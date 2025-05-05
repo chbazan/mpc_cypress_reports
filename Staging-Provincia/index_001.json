@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 2,
-    "start": "2025-05-05T12:41:39.524Z",
-    "end": "2025-05-05T12:42:37.500Z",
-    "duration": 57976,
+    "start": "2025-05-05T13:05:40.892Z",
+    "end": "2025-05-05T13:06:33.246Z",
+    "duration": 52354,
     "testsRegistered": 4,
     "passPercent": 50,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c8c91162-5657-48e9-b4fe-3b085a0036a4",
+      "uuid": "0f2995c9-400e-4194-b3da-16cccc6092c5",
       "title": "",
       "fullFile": "cypress/e2e/Sanity.cy.js",
       "file": "cypress/e2e/Sanity.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "23452d65-9cc2-4666-89d1-996d24765eab",
+          "uuid": "0f3eced3-897b-4971-a7c4-63000f27fc2e",
           "title": "Precondición Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login ",
               "fullTitle": "Precondición Login Login ",
               "timedOut": null,
-              "duration": 6883,
+              "duration": 5054,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "cy.LogIn();",
               "err": {},
-              "uuid": "9b5391bf-b5ab-4502-92f9-d7f9def12331",
-              "parentUUID": "23452d65-9cc2-4666-89d1-996d24765eab",
+              "uuid": "49e6b218-3d9d-456a-afa7-5bd9bbb717ac",
+              "parentUUID": "0f3eced3-897b-4971-a7c4-63000f27fc2e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9b5391bf-b5ab-4502-92f9-d7f9def12331"
+            "49e6b218-3d9d-456a-afa7-5bd9bbb717ac"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6883,
+          "duration": 5054,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "ca20491e-fb69-4133-b0ae-007d0ff295b6",
+          "uuid": "95d3763f-2a5c-4efe-8ba1-70a5c4b09cfd",
           "title": "Verificar posición valuada",
           "fullFile": "",
           "file": "",
@@ -77,7 +77,7 @@
               "title": "Verificar que existan portfolios creados",
               "fullTitle": "Verificar posición valuada Verificar que existan portfolios creados",
               "timedOut": null,
-              "duration": 42346,
+              "duration": 44074,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,8 +86,8 @@
               "context": null,
               "code": "// Verifica si el ambiente está vacío o tiene algún portfolio existente.\ncy.get('body').then($body => {\n  if ($body.find('.alert.alert-info').length) {\n    return;\n  } else {\n    // Si el alert no existe (significa que ya existen portfolios creados).\n    // Validación que se muestre la información de los distintos elementos del Home\n    cy.get('.card-body').should('be.visible');\n    cy.get('.inner-component-backdrop').should('be.visible');\n    cy.get('.sk-circle-fade').should('not.exist');\n    // Validación que carguen los gráficos\n    cy.get('.highcharts-background').should('be.visible');\n  }\n});",
               "err": {},
-              "uuid": "96eefb3b-38ed-49ba-8cc2-403f9b6f0e8f",
-              "parentUUID": "ca20491e-fb69-4133-b0ae-007d0ff295b6",
+              "uuid": "bf745832-c59c-41f6-a730-f21bbe742d69",
+              "parentUUID": "95d3763f-2a5c-4efe-8ba1-70a5c4b09cfd",
               "isHook": false,
               "skipped": false
             },
@@ -95,7 +95,7 @@
               "title": "Revisar que la posición de los portfolios no sea cero",
               "fullTitle": "Verificar posición valuada Revisar que la posición de los portfolios no sea cero",
               "timedOut": null,
-              "duration": 418,
+              "duration": 284,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -108,8 +108,8 @@
                 "estack": "Error: ❌ Los siguientes portfolios tienen valor cero: Total, Portfolio CYPRESS, Testing 1, Testing 2, Testing 3, Testing 4, Testing 5\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:55:16)",
                 "diff": null
               },
-              "uuid": "c312d7ee-4a91-449c-b982-1e242b1a2d8c",
-              "parentUUID": "ca20491e-fb69-4133-b0ae-007d0ff295b6",
+              "uuid": "732293ce-cb1f-4a00-a2b9-dc92ce647969",
+              "parentUUID": "95d3763f-2a5c-4efe-8ba1-70a5c4b09cfd",
               "isHook": false,
               "skipped": false
             },
@@ -117,7 +117,7 @@
               "title": "Revisar que no falten precios de instrumentos",
               "fullTitle": "Verificar posición valuada Revisar que no falten precios de instrumentos",
               "timedOut": null,
-              "duration": 272,
+              "duration": 119,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -130,23 +130,23 @@
                 "estack": "Error: ❌ Se están buscando precios para: AL30, USD, IRCFO, TX25\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:87:18)",
                 "diff": null
               },
-              "uuid": "010976f9-1f8e-4295-85c4-01307c48e41f",
-              "parentUUID": "ca20491e-fb69-4133-b0ae-007d0ff295b6",
+              "uuid": "c10957f4-dda4-41fe-ab63-02f6e7ce29fc",
+              "parentUUID": "95d3763f-2a5c-4efe-8ba1-70a5c4b09cfd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "96eefb3b-38ed-49ba-8cc2-403f9b6f0e8f"
+            "bf745832-c59c-41f6-a730-f21bbe742d69"
           ],
           "failures": [
-            "c312d7ee-4a91-449c-b982-1e242b1a2d8c",
-            "010976f9-1f8e-4295-85c4-01307c48e41f"
+            "732293ce-cb1f-4a00-a2b9-dc92ce647969",
+            "c10957f4-dda4-41fe-ab63-02f6e7ce29fc"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 43036,
+          "duration": 44477,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

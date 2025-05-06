@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 2,
-    "start": "2025-05-05T15:25:37.469Z",
-    "end": "2025-05-05T15:27:19.648Z",
-    "duration": 102179,
+    "start": "2025-05-06T12:39:50.152Z",
+    "end": "2025-05-06T12:40:40.647Z",
+    "duration": 50495,
     "testsRegistered": 6,
     "passPercent": 66.66666666666666,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7a62c990-a5dd-4433-a8d0-7dd418f958c3",
+      "uuid": "6083353a-a560-40f4-8e22-bc6c3ab212ab",
       "title": "",
       "fullFile": "cypress/e2e/Sanity.cy.js",
       "file": "cypress/e2e/Sanity.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c123504a-1415-435a-9397-a0e514cab394",
+          "uuid": "c41c50e8-e9e2-43cb-9c48-4a103e803c05",
           "title": "Precondición Admin Login",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,17 @@
               "title": "Ingresar y hacer login en el admin de MPC",
               "fullTitle": "Precondición Admin Login Ingresar y hacer login en el admin de MPC",
               "timedOut": null,
-              "duration": 4536,
+              "duration": 5221,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.AdminLogin();",
               "err": {},
-              "uuid": "0c2186ec-f45c-4207-bcfe-9bd7de0d35d9",
-              "parentUUID": "c123504a-1415-435a-9397-a0e514cab394",
+              "uuid": "aed8f362-baa9-4e71-8cfd-86776a407bcf",
+              "parentUUID": "c41c50e8-e9e2-43cb-9c48-4a103e803c05",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Obtener versión de MPC",
               "fullTitle": "Precondición Admin Login Obtener versión de MPC",
               "timedOut": null,
-              "duration": 2171,
+              "duration": 2480,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,27 +65,27 @@
               "context": null,
               "code": "// Guardar en una variable la versión de MPC\ncy.get('li.application-footer-link').eq(1).invoke('text').then(text => {\n  const MPC_VERSION = text.trim();\n  cy.writeFile('mpc-version.txt', MPC_VERSION);\n});",
               "err": {},
-              "uuid": "fb94f5f4-f2a1-4f2d-b1d7-696e38888237",
-              "parentUUID": "c123504a-1415-435a-9397-a0e514cab394",
+              "uuid": "2555cddd-4d23-4fdf-8e60-c7a2d1724d9e",
+              "parentUUID": "c41c50e8-e9e2-43cb-9c48-4a103e803c05",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0c2186ec-f45c-4207-bcfe-9bd7de0d35d9",
-            "fb94f5f4-f2a1-4f2d-b1d7-696e38888237"
+            "aed8f362-baa9-4e71-8cfd-86776a407bcf",
+            "2555cddd-4d23-4fdf-8e60-c7a2d1724d9e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6707,
+          "duration": 7701,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "118c733a-caff-4587-a82b-2dff51e18cc7",
+          "uuid": "b6da75b0-811b-45d1-aac5-e972878dcd28",
           "title": "Precondición MPC Login",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "Login en MPC",
               "fullTitle": "Precondición MPC Login Login en MPC",
               "timedOut": null,
-              "duration": 5072,
+              "duration": 5456,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -105,26 +105,26 @@
               "context": null,
               "code": "cy.LogIn();",
               "err": {},
-              "uuid": "edabc193-5e9a-428a-9fae-8acb70772c30",
-              "parentUUID": "118c733a-caff-4587-a82b-2dff51e18cc7",
+              "uuid": "96424f45-2142-4d9b-8efb-302782fe8ba5",
+              "parentUUID": "b6da75b0-811b-45d1-aac5-e972878dcd28",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "edabc193-5e9a-428a-9fae-8acb70772c30"
+            "96424f45-2142-4d9b-8efb-302782fe8ba5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5072,
+          "duration": 5456,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "7e056fbd-25bd-4c9c-b22e-726e2f1ea219",
+          "uuid": "0c8ce7a8-729a-40ec-855f-739cb5729f15",
           "title": "Verificar posición valuada",
           "fullFile": "",
           "file": "",
@@ -135,7 +135,7 @@
               "title": "Verificar que existan portfolios creados",
               "fullTitle": "Verificar posición valuada Verificar que existan portfolios creados",
               "timedOut": null,
-              "duration": 87168,
+              "duration": 33650,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -144,8 +144,8 @@
               "context": null,
               "code": "// Verifica si el ambiente está vacío o tiene algún portfolio existente.\ncy.get('body').then($body => {\n  if ($body.find('.alert.alert-info').length) {\n    throw new Error('❌ Al parecer no hay portfolios creados');\n  } else {\n    const checks = [cy.get('.card-body').should('be.visible'), cy.get('.inner-component-backdrop').should('be.visible'), cy.get('.sk-circle-fade').should('not.exist'), cy.get('.highcharts-background').should('be.visible')];\n    Cypress.Promise.all(checks).catch(() => {\n      throw new Error('❌ La posición valuada o algún elemento relacionado no cargó correctamente.');\n    });\n  }\n});",
               "err": {},
-              "uuid": "343f0e93-3d14-4fb2-86a1-1fde7e377c81",
-              "parentUUID": "7e056fbd-25bd-4c9c-b22e-726e2f1ea219",
+              "uuid": "6d77ed14-8269-490b-9b1a-3aa0de142387",
+              "parentUUID": "0c8ce7a8-729a-40ec-855f-739cb5729f15",
               "isHook": false,
               "skipped": false
             },
@@ -153,7 +153,7 @@
               "title": "Revisar que la posición de los portfolios no sea cero",
               "fullTitle": "Verificar posición valuada Revisar que la posición de los portfolios no sea cero",
               "timedOut": null,
-              "duration": 217,
+              "duration": 215,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -166,8 +166,8 @@
                 "estack": "Error: ❌ Los siguientes portfolios tienen valor cero: Total, Portfolio CYPRESS, Testing 1, Testing 2, Testing 3, Testing 4, Testing 5\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:84:16)",
                 "diff": null
               },
-              "uuid": "c16d0e6a-db7c-4596-b8f0-8a72bc092010",
-              "parentUUID": "7e056fbd-25bd-4c9c-b22e-726e2f1ea219",
+              "uuid": "ca7f4c33-8987-44ea-ba89-f623a5bb6a08",
+              "parentUUID": "0c8ce7a8-729a-40ec-855f-739cb5729f15",
               "isHook": false,
               "skipped": false
             },
@@ -175,36 +175,36 @@
               "title": "Revisar que no falten precios de instrumentos",
               "fullTitle": "Verificar posición valuada Revisar que no falten precios de instrumentos",
               "timedOut": null,
-              "duration": 122,
+              "duration": 158,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "// Validar que no haya íconos de advertencia o capturar cuáles se están mostrando\ncy.get('body').then($body => {\n  // Verificamos si existe al menos un ícono fa-circle-exclamation\n  if ($body.find('svg.svg-inline--fa.fa-circle-exclamation.fa-lg').length > 0) {\n    const instrumentos = new Set();\n    $body.find('svg.svg-inline--fa.fa-circle-exclamation.fa-lg').each((_, icon) => {\n      var _$span$getAttribute;\n      const $span = Cypress.$(icon).closest('span')[0];\n      const mensaje = $span === null || $span === void 0 || (_$span$getAttribute = $span.getAttribute('data-original-title')) === null || _$span$getAttribute === void 0 ? void 0 : _$span$getAttribute.trim();\n      const match = mensaje === null || mensaje === void 0 ? void 0 : mensaje.match(/Buscando el precio para (\\w+) al/);\n      if (match && match[1]) {\n        instrumentos.add(match[1]);\n      }\n    });\n    cy.then(() => {\n      if (instrumentos.size > 0) {\n        const lista = Array.from(instrumentos).join(', ');\n        const errorMsg = `❌ Se están buscando precios para: ${lista}`;\n        cy.log(errorMsg);\n        throw new Error(errorMsg);\n      }\n    });\n  } else {\n    cy.log('✅ No se encontró ningún ícono fa-circle-exclamation');\n  }\n});",
+              "code": "// Validar que no haya íconos de advertencia o capturar cuáles se están mostrando y extraer los nombres de los instrumentos que no tienen precios.\ncy.get('body').then($body => {\n  if ($body.find('svg.svg-inline--fa.fa-circle-exclamation.fa-lg').length > 0) {\n    const instrumentos = new Set();\n    $body.find('svg.svg-inline--fa.fa-circle-exclamation.fa-lg').each((_, icon) => {\n      var _$span$getAttribute;\n      const $span = Cypress.$(icon).closest('span')[0];\n      const mensaje = $span === null || $span === void 0 || (_$span$getAttribute = $span.getAttribute('data-original-title')) === null || _$span$getAttribute === void 0 ? void 0 : _$span$getAttribute.trim();\n      const match = mensaje === null || mensaje === void 0 ? void 0 : mensaje.match(/Buscando el precio para ([\\w.-]+) al/);\n      if (match && match[1]) {\n        instrumentos.add(match[1]);\n      }\n    });\n    cy.then(() => {\n      if (instrumentos.size > 0) {\n        const lista = Array.from(instrumentos).join(', ');\n        const errorMsg = `❌ Se están buscando precios para: ${lista}`;\n        cy.log(errorMsg);\n        throw new Error(errorMsg);\n      }\n    });\n  } else {\n    cy.log('✅ No se encontró ningún ícono fa-circle-exclamation');\n  }\n});",
               "err": {
-                "message": "Error: ❌ Se están buscando precios para: AL30, USD, IRCFO, TX25",
-                "estack": "Error: ❌ Se están buscando precios para: AL30, USD, IRCFO, TX25\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:116:18)",
+                "message": "Error: ❌ Se están buscando precios para: GGAL.BA, AL30, USD, IRCFO, TX25",
+                "estack": "Error: ❌ Se están buscando precios para: GGAL.BA, AL30, USD, IRCFO, TX25\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:115:18)",
                 "diff": null
               },
-              "uuid": "4b552dab-9422-4d5c-8678-d38feb929f5a",
-              "parentUUID": "7e056fbd-25bd-4c9c-b22e-726e2f1ea219",
+              "uuid": "53248663-0cd5-4942-a546-c03e0c6d1741",
+              "parentUUID": "0c8ce7a8-729a-40ec-855f-739cb5729f15",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "343f0e93-3d14-4fb2-86a1-1fde7e377c81"
+            "6d77ed14-8269-490b-9b1a-3aa0de142387"
           ],
           "failures": [
-            "c16d0e6a-db7c-4596-b8f0-8a72bc092010",
-            "4b552dab-9422-4d5c-8678-d38feb929f5a"
+            "ca7f4c33-8987-44ea-ba89-f623a5bb6a08",
+            "53248663-0cd5-4942-a546-c03e0c6d1741"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 87507,
+          "duration": 34023,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

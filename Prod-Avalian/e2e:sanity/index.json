@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 3,
-    "passes": 0,
+    "passes": 2,
     "pending": 0,
-    "failures": 3,
-    "start": "2025-05-26T19:56:17.988Z",
-    "end": "2025-05-26T19:56:54.196Z",
-    "duration": 36208,
+    "failures": 1,
+    "start": "2025-05-26T20:02:04.662Z",
+    "end": "2025-05-26T20:02:21.193Z",
+    "duration": 16531,
     "testsRegistered": 3,
-    "passPercent": 0,
+    "passPercent": 66.66666666666666,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "72be40c6-5aaf-4ebf-ade6-44621a220418",
+      "uuid": "f35ba80c-33a8-48a1-9acb-184138456d69",
       "title": "",
       "fullFile": "cypress/e2e/Sanity.cy.js",
       "file": "cypress/e2e/Sanity.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f56a7cab-e015-46d5-ba7d-b773c85a971a",
+          "uuid": "b2102bc0-0733-423b-bdd0-345455af9c33",
           "title": "Precondición Admin Login",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "Ingresar y hacer login en el admin de MPC",
               "fullTitle": "Precondición Admin Login Ingresar y hacer login en el admin de MPC",
               "timedOut": null,
-              "duration": 11884,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 2013,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.AdminLogin();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.",
-                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:53:6)",
-                "diff": null
-              },
-              "uuid": "ce5590f3-1709-46ce-8c89-a249d8360ce1",
-              "parentUUID": "f56a7cab-e015-46d5-ba7d-b773c85a971a",
+              "err": {},
+              "uuid": "afdcefe0-d1bd-4eb3-9042-67857f9344ce",
+              "parentUUID": "b2102bc0-0733-423b-bdd0-345455af9c33",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +56,7 @@
               "title": "Obtener versión de MPC",
               "fullTitle": "Precondición Admin Login Obtener versión de MPC",
               "timedOut": null,
-              "duration": 10075,
+              "duration": 10204,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,27 +69,28 @@
                 "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `li.application-footer-link`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:16:7)",
                 "diff": null
               },
-              "uuid": "8ab94870-8ea1-437d-9ac5-0e84a5a2cd55",
-              "parentUUID": "f56a7cab-e015-46d5-ba7d-b773c85a971a",
+              "uuid": "72ee6719-33bc-4014-a394-42ad41f28482",
+              "parentUUID": "b2102bc0-0733-423b-bdd0-345455af9c33",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "afdcefe0-d1bd-4eb3-9042-67857f9344ce"
+          ],
           "failures": [
-            "ce5590f3-1709-46ce-8c89-a249d8360ce1",
-            "8ab94870-8ea1-437d-9ac5-0e84a5a2cd55"
+            "72ee6719-33bc-4014-a394-42ad41f28482"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 21959,
+          "duration": 12217,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "c23191da-70ee-42b8-85b5-c60e6c118fae",
+          "uuid": "fb1816a5-101a-4c70-91ff-631efe236136",
           "title": "Precondición MPC Login",
           "fullFile": "",
           "file": "",
@@ -104,33 +101,29 @@
               "title": "Login en MPC",
               "fullTitle": "Precondición MPC Login Login en MPC",
               "timedOut": null,
-              "duration": 11452,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 1576,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.LogIn();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.",
-                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:40:6)",
-                "diff": null
-              },
-              "uuid": "a099bd11-87a0-441d-b3d0-ab072e6caec0",
-              "parentUUID": "c23191da-70ee-42b8-85b5-c60e6c118fae",
+              "err": {},
+              "uuid": "c68c066e-55ac-470b-a1d1-a52848e78a71",
+              "parentUUID": "fb1816a5-101a-4c70-91ff-631efe236136",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "a099bd11-87a0-441d-b3d0-ab072e6caec0"
+          "passes": [
+            "c68c066e-55ac-470b-a1d1-a52848e78a71"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11452,
+          "duration": 1576,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

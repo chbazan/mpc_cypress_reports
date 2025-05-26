@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 3,
-    "passes": 2,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-05-26T20:02:04.662Z",
-    "end": "2025-05-26T20:02:21.193Z",
-    "duration": 16531,
+    "failures": 0,
+    "start": "2025-05-26T20:15:28.217Z",
+    "end": "2025-05-26T20:15:38.193Z",
+    "duration": 9976,
     "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f35ba80c-33a8-48a1-9acb-184138456d69",
+      "uuid": "c5cf88c3-3649-4198-846c-77b5a51f42f8",
       "title": "",
       "fullFile": "cypress/e2e/Sanity.cy.js",
       "file": "cypress/e2e/Sanity.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b2102bc0-0733-423b-bdd0-345455af9c33",
+          "uuid": "eacd06d9-a8e0-4c21-9cbb-603b0eac8acd",
           "title": "Precondición Admin Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingresar y hacer login en el admin de MPC",
               "fullTitle": "Precondición Admin Login Ingresar y hacer login en el admin de MPC",
               "timedOut": null,
-              "duration": 2013,
+              "duration": 2501,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.AdminLogin();",
               "err": {},
-              "uuid": "afdcefe0-d1bd-4eb3-9042-67857f9344ce",
-              "parentUUID": "b2102bc0-0733-423b-bdd0-345455af9c33",
+              "uuid": "ba40c90b-e93f-4da0-b91c-3fc10a99fe62",
+              "parentUUID": "eacd06d9-a8e0-4c21-9cbb-603b0eac8acd",
               "isHook": false,
               "skipped": false
             },
@@ -56,41 +56,36 @@
               "title": "Obtener versión de MPC",
               "fullTitle": "Precondición Admin Login Obtener versión de MPC",
               "timedOut": null,
-              "duration": 10204,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 2485,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "// Guardar en una variable la versión de MPC\ncy.get('li.application-footer-link').eq(1).invoke('text').then(text => {\n  const MPC_VERSION = text.trim();\n  cy.writeFile('mpc-version.txt', MPC_VERSION);\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `li.application-footer-link`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `li.application-footer-link`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:16:7)",
-                "diff": null
-              },
-              "uuid": "72ee6719-33bc-4014-a394-42ad41f28482",
-              "parentUUID": "b2102bc0-0733-423b-bdd0-345455af9c33",
+              "err": {},
+              "uuid": "aeff2063-679a-4a6e-88f1-5db4d8a3d2b9",
+              "parentUUID": "eacd06d9-a8e0-4c21-9cbb-603b0eac8acd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "afdcefe0-d1bd-4eb3-9042-67857f9344ce"
+            "ba40c90b-e93f-4da0-b91c-3fc10a99fe62",
+            "aeff2063-679a-4a6e-88f1-5db4d8a3d2b9"
           ],
-          "failures": [
-            "72ee6719-33bc-4014-a394-42ad41f28482"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12217,
+          "duration": 4986,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "fb1816a5-101a-4c70-91ff-631efe236136",
+          "uuid": "c625ba09-3dad-4126-becc-7add9b1ecd30",
           "title": "Precondición MPC Login",
           "fullFile": "",
           "file": "",
@@ -101,7 +96,7 @@
               "title": "Login en MPC",
               "fullTitle": "Precondición MPC Login Login en MPC",
               "timedOut": null,
-              "duration": 1576,
+              "duration": 2193,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -110,20 +105,20 @@
               "context": null,
               "code": "cy.LogIn();",
               "err": {},
-              "uuid": "c68c066e-55ac-470b-a1d1-a52848e78a71",
-              "parentUUID": "fb1816a5-101a-4c70-91ff-631efe236136",
+              "uuid": "59be5fec-3fdf-4b91-aa4e-f964859c5218",
+              "parentUUID": "c625ba09-3dad-4126-becc-7add9b1ecd30",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c68c066e-55ac-470b-a1d1-a52848e78a71"
+            "59be5fec-3fdf-4b91-aa4e-f964859c5218"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1576,
+          "duration": 2193,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

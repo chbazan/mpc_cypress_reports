@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-05-26T19:56:17.988Z",
+    "end": "2025-05-26T19:56:54.196Z",
+    "duration": 36208,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "72be40c6-5aaf-4ebf-ade6-44621a220418",
+      "title": "",
+      "fullFile": "cypress/e2e/Sanity.cy.js",
+      "file": "cypress/e2e/Sanity.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f56a7cab-e015-46d5-ba7d-b773c85a971a",
+          "title": "Precondición Admin Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar y hacer login en el admin de MPC",
+              "fullTitle": "Precondición Admin Login Ingresar y hacer login en el admin de MPC",
+              "timedOut": null,
+              "duration": 11884,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.AdminLogin();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:53:6)",
+                "diff": null
+              },
+              "uuid": "ce5590f3-1709-46ce-8c89-a249d8360ce1",
+              "parentUUID": "f56a7cab-e015-46d5-ba7d-b773c85a971a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Obtener versión de MPC",
+              "fullTitle": "Precondición Admin Login Obtener versión de MPC",
+              "timedOut": null,
+              "duration": 10075,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Guardar en una variable la versión de MPC\ncy.get('li.application-footer-link').eq(1).invoke('text').then(text => {\n  const MPC_VERSION = text.trim();\n  cy.writeFile('mpc-version.txt', MPC_VERSION);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `li.application-footer-link`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `li.application-footer-link`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/e2e/Sanity.cy.js:16:7)",
+                "diff": null
+              },
+              "uuid": "8ab94870-8ea1-437d-9ac5-0e84a5a2cd55",
+              "parentUUID": "f56a7cab-e015-46d5-ba7d-b773c85a971a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ce5590f3-1709-46ce-8c89-a249d8360ce1",
+            "8ab94870-8ea1-437d-9ac5-0e84a5a2cd55"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21959,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c23191da-70ee-42b8-85b5-c60e6c118fae",
+          "title": "Precondición MPC Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login en MPC",
+              "fullTitle": "Precondición MPC Login Login en MPC",
+              "timedOut": null,
+              "duration": 11452,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.LogIn();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Continue' but never did.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:40:6)",
+                "diff": null
+              },
+              "uuid": "a099bd11-87a0-441d-b3d0-ab072e6caec0",
+              "parentUUID": "c23191da-70ee-42b8-85b5-c60e6c118fae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a099bd11-87a0-441d-b3d0-ab072e6caec0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11452,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "index",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -5,9 +5,9 @@
     "passes": 6,
     "pending": 0,
     "failures": 0,
-    "start": "2025-07-31T10:25:00.196Z",
-    "end": "2025-07-31T10:27:20.401Z",
-    "duration": 140205,
+    "start": "2025-08-01T10:24:47.658Z",
+    "end": "2025-08-01T10:27:14.259Z",
+    "duration": 146601,
     "testsRegistered": 6,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "aa711282-e033-48ab-975b-c51af96c6aec",
+      "uuid": "7ab06e63-0183-457b-9024-031fa7fff4f1",
       "title": "",
       "fullFile": "cypress/e2e/Sanity.cy.js",
       "file": "cypress/e2e/Sanity.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9c5fdc50-953e-4654-b26c-9de65748ca7f",
+          "uuid": "a4008427-3cf3-4d3e-8d2c-826e1bb93fd8",
           "title": "Precondición Admin Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingresar y hacer login en el admin de MPC",
               "fullTitle": "Precondición Admin Login Ingresar y hacer login en el admin de MPC",
               "timedOut": null,
-              "duration": 3940,
+              "duration": 4149,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.AdminLogin();",
               "err": {},
-              "uuid": "ce759b8e-c9a5-439e-9de7-0c3fed6c99b6",
-              "parentUUID": "9c5fdc50-953e-4654-b26c-9de65748ca7f",
+              "uuid": "2a43b226-9a5c-4db2-bc3b-b6986508d577",
+              "parentUUID": "a4008427-3cf3-4d3e-8d2c-826e1bb93fd8",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Obtener versión de MPC",
               "fullTitle": "Precondición Admin Login Obtener versión de MPC",
               "timedOut": null,
-              "duration": 1982,
+              "duration": 2388,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,27 +65,27 @@
               "context": null,
               "code": "// Guardar en una variable la versión de MPC\ncy.get('li.application-footer-link').eq(1).invoke('text').then(text => {\n  const MPC_VERSION = text.trim();\n  cy.writeFile('mpc-version.txt', MPC_VERSION);\n});",
               "err": {},
-              "uuid": "6c21a5a2-b9ae-4df9-8456-5bd6b6028bde",
-              "parentUUID": "9c5fdc50-953e-4654-b26c-9de65748ca7f",
+              "uuid": "56262aa3-bfc7-489d-b73f-f795134bbb56",
+              "parentUUID": "a4008427-3cf3-4d3e-8d2c-826e1bb93fd8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ce759b8e-c9a5-439e-9de7-0c3fed6c99b6",
-            "6c21a5a2-b9ae-4df9-8456-5bd6b6028bde"
+            "2a43b226-9a5c-4db2-bc3b-b6986508d577",
+            "56262aa3-bfc7-489d-b73f-f795134bbb56"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5922,
+          "duration": 6537,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "290d77ff-8da1-44d4-ab75-f1eb740a201a",
+          "uuid": "e893a0d1-8f67-4ce1-9cb3-d72c73922350",
           "title": "Precondición MPC Login",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "Login en MPC",
               "fullTitle": "Precondición MPC Login Login en MPC",
               "timedOut": null,
-              "duration": 3099,
+              "duration": 3749,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -105,26 +105,26 @@
               "context": null,
               "code": "cy.LogIn();",
               "err": {},
-              "uuid": "b1da8c62-454a-4ef2-95ff-d6979b9108f4",
-              "parentUUID": "290d77ff-8da1-44d4-ab75-f1eb740a201a",
+              "uuid": "02f3df21-f916-4ef5-9c71-5ec4b680775e",
+              "parentUUID": "e893a0d1-8f67-4ce1-9cb3-d72c73922350",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b1da8c62-454a-4ef2-95ff-d6979b9108f4"
+            "02f3df21-f916-4ef5-9c71-5ec4b680775e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3099,
+          "duration": 3749,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "a4c8f5a9-bd72-4323-86f1-6571a5f91a38",
+          "uuid": "3ecafba4-f04d-454d-8ab2-162ccf8cf677",
           "title": "Verificar la posición valuada de los portfolios",
           "fullFile": "",
           "file": "",
@@ -135,7 +135,7 @@
               "title": "Verificar que existan portfolios creados",
               "fullTitle": "Verificar la posición valuada de los portfolios Verificar que existan portfolios creados",
               "timedOut": null,
-              "duration": 65996,
+              "duration": 72223,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -144,8 +144,8 @@
               "context": null,
               "code": "cy.ValidacionesHome();",
               "err": {},
-              "uuid": "3350a0cd-4a4a-44d9-b771-71c9d841af80",
-              "parentUUID": "a4c8f5a9-bd72-4323-86f1-6571a5f91a38",
+              "uuid": "22c58a76-5c2b-4f86-8c98-f528ec51f2ab",
+              "parentUUID": "3ecafba4-f04d-454d-8ab2-162ccf8cf677",
               "isHook": false,
               "skipped": false
             },
@@ -153,7 +153,7 @@
               "title": "Revisar que la posición de los portfolios no sea cero",
               "fullTitle": "Verificar la posición valuada de los portfolios Revisar que la posición de los portfolios no sea cero",
               "timedOut": null,
-              "duration": 10,
+              "duration": 12,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -162,8 +162,8 @@
               "context": null,
               "code": "cy.get('.card-body').then($cards => {\n  const portfoliosConValorCero = [];\n  $cards.each((index, card) => {\n    var _$card$find$attr, _$card$find$attr2;\n    const $card = Cypress.$(card);\n    const nombre = (_$card$find$attr = $card.find('h6.card-title span[data-toggle=\"tooltip\"]').attr('data-original-title')) === null || _$card$find$attr === void 0 ? void 0 : _$card$find$attr.trim();\n    const rawValor = (_$card$find$attr2 = $card.find('h5.card-title span[data-toggle=\"tooltip\"]').attr('data-original-title')) === null || _$card$find$attr2 === void 0 ? void 0 : _$card$find$attr2.trim();\n    if (nombre && rawValor) {\n      const valor = parseFloat(rawValor.replace(/\\./g, '').replace(',', '.'));\n      if (valor === 0) {\n        portfoliosConValorCero.push(nombre);\n      }\n    }\n  });\n  cy.then(() => {\n    if (portfoliosConValorCero.length > 0) {\n      const lista = portfoliosConValorCero.join(', ');\n      throw new Error(`❌ Los siguientes portfolios tienen valor cero: ${lista}.`);\n    } else {\n      cy.log('✅ Todos los portfolios tienen valor distinto de cero');\n    }\n  });\n});",
               "err": {},
-              "uuid": "afee87a0-2f4e-43f5-8614-fb2adc623c80",
-              "parentUUID": "a4c8f5a9-bd72-4323-86f1-6571a5f91a38",
+              "uuid": "c4704a6d-c451-454f-ac09-be1119ff5ceb",
+              "parentUUID": "3ecafba4-f04d-454d-8ab2-162ccf8cf677",
               "isHook": false,
               "skipped": false
             },
@@ -171,7 +171,7 @@
               "title": "Ingresar a todos los portfolios disponibles y validar que carguen correctamente",
               "fullTitle": "Verificar la posición valuada de los portfolios Ingresar a todos los portfolios disponibles y validar que carguen correctamente",
               "timedOut": null,
-              "duration": 62163,
+              "duration": 61070,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -180,22 +180,22 @@
               "context": null,
               "code": "cy.contains('Mis portfolios', {\n  matchCase: false\n}).click();\ncy.ValidacionesMisPortfolios();\ncy.RecorridaPortfolios();",
               "err": {},
-              "uuid": "f6d43858-6906-4c2a-b959-103074456f2f",
-              "parentUUID": "a4c8f5a9-bd72-4323-86f1-6571a5f91a38",
+              "uuid": "6ce47bac-b5f8-4d1b-91ed-a8094dd95557",
+              "parentUUID": "3ecafba4-f04d-454d-8ab2-162ccf8cf677",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3350a0cd-4a4a-44d9-b771-71c9d841af80",
-            "afee87a0-2f4e-43f5-8614-fb2adc623c80",
-            "f6d43858-6906-4c2a-b959-103074456f2f"
+            "22c58a76-5c2b-4f86-8c98-f528ec51f2ab",
+            "c4704a6d-c451-454f-ac09-be1119ff5ceb",
+            "6ce47bac-b5f8-4d1b-91ed-a8094dd95557"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 128169,
+          "duration": 133305,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-09-19T18:39:36.889Z",
+    "end": "2025-09-19T18:40:37.964Z",
+    "duration": 61075
+  },
+  "results": [
+    {
+      "uuid": "9c82d7f8-9609-47bf-a5db-e26e5b33f32a",
+      "title": "",
+      "fullFile": "cypress/e2e/performance/02_home.cy.js",
+      "file": "cypress/e2e/performance/02_home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+          "title": "Home",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingreso a MPC",
+              "fullTitle": "Home Ingreso a MPC",
+              "timedOut": null,
+              "duration": 6850,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.sessionMPC();",
+              "err": {},
+              "uuid": "d398516a-50cf-4195-8868-563fb91847e9",
+              "parentUUID": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Primer ingreso al menú Home",
+              "fullTitle": "Home Primer ingreso al menú Home",
+              "timedOut": null,
+              "duration": 7156,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_constants.default.MPC_LOCATION);\ncy.validacionesHome();",
+              "err": {},
+              "uuid": "5020a79e-5788-4280-ae89-ee0c8987729f",
+              "parentUUID": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Segundo ingreso al menú Home",
+              "fullTitle": "Home Segundo ingreso al menú Home",
+              "timedOut": null,
+              "duration": 3933,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(`${sectionName}`).click();\ncy.validacionesHome();",
+              "err": {},
+              "uuid": "3157cef8-09f8-4362-907d-f2027fe17539",
+              "parentUUID": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Primer ingreso al portfolio Avalian ARS desde el Home",
+              "fullTitle": "Home Primer ingreso al portfolio Avalian ARS desde el Home",
+              "timedOut": null,
+              "duration": 13261,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Home\ncy.contains(`${sectionName}`).click();\ncy.validacionesHome();",
+              "err": {},
+              "uuid": "52824531-58ba-48c7-84df-0b320aa6c5f7",
+              "parentUUID": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Primer ingreso al portfolio Avalian USD desde el Home",
+              "fullTitle": "Home Primer ingreso al portfolio Avalian USD desde el Home",
+              "timedOut": null,
+              "duration": 8007,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Home\ncy.contains(`${sectionName}`).click();\ncy.validacionesHome();",
+              "err": {},
+              "uuid": "e4745e5a-5398-4534-9629-3e17201fa4b2",
+              "parentUUID": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Segundo ingreso al portfolio Avalian ARS desde el Home",
+              "fullTitle": "Home Segundo ingreso al portfolio Avalian ARS desde el Home",
+              "timedOut": null,
+              "duration": 11416,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Home\ncy.contains(`${sectionName}`).click();\ncy.validacionesHome();",
+              "err": {},
+              "uuid": "a92fd30b-9a02-481e-aab6-5b6d93b39956",
+              "parentUUID": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Segundo ingreso al portfolio Avalian USD desde el Home",
+              "fullTitle": "Home Segundo ingreso al portfolio Avalian USD desde el Home",
+              "timedOut": null,
+              "duration": 6820,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Home\ncy.contains(`${sectionName}`).click();\ncy.validacionesHome();",
+              "err": {},
+              "uuid": "52c0c69d-cce4-48ad-a734-b7a4b97bf181",
+              "parentUUID": "60b4e05e-5123-4560-8cb2-cb85133688bd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d398516a-50cf-4195-8868-563fb91847e9",
+            "5020a79e-5788-4280-ae89-ee0c8987729f",
+            "3157cef8-09f8-4362-907d-f2027fe17539",
+            "52824531-58ba-48c7-84df-0b320aa6c5f7",
+            "e4745e5a-5398-4534-9629-3e17201fa4b2",
+            "a92fd30b-9a02-481e-aab6-5b6d93b39956",
+            "52c0c69d-cce4-48ad-a734-b7a4b97bf181"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 57443,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

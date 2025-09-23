@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-23T17:35:29.232Z",
+    "end": "2025-09-23T17:38:24.497Z",
+    "duration": 175265,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0cd7da97-34f7-447c-89c6-21d7c71a573b",
+      "title": "",
+      "fullFile": "cypress/e2e/performance/mis_portfolios.cy.js",
+      "file": "cypress/e2e/performance/mis_portfolios.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+          "title": "Mis portfolios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingreso a MPC",
+              "fullTitle": "Mis portfolios Ingreso a MPC",
+              "timedOut": null,
+              "duration": 9885,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.sessionMPC();",
+              "err": {},
+              "uuid": "c7171fc7-241b-4cd3-8f11-8e09b033c3d8",
+              "parentUUID": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Primer ingreso al menú Mis portfolios",
+              "fullTitle": "Mis portfolios Primer ingreso al menú Mis portfolios",
+              "timedOut": null,
+              "duration": 33743,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(`${_constants.default.MPC_LOCATION}${path}`);\ncy.validacionesMisPortfoliosHome();",
+              "err": {},
+              "uuid": "e9babc70-afd0-439e-b732-a193dbac543f",
+              "parentUUID": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Segundo ingreso al menú Mis portfolios",
+              "fullTitle": "Mis portfolios Segundo ingreso al menú Mis portfolios",
+              "timedOut": null,
+              "duration": 23663,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(`${sectionName}`).click();\ncy.validacionesMisPortfoliosHome();",
+              "err": {},
+              "uuid": "b567e07a-d3a6-409e-8bb6-ca1d0ead5f2e",
+              "parentUUID": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Primer ingreso al portfolio Avalian ARS desde Mis portfolios",
+              "fullTitle": "Mis portfolios Primer ingreso al portfolio Avalian ARS desde Mis portfolios",
+              "timedOut": null,
+              "duration": 29604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Mis Portfolios\ncy.contains(`${sectionName}`).click();\ncy.validacionesMisPortfoliosHome();",
+              "err": {},
+              "uuid": "15257ef4-0c6f-40e9-88f8-af0ab3f6cd33",
+              "parentUUID": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Primer ingreso al portfolio Avalian USD desde Mis portfolios",
+              "fullTitle": "Mis portfolios Primer ingreso al portfolio Avalian USD desde Mis portfolios",
+              "timedOut": null,
+              "duration": 13505,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Mis Portfolios\ncy.contains(`${sectionName}`).click();\ncy.validacionesMisPortfoliosHome();",
+              "err": {},
+              "uuid": "f138c2d5-5892-42c8-888c-c51ec9abfe06",
+              "parentUUID": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Segundo ingreso al portfolio Avalian ARS desde Mis portfolios",
+              "fullTitle": "Mis portfolios Segundo ingreso al portfolio Avalian ARS desde Mis portfolios",
+              "timedOut": null,
+              "duration": 42644,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Mis Portfolios\ncy.contains(`${sectionName}`).click();\ncy.validacionesMisPortfoliosHome();",
+              "err": {},
+              "uuid": "66ebe299-3479-4454-9e39-b9a88cd1f4ac",
+              "parentUUID": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Segundo ingreso al portfolio Avalian USD desde Mis portfolios",
+              "fullTitle": "Mis portfolios Segundo ingreso al portfolio Avalian USD desde Mis portfolios",
+              "timedOut": null,
+              "duration": 19404,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[data-icon=\"arrow-right\"]').eq(index).click();\ncy.validacionesMisPortfolios();\n// Volver a Mis Portfolios\ncy.contains(`${sectionName}`).click();\ncy.validacionesMisPortfoliosHome();",
+              "err": {},
+              "uuid": "d4b54572-8158-453e-bfdf-4b99ef4e9929",
+              "parentUUID": "7f7dc462-6846-4be1-b525-09eecf7a4138",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c7171fc7-241b-4cd3-8f11-8e09b033c3d8",
+            "e9babc70-afd0-439e-b732-a193dbac543f",
+            "b567e07a-d3a6-409e-8bb6-ca1d0ead5f2e",
+            "15257ef4-0c6f-40e9-88f8-af0ab3f6cd33",
+            "f138c2d5-5892-42c8-888c-c51ec9abfe06",
+            "66ebe299-3479-4454-9e39-b9a88cd1f4ac",
+            "d4b54572-8158-453e-bfdf-4b99ef4e9929"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 172448,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2025-11-24T15:18:37.639Z",
-    "end": "2025-11-24T15:20:39.366Z",
-    "duration": 121727,
+    "start": "2025-11-25T15:18:09.996Z",
+    "end": "2025-11-25T15:22:02.014Z",
+    "duration": 232018,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1145a93d-2fcc-4498-a022-db1d73d6bf61",
+      "uuid": "c47c847c-a04b-4210-bec2-8b4eefffd0d0",
       "title": "",
       "fullFile": "cypress/e2e/performance/mi_dinero.cy.js",
       "file": "cypress/e2e/performance/mi_dinero.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bb32a6db-c196-4a5a-a663-d24889cde07a",
+          "uuid": "ca13c7e9-c557-4698-b41e-9b25cdb1a707",
           "title": "Mi dinero",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "781f3449-677b-45a8-86aa-f46374c90972",
+              "uuid": "b2bedfc4-3d5e-45af-a6e4-fdded7ea48f3",
               "title": "Ingreso a MPC",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Ingreso a MPC",
                   "fullTitle": "Mi dinero Ingreso a MPC Ingreso a MPC",
                   "timedOut": null,
-                  "duration": 4364,
+                  "duration": 3664,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,26 +56,26 @@
                   "context": null,
                   "code": "cy.sessionMPC();",
                   "err": {},
-                  "uuid": "4620f553-1515-438f-9eb8-f7a7e1e23392",
-                  "parentUUID": "781f3449-677b-45a8-86aa-f46374c90972",
+                  "uuid": "7e8de308-e080-46d3-aa0f-5ded43b0cd15",
+                  "parentUUID": "b2bedfc4-3d5e-45af-a6e4-fdded7ea48f3",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "4620f553-1515-438f-9eb8-f7a7e1e23392"
+                "7e8de308-e080-46d3-aa0f-5ded43b0cd15"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 4364,
+              "duration": 3664,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "81b5bc96-ee90-4f3f-840e-dbe919e6a2b7",
+              "uuid": "cc2acc10-6e55-487a-a460-f73edd04d641",
               "title": "Primer ingreso al menu Mi dinero",
               "fullFile": "",
               "file": "",
@@ -86,7 +86,7 @@
                   "title": "Primer ingreso al menú Mi dinero",
                   "fullTitle": "Mi dinero Primer ingreso al menu Mi dinero Primer ingreso al menú Mi dinero",
                   "timedOut": null,
-                  "duration": 60859,
+                  "duration": 114934,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -95,26 +95,26 @@
                   "context": null,
                   "code": "cy.visit(`${_constants.default.MPC_LOCATION}${path}`);\ncy.get('div[class=\"trades-filters-backdrop\"]').should('be.visible');\ncy.get('div[class=\"inner-component-backdrop\"]').should('be.visible');\ncy.get('div.sk-circle-fade-dot').should('not.exist');\ncy.get('div[class=\"card projected-cashflow-card cash-flow-card\"]').should('be.visible');",
                   "err": {},
-                  "uuid": "21b9e504-0af7-4f65-9a39-ca6617d5a474",
-                  "parentUUID": "81b5bc96-ee90-4f3f-840e-dbe919e6a2b7",
+                  "uuid": "881026af-2a8c-4b11-90fb-ab8fc60cc0bb",
+                  "parentUUID": "cc2acc10-6e55-487a-a460-f73edd04d641",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "21b9e504-0af7-4f65-9a39-ca6617d5a474"
+                "881026af-2a8c-4b11-90fb-ab8fc60cc0bb"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 60859,
+              "duration": 114934,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "60cfaa04-3794-4682-b6c9-6ce429a200cb",
+              "uuid": "d066ddff-a02f-47ee-9566-a749ed8f288c",
               "title": "Segundo ingreso al menu Mi dinero",
               "fullFile": "",
               "file": "",
@@ -125,7 +125,7 @@
                   "title": "Segundo ingreso al menú Mi dinero",
                   "fullTitle": "Mi dinero Segundo ingreso al menu Mi dinero Segundo ingreso al menú Mi dinero",
                   "timedOut": null,
-                  "duration": 54122,
+                  "duration": 110914,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -134,20 +134,20 @@
                   "context": null,
                   "code": "cy.visit(`${_constants.default.MPC_LOCATION}${path}`);\ncy.get('div[class=\"trades-filters-backdrop\"]').should('be.visible');\ncy.get('div[class=\"inner-component-backdrop\"]').should('be.visible');\ncy.get('div.sk-circle-fade-dot').should('not.exist');\ncy.get('div[class=\"card projected-cashflow-card cash-flow-card\"]').should('be.visible');",
                   "err": {},
-                  "uuid": "967f3bad-013f-461e-9368-e686edaa38f9",
-                  "parentUUID": "60cfaa04-3794-4682-b6c9-6ce429a200cb",
+                  "uuid": "ee901d65-efcf-474a-8f38-baa7745ae358",
+                  "parentUUID": "d066ddff-a02f-47ee-9566-a749ed8f288c",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "967f3bad-013f-461e-9368-e686edaa38f9"
+                "ee901d65-efcf-474a-8f38-baa7745ae358"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 54122,
+              "duration": 110914,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

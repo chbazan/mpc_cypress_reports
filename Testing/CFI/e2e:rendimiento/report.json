@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 0,
+    "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-11-27T16:54:53.596Z",
-    "end": "2025-11-27T16:54:53.894Z",
-    "duration": 298,
+    "failures": 0,
+    "start": "2025-11-27T19:08:13.464Z",
+    "end": "2025-11-27T19:08:28.533Z",
+    "duration": 15069,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,46 +18,61 @@
   },
   "results": [
     {
-      "uuid": "38348c55-e2e8-41b0-91d5-304af9008966",
+      "uuid": "c3bb17f3-1abb-49fd-9d14-259aead08eac",
       "title": "",
-      "fullFile": "cypress/e2e/performance/rendimiento.cy.js",
-      "file": "cypress/e2e/performance/rendimiento.cy.js",
+      "fullFile": "cypress/e2e/performance/01_login.cy.js",
+      "file": "cypress/e2e/performance/01_login.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [
+      "tests": [],
+      "suites": [
         {
-          "title": "An uncaught error was detected outside of a test",
-          "fullTitle": "An uncaught error was detected outside of a test",
-          "timedOut": null,
-          "duration": 152,
-          "state": "failed",
-          "speed": null,
-          "pass": false,
-          "fail": true,
-          "pending": false,
-          "context": null,
-          "code": "throw err;",
-          "err": {
-            "message": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: SELECT_PORTFOLIO, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
-            "estack": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: SELECT_PORTFOLIO, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at eval (webpack://cypress/./cypress/support/constants.js:35:10)\n    at Array.forEach (<anonymous>)\n    at ./cypress/support/constants.js (webpack://cypress/./cypress/support/constants.js:32:15)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:28:0)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at eval (webpack://cypress/./cypress/support/e2e.js:17:0)\n    at eval (http://localhost:43349/__cypress/tests?p=cypress/support/e2e.js:1684:3)\n    at eval (http://localhost:43349/__cypress/tests?p=cypress/support/e2e.js:1686:12)\n    at eval (<anonymous>)",
-            "diff": null
-          },
-          "uuid": "3447825e-051c-4f6a-99d4-ba05dd81cfb5",
-          "parentUUID": "38348c55-e2e8-41b0-91d5-304af9008966",
-          "isHook": false,
-          "skipped": false
+          "uuid": "de077b2b-c32f-4a3f-b85f-b9e16a73b0f1",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingreso al admin de MPC y setup de portfolios",
+              "fullTitle": "Login Ingreso al admin de MPC y setup de portfolios",
+              "timedOut": null,
+              "duration": 12256,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.sessionMPC();\ncy.visit(_constants.default.MPC_LOCATION);\ncy.guardarNombresPortfolios();",
+              "err": {},
+              "uuid": "edd3af21-2ad9-47e7-9143-dc08bb251c67",
+              "parentUUID": "de077b2b-c32f-4a3f-b85f-b9e16a73b0f1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "edd3af21-2ad9-47e7-9143-dc08bb251c67"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12256,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
         }
       ],
-      "suites": [],
       "passes": [],
-      "failures": [
-        "3447825e-051c-4f6a-99d4-ba05dd81cfb5"
-      ],
+      "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 152,
+      "duration": 0,
       "root": true,
-      "rootEmpty": false,
+      "rootEmpty": true,
       "_timeout": 2000
     }
   ],

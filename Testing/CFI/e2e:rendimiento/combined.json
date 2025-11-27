@@ -1,0 +1,94 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-11-27T16:44:59.002Z",
+    "end": "2025-11-27T16:44:59.235Z",
+    "duration": 233
+  },
+  "results": [
+    {
+      "uuid": "6d9fae47-b79f-43f2-ada6-076ec64b581a",
+      "title": "",
+      "fullFile": "cypress/e2e/performance/rendimiento.cy.js",
+      "file": "cypress/e2e/performance/rendimiento.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 120,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: SELECT_PORTFOLIO, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "Error: The following error originated from your test code, not from Cypress.\n\n  > Environment variable: SELECT_PORTFOLIO, is not set\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at eval (webpack://cypress/./cypress/support/constants.js:35:10)\n    at Array.forEach (<anonymous>)\n    at ./cypress/support/constants.js (webpack://cypress/./cypress/support/constants.js:32:15)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at ./cypress/support/commands.js (webpack://cypress/./cypress/support/commands.js:28:0)\n    at __webpack_require__ (webpack://cypress/webpack/bootstrap:19:0)\n    at eval (webpack://cypress/./cypress/support/e2e.js:17:0)\n    at eval (http://localhost:46197/__cypress/tests?p=cypress/support/e2e.js:1684:3)\n    at eval (http://localhost:46197/__cypress/tests?p=cypress/support/e2e.js:1686:12)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "c9c18160-be4b-4ab7-845c-dbe641f5f8cb",
+          "parentUUID": "6d9fae47-b79f-43f2-ada6-076ec64b581a",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "c9c18160-be4b-4ab7-845c-dbe641f5f8cb"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 120,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

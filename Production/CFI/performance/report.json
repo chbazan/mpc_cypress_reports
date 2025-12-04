@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2025-12-03T11:14:28.001Z",
-    "end": "2025-12-03T11:20:51.079Z",
-    "duration": 383078,
+    "failures": 0,
+    "start": "2025-12-04T11:15:05.232Z",
+    "end": "2025-12-04T11:15:18.518Z",
+    "duration": 13286,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8544400a-5406-43cb-ac89-489ff1fe81ca",
+      "uuid": "47d31608-8a00-44cd-9e85-adc5fe446df9",
       "title": "",
       "fullFile": "cypress/e2e/production/performance/01_login.cy.js",
       "file": "cypress/e2e/production/performance/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "53752672-66e1-4bd4-bfbb-d1f876a55bb5",
+          "uuid": "ab6c032e-6b41-4b14-8c63-bbbb5b8dc651",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Ingreso al admin de MPC y setup de portfolios",
               "fullTitle": "Login Ingreso al admin de MPC y setup de portfolios",
               "timedOut": null,
-              "duration": 380314,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 10566,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.sessionMPC();\ncy.visit(_constants.default.MPC_LOCATION);\ncy.guardarNombresPortfolios();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 360000ms: Expected to find element: `h6.card-title.d-flex span[data-toggle=\"tooltip\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 360000ms: Expected to find element: `h6.card-title.d-flex span[data-toggle=\"tooltip\"]`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:95:5)\n    at wrapped (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:141525:43)",
-                "diff": null
-              },
-              "uuid": "3dc5412b-d57a-446d-8d41-109268a0dd98",
-              "parentUUID": "53752672-66e1-4bd4-bfbb-d1f876a55bb5",
+              "err": {},
+              "uuid": "88a8abbf-68a2-419e-a9cc-79b55aebbffd",
+              "parentUUID": "ab6c032e-6b41-4b14-8c63-bbbb5b8dc651",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "3dc5412b-d57a-446d-8d41-109268a0dd98"
+          "passes": [
+            "88a8abbf-68a2-419e-a9cc-79b55aebbffd"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 380314,
+          "duration": 10566,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

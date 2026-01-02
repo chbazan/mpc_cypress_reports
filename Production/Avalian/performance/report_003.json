@@ -1,24 +1,24 @@
 {
   "stats": {
-    "suites": 4,
-    "tests": 3,
-    "passes": 3,
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-01-01T15:06:08.450Z",
-    "end": "2026-01-01T15:09:08.188Z",
-    "duration": 179738,
+    "start": "2026-01-02T15:09:44.927Z",
+    "end": "2026-01-02T15:09:44.984Z",
+    "duration": 57,
     "testsRegistered": 3,
-    "passPercent": 100,
+    "passPercent": 33.33333333333333,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 2,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "b529afe6-9857-4ee1-af32-1b104bd2edca",
+      "uuid": "54b94d8a-f598-40c0-b7b8-00fb6da847fc",
       "title": "",
       "fullFile": "cypress/e2e/production/performance/mi_dinero.cy.js",
       "file": "cypress/e2e/production/performance/mi_dinero.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ab60231d-96e1-49e9-9e12-fdee1aaeccb8",
+          "uuid": "5ffd5977-0a44-4bbf-a4f9-73cce5a29538",
           "title": "Mi dinero",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "3218d015-068a-4bf8-bab7-e4a8f751c8e4",
+              "uuid": "557e96cc-1c1d-4fc9-a2ec-9c8f4b69b44a",
               "title": "Ingreso a MPC",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Ingreso a MPC",
                   "fullTitle": "Mi dinero Ingreso a MPC Ingreso a MPC",
                   "timedOut": null,
-                  "duration": 4674,
+                  "duration": 0,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,26 +56,26 @@
                   "context": null,
                   "code": "cy.sessionMPC();",
                   "err": {},
-                  "uuid": "489bbbb3-2453-4ac2-b869-bce9d29c6868",
-                  "parentUUID": "3218d015-068a-4bf8-bab7-e4a8f751c8e4",
+                  "uuid": "91e8f071-ecda-4bf7-a259-aec380582d88",
+                  "parentUUID": "557e96cc-1c1d-4fc9-a2ec-9c8f4b69b44a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "489bbbb3-2453-4ac2-b869-bce9d29c6868"
+                "91e8f071-ecda-4bf7-a259-aec380582d88"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 4674,
+              "duration": 0,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "1bf44007-6cd1-4f25-b32f-3c7bd0467b53",
+              "uuid": "24649ae5-5194-4cac-b15c-c5fae1df4a24",
               "title": "Primer ingreso al menu Mi dinero",
               "fullFile": "",
               "file": "",
@@ -86,35 +86,35 @@
                   "title": "Primer ingreso al menú Mi dinero",
                   "fullTitle": "Mi dinero Primer ingreso al menu Mi dinero Primer ingreso al menú Mi dinero",
                   "timedOut": null,
-                  "duration": 99765,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.visit(`${_constants.default.MPC_LOCATION}${path}`);\ncy.get('div[class=\"trades-filters-backdrop\"]').should('be.visible');\ncy.get('div[class=\"inner-component-backdrop\"]').should('be.visible');\ncy.get('div.sk-circle-fade-dot').should('not.exist');\ncy.get('div[class=\"card projected-cashflow-card cash-flow-card\"]').should('be.visible');",
                   "err": {},
-                  "uuid": "b975186b-81e4-447b-9027-b66aebed3376",
-                  "parentUUID": "1bf44007-6cd1-4f25-b32f-3c7bd0467b53",
+                  "uuid": "9609b2f6-1c11-4731-99d3-4e1647941f27",
+                  "parentUUID": null,
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 }
               ],
               "suites": [],
-              "passes": [
-                "b975186b-81e4-447b-9027-b66aebed3376"
-              ],
+              "passes": [],
               "failures": [],
               "pending": [],
-              "skipped": [],
-              "duration": 99765,
+              "skipped": [
+                "9609b2f6-1c11-4731-99d3-4e1647941f27"
+              ],
+              "duration": 0,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "cb96b892-532c-4047-8762-b140c81ca996",
+              "uuid": "198578df-ed76-4b02-8aa2-acacc658d41f",
               "title": "Segundo ingreso al menu Mi dinero",
               "fullFile": "",
               "file": "",
@@ -125,29 +125,29 @@
                   "title": "Segundo ingreso al menú Mi dinero",
                   "fullTitle": "Mi dinero Segundo ingreso al menu Mi dinero Segundo ingreso al menú Mi dinero",
                   "timedOut": null,
-                  "duration": 72778,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.visit(`${_constants.default.MPC_LOCATION}${path}`);\ncy.get('div[class=\"trades-filters-backdrop\"]').should('be.visible');\ncy.get('div[class=\"inner-component-backdrop\"]').should('be.visible');\ncy.get('div.sk-circle-fade-dot').should('not.exist');\ncy.get('div[class=\"card projected-cashflow-card cash-flow-card\"]').should('be.visible');",
                   "err": {},
-                  "uuid": "05abf9fa-21b7-4873-b05f-dcf58324b2cb",
-                  "parentUUID": "cb96b892-532c-4047-8762-b140c81ca996",
+                  "uuid": "46735c32-5888-40a6-9e76-a91e6dcf91e0",
+                  "parentUUID": null,
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 }
               ],
               "suites": [],
-              "passes": [
-                "05abf9fa-21b7-4873-b05f-dcf58324b2cb"
-              ],
+              "passes": [],
               "failures": [],
               "pending": [],
-              "skipped": [],
-              "duration": 72778,
+              "skipped": [
+                "46735c32-5888-40a6-9e76-a91e6dcf91e0"
+              ],
+              "duration": 0,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

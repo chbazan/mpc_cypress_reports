@@ -1,24 +1,24 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 1,
-    "passes": 1,
-    "pending": 0,
-    "failures": 0,
-    "start": "2026-01-07T11:11:11.268Z",
-    "end": "2026-01-07T11:11:11.449Z",
-    "duration": 181,
+    "suites": 5,
+    "tests": 4,
+    "passes": 2,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-01-08T11:21:09.124Z",
+    "end": "2026-01-08T11:27:21.659Z",
+    "duration": 372535,
     "testsRegistered": 218,
-    "passPercent": 0.45871559633027525,
-    "pendingPercent": 0,
+    "passPercent": 0.9216589861751152,
+    "pendingPercent": 0.45871559633027525,
     "other": 0,
     "hasOther": false,
-    "skipped": 217,
+    "skipped": 214,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "e254185c-b0f1-4eef-b6f1-7fde4cf28a2c",
+      "uuid": "5dc20855-0307-4fe0-a0c7-8cae462383ca",
       "title": "",
       "fullFile": "cypress/e2e/production/performance/rendimiento.cy.js",
       "file": "cypress/e2e/production/performance/rendimiento.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "aa14466d-ffb5-40a7-ac6a-8c1ae066a7e3",
+          "uuid": "7d65aed7-e5ca-4ca8-8ac6-c79c88323dfe",
           "title": "Rendimiento",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "fdd99d8f-3eb2-4a54-876c-3e202b32c5ca",
+              "uuid": "fa0c368e-319f-49a5-80e7-3e56da2ff676",
               "title": "Ingreso a MPC",
               "fullFile": "",
               "file": "",
@@ -47,35 +47,35 @@
                   "title": "Ingreso a MPC",
                   "fullTitle": "Rendimiento Ingreso a MPC Ingreso a MPC",
                   "timedOut": null,
-                  "duration": 0,
+                  "duration": 5374,
                   "state": "passed",
-                  "speed": "fast",
+                  "speed": "medium",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.sessionMPC();",
                   "err": {},
-                  "uuid": "c3ff2acf-4a14-410b-a1ac-ed2e2fd6abdf",
-                  "parentUUID": "fdd99d8f-3eb2-4a54-876c-3e202b32c5ca",
+                  "uuid": "94b1b78a-80a9-4bbb-b85a-a038ae416bba",
+                  "parentUUID": "fa0c368e-319f-49a5-80e7-3e56da2ff676",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "c3ff2acf-4a14-410b-a1ac-ed2e2fd6abdf"
+                "94b1b78a-80a9-4bbb-b85a-a038ae416bba"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 0,
+              "duration": 5374,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "fc224e51-f935-4a6c-834b-7e838595eadc",
+              "uuid": "598701f6-d5ab-4ed3-bba2-ca655b903dd4",
               "title": "Primer ingreso al menu Rendimiento: Preseleccionar portfolio",
               "fullFile": "",
               "file": "",
@@ -86,35 +86,35 @@
                   "title": "Primer ingreso al menú Rendimiento",
                   "fullTitle": "Rendimiento Primer ingreso al menu Rendimiento: Preseleccionar portfolio Primer ingreso al menú Rendimiento",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 3364,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.visit(`${_constants.default.MPC_LOCATION}${path}`);\ncy.get('.alert').should('be.visible').and('contain.text', 'Seleccione un portfolio para ver su rendimiento');\ncy.get('div[class=\"card composite-account-composition-details-card\"]').should('be.visible');",
                   "err": {},
-                  "uuid": "61d85aa5-e84d-49c4-a4a5-6369f4ec6537",
-                  "parentUUID": null,
+                  "uuid": "5f8d8de1-b28c-4183-a1bc-9cb54787bcc0",
+                  "parentUUID": "598701f6-d5ab-4ed3-bba2-ca655b903dd4",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
+              "passes": [
+                "5f8d8de1-b28c-4183-a1bc-9cb54787bcc0"
+              ],
               "failures": [],
               "pending": [],
-              "skipped": [
-                "61d85aa5-e84d-49c4-a4a5-6369f4ec6537"
-              ],
-              "duration": 0,
+              "skipped": [],
+              "duration": 3364,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "91ab8822-fb8d-4e0d-a307-3af5fe090e06",
+              "uuid": "9f31f8ef-fe26-461a-997c-50d957393686",
               "title": "Primer ingreso al portfolio Total",
               "fullFile": "",
               "file": "",
@@ -125,35 +125,39 @@
                   "title": "Primer ingreso al portfolio Total",
                   "fullTitle": "Rendimiento Primer ingreso al portfolio Total Primer ingreso al portfolio Total",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
+                  "duration": 360716,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.contains('Total').should('be.visible').click({\n  force: true\n});\ncy.verificarPortfolio();",
-                  "err": {},
-                  "uuid": "751cff6e-eb21-4c04-9cef-13e31341b374",
-                  "parentUUID": null,
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 360000ms: Expected to find element: `rect[class=\"highcharts-background\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 360000ms: Expected to find element: `rect[class=\"highcharts-background\"]`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:350:48)\n    at wrapped (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:141525:43)",
+                    "diff": null
+                  },
+                  "uuid": "6524bd2c-3fda-4579-aefc-8b86e21057c1",
+                  "parentUUID": "9f31f8ef-fe26-461a-997c-50d957393686",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
               "passes": [],
-              "failures": [],
-              "pending": [],
-              "skipped": [
-                "751cff6e-eb21-4c04-9cef-13e31341b374"
+              "failures": [
+                "6524bd2c-3fda-4579-aefc-8b86e21057c1"
               ],
-              "duration": 0,
+              "pending": [],
+              "skipped": [],
+              "duration": 360716,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "c6a99188-0c9a-474b-ad18-456fa1cc33d0",
+              "uuid": "0913983d-74b9-43d4-ab97-f3e0765835fa",
               "title": "Portfolio Total: Primera recorrida de cartas de rendimiento con método MWR",
               "fullFile": "",
               "file": "",
@@ -165,18 +169,18 @@
                   "fullTitle": "Rendimiento Portfolio Total: Primera recorrida de cartas de rendimiento con método MWR Portfolio Total: Primer ingreso a la carta de rendimiento Último año con método MWR",
                   "timedOut": null,
                   "duration": 0,
-                  "state": "skipped",
+                  "state": "pending",
                   "speed": null,
                   "pass": false,
                   "fail": false,
-                  "pending": false,
+                  "pending": true,
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d179addb-9a3e-43e0-a431-247f4eb5d08b",
-                  "parentUUID": null,
+                  "uuid": "ebda21ee-c2d7-409a-a724-c8d989094c61",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Portfolio Total: Primer ingreso a la carta de rendimiento Últimos 6 meses con método MWR",
@@ -191,8 +195,8 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "1238983f-312f-4fec-ae7e-60383deaa2d0",
-                  "parentUUID": null,
+                  "uuid": "a3988dae-6d0b-4f5c-8bd4-22fa63698ea4",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
                   "skipped": true
                 },
@@ -209,8 +213,8 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a12b996d-5533-46b3-b202-267926368fa0",
-                  "parentUUID": null,
+                  "uuid": "b73bea69-72e7-4e00-818b-616e05beebba",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
                   "skipped": true
                 },
@@ -227,8 +231,8 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "82f4f1fd-97df-4810-935c-015199d00ba6",
-                  "parentUUID": null,
+                  "uuid": "ab2eb0ba-129a-41af-985f-364e889cc7e7",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
                   "skipped": true
                 },
@@ -245,8 +249,8 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "7e4e80cf-1f9d-457a-bdb5-e25c43dc0fa3",
-                  "parentUUID": null,
+                  "uuid": "64e3cbb0-188a-4693-87aa-17a56e4f3b8f",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
                   "skipped": true
                 },
@@ -263,8 +267,8 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "625b5bdc-bc69-4e46-8b31-a2e1b66fdb6a",
-                  "parentUUID": null,
+                  "uuid": "76a4cd4f-c4b0-499b-a114-263336d69eaf",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
                   "skipped": true
                 },
@@ -281,8 +285,8 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "cc275edc-9a64-40fb-a9ca-f422bd5b070e",
-                  "parentUUID": null,
+                  "uuid": "441afcdb-e171-43bc-b55f-04287dbbcabd",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
                   "skipped": true
                 },
@@ -299,8 +303,8 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "e9e9ff74-38b9-43c6-8219-6120c4e6142c",
-                  "parentUUID": null,
+                  "uuid": "390eb77a-4bce-47d9-b0a0-0bc8521a46df",
+                  "parentUUID": "0913983d-74b9-43d4-ab97-f3e0765835fa",
                   "isHook": false,
                   "skipped": true
                 }
@@ -308,16 +312,17 @@
               "suites": [],
               "passes": [],
               "failures": [],
-              "pending": [],
+              "pending": [
+                "ebda21ee-c2d7-409a-a724-c8d989094c61"
+              ],
               "skipped": [
-                "d179addb-9a3e-43e0-a431-247f4eb5d08b",
-                "1238983f-312f-4fec-ae7e-60383deaa2d0",
-                "a12b996d-5533-46b3-b202-267926368fa0",
-                "82f4f1fd-97df-4810-935c-015199d00ba6",
-                "7e4e80cf-1f9d-457a-bdb5-e25c43dc0fa3",
-                "625b5bdc-bc69-4e46-8b31-a2e1b66fdb6a",
-                "cc275edc-9a64-40fb-a9ca-f422bd5b070e",
-                "e9e9ff74-38b9-43c6-8219-6120c4e6142c"
+                "a3988dae-6d0b-4f5c-8bd4-22fa63698ea4",
+                "b73bea69-72e7-4e00-818b-616e05beebba",
+                "ab2eb0ba-129a-41af-985f-364e889cc7e7",
+                "64e3cbb0-188a-4693-87aa-17a56e4f3b8f",
+                "76a4cd4f-c4b0-499b-a114-263336d69eaf",
+                "441afcdb-e171-43bc-b55f-04287dbbcabd",
+                "390eb77a-4bce-47d9-b0a0-0bc8521a46df"
               ],
               "duration": 0,
               "root": false,
@@ -325,7 +330,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "370d98db-b9d1-48bd-bb3a-ebfd6b2b17cc",
+              "uuid": "6b45cfa7-bcc8-433f-a899-f942b55861aa",
               "title": "Cambio de método de rentabilidad a TWR'",
               "fullFile": "",
               "file": "",
@@ -345,7 +350,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "d4e82bfc-4646-4f9d-8f0a-b74fe87c15a6",
+                  "uuid": "d7d66700-fab1-4c7e-83cc-39f60a9c7852",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -356,7 +361,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "d4e82bfc-4646-4f9d-8f0a-b74fe87c15a6"
+                "d7d66700-fab1-4c7e-83cc-39f60a9c7852"
               ],
               "duration": 0,
               "root": false,
@@ -364,7 +369,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "132a7e8d-0753-4083-92b6-affb7b8a6490",
+              "uuid": "1b6fe1e5-a764-4798-abd2-bf9d1fa2c900",
               "title": "Portfolio Total: Primera recorrida de cartas de rendimiento con método TWR",
               "fullFile": "",
               "file": "",
@@ -384,7 +389,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "cd2b4cf2-1703-4c0e-9978-c5f21281b46e",
+                  "uuid": "a19ed720-aa89-410d-b525-9f99c1713eba",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -402,7 +407,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "1d1e78bb-3ed8-4740-8c40-7b4d7cd1b0a4",
+                  "uuid": "2bfbd8fc-2b38-4fea-8cb1-2831ff540c7b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -420,7 +425,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "5b9e4278-fb28-46f9-8e0e-5aec5f957da5",
+                  "uuid": "b19fb6f2-0c4b-4d48-bffb-8e117a09abd9",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -438,7 +443,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "0c4b26bb-f0e5-4cc1-b986-b8e5b58b61a2",
+                  "uuid": "bde80148-1ccb-4cf1-9f0e-6ccb14cf93ad",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -456,7 +461,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d944011b-7722-4bf6-9ac9-31b273727d9e",
+                  "uuid": "4dffe40a-0f08-4ff6-8b67-3adbda06c8ca",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -474,7 +479,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "943315a8-4130-411f-aa61-0fbbd2122b08",
+                  "uuid": "979944ee-e68a-48ab-bf71-2e0eed807ee3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -492,7 +497,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "275b4831-a747-406b-ba62-1ebdf309cfb0",
+                  "uuid": "98630194-729d-4d2a-8a7c-7550592f4fe4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -510,7 +515,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a37760f4-4e9f-4425-9d93-f351468810d5",
+                  "uuid": "412e11b1-723a-4d39-a840-76048d51c8bc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -521,14 +526,14 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "cd2b4cf2-1703-4c0e-9978-c5f21281b46e",
-                "1d1e78bb-3ed8-4740-8c40-7b4d7cd1b0a4",
-                "5b9e4278-fb28-46f9-8e0e-5aec5f957da5",
-                "0c4b26bb-f0e5-4cc1-b986-b8e5b58b61a2",
-                "d944011b-7722-4bf6-9ac9-31b273727d9e",
-                "943315a8-4130-411f-aa61-0fbbd2122b08",
-                "275b4831-a747-406b-ba62-1ebdf309cfb0",
-                "a37760f4-4e9f-4425-9d93-f351468810d5"
+                "a19ed720-aa89-410d-b525-9f99c1713eba",
+                "2bfbd8fc-2b38-4fea-8cb1-2831ff540c7b",
+                "b19fb6f2-0c4b-4d48-bffb-8e117a09abd9",
+                "bde80148-1ccb-4cf1-9f0e-6ccb14cf93ad",
+                "4dffe40a-0f08-4ff6-8b67-3adbda06c8ca",
+                "979944ee-e68a-48ab-bf71-2e0eed807ee3",
+                "98630194-729d-4d2a-8a7c-7550592f4fe4",
+                "412e11b1-723a-4d39-a840-76048d51c8bc"
               ],
               "duration": 0,
               "root": false,
@@ -536,7 +541,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "f69bf37c-b81e-4647-98ac-06126a2a7fe3",
+              "uuid": "bab2dcb6-46c4-4c99-a24a-623994ca2511",
               "title": "Primer ingreso y recorrida de cartas de rendimiento del portfolio CFI",
               "fullFile": "",
               "file": "",
@@ -556,7 +561,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "6a5994b9-7322-44c1-ab69-e92168dae632",
+                  "uuid": "a9ff5e8d-70bc-4ab5-999f-781cc4f7a481",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -574,7 +579,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "fbb2607e-9e93-48f9-9536-54f63fced464",
+                  "uuid": "6d583475-2295-4a3c-b6ab-87c54108b4c0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -592,7 +597,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "627c6344-39e0-4956-81db-b9e228a4139b",
+                  "uuid": "18137947-3e48-4091-8be1-edae6777ad21",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -610,7 +615,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "10b2584a-1687-4b1d-980c-b988d65cc77c",
+                  "uuid": "3cd1fb86-d1db-49bc-af23-97d74691e0b7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -628,7 +633,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "e2cc0ed2-5352-4080-88d4-1676718784be",
+                  "uuid": "58b436e2-c50a-4ae8-81d6-8b0d8c971d9a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -646,7 +651,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "25ab25b0-da8f-4a4c-82d2-0b5bb39dcf9a",
+                  "uuid": "d764dd3f-cd4a-46e8-9bfe-44e8cefe15ec",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -664,7 +669,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c37daaa2-398e-4be5-989d-fc0bdf636401",
+                  "uuid": "582641e8-b4de-46ae-8d69-19ba07e00665",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -682,7 +687,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "90e4cfb1-c107-40a1-a222-c2ac020a8b26",
+                  "uuid": "3d074b6d-f94b-4eb4-8e9a-d3aa0b3bfcf4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -700,7 +705,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f73ba848-68f8-4a05-b0f5-c6d50fd0572c",
+                  "uuid": "dcc39ea5-475c-4a85-bb27-75167e02cc49",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -718,7 +723,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "151df7fa-3420-47ea-b8d5-5eb51e81503b",
+                  "uuid": "42c4ec56-4df8-42a2-a990-db47327ae3f4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -736,7 +741,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "58f99976-f0cc-4acd-beff-700736598730",
+                  "uuid": "df2979b5-7acf-4f76-adb2-5eab40c309ee",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -754,7 +759,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "5cee7464-146d-4254-8ab4-817eafb7f3d5",
+                  "uuid": "e72fafd2-6a52-4dde-b548-59b47da93b54",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -772,7 +777,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "61fdbdcb-1447-4a91-944b-98b40580d811",
+                  "uuid": "642a4ebe-fe02-4f6f-a4de-acc364117df3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -790,7 +795,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "bf51cfe7-0525-4f33-9625-6f0619abf84b",
+                  "uuid": "e0a55581-d49f-4d62-b8f8-40c9da3e422b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -808,7 +813,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3d96b900-3c61-4a3a-a274-7ce7e3dd8af3",
+                  "uuid": "804c443e-0c66-40c1-a3b1-17870d0c2eef",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -826,7 +831,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "0e84920c-7e59-4cfe-a3bb-074e68a81bf6",
+                  "uuid": "35f31344-418b-4a5d-a9b5-d43ad170c3da",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -844,7 +849,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "59ed4a4e-a66b-4a86-87b0-e09e914e8155",
+                  "uuid": "7b37aa04-da10-4743-aa4a-1977a6ed937d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -862,7 +867,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a5bfef8c-bbd4-4ce5-8422-b1bb70b99f3f",
+                  "uuid": "40da3ce9-f764-444d-b163-6b63a9cd5152",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -873,24 +878,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "6a5994b9-7322-44c1-ab69-e92168dae632",
-                "fbb2607e-9e93-48f9-9536-54f63fced464",
-                "627c6344-39e0-4956-81db-b9e228a4139b",
-                "10b2584a-1687-4b1d-980c-b988d65cc77c",
-                "e2cc0ed2-5352-4080-88d4-1676718784be",
-                "25ab25b0-da8f-4a4c-82d2-0b5bb39dcf9a",
-                "c37daaa2-398e-4be5-989d-fc0bdf636401",
-                "90e4cfb1-c107-40a1-a222-c2ac020a8b26",
-                "f73ba848-68f8-4a05-b0f5-c6d50fd0572c",
-                "151df7fa-3420-47ea-b8d5-5eb51e81503b",
-                "58f99976-f0cc-4acd-beff-700736598730",
-                "5cee7464-146d-4254-8ab4-817eafb7f3d5",
-                "61fdbdcb-1447-4a91-944b-98b40580d811",
-                "bf51cfe7-0525-4f33-9625-6f0619abf84b",
-                "3d96b900-3c61-4a3a-a274-7ce7e3dd8af3",
-                "0e84920c-7e59-4cfe-a3bb-074e68a81bf6",
-                "59ed4a4e-a66b-4a86-87b0-e09e914e8155",
-                "a5bfef8c-bbd4-4ce5-8422-b1bb70b99f3f"
+                "a9ff5e8d-70bc-4ab5-999f-781cc4f7a481",
+                "6d583475-2295-4a3c-b6ab-87c54108b4c0",
+                "18137947-3e48-4091-8be1-edae6777ad21",
+                "3cd1fb86-d1db-49bc-af23-97d74691e0b7",
+                "58b436e2-c50a-4ae8-81d6-8b0d8c971d9a",
+                "d764dd3f-cd4a-46e8-9bfe-44e8cefe15ec",
+                "582641e8-b4de-46ae-8d69-19ba07e00665",
+                "3d074b6d-f94b-4eb4-8e9a-d3aa0b3bfcf4",
+                "dcc39ea5-475c-4a85-bb27-75167e02cc49",
+                "42c4ec56-4df8-42a2-a990-db47327ae3f4",
+                "df2979b5-7acf-4f76-adb2-5eab40c309ee",
+                "e72fafd2-6a52-4dde-b548-59b47da93b54",
+                "642a4ebe-fe02-4f6f-a4de-acc364117df3",
+                "e0a55581-d49f-4d62-b8f8-40c9da3e422b",
+                "804c443e-0c66-40c1-a3b1-17870d0c2eef",
+                "35f31344-418b-4a5d-a9b5-d43ad170c3da",
+                "7b37aa04-da10-4743-aa4a-1977a6ed937d",
+                "40da3ce9-f764-444d-b163-6b63a9cd5152"
               ],
               "duration": 0,
               "root": false,
@@ -898,7 +903,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "9342e2a6-2e18-450b-a935-5c38ed3a6320",
+              "uuid": "e4dc9702-5f14-4f56-b2e6-79ce5fad0e5c",
               "title": "Primer ingreso y recorrida de cartas de rendimiento del portfolio FFI",
               "fullFile": "",
               "file": "",
@@ -918,7 +923,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "a1646a94-8a23-422d-a8ff-03d8a6722d59",
+                  "uuid": "4b799c14-cb27-44ce-b212-3b42251c8b73",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -936,7 +941,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "e678ed6f-1bb4-44a4-8fa4-2a03d6f18b46",
+                  "uuid": "ce01374c-40e3-412b-a1aa-f46787ba8f58",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -954,7 +959,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a23c3a55-008f-40ae-a268-614a03065dfd",
+                  "uuid": "4c414ed9-4b78-4343-8f28-2ec854043685",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -972,7 +977,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c3a8ce95-60e5-451f-95b8-ac3baa90c2a0",
+                  "uuid": "45bfeae9-ba98-4089-ab9d-3edacfdab11b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -990,7 +995,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "8617f1f5-bf5b-4ba8-9876-993cfdd9d699",
+                  "uuid": "14dcdf26-8971-49a9-b43e-bdba9d59cae3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1008,7 +1013,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "8cbad472-527d-4ef2-abe8-d12e1c7fd6f3",
+                  "uuid": "71d64760-3451-43ee-b4ca-393c031443a6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1026,7 +1031,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9eba6ae8-e8d3-41e4-9a68-6c32d317772a",
+                  "uuid": "6b036fa0-3bf4-40f8-b436-cf484f887fb3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1044,7 +1049,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c2378eb3-7a4b-455f-8b48-eeb8de8cd846",
+                  "uuid": "079a28d1-7f5d-4a1b-bb87-24f33fbaebb7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1062,7 +1067,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "0b7f7bf0-0c73-42c5-8248-98041ece8af2",
+                  "uuid": "225c7ac8-47a5-4fff-8a23-b6c81eb00b06",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1080,7 +1085,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "7f2f6678-f4af-4209-b1fb-ae625d68e71f",
+                  "uuid": "b653f45e-84dc-4605-bc2e-ee7cf6cfe06b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1098,7 +1103,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "1196d82d-60e4-4f22-b862-2d75a3f60801",
+                  "uuid": "3f802ee4-91ec-4029-bcef-773a1ddc1030",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1116,7 +1121,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "36b58d32-f88d-4dcb-bc09-7eba5c0476b0",
+                  "uuid": "1868e202-5316-42e7-b269-24920eae8119",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1134,7 +1139,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "94ead1e0-b854-4924-9498-b653428ecda2",
+                  "uuid": "672e8455-11a4-459b-ad9f-5d0033a01855",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1152,7 +1157,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "242244db-8a21-421f-9923-c643c985d04d",
+                  "uuid": "adcb332a-8db9-47dc-ae9f-a32188995748",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1170,7 +1175,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d95e92c8-f29a-4223-bfcb-1a3ae0abcc17",
+                  "uuid": "cc6934c7-18ad-424e-922a-07684b3f65c0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1188,7 +1193,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f532a792-3f98-4da5-b8a8-43271a195486",
+                  "uuid": "d0935e94-1ebf-4052-bcd5-33644ee6efed",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1206,7 +1211,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f43ebf9f-f4cc-4804-aa46-9bac743fd5d8",
+                  "uuid": "269fd829-c116-46cc-83f3-1cc923802357",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1224,7 +1229,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c6d9cd17-0941-4119-a5a0-0948a1d0eb1c",
+                  "uuid": "b9353958-4095-430e-804e-c10fc8f81286",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1235,24 +1240,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "a1646a94-8a23-422d-a8ff-03d8a6722d59",
-                "e678ed6f-1bb4-44a4-8fa4-2a03d6f18b46",
-                "a23c3a55-008f-40ae-a268-614a03065dfd",
-                "c3a8ce95-60e5-451f-95b8-ac3baa90c2a0",
-                "8617f1f5-bf5b-4ba8-9876-993cfdd9d699",
-                "8cbad472-527d-4ef2-abe8-d12e1c7fd6f3",
-                "9eba6ae8-e8d3-41e4-9a68-6c32d317772a",
-                "c2378eb3-7a4b-455f-8b48-eeb8de8cd846",
-                "0b7f7bf0-0c73-42c5-8248-98041ece8af2",
-                "7f2f6678-f4af-4209-b1fb-ae625d68e71f",
-                "1196d82d-60e4-4f22-b862-2d75a3f60801",
-                "36b58d32-f88d-4dcb-bc09-7eba5c0476b0",
-                "94ead1e0-b854-4924-9498-b653428ecda2",
-                "242244db-8a21-421f-9923-c643c985d04d",
-                "d95e92c8-f29a-4223-bfcb-1a3ae0abcc17",
-                "f532a792-3f98-4da5-b8a8-43271a195486",
-                "f43ebf9f-f4cc-4804-aa46-9bac743fd5d8",
-                "c6d9cd17-0941-4119-a5a0-0948a1d0eb1c"
+                "4b799c14-cb27-44ce-b212-3b42251c8b73",
+                "ce01374c-40e3-412b-a1aa-f46787ba8f58",
+                "4c414ed9-4b78-4343-8f28-2ec854043685",
+                "45bfeae9-ba98-4089-ab9d-3edacfdab11b",
+                "14dcdf26-8971-49a9-b43e-bdba9d59cae3",
+                "71d64760-3451-43ee-b4ca-393c031443a6",
+                "6b036fa0-3bf4-40f8-b436-cf484f887fb3",
+                "079a28d1-7f5d-4a1b-bb87-24f33fbaebb7",
+                "225c7ac8-47a5-4fff-8a23-b6c81eb00b06",
+                "b653f45e-84dc-4605-bc2e-ee7cf6cfe06b",
+                "3f802ee4-91ec-4029-bcef-773a1ddc1030",
+                "1868e202-5316-42e7-b269-24920eae8119",
+                "672e8455-11a4-459b-ad9f-5d0033a01855",
+                "adcb332a-8db9-47dc-ae9f-a32188995748",
+                "cc6934c7-18ad-424e-922a-07684b3f65c0",
+                "d0935e94-1ebf-4052-bcd5-33644ee6efed",
+                "269fd829-c116-46cc-83f3-1cc923802357",
+                "b9353958-4095-430e-804e-c10fc8f81286"
               ],
               "duration": 0,
               "root": false,
@@ -1260,7 +1265,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "9d590a39-4656-4807-9be4-5d929493d5e9",
+              "uuid": "39fa1004-e494-4222-a696-e770fd6c6e57",
               "title": "Primer ingreso y recorrida de cartas de rendimiento del portfolio FPC",
               "fullFile": "",
               "file": "",
@@ -1280,7 +1285,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "688ce0f5-ec56-4894-b492-87411bab037e",
+                  "uuid": "1a864386-6a88-4689-a617-e35fc7dd210c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1298,7 +1303,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4a06c161-12e0-4186-95ef-825b4490b311",
+                  "uuid": "d3d99933-870e-4d9e-8ffa-c661bdbb7b9a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1316,7 +1321,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "460a59a8-0bc1-4e6f-b1a6-b092c79e0528",
+                  "uuid": "14918961-5f32-4d08-85ab-3e0e6b8c52ce",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1334,7 +1339,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "25d32eb6-07d7-4a22-991f-c8864948df1a",
+                  "uuid": "5225a77f-df0e-439d-8e8a-9515681f89f3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1352,7 +1357,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "35f05fe1-aba4-4214-a733-288b15977b77",
+                  "uuid": "d3aaac2a-a805-4a23-80af-6f92a224316f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1370,7 +1375,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f9a1e77a-30b2-4a7f-bbae-f67c9999590c",
+                  "uuid": "808593ea-7e30-4f16-8168-249371e9cc87",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1388,7 +1393,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d805bac5-dfaf-4aaf-b759-c01267aaeb47",
+                  "uuid": "c4340fe4-d777-4c03-a328-ea16bebfec67",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1406,7 +1411,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a9cc2801-1efd-461f-8e4e-8ce068aa88ee",
+                  "uuid": "f60e10ac-2ba1-445c-beb7-8714d373ccf7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1424,7 +1429,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b9e0c0aa-e229-4cbb-99d5-baecd29aaa48",
+                  "uuid": "1045e049-d6d9-46b9-a390-d9744c9605e4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1442,7 +1447,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "558f5e2d-c09e-4b56-a030-7c40c1566869",
+                  "uuid": "a7f03045-4e51-4c3b-9e1d-1d83c816f765",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1460,7 +1465,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "517f8794-e2b7-4d75-bcba-97b3fcf4d729",
+                  "uuid": "812ab859-1316-4c99-a29d-18f84e8b42ea",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1478,7 +1483,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "5614c918-1b0e-48a4-a01f-e9c1b22aa2d6",
+                  "uuid": "5b7d83b8-cecb-4d7c-bac7-091baf7e3b7d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1496,7 +1501,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "7c688b98-3278-4921-acee-0860ba7f4596",
+                  "uuid": "5330bdb7-d38f-48de-beb3-82735191fa9e",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1514,7 +1519,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f8e2bd39-4d75-4d00-99fa-bead34b708fc",
+                  "uuid": "2a3bfbb5-785a-4bdf-9cfb-fcf3de7b8108",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1532,7 +1537,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "672989c4-c8d6-4361-bf80-18d824135484",
+                  "uuid": "74e2003a-5488-4910-8ac7-1ade89e1dcce",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1550,7 +1555,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "43d64925-6c76-436e-a513-86357a4d95e6",
+                  "uuid": "c14a11b6-d37f-45a4-b871-accf5b411fbc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1568,7 +1573,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "7c7efb80-14ab-4dd9-826c-d9d2d970c75e",
+                  "uuid": "cf0b4036-4950-418d-b445-675eb1edda40",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1586,7 +1591,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c3984874-8eca-48df-ab92-57e92060b28e",
+                  "uuid": "6886fc08-d394-4f2d-befe-b5dfa42c6ed1",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1597,24 +1602,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "688ce0f5-ec56-4894-b492-87411bab037e",
-                "4a06c161-12e0-4186-95ef-825b4490b311",
-                "460a59a8-0bc1-4e6f-b1a6-b092c79e0528",
-                "25d32eb6-07d7-4a22-991f-c8864948df1a",
-                "35f05fe1-aba4-4214-a733-288b15977b77",
-                "f9a1e77a-30b2-4a7f-bbae-f67c9999590c",
-                "d805bac5-dfaf-4aaf-b759-c01267aaeb47",
-                "a9cc2801-1efd-461f-8e4e-8ce068aa88ee",
-                "b9e0c0aa-e229-4cbb-99d5-baecd29aaa48",
-                "558f5e2d-c09e-4b56-a030-7c40c1566869",
-                "517f8794-e2b7-4d75-bcba-97b3fcf4d729",
-                "5614c918-1b0e-48a4-a01f-e9c1b22aa2d6",
-                "7c688b98-3278-4921-acee-0860ba7f4596",
-                "f8e2bd39-4d75-4d00-99fa-bead34b708fc",
-                "672989c4-c8d6-4361-bf80-18d824135484",
-                "43d64925-6c76-436e-a513-86357a4d95e6",
-                "7c7efb80-14ab-4dd9-826c-d9d2d970c75e",
-                "c3984874-8eca-48df-ab92-57e92060b28e"
+                "1a864386-6a88-4689-a617-e35fc7dd210c",
+                "d3d99933-870e-4d9e-8ffa-c661bdbb7b9a",
+                "14918961-5f32-4d08-85ab-3e0e6b8c52ce",
+                "5225a77f-df0e-439d-8e8a-9515681f89f3",
+                "d3aaac2a-a805-4a23-80af-6f92a224316f",
+                "808593ea-7e30-4f16-8168-249371e9cc87",
+                "c4340fe4-d777-4c03-a328-ea16bebfec67",
+                "f60e10ac-2ba1-445c-beb7-8714d373ccf7",
+                "1045e049-d6d9-46b9-a390-d9744c9605e4",
+                "a7f03045-4e51-4c3b-9e1d-1d83c816f765",
+                "812ab859-1316-4c99-a29d-18f84e8b42ea",
+                "5b7d83b8-cecb-4d7c-bac7-091baf7e3b7d",
+                "5330bdb7-d38f-48de-beb3-82735191fa9e",
+                "2a3bfbb5-785a-4bdf-9cfb-fcf3de7b8108",
+                "74e2003a-5488-4910-8ac7-1ade89e1dcce",
+                "c14a11b6-d37f-45a4-b871-accf5b411fbc",
+                "cf0b4036-4950-418d-b445-675eb1edda40",
+                "6886fc08-d394-4f2d-befe-b5dfa42c6ed1"
               ],
               "duration": 0,
               "root": false,
@@ -1622,7 +1627,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "fc5d05d2-5d1e-4062-9151-73189c99de3d",
+              "uuid": "721e9f00-a68e-45db-825e-3a9b87641243",
               "title": "Primer ingreso y recorrida de cartas de rendimiento del portfolio Fideicomiso CFI",
               "fullFile": "",
               "file": "",
@@ -1642,7 +1647,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "d6ed21f7-a81f-4c33-9ce0-0d69c1f139d3",
+                  "uuid": "0c87145c-61ff-4317-a1eb-f9f079b8425a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1660,7 +1665,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3796c38d-5116-489d-a44c-e5d5bfe2db5c",
+                  "uuid": "0f1fa975-8ba8-4632-bec0-1b7d38dffe3c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1678,7 +1683,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "1a74f948-fda2-4807-a284-6d1cfbf38ee8",
+                  "uuid": "30c2c563-21f2-4a9b-b5d1-e39cde18843b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1696,7 +1701,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9e469684-bb15-42ab-9b5b-f9effe49bb06",
+                  "uuid": "b1e9365d-9b40-46c2-8577-2f23920c6715",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1714,7 +1719,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a95d2b4f-4736-41a5-bc86-72f254cb0d3f",
+                  "uuid": "9452b839-929e-4ab9-aac4-560bf2b28914",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1732,7 +1737,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "17cd17b4-9a4d-4e23-aaa9-19f6c922f15a",
+                  "uuid": "3ffde70d-96e5-4269-85e6-981420dec795",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1750,7 +1755,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a633bcb1-4de2-4939-b632-77f06ecf188a",
+                  "uuid": "52aec3fd-af67-4835-a036-f0fdba062ffd",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1768,7 +1773,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "766e3991-7d12-4006-9ee3-46ae1725cfec",
+                  "uuid": "1378ceb5-0080-4e98-9103-5243f2c84a73",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1786,7 +1791,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a8572177-0ec8-43b4-a7bb-62eaf903a672",
+                  "uuid": "ddbcb651-f079-4f5f-83c8-10f324009c69",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1804,7 +1809,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "81c70b5b-d6e9-4393-bf2a-8a27b19e5dd9",
+                  "uuid": "eecc632a-fec7-468f-aaf8-7a387bb9436d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1822,7 +1827,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "45bbc4df-f217-40d0-8931-590eb94da9c8",
+                  "uuid": "050141ec-2b56-4d8a-96da-36ab70d5eba1",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1840,7 +1845,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "07b33dd0-807d-4e82-9de4-1f853b9cc794",
+                  "uuid": "90f05e4a-ae44-42bc-a8ec-6cee94d2976f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1858,7 +1863,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "5f14cbcb-1f5c-4de7-ba1b-dddc943ccff3",
+                  "uuid": "8d020b88-f2c0-4ad8-b726-93a6058e7008",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1876,7 +1881,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "0cf0f694-3eab-4b5a-8241-fc0bf54a9a3c",
+                  "uuid": "e9fc8e1e-8d94-4534-b766-242c74905dc2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1894,7 +1899,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3e0e3e23-979c-4b38-9ecd-c20739c0e7c3",
+                  "uuid": "de487dc6-d25f-4eb0-95be-a2308fa2eae0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1912,7 +1917,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "1cb69598-18a4-4237-b3de-c88fab4d4028",
+                  "uuid": "b328b714-e801-4e71-9114-975e198ed853",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1930,7 +1935,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "74410194-b2ca-4949-b4cc-acf66ba8f763",
+                  "uuid": "d41c8a07-de74-4e19-9677-67a530504cde",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1948,7 +1953,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "de793e41-b4bf-4118-9d48-91d8e19f37bb",
+                  "uuid": "f1f61ef4-0c3d-4b45-aba6-241bfa2e1ce4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -1959,24 +1964,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "d6ed21f7-a81f-4c33-9ce0-0d69c1f139d3",
-                "3796c38d-5116-489d-a44c-e5d5bfe2db5c",
-                "1a74f948-fda2-4807-a284-6d1cfbf38ee8",
-                "9e469684-bb15-42ab-9b5b-f9effe49bb06",
-                "a95d2b4f-4736-41a5-bc86-72f254cb0d3f",
-                "17cd17b4-9a4d-4e23-aaa9-19f6c922f15a",
-                "a633bcb1-4de2-4939-b632-77f06ecf188a",
-                "766e3991-7d12-4006-9ee3-46ae1725cfec",
-                "a8572177-0ec8-43b4-a7bb-62eaf903a672",
-                "81c70b5b-d6e9-4393-bf2a-8a27b19e5dd9",
-                "45bbc4df-f217-40d0-8931-590eb94da9c8",
-                "07b33dd0-807d-4e82-9de4-1f853b9cc794",
-                "5f14cbcb-1f5c-4de7-ba1b-dddc943ccff3",
-                "0cf0f694-3eab-4b5a-8241-fc0bf54a9a3c",
-                "3e0e3e23-979c-4b38-9ecd-c20739c0e7c3",
-                "1cb69598-18a4-4237-b3de-c88fab4d4028",
-                "74410194-b2ca-4949-b4cc-acf66ba8f763",
-                "de793e41-b4bf-4118-9d48-91d8e19f37bb"
+                "0c87145c-61ff-4317-a1eb-f9f079b8425a",
+                "0f1fa975-8ba8-4632-bec0-1b7d38dffe3c",
+                "30c2c563-21f2-4a9b-b5d1-e39cde18843b",
+                "b1e9365d-9b40-46c2-8577-2f23920c6715",
+                "9452b839-929e-4ab9-aac4-560bf2b28914",
+                "3ffde70d-96e5-4269-85e6-981420dec795",
+                "52aec3fd-af67-4835-a036-f0fdba062ffd",
+                "1378ceb5-0080-4e98-9103-5243f2c84a73",
+                "ddbcb651-f079-4f5f-83c8-10f324009c69",
+                "eecc632a-fec7-468f-aaf8-7a387bb9436d",
+                "050141ec-2b56-4d8a-96da-36ab70d5eba1",
+                "90f05e4a-ae44-42bc-a8ec-6cee94d2976f",
+                "8d020b88-f2c0-4ad8-b726-93a6058e7008",
+                "e9fc8e1e-8d94-4534-b766-242c74905dc2",
+                "de487dc6-d25f-4eb0-95be-a2308fa2eae0",
+                "b328b714-e801-4e71-9114-975e198ed853",
+                "d41c8a07-de74-4e19-9677-67a530504cde",
+                "f1f61ef4-0c3d-4b45-aba6-241bfa2e1ce4"
               ],
               "duration": 0,
               "root": false,
@@ -1984,7 +1989,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "81aa0aa4-ae8f-4a19-849f-92af3accf29c",
+              "uuid": "053de565-e73e-44f8-843d-d30dd20d96b6",
               "title": "Primer ingreso y recorrida de cartas de rendimiento del portfolio Fondo de Obra Social",
               "fullFile": "",
               "file": "",
@@ -2004,7 +2009,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "a7999bbb-24b3-47cb-8380-799ebd22153e",
+                  "uuid": "d23b4813-714e-49f7-afa2-b4582ebbb6f0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2022,7 +2027,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c7c1c411-8525-48eb-9044-1cf35dae7710",
+                  "uuid": "2c655eab-b7d0-4a78-b5dc-cbb30b00bfd1",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2040,7 +2045,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "58471092-08ab-42f4-8397-d1e6ef31addc",
+                  "uuid": "ec4efa5d-6ceb-4366-bb97-16005834491f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2058,7 +2063,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9e235b9c-2a14-4ab7-8e1d-156984f37652",
+                  "uuid": "0087efa4-0124-494a-80a8-e9e6ee75a8c8",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2076,7 +2081,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9dc0044b-6e8d-4a89-9460-98cc3c208e1e",
+                  "uuid": "e0918e8d-76c0-4273-a403-8e767ec85256",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2094,7 +2099,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d40d5dc1-ba2e-47e4-9a8c-d188870b5939",
+                  "uuid": "24dbb80a-9ac5-4ada-b548-d2ac5f63c5c8",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2112,7 +2117,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "8e26bbfd-9b96-48ba-a031-fb920ffb9e05",
+                  "uuid": "a46655b8-d34b-4d67-8fcf-3e6a9bb40ba5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2130,7 +2135,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "620e8f0f-4ae4-4586-992c-5ef678f424b7",
+                  "uuid": "b92f371a-8a95-471d-8c5c-b242c866e731",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2148,7 +2153,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "eca638ee-bffe-4b76-bbb8-ae724d44e775",
+                  "uuid": "54cad934-3642-4c2a-8fe3-c973cc15f5ae",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2166,7 +2171,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "5164e031-a06b-4fbd-bfdc-fe4c0fbc8501",
+                  "uuid": "2494db8a-868f-4133-a607-b251cbf1bd3d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2184,7 +2189,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4bc85173-7fe1-4e15-892f-5ced9e15c3c5",
+                  "uuid": "13f41d7b-cb82-445b-a96a-c7fd82dff2ab",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2202,7 +2207,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "63207cf7-d037-43bd-b217-d91b6db96f1e",
+                  "uuid": "1f5ae5df-af0a-4ef3-8366-55e0e84179bc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2220,7 +2225,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "902af4c6-b637-44d8-8747-e13483d87715",
+                  "uuid": "4d4fe04f-1acc-43a8-ba1c-9906c44293a7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2238,7 +2243,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "0e8bd18f-0ef4-4cb7-9a09-289d6a88f35c",
+                  "uuid": "1ea2a5f1-b1bf-4eda-9e92-e5ba2f48b6cc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2256,7 +2261,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "2bbdf6ea-f8c8-491e-a1f1-0f866ca94c4b",
+                  "uuid": "1469b8cd-0e5c-4a70-987e-60cbab50c751",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2274,7 +2279,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "02f9331c-1596-428f-ab46-0b4160bc2a6e",
+                  "uuid": "fb88073a-2c5f-4dbc-a22e-05fce8115ba0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2292,7 +2297,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f569f9ff-72cd-497d-8310-ddf106ac280d",
+                  "uuid": "b4ce66a3-ffdb-46b7-8fd2-9b72f24ec34a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2310,7 +2315,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "7a98e52e-2bd7-4dd6-8ef0-037eeda69f66",
+                  "uuid": "a25e36b9-4b6f-4589-8ba4-07201572465f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2321,24 +2326,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "a7999bbb-24b3-47cb-8380-799ebd22153e",
-                "c7c1c411-8525-48eb-9044-1cf35dae7710",
-                "58471092-08ab-42f4-8397-d1e6ef31addc",
-                "9e235b9c-2a14-4ab7-8e1d-156984f37652",
-                "9dc0044b-6e8d-4a89-9460-98cc3c208e1e",
-                "d40d5dc1-ba2e-47e4-9a8c-d188870b5939",
-                "8e26bbfd-9b96-48ba-a031-fb920ffb9e05",
-                "620e8f0f-4ae4-4586-992c-5ef678f424b7",
-                "eca638ee-bffe-4b76-bbb8-ae724d44e775",
-                "5164e031-a06b-4fbd-bfdc-fe4c0fbc8501",
-                "4bc85173-7fe1-4e15-892f-5ced9e15c3c5",
-                "63207cf7-d037-43bd-b217-d91b6db96f1e",
-                "902af4c6-b637-44d8-8747-e13483d87715",
-                "0e8bd18f-0ef4-4cb7-9a09-289d6a88f35c",
-                "2bbdf6ea-f8c8-491e-a1f1-0f866ca94c4b",
-                "02f9331c-1596-428f-ab46-0b4160bc2a6e",
-                "f569f9ff-72cd-497d-8310-ddf106ac280d",
-                "7a98e52e-2bd7-4dd6-8ef0-037eeda69f66"
+                "d23b4813-714e-49f7-afa2-b4582ebbb6f0",
+                "2c655eab-b7d0-4a78-b5dc-cbb30b00bfd1",
+                "ec4efa5d-6ceb-4366-bb97-16005834491f",
+                "0087efa4-0124-494a-80a8-e9e6ee75a8c8",
+                "e0918e8d-76c0-4273-a403-8e767ec85256",
+                "24dbb80a-9ac5-4ada-b548-d2ac5f63c5c8",
+                "a46655b8-d34b-4d67-8fcf-3e6a9bb40ba5",
+                "b92f371a-8a95-471d-8c5c-b242c866e731",
+                "54cad934-3642-4c2a-8fe3-c973cc15f5ae",
+                "2494db8a-868f-4133-a607-b251cbf1bd3d",
+                "13f41d7b-cb82-445b-a96a-c7fd82dff2ab",
+                "1f5ae5df-af0a-4ef3-8366-55e0e84179bc",
+                "4d4fe04f-1acc-43a8-ba1c-9906c44293a7",
+                "1ea2a5f1-b1bf-4eda-9e92-e5ba2f48b6cc",
+                "1469b8cd-0e5c-4a70-987e-60cbab50c751",
+                "fb88073a-2c5f-4dbc-a22e-05fce8115ba0",
+                "b4ce66a3-ffdb-46b7-8fd2-9b72f24ec34a",
+                "a25e36b9-4b6f-4589-8ba4-07201572465f"
               ],
               "duration": 0,
               "root": false,
@@ -2346,7 +2351,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "5820dc10-f291-400f-a7a8-ef5b04a8c985",
+              "uuid": "3e0ce06d-8206-49d3-8816-c93d136eb0cd",
               "title": "Segundo ingreso al portfolio Total",
               "fullFile": "",
               "file": "",
@@ -2366,7 +2371,7 @@
                   "context": null,
                   "code": "cy.contains('Total').should('be.visible').click({\n  force: true\n});\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "93aa58df-0421-422e-8f52-4f20d975f287",
+                  "uuid": "ff18204f-e44a-49f6-bca8-2519fb1c79e8",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2377,7 +2382,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "93aa58df-0421-422e-8f52-4f20d975f287"
+                "ff18204f-e44a-49f6-bca8-2519fb1c79e8"
               ],
               "duration": 0,
               "root": false,
@@ -2385,7 +2390,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "e6dbaa77-5ec6-45f7-b293-5b20b3e85e6b",
+              "uuid": "f6bfcae1-4fc2-4062-86b8-66bcbdced886",
               "title": "Portfolio Total: Segunda recorrida de cartas de rendimiento con método MWR",
               "fullFile": "",
               "file": "",
@@ -2405,7 +2410,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "40f3a612-aad2-4b26-9074-1bb53849ff16",
+                  "uuid": "ace9eb7d-f0d8-434a-9464-cb0f3c538ef5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2423,7 +2428,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "dcff7211-6adb-4101-945e-8eff157c59c5",
+                  "uuid": "883a3b90-2e4b-4f4e-bfd5-0359e6856156",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2441,7 +2446,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "08f5aab4-0a54-4d63-bb49-bb76397067c4",
+                  "uuid": "7e7c43a6-1ffa-4007-82cd-50b25036fdf2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2459,7 +2464,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b4169df0-48e5-4e2e-93f4-6f8d5864030f",
+                  "uuid": "be040b4c-3387-4b6a-a41f-55cd4b8f8cbd",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2477,7 +2482,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9fe85c3d-f868-44c9-9e03-eb90511f3c08",
+                  "uuid": "54189b86-68b8-4a35-8ac8-07323f996727",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2495,7 +2500,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "ea973e54-aebf-4349-94a3-4badcd9e8101",
+                  "uuid": "2b4f6acf-a864-4bd4-968d-b485d3841b3a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2513,7 +2518,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "76e83eef-2d5a-4a3e-a5e6-6b4c5911284f",
+                  "uuid": "45e2208b-0be7-4822-afe8-cb1f9f22286f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2531,7 +2536,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "fe17e3ce-175e-4982-a756-3cfdf1ad4e3f",
+                  "uuid": "4e839354-2276-4db7-9a3c-0d66a8a896f1",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2542,14 +2547,14 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "40f3a612-aad2-4b26-9074-1bb53849ff16",
-                "dcff7211-6adb-4101-945e-8eff157c59c5",
-                "08f5aab4-0a54-4d63-bb49-bb76397067c4",
-                "b4169df0-48e5-4e2e-93f4-6f8d5864030f",
-                "9fe85c3d-f868-44c9-9e03-eb90511f3c08",
-                "ea973e54-aebf-4349-94a3-4badcd9e8101",
-                "76e83eef-2d5a-4a3e-a5e6-6b4c5911284f",
-                "fe17e3ce-175e-4982-a756-3cfdf1ad4e3f"
+                "ace9eb7d-f0d8-434a-9464-cb0f3c538ef5",
+                "883a3b90-2e4b-4f4e-bfd5-0359e6856156",
+                "7e7c43a6-1ffa-4007-82cd-50b25036fdf2",
+                "be040b4c-3387-4b6a-a41f-55cd4b8f8cbd",
+                "54189b86-68b8-4a35-8ac8-07323f996727",
+                "2b4f6acf-a864-4bd4-968d-b485d3841b3a",
+                "45e2208b-0be7-4822-afe8-cb1f9f22286f",
+                "4e839354-2276-4db7-9a3c-0d66a8a896f1"
               ],
               "duration": 0,
               "root": false,
@@ -2557,7 +2562,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "e07eeec1-5b04-419a-bd43-859531b636ec",
+              "uuid": "d5ebf369-cdba-42d1-9281-b70d56ea3eb4",
               "title": "Cambio de método de rentabilidad a TWR'",
               "fullFile": "",
               "file": "",
@@ -2577,7 +2582,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "5ffa8b0a-4855-4705-a150-e7032180dec9",
+                  "uuid": "d489035f-5bb0-4f51-8500-37dd6d27ed99",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2588,7 +2593,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "5ffa8b0a-4855-4705-a150-e7032180dec9"
+                "d489035f-5bb0-4f51-8500-37dd6d27ed99"
               ],
               "duration": 0,
               "root": false,
@@ -2596,7 +2601,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "f9ec621f-cc57-4e80-a822-3b8d2eaa9689",
+              "uuid": "955df6f2-009d-4bcf-9cb4-81817d31c213",
               "title": "Portfolio Total: Segunda recorrida de cartas de rendimiento con método TWR",
               "fullFile": "",
               "file": "",
@@ -2616,7 +2621,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b2868ecc-c979-47d9-8f4c-c66f74b7a40f",
+                  "uuid": "1418fa93-0d31-4177-a58c-d14c78153265",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2634,7 +2639,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "dffa876e-e1db-4094-b3ac-d8822bb122fc",
+                  "uuid": "aeed7b5f-ce40-4535-aaa6-83ae189fcb6c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2652,7 +2657,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "dfc29eed-2481-41e8-ab7d-a68cbe322ef2",
+                  "uuid": "453e67b0-bc25-4531-a22a-2d41a4e6e795",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2670,7 +2675,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "74b38dd2-b60e-4ed9-87cf-30ed7382f5e4",
+                  "uuid": "ba961c1d-c04a-4e86-ba89-105f0d11dea6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2688,7 +2693,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3e71f176-a3f0-4b1a-916a-cdeac2645723",
+                  "uuid": "90d74662-d4ba-4d77-be47-8415b819315d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2706,7 +2711,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4260b14b-935a-432b-8e16-49a1a551a9cf",
+                  "uuid": "72e02f78-0bb1-415d-b21b-aeb0971a66f0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2724,7 +2729,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d4e2b3e6-7557-473d-9f3c-68f2dd365b69",
+                  "uuid": "0bc809d5-9e97-4209-8813-42e0494e1d06",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2742,7 +2747,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "76f7d459-003b-4d0b-b52d-e70e0523a241",
+                  "uuid": "370e7cc1-c1cc-4ff3-928a-0877ac33dbea",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2753,14 +2758,14 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "b2868ecc-c979-47d9-8f4c-c66f74b7a40f",
-                "dffa876e-e1db-4094-b3ac-d8822bb122fc",
-                "dfc29eed-2481-41e8-ab7d-a68cbe322ef2",
-                "74b38dd2-b60e-4ed9-87cf-30ed7382f5e4",
-                "3e71f176-a3f0-4b1a-916a-cdeac2645723",
-                "4260b14b-935a-432b-8e16-49a1a551a9cf",
-                "d4e2b3e6-7557-473d-9f3c-68f2dd365b69",
-                "76f7d459-003b-4d0b-b52d-e70e0523a241"
+                "1418fa93-0d31-4177-a58c-d14c78153265",
+                "aeed7b5f-ce40-4535-aaa6-83ae189fcb6c",
+                "453e67b0-bc25-4531-a22a-2d41a4e6e795",
+                "ba961c1d-c04a-4e86-ba89-105f0d11dea6",
+                "90d74662-d4ba-4d77-be47-8415b819315d",
+                "72e02f78-0bb1-415d-b21b-aeb0971a66f0",
+                "0bc809d5-9e97-4209-8813-42e0494e1d06",
+                "370e7cc1-c1cc-4ff3-928a-0877ac33dbea"
               ],
               "duration": 0,
               "root": false,
@@ -2768,7 +2773,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "5d8da609-f1f6-48ec-a151-a7f4b4398e30",
+              "uuid": "eab0efbe-226a-480e-a080-392d87368c45",
               "title": "Segundo ingreso y recorrida de cartas de rendimiento del portfolio CFI",
               "fullFile": "",
               "file": "",
@@ -2788,7 +2793,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "6bf2aabc-faeb-4ff5-941f-b662e4468233",
+                  "uuid": "b183f434-6dae-4ac6-bf7f-ae9903f633ee",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2806,7 +2811,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "03ac7cb5-7989-4129-8a56-a15d8878c7f9",
+                  "uuid": "6c946acb-0db3-41eb-a99b-f67385df8547",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2824,7 +2829,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9bb067d1-28d4-4bab-9597-f8de6575a371",
+                  "uuid": "d51cec08-4eba-4802-b238-350137567d58",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2842,7 +2847,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "8b7899fd-577a-420f-810b-47046483730a",
+                  "uuid": "a96bbf93-6822-43a5-9d7b-e662438ab87c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2860,7 +2865,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "1804828e-ddaf-4e5a-9a4b-cfdd89007c4c",
+                  "uuid": "89942d64-9eff-4b63-a832-4e64332c92bb",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2878,7 +2883,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "934ac026-342a-4ca8-b684-f2e6e833af36",
+                  "uuid": "c1735dc5-a4bb-4a28-b892-1ec062ab27fb",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2896,7 +2901,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b4cb21b9-baa1-4c4a-bdfb-c2ef623c897a",
+                  "uuid": "078823ab-fcf0-409c-a78e-7a4d49926795",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2914,7 +2919,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c2e2fc6f-f525-4e22-9d50-7e2cb37b2228",
+                  "uuid": "a0c59463-b17f-4e53-99c9-1b43aa862045",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2932,7 +2937,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "47af966f-57c0-44bd-95f5-3356ed22f5a3",
+                  "uuid": "d0fdc1a6-3734-4ece-9289-ad9134f7eb5a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2950,7 +2955,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "f78f9fe4-471b-4c97-90a2-7d81f05cd9ca",
+                  "uuid": "e3d3243d-5514-4c3c-853e-d4d03a2fa244",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2968,7 +2973,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "74899342-22b7-4968-bf04-bf0c4c25a769",
+                  "uuid": "687cab3a-ddca-48c4-aba3-99ab2a8db227",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -2986,7 +2991,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d37552a1-e17d-4542-8acc-5f6bb956c365",
+                  "uuid": "3758f6eb-e64f-4f72-b9f5-b4508a4e9f48",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3004,7 +3009,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f1aca8ea-437c-4efb-8f79-d7d58c79c9a5",
+                  "uuid": "c8430586-a8cc-4281-9bda-946eb84a27a5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3022,7 +3027,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "de91c645-4ea3-4ff7-b1a5-79158016bad2",
+                  "uuid": "4a5c43e2-8cef-42fb-aa22-e11de9c1801c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3040,7 +3045,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3c6fd495-9479-477f-ba71-30988b0b917b",
+                  "uuid": "406a2acf-01f9-45ae-a940-44da04c000f2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3058,7 +3063,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "434c34a8-0295-42e6-8acb-309322a488d8",
+                  "uuid": "eb81e00f-337d-4375-b936-af3adb9e25f6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3076,7 +3081,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b3245901-c2ed-4374-b4ca-bb935c4a074a",
+                  "uuid": "67df7f37-8e4b-48a0-848d-b6e3571d39a3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3094,7 +3099,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "bb659adb-9fa4-401f-a0f9-f8e6c4e1d39c",
+                  "uuid": "282eaad4-d485-421c-8342-fd56dcd94a04",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3105,24 +3110,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "6bf2aabc-faeb-4ff5-941f-b662e4468233",
-                "03ac7cb5-7989-4129-8a56-a15d8878c7f9",
-                "9bb067d1-28d4-4bab-9597-f8de6575a371",
-                "8b7899fd-577a-420f-810b-47046483730a",
-                "1804828e-ddaf-4e5a-9a4b-cfdd89007c4c",
-                "934ac026-342a-4ca8-b684-f2e6e833af36",
-                "b4cb21b9-baa1-4c4a-bdfb-c2ef623c897a",
-                "c2e2fc6f-f525-4e22-9d50-7e2cb37b2228",
-                "47af966f-57c0-44bd-95f5-3356ed22f5a3",
-                "f78f9fe4-471b-4c97-90a2-7d81f05cd9ca",
-                "74899342-22b7-4968-bf04-bf0c4c25a769",
-                "d37552a1-e17d-4542-8acc-5f6bb956c365",
-                "f1aca8ea-437c-4efb-8f79-d7d58c79c9a5",
-                "de91c645-4ea3-4ff7-b1a5-79158016bad2",
-                "3c6fd495-9479-477f-ba71-30988b0b917b",
-                "434c34a8-0295-42e6-8acb-309322a488d8",
-                "b3245901-c2ed-4374-b4ca-bb935c4a074a",
-                "bb659adb-9fa4-401f-a0f9-f8e6c4e1d39c"
+                "b183f434-6dae-4ac6-bf7f-ae9903f633ee",
+                "6c946acb-0db3-41eb-a99b-f67385df8547",
+                "d51cec08-4eba-4802-b238-350137567d58",
+                "a96bbf93-6822-43a5-9d7b-e662438ab87c",
+                "89942d64-9eff-4b63-a832-4e64332c92bb",
+                "c1735dc5-a4bb-4a28-b892-1ec062ab27fb",
+                "078823ab-fcf0-409c-a78e-7a4d49926795",
+                "a0c59463-b17f-4e53-99c9-1b43aa862045",
+                "d0fdc1a6-3734-4ece-9289-ad9134f7eb5a",
+                "e3d3243d-5514-4c3c-853e-d4d03a2fa244",
+                "687cab3a-ddca-48c4-aba3-99ab2a8db227",
+                "3758f6eb-e64f-4f72-b9f5-b4508a4e9f48",
+                "c8430586-a8cc-4281-9bda-946eb84a27a5",
+                "4a5c43e2-8cef-42fb-aa22-e11de9c1801c",
+                "406a2acf-01f9-45ae-a940-44da04c000f2",
+                "eb81e00f-337d-4375-b936-af3adb9e25f6",
+                "67df7f37-8e4b-48a0-848d-b6e3571d39a3",
+                "282eaad4-d485-421c-8342-fd56dcd94a04"
               ],
               "duration": 0,
               "root": false,
@@ -3130,7 +3135,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "0d9a6217-9810-4af9-8f29-678c784cd665",
+              "uuid": "a8f00fa2-a597-444b-afc6-82f6cb6d8504",
               "title": "Segundo ingreso y recorrida de cartas de rendimiento del portfolio FFI",
               "fullFile": "",
               "file": "",
@@ -3150,7 +3155,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "5895682d-9014-4e18-8b51-3e1b186a7a62",
+                  "uuid": "3bf07324-10c1-4c66-ab41-e296c55c3e0d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3168,7 +3173,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "626af045-2e88-4bb7-a6b6-2ef691c78af2",
+                  "uuid": "4537a248-2474-4c9f-a914-e31203f5ccaf",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3186,7 +3191,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "ee82f967-7dc1-4bf7-865d-95cd006ffe6c",
+                  "uuid": "35682c88-b41b-4b10-ac06-6fc402fcc336",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3204,7 +3209,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "52b51550-6732-424f-9008-0e417a5970ee",
+                  "uuid": "70a7c61a-eae4-45a4-af85-fdcc433ce0bc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3222,7 +3227,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "37683a72-94bb-4e2d-9374-dd5fd2fcac7d",
+                  "uuid": "877fbb00-e46a-4dc1-ae93-e761c0f73b62",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3240,7 +3245,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3393f203-292c-4f67-ba39-8f33fd9157f7",
+                  "uuid": "005acee8-80b3-4bea-b7d7-886fc2a3057b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3258,7 +3263,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9f65ed3f-c767-4aa4-b0e2-77d2277e9bc0",
+                  "uuid": "81ab7bd8-d7a2-42ff-9559-e6c06dbc1477",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3276,7 +3281,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "885f3dd1-4105-438b-bd63-135e9dbd3101",
+                  "uuid": "15de82cb-cf7c-47ce-bcc5-2ba52f1345e0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3294,7 +3299,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4a92860e-850c-4c56-a7a8-4e87e1c72718",
+                  "uuid": "70be89d8-c8bc-4b9b-913d-4690d1a4df94",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3312,7 +3317,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "68cdaa16-6d4a-4683-829c-c73e8c0a9348",
+                  "uuid": "4c819e57-8d18-4398-b458-51af7268a949",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3330,7 +3335,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d4b84799-0933-4372-a13a-0abdc9b055f9",
+                  "uuid": "925e8c78-37f3-4ab3-9bf9-42cb1d1262ea",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3348,7 +3353,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b7a5137a-ef5b-4b51-a093-e21cb07117a1",
+                  "uuid": "f2b4e273-5b23-40cc-b732-841803c1e5cf",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3366,7 +3371,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "6baf7ce0-043a-4963-a05e-b6b04a188d43",
+                  "uuid": "30e23b37-9f88-457a-ba7c-8bcb3eb4bfc5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3384,7 +3389,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b1688bf3-fff2-4fcb-bb17-b65def8908d7",
+                  "uuid": "88ac2759-a6f2-49ef-af7a-e37646a80101",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3402,7 +3407,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4cb34941-a9fe-4973-98e6-92d95038db7a",
+                  "uuid": "717d54e3-8fa5-48ac-ae29-cf88313c22be",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3420,7 +3425,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "ca75ef91-cc62-4baa-ba9d-893e13ee1b8d",
+                  "uuid": "9365146e-50c8-4aa0-a893-7d04e2ca08c4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3438,7 +3443,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3e1109cf-ec8d-4c64-9ac4-c0ce72b839ff",
+                  "uuid": "031d0daa-4423-4166-9c7e-4063e7ca39c1",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3456,7 +3461,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "46adbfcc-034c-438e-8f46-8707db9ba589",
+                  "uuid": "b3bfa297-201c-4b17-bb24-7a1d7f791f05",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3467,24 +3472,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "5895682d-9014-4e18-8b51-3e1b186a7a62",
-                "626af045-2e88-4bb7-a6b6-2ef691c78af2",
-                "ee82f967-7dc1-4bf7-865d-95cd006ffe6c",
-                "52b51550-6732-424f-9008-0e417a5970ee",
-                "37683a72-94bb-4e2d-9374-dd5fd2fcac7d",
-                "3393f203-292c-4f67-ba39-8f33fd9157f7",
-                "9f65ed3f-c767-4aa4-b0e2-77d2277e9bc0",
-                "885f3dd1-4105-438b-bd63-135e9dbd3101",
-                "4a92860e-850c-4c56-a7a8-4e87e1c72718",
-                "68cdaa16-6d4a-4683-829c-c73e8c0a9348",
-                "d4b84799-0933-4372-a13a-0abdc9b055f9",
-                "b7a5137a-ef5b-4b51-a093-e21cb07117a1",
-                "6baf7ce0-043a-4963-a05e-b6b04a188d43",
-                "b1688bf3-fff2-4fcb-bb17-b65def8908d7",
-                "4cb34941-a9fe-4973-98e6-92d95038db7a",
-                "ca75ef91-cc62-4baa-ba9d-893e13ee1b8d",
-                "3e1109cf-ec8d-4c64-9ac4-c0ce72b839ff",
-                "46adbfcc-034c-438e-8f46-8707db9ba589"
+                "3bf07324-10c1-4c66-ab41-e296c55c3e0d",
+                "4537a248-2474-4c9f-a914-e31203f5ccaf",
+                "35682c88-b41b-4b10-ac06-6fc402fcc336",
+                "70a7c61a-eae4-45a4-af85-fdcc433ce0bc",
+                "877fbb00-e46a-4dc1-ae93-e761c0f73b62",
+                "005acee8-80b3-4bea-b7d7-886fc2a3057b",
+                "81ab7bd8-d7a2-42ff-9559-e6c06dbc1477",
+                "15de82cb-cf7c-47ce-bcc5-2ba52f1345e0",
+                "70be89d8-c8bc-4b9b-913d-4690d1a4df94",
+                "4c819e57-8d18-4398-b458-51af7268a949",
+                "925e8c78-37f3-4ab3-9bf9-42cb1d1262ea",
+                "f2b4e273-5b23-40cc-b732-841803c1e5cf",
+                "30e23b37-9f88-457a-ba7c-8bcb3eb4bfc5",
+                "88ac2759-a6f2-49ef-af7a-e37646a80101",
+                "717d54e3-8fa5-48ac-ae29-cf88313c22be",
+                "9365146e-50c8-4aa0-a893-7d04e2ca08c4",
+                "031d0daa-4423-4166-9c7e-4063e7ca39c1",
+                "b3bfa297-201c-4b17-bb24-7a1d7f791f05"
               ],
               "duration": 0,
               "root": false,
@@ -3492,7 +3497,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "a8b42288-2016-40d5-ba71-af95839d80ea",
+              "uuid": "8818f2fd-c30a-4da6-8bf9-2b9da61e2820",
               "title": "Segundo ingreso y recorrida de cartas de rendimiento del portfolio FPC",
               "fullFile": "",
               "file": "",
@@ -3512,7 +3517,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "a718cb07-75ad-41e3-a412-6fc3e41d51bd",
+                  "uuid": "495e6a12-96ba-4066-b17a-ab0c4c8dccae",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3530,7 +3535,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "f108c206-af33-4349-9367-875fb79a033b",
+                  "uuid": "df9edae5-e28b-4dcb-9ead-2da7b58e9ac3",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3548,7 +3553,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a101370f-ed09-4e42-b2ed-14443320f21a",
+                  "uuid": "8c9bd861-74be-486a-95a9-9ac872e1c449",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3566,7 +3571,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4616a461-e6a5-46a2-80c1-caea24980458",
+                  "uuid": "fe988c48-414e-42df-9f59-8fb076ec3482",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3584,7 +3589,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "91c6ebbd-654f-43a5-9ca2-787e4978f983",
+                  "uuid": "861e7090-fac4-4496-9181-dc28b77b5740",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3602,7 +3607,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "93c16cc5-d4a3-438d-8d39-1baa0d7c4ef5",
+                  "uuid": "ee509700-d74e-44ee-9fb8-3c5846bf22aa",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3620,7 +3625,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "36772ebc-771b-41e4-8012-77707f44f8cc",
+                  "uuid": "8f661b5f-9ac8-481b-bcc7-d47b30ad95d2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3638,7 +3643,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d5d7faa6-71fa-4510-b5ae-743e9908b347",
+                  "uuid": "0c26621d-5061-41ae-8b42-4dd333b89972",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3656,7 +3661,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "be90be10-598b-4548-a51f-f4dfdbdee8bd",
+                  "uuid": "1fdf6ef1-8100-4997-aa78-edb3c38a4e96",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3674,7 +3679,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "b50cadda-1ff3-4cd8-8182-c36b7f9db922",
+                  "uuid": "d3a47dc2-c5ba-4b1e-a99d-fb7fd4890ad5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3692,7 +3697,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "36f0a387-b1cd-49c2-b99c-7e15dd81bad9",
+                  "uuid": "a1c4bd13-c5d4-4b5c-961e-77b3fa9cc8fa",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3710,7 +3715,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c77b9c48-e2f8-41dc-ad34-17db48d6b71d",
+                  "uuid": "b0b3a50e-1862-4617-a414-408165492b64",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3728,7 +3733,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "e5a649aa-f64d-45ad-809c-41d7ae89ea28",
+                  "uuid": "900764fc-b358-4904-962d-30454f60fb5a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3746,7 +3751,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "0c7aec0b-52e2-42d3-a0e4-ee37d3cecd85",
+                  "uuid": "fb26a230-31d5-4c61-8ddf-051728ca0a74",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3764,7 +3769,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "5293c56b-92c7-4511-bfd6-5a07db1bdeaa",
+                  "uuid": "c7eaf957-fb77-42a1-8783-963745d98ce8",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3782,7 +3787,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "10fafe07-0224-4c59-b188-82af44ad5120",
+                  "uuid": "e69b1fc8-ef41-43df-8e32-3592f48261a9",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3800,7 +3805,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "0515f122-c4f3-4523-914d-3ec5ea03b232",
+                  "uuid": "a0f78cb6-eda3-4bda-afd4-f2d694474c60",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3818,7 +3823,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4eae3d33-9daf-4bdc-8388-a488301a7e9a",
+                  "uuid": "82d86d9e-3c43-434f-b97d-a9acdf342d70",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3829,24 +3834,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "a718cb07-75ad-41e3-a412-6fc3e41d51bd",
-                "f108c206-af33-4349-9367-875fb79a033b",
-                "a101370f-ed09-4e42-b2ed-14443320f21a",
-                "4616a461-e6a5-46a2-80c1-caea24980458",
-                "91c6ebbd-654f-43a5-9ca2-787e4978f983",
-                "93c16cc5-d4a3-438d-8d39-1baa0d7c4ef5",
-                "36772ebc-771b-41e4-8012-77707f44f8cc",
-                "d5d7faa6-71fa-4510-b5ae-743e9908b347",
-                "be90be10-598b-4548-a51f-f4dfdbdee8bd",
-                "b50cadda-1ff3-4cd8-8182-c36b7f9db922",
-                "36f0a387-b1cd-49c2-b99c-7e15dd81bad9",
-                "c77b9c48-e2f8-41dc-ad34-17db48d6b71d",
-                "e5a649aa-f64d-45ad-809c-41d7ae89ea28",
-                "0c7aec0b-52e2-42d3-a0e4-ee37d3cecd85",
-                "5293c56b-92c7-4511-bfd6-5a07db1bdeaa",
-                "10fafe07-0224-4c59-b188-82af44ad5120",
-                "0515f122-c4f3-4523-914d-3ec5ea03b232",
-                "4eae3d33-9daf-4bdc-8388-a488301a7e9a"
+                "495e6a12-96ba-4066-b17a-ab0c4c8dccae",
+                "df9edae5-e28b-4dcb-9ead-2da7b58e9ac3",
+                "8c9bd861-74be-486a-95a9-9ac872e1c449",
+                "fe988c48-414e-42df-9f59-8fb076ec3482",
+                "861e7090-fac4-4496-9181-dc28b77b5740",
+                "ee509700-d74e-44ee-9fb8-3c5846bf22aa",
+                "8f661b5f-9ac8-481b-bcc7-d47b30ad95d2",
+                "0c26621d-5061-41ae-8b42-4dd333b89972",
+                "1fdf6ef1-8100-4997-aa78-edb3c38a4e96",
+                "d3a47dc2-c5ba-4b1e-a99d-fb7fd4890ad5",
+                "a1c4bd13-c5d4-4b5c-961e-77b3fa9cc8fa",
+                "b0b3a50e-1862-4617-a414-408165492b64",
+                "900764fc-b358-4904-962d-30454f60fb5a",
+                "fb26a230-31d5-4c61-8ddf-051728ca0a74",
+                "c7eaf957-fb77-42a1-8783-963745d98ce8",
+                "e69b1fc8-ef41-43df-8e32-3592f48261a9",
+                "a0f78cb6-eda3-4bda-afd4-f2d694474c60",
+                "82d86d9e-3c43-434f-b97d-a9acdf342d70"
               ],
               "duration": 0,
               "root": false,
@@ -3854,7 +3859,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "8dfa3a02-92ae-4977-86d2-35d33c536649",
+              "uuid": "698c9cd7-7117-448e-b2c7-fad438f11890",
               "title": "Segundo ingreso y recorrida de cartas de rendimiento del portfolio Fideicomiso CFI",
               "fullFile": "",
               "file": "",
@@ -3874,7 +3879,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "44b32c9f-53de-427b-8af3-504ac5b1c5d0",
+                  "uuid": "01afd8da-beb3-415b-8dc1-8ce87392d824",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3892,7 +3897,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "e2d74a55-0d06-4ceb-ae67-1d1db4711876",
+                  "uuid": "22c9a7ff-950b-4b8c-afcc-35a8a23d7857",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3910,7 +3915,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d923c52d-4570-4deb-a585-5d759c21b26e",
+                  "uuid": "01dc9dd2-c2ad-4173-8246-507b64956ea4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3928,7 +3933,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c235582d-1858-4464-acae-e0a14faf5bb0",
+                  "uuid": "efc2e6b5-7637-4816-8aa2-6e78bc49d5fe",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3946,7 +3951,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "32d02190-c774-4994-bf75-6b9e7ca732b9",
+                  "uuid": "a3457adf-25e8-41e5-bb60-9a9322b7b099",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3964,7 +3969,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "382833f5-565d-4a19-9a4a-f406e8216fac",
+                  "uuid": "e5620d90-4c86-4275-98d4-0d1d2980d3f8",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -3982,7 +3987,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "2d4c8cdf-72a8-432f-893f-55ada83be35b",
+                  "uuid": "cc8076ee-bd62-447d-9cd9-6f71e58631b4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4000,7 +4005,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "909cdc20-2b9d-4379-864a-ea7d24f2e73c",
+                  "uuid": "8c9f7e16-dbb2-468f-bdc2-46667b1af02d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4018,7 +4023,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "3f8647ad-e69d-4a41-b391-9790e5dd1da9",
+                  "uuid": "02d54fb3-9aa9-4b5e-9b1e-244fe39a3f3c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4036,7 +4041,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "d1683a1b-1b4d-4e44-965d-f44521b0820a",
+                  "uuid": "5d943604-528c-4fb8-9db0-454cd75503b8",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4054,7 +4059,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a200316b-24c7-418a-9a06-c3532c73e2fa",
+                  "uuid": "61315d25-30ba-46dd-b23c-d6e9f303ab98",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4072,7 +4077,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d4f5c6fa-667f-4e37-802a-e1ba15533169",
+                  "uuid": "efd39db7-6988-474b-ae33-097163b52337",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4090,7 +4095,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "e2fa5cb4-8614-4676-bcc1-52e55d0e61ec",
+                  "uuid": "68c269b7-0fb8-4127-a8b6-73342a4ca078",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4108,7 +4113,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "c176d5ff-e065-4c7f-9e92-0bf76b7cbe3f",
+                  "uuid": "fc8c9cca-5653-415e-98b6-5f685026f3c4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4126,7 +4131,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "8b84e5ed-983a-4a7c-a40e-ca46932ec105",
+                  "uuid": "f6cb6061-4432-4fd8-ba77-a7921a6855ae",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4144,7 +4149,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "75a1b3e1-b5fb-4c62-9f75-9d790716cec3",
+                  "uuid": "39b25c9b-8d9a-4b33-bdef-ea695e1aca2a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4162,7 +4167,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b8821086-5d38-4270-b72f-b51a9b865aac",
+                  "uuid": "a954afb0-ba34-4f8c-af8e-4eb7077e2f08",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4180,7 +4185,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "04875fb2-e96f-4154-96ce-5420046fb67b",
+                  "uuid": "f1467fb2-8027-46c1-b314-180bc80b5957",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4191,24 +4196,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "44b32c9f-53de-427b-8af3-504ac5b1c5d0",
-                "e2d74a55-0d06-4ceb-ae67-1d1db4711876",
-                "d923c52d-4570-4deb-a585-5d759c21b26e",
-                "c235582d-1858-4464-acae-e0a14faf5bb0",
-                "32d02190-c774-4994-bf75-6b9e7ca732b9",
-                "382833f5-565d-4a19-9a4a-f406e8216fac",
-                "2d4c8cdf-72a8-432f-893f-55ada83be35b",
-                "909cdc20-2b9d-4379-864a-ea7d24f2e73c",
-                "3f8647ad-e69d-4a41-b391-9790e5dd1da9",
-                "d1683a1b-1b4d-4e44-965d-f44521b0820a",
-                "a200316b-24c7-418a-9a06-c3532c73e2fa",
-                "d4f5c6fa-667f-4e37-802a-e1ba15533169",
-                "e2fa5cb4-8614-4676-bcc1-52e55d0e61ec",
-                "c176d5ff-e065-4c7f-9e92-0bf76b7cbe3f",
-                "8b84e5ed-983a-4a7c-a40e-ca46932ec105",
-                "75a1b3e1-b5fb-4c62-9f75-9d790716cec3",
-                "b8821086-5d38-4270-b72f-b51a9b865aac",
-                "04875fb2-e96f-4154-96ce-5420046fb67b"
+                "01afd8da-beb3-415b-8dc1-8ce87392d824",
+                "22c9a7ff-950b-4b8c-afcc-35a8a23d7857",
+                "01dc9dd2-c2ad-4173-8246-507b64956ea4",
+                "efc2e6b5-7637-4816-8aa2-6e78bc49d5fe",
+                "a3457adf-25e8-41e5-bb60-9a9322b7b099",
+                "e5620d90-4c86-4275-98d4-0d1d2980d3f8",
+                "cc8076ee-bd62-447d-9cd9-6f71e58631b4",
+                "8c9f7e16-dbb2-468f-bdc2-46667b1af02d",
+                "02d54fb3-9aa9-4b5e-9b1e-244fe39a3f3c",
+                "5d943604-528c-4fb8-9db0-454cd75503b8",
+                "61315d25-30ba-46dd-b23c-d6e9f303ab98",
+                "efd39db7-6988-474b-ae33-097163b52337",
+                "68c269b7-0fb8-4127-a8b6-73342a4ca078",
+                "fc8c9cca-5653-415e-98b6-5f685026f3c4",
+                "f6cb6061-4432-4fd8-ba77-a7921a6855ae",
+                "39b25c9b-8d9a-4b33-bdef-ea695e1aca2a",
+                "a954afb0-ba34-4f8c-af8e-4eb7077e2f08",
+                "f1467fb2-8027-46c1-b314-180bc80b5957"
               ],
               "duration": 0,
               "root": false,
@@ -4216,7 +4221,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "723b5c50-8878-4d10-8f97-e49a58d0878d",
+              "uuid": "92b5a75c-ce2e-4429-9544-da05fc0eff4e",
               "title": "Segundo ingreso y recorrida de cartas de rendimiento del portfolio Fondo de Obra Social",
               "fullFile": "",
               "file": "",
@@ -4236,7 +4241,7 @@
                   "context": null,
                   "code": "cy.get(`div[data-original-title=\"${name}\"]`).click();\ncy.verificarPortfolio();",
                   "err": {},
-                  "uuid": "97103853-bdab-43c3-98cf-186162173bca",
+                  "uuid": "a6ab7adf-ac5a-462e-804b-1f41c2ccfc5e",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4254,7 +4259,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "6f190246-5f33-444a-a763-1188397170c9",
+                  "uuid": "a79519a8-48a0-40e2-ad2f-c1edb7f89df7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4272,7 +4277,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "19b6a7bc-bc48-4930-9df5-6bd5b22d0844",
+                  "uuid": "557184df-52cf-41cf-974b-548085419634",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4290,7 +4295,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "730f7faf-ddf4-4cce-987f-b0a73931305d",
+                  "uuid": "f7868c78-9cde-449c-9439-af20d86e13e1",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4308,7 +4313,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4a3c2652-6adb-41c0-ace3-10f0b0eb7d9d",
+                  "uuid": "8a7e28fc-4596-4b3f-9b0d-32143d16d159",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4326,7 +4331,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "08e083cc-05a6-43f2-bd18-1e6d00cbdbb4",
+                  "uuid": "2fbb6a7f-8910-4677-8383-a11f57d5aa34",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4344,7 +4349,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "1c9934fc-3547-4c63-a8ea-221e7243c854",
+                  "uuid": "ed4484f4-568b-4098-b082-f90a5382a22a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4362,7 +4367,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "498f56c3-a5f1-4043-a22f-b2bcc0842040",
+                  "uuid": "fb72d54c-beb6-463b-bae9-07480bba4d01",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4380,7 +4385,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "d7359e4a-ed67-4dda-9a56-e45bc45726c9",
+                  "uuid": "18c92c30-53ea-44f9-8125-069cf903d648",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4398,7 +4403,7 @@
                   "context": null,
                   "code": "cy.cambiarMetodoRentabilidad();",
                   "err": {},
-                  "uuid": "d6e87752-f171-49c9-b667-bf08925e30eb",
+                  "uuid": "91874a2a-eb14-4642-9abb-a3c74904f5d7",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4416,7 +4421,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "68c3ea14-f462-4a79-be4b-972d915ee81d",
+                  "uuid": "0e743595-a7ee-40f1-b9ac-5dfcf8df981b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4434,7 +4439,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "9499edb4-0f91-4d45-a792-ba19bd0e52f8",
+                  "uuid": "7e5e7ade-41d4-487f-b0cb-5af5d6e5be7d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4452,7 +4457,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "4cd28522-20a8-4ecf-822e-3fee4fe1ea2e",
+                  "uuid": "a9a293e3-e4f5-45fe-b617-cd2d5d59eff4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4470,7 +4475,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "6a5f699f-2abe-4777-8f9a-f49b39bba521",
+                  "uuid": "0bb266a3-db36-4a69-8dae-1575993a03e2",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4488,7 +4493,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "b0748dea-fb21-4836-b13b-dc19a78a93ba",
+                  "uuid": "0fa00c1f-0f2b-454b-99c4-10fcfe28f6c0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4506,7 +4511,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "ef593c53-3c61-4fee-9b99-40b96d9ec0a1",
+                  "uuid": "3433d365-f33e-459a-beb9-05fd6546187f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4524,7 +4529,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "e733f973-7c36-4759-9bdc-baf2ac246e87",
+                  "uuid": "cfae1e83-8e97-4fbd-a266-78534389f2aa",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4542,7 +4547,7 @@
                   "context": null,
                   "code": "cy.verificarCartaRendimiento(carta);",
                   "err": {},
-                  "uuid": "a1348ae2-3475-4481-aa10-81089e31ee99",
+                  "uuid": "f72b6679-9ac6-466d-b763-c3ebc7f7f7ad",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -4553,24 +4558,24 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "97103853-bdab-43c3-98cf-186162173bca",
-                "6f190246-5f33-444a-a763-1188397170c9",
-                "19b6a7bc-bc48-4930-9df5-6bd5b22d0844",
-                "730f7faf-ddf4-4cce-987f-b0a73931305d",
-                "4a3c2652-6adb-41c0-ace3-10f0b0eb7d9d",
-                "08e083cc-05a6-43f2-bd18-1e6d00cbdbb4",
-                "1c9934fc-3547-4c63-a8ea-221e7243c854",
-                "498f56c3-a5f1-4043-a22f-b2bcc0842040",
-                "d7359e4a-ed67-4dda-9a56-e45bc45726c9",
-                "d6e87752-f171-49c9-b667-bf08925e30eb",
-                "68c3ea14-f462-4a79-be4b-972d915ee81d",
-                "9499edb4-0f91-4d45-a792-ba19bd0e52f8",
-                "4cd28522-20a8-4ecf-822e-3fee4fe1ea2e",
-                "6a5f699f-2abe-4777-8f9a-f49b39bba521",
-                "b0748dea-fb21-4836-b13b-dc19a78a93ba",
-                "ef593c53-3c61-4fee-9b99-40b96d9ec0a1",
-                "e733f973-7c36-4759-9bdc-baf2ac246e87",
-                "a1348ae2-3475-4481-aa10-81089e31ee99"
+                "a6ab7adf-ac5a-462e-804b-1f41c2ccfc5e",
+                "a79519a8-48a0-40e2-ad2f-c1edb7f89df7",
+                "557184df-52cf-41cf-974b-548085419634",
+                "f7868c78-9cde-449c-9439-af20d86e13e1",
+                "8a7e28fc-4596-4b3f-9b0d-32143d16d159",
+                "2fbb6a7f-8910-4677-8383-a11f57d5aa34",
+                "ed4484f4-568b-4098-b082-f90a5382a22a",
+                "fb72d54c-beb6-463b-bae9-07480bba4d01",
+                "18c92c30-53ea-44f9-8125-069cf903d648",
+                "91874a2a-eb14-4642-9abb-a3c74904f5d7",
+                "0e743595-a7ee-40f1-b9ac-5dfcf8df981b",
+                "7e5e7ade-41d4-487f-b0cb-5af5d6e5be7d",
+                "a9a293e3-e4f5-45fe-b617-cd2d5d59eff4",
+                "0bb266a3-db36-4a69-8dae-1575993a03e2",
+                "0fa00c1f-0f2b-454b-99c4-10fcfe28f6c0",
+                "3433d365-f33e-459a-beb9-05fd6546187f",
+                "cfae1e83-8e97-4fbd-a266-78534389f2aa",
+                "f72b6679-9ac6-466d-b763-c3ebc7f7f7ad"
               ],
               "duration": 0,
               "root": false,

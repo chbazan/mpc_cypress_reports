@@ -1,0 +1,249 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-01-28T10:07:24.488Z",
+    "end": "2026-01-28T10:07:25.328Z",
+    "duration": 840,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 16.666666666666664,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b4cfd27f-839d-44ec-8941-507ce94e99c8",
+      "title": "",
+      "fullFile": "build/production/avalian/sanity/sanity.cy.js",
+      "file": "build/production/avalian/sanity/sanity.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a7db78cf-2d63-4efc-91ac-db59c0faa2ee",
+          "title": "Precondición Admin Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingresar y hacer login en el admin de MPC",
+              "fullTitle": "Precondición Admin Login Ingresar y hacer login en el admin de MPC",
+              "timedOut": null,
+              "duration": 713,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.AdminLogin();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://avalian.mercapportfolio.com/mercap-portfolio-admin\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: 738735100224:error:1000045c:SSL routines:OPENSSL_internal:TLSV1_ALERT_CERTIFICATE_REQUIRED:../../third_party/boringssl/src/ssl/tls_record.cc:486:SSL alert number 116\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://avalian.mercapportfolio.com/mercap-portfolio-admin\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: 738735100224:error:1000045c:SSL routines:OPENSSL_internal:TLSV1_ALERT_CERTIFICATE_REQUIRED:../../third_party/boringssl/src/ssl/tls_record.cc:486:SSL alert number 116\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:36965/__cypress/runner/cypress_runner.js:134880:74)\n    at visitFailedByErr (http://localhost:36965/__cypress/runner/cypress_runner.js:134454:12)\n    at <unknown> (http://localhost:36965/__cypress/runner/cypress_runner.js:134879:11)\n    at tryCatcher (http://localhost:36965/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:36965/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:36965/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:36965/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:36965/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:36965/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:36965/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:36965/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:36965/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress/./cypress/support/commands/shared.commands.js:20:0)\n    at wrapped (http://localhost:36965/__cypress/runner/cypress_runner.js:146042:43)\n\nFrom Node.js Internals:\n  Error: 738735100224:error:1000045c:SSL routines:OPENSSL_internal:TLSV1_ALERT_CERTIFICATE_REQUIRED:../../third_party/boringssl/src/ssl/tls_record.cc:486:SSL alert number 116",
+                "diff": null
+              },
+              "uuid": "b0b0a8cb-93b5-467c-999b-531dc72cdb7d",
+              "parentUUID": "a7db78cf-2d63-4efc-91ac-db59c0faa2ee",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Obtener versión de MPC",
+              "fullTitle": "Precondición Admin Login Obtener versión de MPC",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "// Guardar la versión de MPC en version.txt\n    cy.guardarVersion();",
+              "err": {},
+              "uuid": "c6975038-7d14-4387-8ec1-3852f7175ae9",
+              "parentUUID": "a7db78cf-2d63-4efc-91ac-db59c0faa2ee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b0b0a8cb-93b5-467c-999b-531dc72cdb7d"
+          ],
+          "pending": [
+            "c6975038-7d14-4387-8ec1-3852f7175ae9"
+          ],
+          "skipped": [],
+          "duration": 713,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3779904c-3ac6-407e-8d09-7e49c8b0b729",
+          "title": "Precondición MPC Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login en MPC",
+              "fullTitle": "Precondición MPC Login Login en MPC",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.LogIn();",
+              "err": {},
+              "uuid": "08e44b11-f78a-4f5a-b2e0-b2bec94d8ca1",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "08e44b11-f78a-4f5a-b2e0-b2bec94d8ca1"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "55937dea-9b9f-4c3c-aa01-2452a61fe013",
+          "title": "Verificar la posición valuada de los portfolios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificar que existan portfolios creados",
+              "fullTitle": "Verificar la posición valuada de los portfolios Verificar que existan portfolios creados",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.validacionesHome();\n    cy.skipEncuesta();",
+              "err": {},
+              "uuid": "2489e6b4-bb79-4abc-a011-0fcb8cd83860",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Revisar que la posición de los portfolios no sea cero",
+              "fullTitle": "Verificar la posición valuada de los portfolios Revisar que la posición de los portfolios no sea cero",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.card-body').then(($cards) => {\n      const portfoliosConValorCero = [];\n      $cards.each((index, card) => {\n        const $card = Cypress.$(card);\n        const nombre = $card.find('h6.card-title span[data-toggle=\"tooltip\"]').attr('data-original-title')?.trim();\n        const rawValor = $card.find('h5.card-title span[data-toggle=\"tooltip\"]').attr('data-original-title')?.trim();\n        if (nombre && rawValor) {\n          const valor = parseFloat(rawValor.replace(/\\./g, '').replace(',', '.'));\n          if (valor === 0) {\n            portfoliosConValorCero.push(nombre);\n          }\n        }\n      });\n      cy.then(() => {\n        if (portfoliosConValorCero.length > 0) {\n          const lista = portfoliosConValorCero.join(', ');\n          throw new Error(`❌ Los siguientes portfolios tienen valor cero: ${lista}.`);\n        } else {\n          cy.log('✅ Todos los portfolios tienen valor distinto de cero');\n        }\n      });\n    });",
+              "err": {},
+              "uuid": "5330ec89-a630-4038-bd34-4763fd87e488",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ingresar a todos los portfolios disponibles y validar que carguen correctamente",
+              "fullTitle": "Verificar la posición valuada de los portfolios Ingresar a todos los portfolios disponibles y validar que carguen correctamente",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Mis portfolios', { matchCase: false }).click();\n    cy.validacionesMisPortfolios();\n    cy.recorridaPortfolios();",
+              "err": {},
+              "uuid": "4f882079-553a-48ea-99a3-2aaf681b09b7",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "2489e6b4-bb79-4abc-a011-0fcb8cd83860",
+            "5330ec89-a630-4038-bd34-4763fd87e488",
+            "4f882079-553a-48ea-99a3-2aaf681b09b7"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-01-30T19:43:48.151Z",
-    "end": "2026-01-30T19:44:05.824Z",
-    "duration": 17673,
+    "start": "2026-02-02T15:17:07.722Z",
+    "end": "2026-02-02T15:17:27.396Z",
+    "duration": 19674,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "801a191f-dff2-4bef-a87d-332b1245c566",
+      "uuid": "dc667160-d372-45d8-b79a-ff8599f28f26",
       "title": "",
       "fullFile": "build/production/avalian/01_login.cy.js",
       "file": "build/production/avalian/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c6af4a4f-ecf9-4bbb-bd43-f6faf3df9664",
+          "uuid": "6d27f79c-e383-4aa4-acc4-7e6e68af84ff",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Ingreso al admin de MPC y setup de portfolios",
               "fullTitle": "Login Ingreso al admin de MPC y setup de portfolios",
               "timedOut": null,
-              "duration": 14962,
+              "duration": 16969,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.adminLoginMPC();\n    cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION);\n    cy.guardarNombresPortfolios();\n    cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${depositaryPath}`);\n    cy.contains('Seleccioná una o varias cuentas para verificar la información consolidada.').\n    should('be.visible');\n    cy.guardarNombresDepositarios();\n    cy.guardarCuentasDepositarios();",
+              "code": "cy.adminLoginMPC();\n    cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ADMIN_LOCATION);\n    cy.guardarEsquemasValuacion();\n    cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION);\n    cy.guardarNombresPortfolios();\n    cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${depositaryPath}`);\n    cy.contains('Seleccioná una o varias cuentas para verificar la información consolidada.').\n    should('be.visible');\n    cy.guardarNombresDepositarios();\n    cy.guardarCuentasDepositarios();",
               "err": {},
-              "uuid": "6d659e1e-17db-4957-b0ab-a6e0480ac145",
-              "parentUUID": "c6af4a4f-ecf9-4bbb-bd43-f6faf3df9664",
+              "uuid": "c0742414-3a6a-4672-b9e0-02b5c448d039",
+              "parentUUID": "6d27f79c-e383-4aa4-acc4-7e6e68af84ff",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6d659e1e-17db-4957-b0ab-a6e0480ac145"
+            "c0742414-3a6a-4672-b9e0-02b5c448d039"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14962,
+          "duration": 16969,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

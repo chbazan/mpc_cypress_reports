@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2026-02-11T16:26:10.922Z",
-    "end": "2026-02-11T16:32:23.561Z",
-    "duration": 372639,
+    "failures": 0,
+    "start": "2026-02-12T16:22:48.343Z",
+    "end": "2026-02-12T16:23:06.798Z",
+    "duration": 18455,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "523e5b50-d14f-4400-bf81-947ee9030455",
+      "uuid": "adaf28e0-e00f-4760-bced-b8f3968bf3de",
       "title": "",
       "fullFile": "build/production/cfi/01_login.cy.js",
       "file": "build/production/cfi/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "918e42d4-aecb-470c-9986-41f3b796939f",
+          "uuid": "2439f94b-2239-4fc6-b469-b06fdbf6ecb0",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Ingreso al admin de MPC y setup de portfolios",
               "fullTitle": "Login Ingreso al admin de MPC y setup de portfolios",
               "timedOut": null,
-              "duration": 369785,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 15604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.adminLoginMPC();\n    cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ADMIN_LOCATION);\n    cy.guardarEsquemasValuacion();\n    cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION);\n    cy.guardarNombresPortfolios();\n    cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${depositaryPath}`);\n    cy.contains('Seleccioná una o varias cuentas para verificar la información consolidada.').\n    should('be.visible');\n    cy.guardarNombresDepositarios();\n    cy.guardarCuentasDepositarios();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 360000ms: Expected to find element: `.dataTable tbody tr td:first-child`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 360000ms: Expected to find element: `.dataTable tbody tr td:first-child`, but never found it.\n    at Context.eval (webpack://cypress/./cypress/support/commands.js:579:0)\n    at wrapped (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:146042:43)",
-                "diff": null
-              },
-              "uuid": "7b43c7e5-aec3-4e0d-a24d-6641f3a0ed22",
-              "parentUUID": "918e42d4-aecb-470c-9986-41f3b796939f",
+              "err": {},
+              "uuid": "297f3084-f18d-4158-a668-5a229e2e70bd",
+              "parentUUID": "2439f94b-2239-4fc6-b469-b06fdbf6ecb0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "7b43c7e5-aec3-4e0d-a24d-6641f3a0ed22"
+          "passes": [
+            "297f3084-f18d-4158-a668-5a229e2e70bd"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 369785,
+          "duration": 15604,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

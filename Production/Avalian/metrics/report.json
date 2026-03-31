@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-03-30T15:30:32.067Z",
-    "end": "2026-03-30T15:30:50.719Z",
-    "duration": 18652,
+    "start": "2026-03-31T15:29:38.682Z",
+    "end": "2026-03-31T15:29:55.782Z",
+    "duration": 17100,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f47e8b45-c3fe-4f38-b81f-3de1ae999bbc",
+      "uuid": "e6819cec-09d1-4706-83ed-db0a3167e844",
       "title": "",
       "fullFile": "build/production/avalian/01_login.cy.js",
       "file": "build/production/avalian/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "92eec488-dfa7-4d36-8a38-892cdb3f3f66",
+          "uuid": "4b050fae-a057-4e13-9b95-39fdc1a51a23",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingreso al admin de MPC y setup de portfolios",
               "fullTitle": "Login Ingreso al admin de MPC y setup de portfolios",
               "timedOut": null,
-              "duration": 15780,
+              "duration": 14229,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.adminLoginMPC();\n    cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ADMIN_LOCATION);\n    cy.guardarEsquemasValuacion();\n    cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION);\n    cy.guardarNombresPortfolios();\n    cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${depositaryPath}`);\n    cy.contains('Seleccioná una o varias cuentas para verificar la información consolidada.').\n    should('be.visible');\n    cy.guardarNombresDepositarios();\n    cy.guardarCuentasDepositarios();",
               "err": {},
-              "uuid": "ac48ad00-4dd1-4ea5-a3f2-337e17613e65",
-              "parentUUID": "92eec488-dfa7-4d36-8a38-892cdb3f3f66",
+              "uuid": "dc02a9c0-21e7-4d0b-b30d-eddf0f9e061f",
+              "parentUUID": "4b050fae-a057-4e13-9b95-39fdc1a51a23",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ac48ad00-4dd1-4ea5-a3f2-337e17613e65"
+            "dc02a9c0-21e7-4d0b-b30d-eddf0f9e061f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 15780,
+          "duration": 14229,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

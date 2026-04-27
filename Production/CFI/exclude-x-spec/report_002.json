@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 1,
     "failures": 1,
-    "start": "2026-04-24T16:26:08.053Z",
-    "end": "2026-04-24T16:32:19.343Z",
-    "duration": 371290,
+    "start": "2026-04-27T16:38:46.636Z",
+    "end": "2026-04-27T16:44:55.688Z",
+    "duration": 369052,
     "testsRegistered": 15,
     "passPercent": 14.285714285714285,
     "pendingPercent": 6.666666666666667,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "adb0d3c7-47e5-45ff-a5dd-b29432194a7f",
+      "uuid": "112e61cd-1db9-4378-a149-07a861273151",
       "title": "",
       "fullFile": "build/production/cfi/agenda.cy.js",
       "file": "build/production/cfi/agenda.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "877d8812-ff1d-436b-ba20-3bf8d38e204d",
+          "uuid": "2191c135-ebb6-4145-a387-8f14c1001c5e",
           "title": "Agenda",
           "fullFile": "",
           "file": "",
@@ -38,24 +38,24 @@
               "title": "Ingreso a MPC",
               "fullTitle": "Agenda Ingreso a MPC",
               "timedOut": null,
-              "duration": 6176,
+              "duration": 3404,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.adminLoginMPC();",
               "err": {},
-              "uuid": "5fa89302-a9ef-4d3e-9b7a-db0fcebd9150",
-              "parentUUID": "877d8812-ff1d-436b-ba20-3bf8d38e204d",
+              "uuid": "e6a20c6a-794f-41cf-8be3-264607b52335",
+              "parentUUID": "2191c135-ebb6-4145-a387-8f14c1001c5e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "ef847bdf-ef71-4740-b544-3eda7d72e0bd",
+              "uuid": "ed600773-48ca-4a73-83d5-fad125252029",
               "title": "Primer ingreso al menu Agenda",
               "fullFile": "",
               "file": "",
@@ -66,7 +66,7 @@
                   "title": "Primer ingreso al menú Agenda",
                   "fullTitle": "Agenda Primer ingreso al menu Agenda Primer ingreso al menú Agenda",
                   "timedOut": null,
-                  "duration": 1934,
+                  "duration": 2456,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -75,26 +75,26 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${path}`);\ncy.validacionesAgendaHome();",
                   "err": {},
-                  "uuid": "02bf8eb2-327e-4ed5-b698-62393377fb90",
-                  "parentUUID": "ef847bdf-ef71-4740-b544-3eda7d72e0bd",
+                  "uuid": "83ed7c4a-98b2-4e27-a2cf-951d3286b9b6",
+                  "parentUUID": "ed600773-48ca-4a73-83d5-fad125252029",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "02bf8eb2-327e-4ed5-b698-62393377fb90"
+                "83ed7c4a-98b2-4e27-a2cf-951d3286b9b6"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1934,
+              "duration": 2456,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "7782c7a7-51f3-4201-ab77-58a7ec073319",
+              "uuid": "38c63e22-5469-4c4f-81a6-5d28d698c23e",
               "title": "Primer ingreso: Filtros de Agenda",
               "fullFile": "",
               "file": "",
@@ -105,7 +105,7 @@
                   "title": "Primer ingreso: Filtro de todos los estados y conceptos con fecha actual",
                   "fullTitle": "Agenda Primer ingreso: Filtros de Agenda Primer ingreso: Filtro de todos los estados y conceptos con fecha actual",
                   "timedOut": null,
-                  "duration": 360396,
+                  "duration": 360561,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -118,8 +118,8 @@
                     "estack": "AssertionError: Timed out retrying after 360000ms: Expected to find content: 'Seleccionar estado' within the element: <div.filter-option-inner-inner> but never did.\n    at Context.eval (webpack://cypress/./build/production/cfi/agenda.cy.js:28:0)",
                     "diff": null
                   },
-                  "uuid": "6413ac7f-2937-4726-a2c2-96cc09b95028",
-                  "parentUUID": "7782c7a7-51f3-4201-ab77-58a7ec073319",
+                  "uuid": "569494c3-7010-476d-aeec-f6d909e86671",
+                  "parentUUID": "38c63e22-5469-4c4f-81a6-5d28d698c23e",
                   "isHook": false,
                   "skipped": false
                 },
@@ -136,8 +136,8 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Tipo de concepto: 5 de 5 seleccionados').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Cobro de dividendo\n      cy.get('span.text').contains('Cobro de dividendo').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "f09c5808-cd08-406f-8a29-617ad87cced9",
-                  "parentUUID": "7782c7a7-51f3-4201-ab77-58a7ec073319",
+                  "uuid": "ae37f686-9947-4aaa-adc3-5f2c66d6ee93",
+                  "parentUUID": "38c63e22-5469-4c4f-81a6-5d28d698c23e",
                   "isHook": false,
                   "skipped": false
                 },
@@ -154,8 +154,8 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Cobro de dividendo').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Cobro de cupón\n      cy.get('span.text').contains('Cobro de cupón').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "b95afc4c-546a-48e7-a69e-fbd01db8a73a",
-                  "parentUUID": "7782c7a7-51f3-4201-ab77-58a7ec073319",
+                  "uuid": "ac074006-9be6-4977-9dde-9b9fd2c5d778",
+                  "parentUUID": "38c63e22-5469-4c4f-81a6-5d28d698c23e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -172,8 +172,8 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Cobro de cupón').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Cancelación anticipada\n      cy.get('span.text').contains('Cancelación anticipada').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "72b87ca3-9155-4ab9-9269-f238f8e8ec6c",
-                  "parentUUID": "7782c7a7-51f3-4201-ab77-58a7ec073319",
+                  "uuid": "82ef4b08-1c32-44b1-9104-e1b6eaf88a18",
+                  "parentUUID": "38c63e22-5469-4c4f-81a6-5d28d698c23e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -190,8 +190,8 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Cancelación anticipada').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Vencimiento\n      cy.get('span.text').contains('Vencimiento').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "8c2e9c82-1479-4044-9a15-710a5b4f6dc4",
-                  "parentUUID": "7782c7a7-51f3-4201-ab77-58a7ec073319",
+                  "uuid": "e411d36e-261f-401e-bb08-2edf96edf802",
+                  "parentUUID": "38c63e22-5469-4c4f-81a6-5d28d698c23e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -208,8 +208,8 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Vencimiento').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Venta\n      cy.get('span.text').contains('Venta').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "aec67eaf-9efb-4268-b101-16e03b72ae69",
-                  "parentUUID": "7782c7a7-51f3-4201-ab77-58a7ec073319",
+                  "uuid": "c760e85c-0adf-4df0-90cd-4dddf2eb88f8",
+                  "parentUUID": "38c63e22-5469-4c4f-81a6-5d28d698c23e",
                   "isHook": false,
                   "skipped": true
                 }
@@ -217,24 +217,24 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "6413ac7f-2937-4726-a2c2-96cc09b95028"
+                "569494c3-7010-476d-aeec-f6d909e86671"
               ],
               "pending": [
-                "f09c5808-cd08-406f-8a29-617ad87cced9"
+                "ae37f686-9947-4aaa-adc3-5f2c66d6ee93"
               ],
               "skipped": [
-                "b95afc4c-546a-48e7-a69e-fbd01db8a73a",
-                "72b87ca3-9155-4ab9-9269-f238f8e8ec6c",
-                "8c2e9c82-1479-4044-9a15-710a5b4f6dc4",
-                "aec67eaf-9efb-4268-b101-16e03b72ae69"
+                "ac074006-9be6-4977-9dde-9b9fd2c5d778",
+                "82ef4b08-1c32-44b1-9104-e1b6eaf88a18",
+                "e411d36e-261f-401e-bb08-2edf96edf802",
+                "c760e85c-0adf-4df0-90cd-4dddf2eb88f8"
               ],
-              "duration": 360396,
+              "duration": 360561,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "3c746d31-fb94-47bb-8377-36656c705c3f",
+              "uuid": "c6b11720-0abf-4b49-82d6-f62e12a2f0cc",
               "title": "Segundo ingreso al menu Agenda",
               "fullFile": "",
               "file": "",
@@ -254,7 +254,7 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${path}`);\ncy.validacionesAgendaHome();",
                   "err": {},
-                  "uuid": "7b81a20e-c689-4591-8099-2e37f44d562b",
+                  "uuid": "2c7374ee-3ebe-45c1-bc97-d2666b453f72",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -265,7 +265,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "7b81a20e-c689-4591-8099-2e37f44d562b"
+                "2c7374ee-3ebe-45c1-bc97-d2666b453f72"
               ],
               "duration": 0,
               "root": false,
@@ -273,7 +273,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "6fec962c-9165-45aa-91f2-a79962c6ed55",
+              "uuid": "4ed72693-3579-450d-8f31-5e97459f0329",
               "title": "Segundo ingreso: Filtros de Agenda",
               "fullFile": "",
               "file": "",
@@ -293,7 +293,7 @@
                   "context": null,
                   "code": "// Seleccionar Estado: Todos\n      cy.get('.filter-option-inner-inner').contains('Seleccionar estado').click();\n      cy.get('.actions-btn.bs-select-all.btn.btn-light').contains('Todos').click();\n      // Seleccionar tipo de concepto: Todos\n      cy.get('.filter-option-inner-inner').contains('Seleccionar tipo de concepto').click();\n      cy.get('.actions-btn.bs-select-all.btn.btn-light').eq(1).click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "019ac177-6a7e-44c5-9f3b-4a9a21e25fb1",
+                  "uuid": "40161036-38e4-4b64-9303-a7865a2fafc5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -311,7 +311,7 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Tipo de concepto: 5 de 5 seleccionados').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Cobro de dividendo\n      cy.get('span.text').contains('Cobro de dividendo').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "5d74e6a1-8908-4b6a-a31d-c5e0417bd290",
+                  "uuid": "a4644745-c797-4f0d-90af-3c3d0acd0a0e",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -329,7 +329,7 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Cobro de dividendo').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Cobro de cupón\n      cy.get('span.text').contains('Cobro de cupón').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "797a72b6-46b3-40fc-93c2-5c96c255547c",
+                  "uuid": "186429fa-6ca0-40a2-91c3-34ca4b2d0d7f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -347,7 +347,7 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Cobro de cupón').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Cancelación anticipada\n      cy.get('span.text').contains('Cancelación anticipada').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "836f5736-feb8-430b-ac30-03986b9ee28a",
+                  "uuid": "4ad6ef57-b12e-406a-8d1c-a3ddac44456f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -365,7 +365,7 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Cancelación anticipada').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Vencimiento\n      cy.get('span.text').contains('Vencimiento').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "49d410ab-735f-4633-be0e-180625c7c47c",
+                  "uuid": "19601f6b-3e2b-444f-8736-7b9eaefdf8da",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -383,7 +383,7 @@
                   "context": null,
                   "code": "// Limpiar el filtro de conceptos\n      cy.get('.filter-option-inner-inner').contains('Vencimiento').click();\n      cy.get('.actions-btn.bs-deselect-all.btn.btn-light').eq(1).click({ force: true });\n      // Seleccionar tipo de concepto: Venta\n      cy.get('span.text').contains('Venta').click({ force: true });\n      // Hace click en el botón Filtrar y valida la grilla de cobros y pagos\n      cy.contains('Filtrar').click();\n      cy.get('div[class=\"sk-flow-dot\"]').should('not.exist');\n      cy.get('div.sk-circle-fade-dot').should('not.exist');\n      cy.get('div.loading-overlay').should('not.exist');\n      cy.validacionesAgenda();",
                   "err": {},
-                  "uuid": "f0a0e102-8340-4c5c-aa0a-9993e8169c2f",
+                  "uuid": "1550895b-a06b-4e12-b0c9-532662ea7ece",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -394,12 +394,12 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "019ac177-6a7e-44c5-9f3b-4a9a21e25fb1",
-                "5d74e6a1-8908-4b6a-a31d-c5e0417bd290",
-                "797a72b6-46b3-40fc-93c2-5c96c255547c",
-                "836f5736-feb8-430b-ac30-03986b9ee28a",
-                "49d410ab-735f-4633-be0e-180625c7c47c",
-                "f0a0e102-8340-4c5c-aa0a-9993e8169c2f"
+                "40161036-38e4-4b64-9303-a7865a2fafc5",
+                "a4644745-c797-4f0d-90af-3c3d0acd0a0e",
+                "186429fa-6ca0-40a2-91c3-34ca4b2d0d7f",
+                "4ad6ef57-b12e-406a-8d1c-a3ddac44456f",
+                "19601f6b-3e2b-444f-8736-7b9eaefdf8da",
+                "1550895b-a06b-4e12-b0c9-532662ea7ece"
               ],
               "duration": 0,
               "root": false,
@@ -408,12 +408,12 @@
             }
           ],
           "passes": [
-            "5fa89302-a9ef-4d3e-9b7a-db0fcebd9150"
+            "e6a20c6a-794f-41cf-8be3-264607b52335"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6176,
+          "duration": 3404,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

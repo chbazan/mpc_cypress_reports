@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-05T20:14:39.796Z",
+    "end": "2026-06-05T20:14:39.905Z",
+    "duration": 109,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b55a901f-641e-4043-af5d-db4ae129468a",
+      "title": "",
+      "fullFile": "build/testing/lh/smoke/09_proyeccion.cy.js",
+      "file": "build/testing/lh/smoke/09_proyeccion.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "73e20b29-7bae-498f-8be2-6663cb886519",
+          "title": "Proyección",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validación de proyección según operaciones",
+              "fullTitle": "Proyección Validación de proyección según operaciones",
+              "timedOut": null,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.abrirProyeccionPortfolio('Portfolio CYPRESS');\ncy.validarGruposProyeccion({\n  ARS: ['Plazo fijo', 'Caución'],\n  USD: ['Título Público']\n});\ncy.validarMesesProyeccion();\ncy.validarDetalleProyeccion({\n  link: '80,00',\n  fecha: '09/01/2026',\n  activo: 'AL30',\n  monto: '80,00',\n  moneda: 'USD'\n});",
+              "err": {},
+              "uuid": "3411afe5-6bcf-4e70-a9b9-50083fdeda18",
+              "parentUUID": "73e20b29-7bae-498f-8be2-6663cb886519",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3411afe5-6bcf-4e70-a9b9-50083fdeda18"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

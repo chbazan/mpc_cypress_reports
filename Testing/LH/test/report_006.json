@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-06-05T20:12:14.962Z",
+    "end": "2026-06-05T20:14:34.877Z",
+    "duration": 139915,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9f366ca1-28e3-4ee8-9b02-9afd693f21b2",
+      "title": "",
+      "fullFile": "build/testing/lh/smoke/07_resultado.cy.js",
+      "file": "build/testing/lh/smoke/07_resultado.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "60ee54cb-beb2-4872-a2f5-5c26779f0b8e",
+          "title": "Resultados",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validación de resultados al inicio del periodo",
+              "fullTitle": "Resultados Validación de resultados al inicio del periodo",
+              "timedOut": null,
+              "duration": 137560,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.irAResultado();\ncy.abrirPortfolioResultados('Portfolio CYPRESS');\ncy.setearFechaDesdeDias(-2);\ncy.seleccionarEsquema(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].VALUATION_SCHEME);\ncy.filtrarResultados();\ncy.validarCostoPortfolio();\ncy.guardarResultadoPorcentaje();\ncy.validarAgrupamiento('Acciones', 'ALUA.BA');\ncy.validarAgrupamiento('Bonos', 'AL30');\ncy.validarAgrupamiento('Cauciones', 'Caución - Caución aut N° 1');\ncy.validarAgrupamiento('Fondos', 'Alpha Renta Fija Serie 4 - Clase A');\ncy.validarAgrupamiento('Plazos fijos', 'Plazo fijo - Plazo fijo aut N° 1');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 120000ms: Expected to find element: `th[data-group-id=\"Cauciones\"]`, but never found it. Queried from:\n\n              > cy.get(.dtrg-group)",
+                "estack": "AssertionError: Timed out retrying after 120000ms: Expected to find element: `th[data-group-id=\"Cauciones\"]`, but never found it. Queried from:\n\n              > cy.get(.dtrg-group)\n    at Context.eval (webpack:///../../../cypress/support/commands/resultado.commands.js:82:0)\n    at wrapped (https://mercap-staging-1.us.auth0.com/__cypress/runner/cypress_runner.js:146042:43)",
+                "diff": null
+              },
+              "uuid": "bbe63330-1cd1-4827-8881-7d112ebfcdd8",
+              "parentUUID": "60ee54cb-beb2-4872-a2f5-5c26779f0b8e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación resultados a costo histórico",
+              "fullTitle": "Resultados Validación resultados a costo histórico",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.irAResultado();\ncy.abrirPortfolioResultados('Portfolio CYPRESS');\ncy.setearFechaDesdeDias(-2);\ncy.seleccionarEsquema(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].VALUATION_SCHEME);\ncy.cambiarModoHistorico();\ncy.filtrarResultados();\ncy.validarCostoPortfolio();\ncy.validarCambioResultadoPorcentaje(this.resultadoAnterior);\ncy.validarEncabezadosTablaResultados();\ncy.validarAgrupamiento('Acciones', 'ALUA.BA');\ncy.validarAgrupamiento('Bonos', 'AL30');\ncy.validarAgrupamiento('Cauciones', 'Caución - Caución aut N° 1');\ncy.validarAgrupamiento('Fondos', 'Alpha Renta Fija Serie 4 - Clase A');\ncy.validarAgrupamiento('Plazos fijos', 'Plazo fijo - Plazo fijo aut N° 1');",
+              "err": {},
+              "uuid": "0855a8fa-7c32-4367-8bc1-f366c2a74407",
+              "parentUUID": "60ee54cb-beb2-4872-a2f5-5c26779f0b8e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bbe63330-1cd1-4827-8881-7d112ebfcdd8"
+          ],
+          "pending": [
+            "0855a8fa-7c32-4367-8bc1-f366c2a74407"
+          ],
+          "skipped": [],
+          "duration": 137560,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}

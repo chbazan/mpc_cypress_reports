@@ -2,15 +2,15 @@
   "stats": {
     "suites": 3,
     "tests": 3,
-    "passes": 1,
-    "pending": 1,
+    "passes": 2,
+    "pending": 0,
     "failures": 1,
-    "start": "2026-06-11T17:23:08.147Z",
-    "end": "2026-06-11T17:29:17.479Z",
-    "duration": 369332,
+    "start": "2026-06-11T18:55:46.355Z",
+    "end": "2026-06-11T19:12:51.953Z",
+    "duration": 1025598,
     "testsRegistered": 3,
-    "passPercent": 50,
-    "pendingPercent": 33.33333333333333,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "83a04aff-d039-467c-b241-708388d3ea54",
+      "uuid": "25e85d9b-9fa0-4b16-91a5-60ee44346634",
       "title": "",
       "fullFile": "build/production/cfi/mi_dinero.cy.js",
       "file": "build/production/cfi/mi_dinero.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "50be9bbb-62ce-4da2-bc5a-f180cfe621c5",
+          "uuid": "8b598cca-c8c7-43f1-9f43-871972f9114a",
           "title": "Mi dinero",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Ingreso a MPC",
               "fullTitle": "Mi dinero Ingreso a MPC",
               "timedOut": null,
-              "duration": 3747,
+              "duration": 3735,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,15 +47,15 @@
               "context": null,
               "code": "cy.adminLoginMPC();",
               "err": {},
-              "uuid": "f353817c-1404-4bd4-8cdf-672b180ba65f",
-              "parentUUID": "50be9bbb-62ce-4da2-bc5a-f180cfe621c5",
+              "uuid": "4882f197-91a7-42ca-9745-8bf33c883a0f",
+              "parentUUID": "8b598cca-c8c7-43f1-9f43-871972f9114a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "6ca1f3fb-7762-47bd-85f4-71a4a64ff0b4",
+              "uuid": "518ec600-cc03-4c01-939e-9b48b09d4af9",
               "title": "Primer ingreso al menu Mi dinero",
               "fullFile": "",
               "file": "",
@@ -66,39 +66,35 @@
                   "title": "Primer ingreso al menú Mi dinero",
                   "fullTitle": "Mi dinero Primer ingreso al menu Mi dinero Primer ingreso al menú Mi dinero",
                   "timedOut": null,
-                  "duration": 363420,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "duration": 416660,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${path}`);\ncy.get('div[class=\"trades-filters-backdrop\"]').should('be.visible');\ncy.get('div[class=\"inner-component-backdrop\"]').should('be.visible');\ncy.get('div.sk-circle-fade-dot').should('not.exist');\ncy.get('div[class=\"card projected-cashflow-card cash-flow-card\"]').should('be.visible');",
-                  "err": {
-                    "message": "AssertionError: Timed out retrying after 360000ms: Expected [ <div.sk-circle-fade-dot>, 11 more... ] not to exist in the DOM, but it was continuously found.",
-                    "estack": "AssertionError: Timed out retrying after 360000ms: Expected [ <div.sk-circle-fade-dot>, 11 more... ] not to exist in the DOM, but it was continuously found.\n    at Context.eval (webpack://cypress/./build/production/cfi/mi_dinero.cy.js:17:0)",
-                    "diff": null
-                  },
-                  "uuid": "7b6e4af8-d423-4789-8829-64ddec92a0d7",
-                  "parentUUID": "6ca1f3fb-7762-47bd-85f4-71a4a64ff0b4",
+                  "err": {},
+                  "uuid": "336a018e-97d7-49b9-81b1-ff26b0232585",
+                  "parentUUID": "518ec600-cc03-4c01-939e-9b48b09d4af9",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
-              "failures": [
-                "7b6e4af8-d423-4789-8829-64ddec92a0d7"
+              "passes": [
+                "336a018e-97d7-49b9-81b1-ff26b0232585"
               ],
+              "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 363420,
+              "duration": 416660,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "7c54bdb4-4713-4a10-b6ba-90a73cc7bffc",
+              "uuid": "696298d6-e063-4ff6-b37c-2f91ba6bb59d",
               "title": "Segundo ingreso al menu Mi dinero",
               "fullFile": "",
               "file": "",
@@ -109,41 +105,45 @@
                   "title": "Segundo ingreso al menú Mi dinero",
                   "fullTitle": "Mi dinero Segundo ingreso al menu Mi dinero Segundo ingreso al menú Mi dinero",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "pending",
+                  "duration": 602594,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
-                  "pending": true,
+                  "fail": true,
+                  "pending": false,
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${path}`);\ncy.get('div[class=\"trades-filters-backdrop\"]').should('be.visible');\ncy.get('div[class=\"inner-component-backdrop\"]').should('be.visible');\ncy.get('div.sk-circle-fade-dot').should('not.exist');\ncy.get('div[class=\"card projected-cashflow-card cash-flow-card\"]').should('be.visible');",
-                  "err": {},
-                  "uuid": "e93c8062-71aa-4724-9dc4-57ef1ee03526",
-                  "parentUUID": "7c54bdb4-4713-4a10-b6ba-90a73cc7bffc",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 600000ms: Expected [ <div.sk-circle-fade-dot>, 11 more... ] not to exist in the DOM, but it was continuously found.",
+                    "estack": "AssertionError: Timed out retrying after 600000ms: Expected [ <div.sk-circle-fade-dot>, 11 more... ] not to exist in the DOM, but it was continuously found.\n    at Context.eval (webpack://cypress/./build/production/cfi/mi_dinero.cy.js:28:0)",
+                    "diff": null
+                  },
+                  "uuid": "17e97ced-81ff-4a28-bfab-78d17365f045",
+                  "parentUUID": "696298d6-e063-4ff6-b37c-2f91ba6bb59d",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [],
-              "failures": [],
-              "pending": [
-                "e93c8062-71aa-4724-9dc4-57ef1ee03526"
+              "failures": [
+                "17e97ced-81ff-4a28-bfab-78d17365f045"
               ],
+              "pending": [],
               "skipped": [],
-              "duration": 0,
+              "duration": 602594,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
           "passes": [
-            "f353817c-1404-4bd4-8cdf-672b180ba65f"
+            "4882f197-91a7-42ca-9745-8bf33c883a0f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3747,
+          "duration": 3735,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

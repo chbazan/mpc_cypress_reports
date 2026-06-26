@@ -1,0 +1,591 @@
+{
+  "input": {
+    "meta": {
+      "ambiente": "Production",
+      "cliente": "Avalian",
+      "version": "V1.12.4",
+      "version_anterior": "V1.11.8",
+      "timestamp_informe": "2026-05-21T13:37:15-03:00",
+      "muestras": 10
+    },
+    "resumen": {
+      "total_secciones": 8,
+      "total_acciones": 225,
+      "secciones_con_mejora": 6,
+      "secciones_con_degradacion": 1,
+      "secciones_con_alerta_15pct": 0,
+      "ux_health_score": 86
+    },
+    "secciones": [
+      {
+        "seccion": "Agenda",
+        "p95_actual_s": 8.35,
+        "p95_historico_s": 12.22,
+        "pct_mejora": 31.7,
+        "estado": "mejora",
+        "p50_s": 1.0,
+        "ratio_p95_p50": 8.35,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Home",
+        "p95_actual_s": 13.83,
+        "p95_historico_s": 25.51,
+        "pct_mejora": 45.8,
+        "estado": "mejora",
+        "p50_s": 7.72,
+        "ratio_p95_p50": 1.79,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Mi dinero",
+        "p95_actual_s": 142.89,
+        "p95_historico_s": 136.86,
+        "pct_mejora": -4.4,
+        "estado": "estable",
+        "p50_s": 88.84,
+        "ratio_p95_p50": 1.61,
+        "sla": {
+          "color": "#e67e22",
+          "bg": "#fef5e7",
+          "label": "Sobre umbral",
+          "icon": "🟡"
+        }
+      },
+      {
+        "seccion": "Mis depositarios",
+        "p95_actual_s": 3.35,
+        "p95_historico_s": 3.68,
+        "pct_mejora": 8.9,
+        "estado": "mejora",
+        "p50_s": 2.6,
+        "ratio_p95_p50": 1.29,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Mis operaciones",
+        "p95_actual_s": 28.3,
+        "p95_historico_s": 52.34,
+        "pct_mejora": 45.9,
+        "estado": "mejora",
+        "p50_s": 4.25,
+        "ratio_p95_p50": 6.66,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Mis portfolios",
+        "p95_actual_s": 8.66,
+        "p95_historico_s": 13.33,
+        "pct_mejora": 35.0,
+        "estado": "mejora",
+        "p50_s": 4.64,
+        "ratio_p95_p50": 1.87,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Rendimiento",
+        "p95_actual_s": 3.11,
+        "p95_historico_s": 2.88,
+        "pct_mejora": -8.2,
+        "estado": "degradacion",
+        "p50_s": 0.79,
+        "ratio_p95_p50": 3.94,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      },
+      {
+        "seccion": "Resultado",
+        "p95_actual_s": 36.99,
+        "p95_historico_s": 42.61,
+        "pct_mejora": 13.2,
+        "estado": "mejora",
+        "p50_s": 4.78,
+        "ratio_p95_p50": 7.74,
+        "sla": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Dentro de SLA",
+          "icon": "🟢"
+        }
+      }
+    ],
+    "alertas": [],
+    "top_acciones_lentas": [
+      {
+        "descripcion": "Primer ingreso al menú Mi dinero",
+        "seccion": "Mi dinero",
+        "p95_actual_s": 241.14,
+        "p95_historico_s": 204.72,
+        "pct_mejora": -17.8
+      },
+      {
+        "descripcion": "Segundo ingreso al menú Mi dinero",
+        "seccion": "Mi dinero",
+        "p95_actual_s": 109.67,
+        "p95_historico_s": 101.07,
+        "pct_mejora": -8.5
+      },
+      {
+        "descripcion": "Primer ingreso al portfolio Estrategia base de costo a inicio de periodo",
+        "seccion": "Resultado",
+        "p95_actual_s": 44.75,
+        "p95_historico_s": 63.08,
+        "pct_mejora": 29.1
+      },
+      {
+        "descripcion": "Cambio de esquema de valuación del portfolio Estrategia a ARS-USD CCL",
+        "seccion": "Resultado",
+        "p95_actual_s": 38.31,
+        "p95_historico_s": 47.58,
+        "pct_mejora": 19.5
+      },
+      {
+        "descripcion": "Primer ingreso al menú Home",
+        "seccion": "Home",
+        "p95_actual_s": 37.91,
+        "p95_historico_s": 74.48,
+        "pct_mejora": 49.1
+      }
+    ],
+    "top_acciones_rapidas": [
+      {
+        "descripcion": "Portfolio Hard Dollar: Primer ingreso a la carta de rendimiento Última semana con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.51,
+        "p95_historico_s": 0.55,
+        "pct_mejora": 7.7
+      },
+      {
+        "descripcion": "Portfolio Cobertura: Primer ingreso a la carta de rendimiento Última semana con método MWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.52,
+        "p95_historico_s": 0.55,
+        "pct_mejora": 6.2
+      },
+      {
+        "descripcion": "Portfolio Estrategia: Primer ingreso a la carta de rendimiento Última semana con método MWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.52,
+        "p95_historico_s": 0.54,
+        "pct_mejora": 4.7
+      },
+      {
+        "descripcion": "Portfolio Cobertura: Primer ingreso a la carta de rendimiento Última semana con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.53,
+        "p95_historico_s": 0.58,
+        "pct_mejora": 8.7
+      },
+      {
+        "descripcion": "Portfolio Hard Dollar: Primer ingreso a la carta de rendimiento Última semana con método MWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.54,
+        "p95_historico_s": 0.58,
+        "pct_mejora": 7.1
+      }
+    ],
+    "top_acciones_mejoradas": [
+      {
+        "descripcion": "Cambio de esquema de valuación del portfolio Hard Dollar a ARS-USD CCL",
+        "seccion": "Resultado",
+        "p95_actual_s": 7.41,
+        "p95_historico_s": 25.55,
+        "pct_mejora": 71.0
+      },
+      {
+        "descripcion": "Primer ingreso al portfolio Hard Dollar base de costo a inicio de periodo",
+        "seccion": "Resultado",
+        "p95_actual_s": 6.38,
+        "p95_historico_s": 18.64,
+        "pct_mejora": 65.8
+      },
+      {
+        "descripcion": "Segundo ingreso al portfolio Cobertura desde Mis portfolios",
+        "seccion": "Mis portfolios",
+        "p95_actual_s": 5.53,
+        "p95_historico_s": 14.78,
+        "pct_mejora": 62.6
+      },
+      {
+        "descripcion": "Primer ingreso al portfolio Estrategia desde el Home",
+        "seccion": "Home",
+        "p95_actual_s": 14.82,
+        "p95_historico_s": 38.67,
+        "pct_mejora": 61.7
+      },
+      {
+        "descripcion": "Primer ingreso al portfolio Hard Dollar desde el Home",
+        "seccion": "Home",
+        "p95_actual_s": 10.67,
+        "p95_historico_s": 27.6,
+        "pct_mejora": 61.3
+      }
+    ],
+    "top_acciones_degradadas": [
+      {
+        "descripcion": "Cambio de método de rentabilidad a TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 9.98,
+        "p95_historico_s": 5.64,
+        "pct_mejora": -77.0
+      },
+      {
+        "descripcion": "Portfolio Estrategia: Segundo ingreso a la carta de rendimiento Desde principio de mes con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.96,
+        "p95_historico_s": 0.67,
+        "pct_mejora": -42.8
+      },
+      {
+        "descripcion": "Portfolio Hard Dollar: Segundo ingreso a la carta de rendimiento Desde principio de año con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 1.17,
+        "p95_historico_s": 0.87,
+        "pct_mejora": -33.6
+      },
+      {
+        "descripcion": "Portfolio Total: Primer ingreso a la carta de rendimiento Desde principio de año con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 1.53,
+        "p95_historico_s": 1.16,
+        "pct_mejora": -31.6
+      },
+      {
+        "descripcion": "Portfolio Hard Dollar: Segundo ingreso a la carta de rendimiento Última semana con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.76,
+        "p95_historico_s": 0.58,
+        "pct_mejora": -30.5
+      }
+    ],
+    "comparativa_version_anterior": [
+      {
+        "seccion": "Agenda",
+        "p95_actual_s": 8.35,
+        "p95_anterior_s": 12.27,
+        "pct_mejora": 32.0
+      },
+      {
+        "seccion": "Home",
+        "p95_actual_s": 13.83,
+        "p95_anterior_s": 27.41,
+        "pct_mejora": 49.5
+      },
+      {
+        "seccion": "Mi dinero",
+        "p95_actual_s": 142.89,
+        "p95_anterior_s": 140.42,
+        "pct_mejora": -1.8
+      },
+      {
+        "seccion": "Mis depositarios",
+        "p95_actual_s": 3.35,
+        "p95_anterior_s": 3.68,
+        "pct_mejora": 8.9
+      },
+      {
+        "seccion": "Mis operaciones",
+        "p95_actual_s": 28.3,
+        "p95_anterior_s": 52.55,
+        "pct_mejora": 46.1
+      },
+      {
+        "seccion": "Mis portfolios",
+        "p95_actual_s": 8.66,
+        "p95_anterior_s": 13.62,
+        "pct_mejora": 36.4
+      },
+      {
+        "seccion": "Rendimiento",
+        "p95_actual_s": 3.11,
+        "p95_anterior_s": 2.87,
+        "pct_mejora": -8.3
+      },
+      {
+        "seccion": "Resultado",
+        "p95_actual_s": 36.99,
+        "p95_anterior_s": 42.61,
+        "pct_mejora": 13.2
+      }
+    ],
+    "impacto_cache": [
+      {
+        "seccion": "Agenda",
+        "descripcion_base": "Primer ingreso al menú Agenda",
+        "p95_base_s": 4.6,
+        "descripcion_cache": "Segundo ingreso al menú Agenda",
+        "p95_cache_s": 4.7,
+        "pct_mejora": -2.1
+      },
+      {
+        "seccion": "Home",
+        "descripcion_base": "Primer ingreso al menú Home",
+        "p95_base_s": 22.65,
+        "descripcion_cache": "Segundo ingreso al menú Home",
+        "p95_cache_s": 7.15,
+        "pct_mejora": 68.5
+      },
+      {
+        "seccion": "Mi dinero",
+        "descripcion_base": "Primer ingreso al menú Mi dinero",
+        "p95_base_s": 235.99,
+        "descripcion_cache": "Segundo ingreso al menú Mi dinero",
+        "p95_cache_s": 149.15,
+        "pct_mejora": 36.8
+      },
+      {
+        "seccion": "Mis operaciones",
+        "descripcion_base": "Primer ingreso al menú Mis operaciones",
+        "p95_base_s": 6.66,
+        "descripcion_cache": "Segundo ingreso al menú Mis operaciones",
+        "p95_cache_s": 5.89,
+        "pct_mejora": 11.6
+      },
+      {
+        "seccion": "Mis operaciones",
+        "descripcion_base": "Primer uso de filtros de operaciones",
+        "p95_base_s": 32.07,
+        "descripcion_cache": "Segundo uso de filtros de operaciones",
+        "p95_cache_s": 34.55,
+        "pct_mejora": -7.7
+      },
+      {
+        "seccion": "Mis operaciones",
+        "descripcion_base": "Primer uso de filtros de operaciones por depositario",
+        "p95_base_s": 4.66,
+        "descripcion_cache": "Segundo uso de filtros de operaciones por depositario",
+        "p95_cache_s": 4.64,
+        "pct_mejora": 0.5
+      }
+    ],
+    "tendencia_versiones": [
+      {
+        "version": "V1.10.1",
+        "p95_global_s": 28.35
+      },
+      {
+        "version": "V1.10.5",
+        "p95_global_s": 27.63
+      },
+      {
+        "version": "V1.10.7",
+        "p95_global_s": 29.1
+      },
+      {
+        "version": "V1.11.7",
+        "p95_global_s": 11.72
+      },
+      {
+        "version": "V1.11.8",
+        "p95_global_s": 16.09
+      },
+      {
+        "version": "V1.12.4",
+        "p95_global_s": 10.24
+      }
+    ],
+    "nuevas_acciones": [
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Acciones, estado: Cobrado",
+        "p95_s": 0.71
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Acciones, estado: Cobrado, fecha: 1 mes hacia atras",
+        "p95_s": 1.3
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Acciones, estado: Cobrado, fecha: 3 meses hacia atras",
+        "p95_s": 1.29
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Acciones, estado: Pendiente",
+        "p95_s": 0.63
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Acciones, estado: Pendiente, fecha: 1 mes hacia atras",
+        "p95_s": 1.23
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Acciones, estado: Pendiente, fecha: 3 meses hacia atras",
+        "p95_s": 1.29
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado",
+        "p95_s": 1.01
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado, fecha: 1 mes hacia atras",
+        "p95_s": 1.79
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado, fecha: 3 meses hacia atras",
+        "p95_s": 2.31
+      },
+      {
+        "seccion": "Agenda",
+        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente",
+        "p95_s": 19.58
+      }
+    ],
+    "impact_ranking": [
+      {
+        "seccion": "Resultado",
+        "p95_actual_s": 36.99,
+        "n_acciones": 19,
+        "impact_score": 702.8,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Rendimiento",
+        "p95_actual_s": 3.11,
+        "n_acciones": 122,
+        "impact_score": 379.4,
+        "estado": "degradacion"
+      },
+      {
+        "seccion": "Mis operaciones",
+        "p95_actual_s": 28.3,
+        "n_acciones": 12,
+        "impact_score": 339.6,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Mi dinero",
+        "p95_actual_s": 142.89,
+        "n_acciones": 2,
+        "impact_score": 285.8,
+        "estado": "estable"
+      },
+      {
+        "seccion": "Mis depositarios",
+        "p95_actual_s": 3.35,
+        "n_acciones": 50,
+        "impact_score": 167.5,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Home",
+        "p95_actual_s": 13.83,
+        "n_acciones": 9,
+        "impact_score": 124.5,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Mis portfolios",
+        "p95_actual_s": 8.66,
+        "n_acciones": 8,
+        "impact_score": 69.3,
+        "estado": "mejora"
+      },
+      {
+        "seccion": "Agenda",
+        "p95_actual_s": 8.35,
+        "n_acciones": 2,
+        "impact_score": 16.7,
+        "estado": "mejora"
+      }
+    ]
+  },
+  "conclusions": {
+    "estado_general": "excelente",
+    "resumen_ejecutivo": "Análisis de Avalian / V1.12.4 (Production) con 10 muestras. 6 de 8 secciones muestran mejoras, 1 degradaciones. Sin alertas de degradación crítica.",
+    "escalar": {
+      "titulo": "No hay alertas críticas en esta versión",
+      "detalle": "Ninguna sección superó el umbral de degradación del 15% respecto al histórico acumulado."
+    },
+    "investigar": {
+      "titulo": "Acción más lenta: Primer ingreso al menú Mi dinero",
+      "detalle": "P95 de 241.14s en la sección Mi dinero. Evaluar si el tiempo es aceptable para el usuario."
+    },
+    "optimizar": {
+      "titulo": "Mayor degradación: Cambio de método de rentabilidad a TWR",
+      "detalle": "Empeoró 77.0% (de 5.64s a 9.98s) en Rendimiento."
+    },
+    "hallazgos": [
+      {
+        "tipo": "mejora",
+        "seccion": "Mis operaciones",
+        "descripcion": "El P95 mejoró significativamente respecto al histórico",
+        "evidencia": "Histórico: 52.34s → Actual: 28.3s (+45.9%)"
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Home",
+        "descripcion": "El P95 mejoró significativamente respecto al histórico",
+        "evidencia": "Histórico: 25.51s → Actual: 13.83s (+45.8%)"
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Mis portfolios",
+        "descripcion": "El P95 mejoró significativamente respecto al histórico",
+        "evidencia": "Histórico: 13.33s → Actual: 8.66s (+35.0%)"
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Agenda",
+        "descripcion": "El P95 mejoró significativamente respecto al histórico",
+        "evidencia": "Histórico: 12.22s → Actual: 8.35s (+31.7%)"
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Rendimiento",
+        "descripcion": "El P95 empeoró respecto al histórico",
+        "evidencia": "Histórico: 2.88s → Actual: 3.11s (-8.2%)"
+      }
+    ],
+    "causa_raiz": [],
+    "recomendaciones": [
+      {
+        "prioridad": "P2",
+        "seccion": "Mi dinero",
+        "accion": "Revisar rendimiento en Mi dinero",
+        "evidencia": "P95 de 241.14s — punto de mayor latencia del sistema"
+      },
+      {
+        "prioridad": "P3",
+        "seccion": "General",
+        "accion": "Acumular más muestras para consolidar baseline de esta versión",
+        "evidencia": "Con 10 muestras, ≥5 dan P95 más estable y confiable"
+      }
+    ]
+  },
+  "ai_model": null
+}

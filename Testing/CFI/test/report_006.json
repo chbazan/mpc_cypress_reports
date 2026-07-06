@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-06T14:54:21.438Z",
-    "end": "2026-07-06T14:54:21.494Z",
-    "duration": 56,
+    "start": "2026-07-06T16:11:38.707Z",
+    "end": "2026-07-06T16:12:08.263Z",
+    "duration": 29556,
     "testsRegistered": 2,
-    "passPercent": 50,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 1,
-    "hasSkipped": true
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "bb41f077-83a8-4f74-821d-86577450bc6e",
+      "uuid": "23c6ace7-2d7c-40cb-874b-8b16827a55b8",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/07_resultado.cy.js",
       "file": "build/testing/cfi/smoke/07_resultado.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c5fe5e5a-ad91-496d-8bd8-6a2c8e6f25ca",
+          "uuid": "a366b825-0fe2-487e-99b0-26e0a60d0f6a",
           "title": "Resultados",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,17 @@
               "title": "Validación de resultados al inicio del periodo",
               "fullTitle": "Resultados Validación de resultados al inicio del periodo",
               "timedOut": null,
-              "duration": 0,
+              "duration": 18399,
               "state": "passed",
-              "speed": "fast",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.irAResultado();\ncy.abrirPortfolioResultados('Portfolio CYPRESS');\ncy.setPeriodo('02/02/2026', '05/03/2026');\ncy.seleccionarEsquema(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].VALUATION_SCHEME);\ncy.filtrarResultados();\ncy.validarCostoPortfolio();\ncy.guardarResultadoPorcentaje();\ncy.validarAgrupamiento('Acciones', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION);\ncy.validarAgrupamiento('Bonos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO);\ncy.validarAgrupamiento('Cauciones', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].CAUCION);\ncy.validarAgrupamiento('Fondos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO);\ncy.validarAgrupamiento('Plazos fijos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].PLAZO_FIJO);",
               "err": {},
-              "uuid": "65aa2062-41c6-48d4-9978-26e965c8cc04",
-              "parentUUID": "c5fe5e5a-ad91-496d-8bd8-6a2c8e6f25ca",
+              "uuid": "220c661e-4eb9-496c-8614-cf0ee2915b6a",
+              "parentUUID": "a366b825-0fe2-487e-99b0-26e0a60d0f6a",
               "isHook": false,
               "skipped": false
             },
@@ -56,31 +56,30 @@
               "title": "Validación resultados a costo histórico",
               "fullTitle": "Resultados Validación resultados a costo histórico",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
-              "speed": null,
-              "pass": false,
+              "duration": 9202,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.irAResultado();\ncy.abrirPortfolioResultados('Portfolio CYPRESS');\ncy.setPeriodo('02/02/2026', '05/03/2026');\ncy.seleccionarEsquema(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].VALUATION_SCHEME);\ncy.cambiarModoHistorico();\ncy.filtrarResultados();\ncy.validarCostoPortfolio();\ncy.validarCambioResultadoPorcentaje(this.resultadoAnterior);\ncy.validarEncabezadosTablaResultados();\ncy.validarAgrupamiento('Acciones', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION);\ncy.validarAgrupamiento('Bonos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO);\ncy.validarAgrupamiento('Cauciones', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].CAUCION);\ncy.validarAgrupamiento('Fondos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO);\ncy.validarAgrupamiento('Plazos fijos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].PLAZO_FIJO);",
               "err": {},
-              "uuid": "2f034833-234c-4edb-9f07-e1cd6ffd1df6",
-              "parentUUID": "c5fe5e5a-ad91-496d-8bd8-6a2c8e6f25ca",
+              "uuid": "e8391468-dbfc-4231-91ae-8050716da194",
+              "parentUUID": "a366b825-0fe2-487e-99b0-26e0a60d0f6a",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "65aa2062-41c6-48d4-9978-26e965c8cc04"
+            "220c661e-4eb9-496c-8614-cf0ee2915b6a",
+            "e8391468-dbfc-4231-91ae-8050716da194"
           ],
           "failures": [],
           "pending": [],
-          "skipped": [
-            "2f034833-234c-4edb-9f07-e1cd6ffd1df6"
-          ],
-          "duration": 0,
+          "skipped": [],
+          "duration": 27601,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

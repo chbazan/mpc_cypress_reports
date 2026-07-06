@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-06T14:02:46.813Z",
-    "end": "2026-07-06T14:02:46.894Z",
-    "duration": 81,
+    "start": "2026-07-06T14:28:05.318Z",
+    "end": "2026-07-06T14:28:05.408Z",
+    "duration": 90,
     "testsRegistered": 10,
     "passPercent": 10,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "97ada4eb-6f3a-48ec-9070-c21ad335e6bc",
+      "uuid": "74af0915-ec08-495d-8045-1ca255c76b76",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/12_importacion_archivo.cy.js",
       "file": "build/testing/cfi/smoke/12_importacion_archivo.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a891c708-6fa1-4bd3-bcc8-18cd48d5ac80",
+          "uuid": "42e8e59c-82a7-4e3b-98a0-c36b10b22961",
           "title": "Importación de archivo",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+              "uuid": "92442973-00e8-44ba-95b0-b88d42bab84e",
               "title": "Importación del template de Mercap",
               "fullFile": "",
               "file": "",
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "991a6886-660a-4f89-9b86-8db2b36bf242",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "3a84e8d2-44b7-42d0-8efa-e19e60c27bca",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": false
                 },
@@ -74,8 +74,8 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "1f8ca3fc-bafc-48f6-beea-4706581cdf04",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "db592afd-e515-40d5-9189-85726a7c7046",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -92,8 +92,8 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "14628343-b4ef-406d-a0fe-e17c41028463",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "3c5c69b8-73f4-4784-b684-7dadd4e1831c",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -110,8 +110,8 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "2daa54a5-b396-4263-b58d-673f834113e4",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "5c64da38-cfa4-44e4-b9e8-470e249c65fd",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -128,8 +128,8 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "0c772746-f589-4445-a8d7-80174e2f2dbf",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "84e6a113-19c3-4a52-9deb-20579ef69fb0",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -146,8 +146,8 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "1108f25f-24ac-4197-8580-12223bcb4650",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "db5459e8-ed5e-4683-ba8c-a5021de619f7",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -164,8 +164,8 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "7e1dbf2c-7aae-4184-9b62-ee221ad2952d",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "62127896-ec1f-483d-ad97-40f9d760b230",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": true
                 },
@@ -182,26 +182,26 @@
                   "context": null,
                   "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\ntestCase.data.forEach(item => cy.importTalbeValidation(item.especie, item));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\ncy.validarPosicionesNetasPortfolio(testCase.data);",
                   "err": {},
-                  "uuid": "b90fff4c-013b-4349-8ce6-4f63e8a6e738",
-                  "parentUUID": "53b19b97-47f7-4dbb-a166-40f293b6e908",
+                  "uuid": "9ef0f904-614c-49cc-9484-5ecd5625a612",
+                  "parentUUID": "92442973-00e8-44ba-95b0-b88d42bab84e",
                   "isHook": false,
                   "skipped": true
                 }
               ],
               "suites": [],
               "passes": [
-                "991a6886-660a-4f89-9b86-8db2b36bf242"
+                "3a84e8d2-44b7-42d0-8efa-e19e60c27bca"
               ],
               "failures": [],
               "pending": [],
               "skipped": [
-                "1f8ca3fc-bafc-48f6-beea-4706581cdf04",
-                "14628343-b4ef-406d-a0fe-e17c41028463",
-                "2daa54a5-b396-4263-b58d-673f834113e4",
-                "0c772746-f589-4445-a8d7-80174e2f2dbf",
-                "1108f25f-24ac-4197-8580-12223bcb4650",
-                "7e1dbf2c-7aae-4184-9b62-ee221ad2952d",
-                "b90fff4c-013b-4349-8ce6-4f63e8a6e738"
+                "db592afd-e515-40d5-9189-85726a7c7046",
+                "3c5c69b8-73f4-4784-b684-7dadd4e1831c",
+                "5c64da38-cfa4-44e4-b9e8-470e249c65fd",
+                "84e6a113-19c3-4a52-9deb-20579ef69fb0",
+                "db5459e8-ed5e-4683-ba8c-a5021de619f7",
+                "62127896-ec1f-483d-ad97-40f9d760b230",
+                "9ef0f904-614c-49cc-9484-5ecd5625a612"
               ],
               "duration": 0,
               "root": false,
@@ -209,7 +209,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "67bb53af-4a2b-4638-896c-5c5b543e7cc9",
+              "uuid": "a4462b5f-222f-4b08-b161-380caad3631a",
               "title": "Importación del template de Fondos Pellegrini",
               "fullFile": "",
               "file": "",
@@ -229,7 +229,7 @@
                   "context": null,
                   "code": "cy.importOperations('Pellegrini (.xls)', 'Pellegrini-Template-Multiples.xls', 'application/vnd.ms-excel');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// Validación de operaciones en la tabla en flujo de Importación.\nfondosPellegrini.forEach(f => cy.importTalbeValidation(f.especie, f));\n// Flujo de Importación.\ncy.ejecutarFlujoImportacion('01/01/2024');\n// Validación de operaciones importadas desde Mis Operaciones.\ncy.irAMisOperaciones();\ncy.filtrarFecha('01/01/2024');\nfondosPellegrini.forEach(f => cy.importTalbeValidation(f.especie, f));\n// Validación de la operación desde el portfolio.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\n// Calcula las tenencias finales de los fondos tras suscripciones/rescates y las valida\ncy.validarPosicionesNetasPortfolio(fondosPellegrini);",
                   "err": {},
-                  "uuid": "3f224fca-cd46-4f18-9d1c-19db2786da94",
+                  "uuid": "004d87fc-751b-4690-b32c-8c103725d8cc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -240,7 +240,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "3f224fca-cd46-4f18-9d1c-19db2786da94"
+                "004d87fc-751b-4690-b32c-8c103725d8cc"
               ],
               "duration": 0,
               "root": false,
@@ -248,7 +248,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "f6ce3288-646a-496b-8ebc-650f5833e746",
+              "uuid": "7217a909-6a8a-4c9f-b88e-5febbab3995e",
               "title": "Importación del template balanz",
               "fullFile": "",
               "file": "",
@@ -268,7 +268,7 @@
                   "context": null,
                   "code": "const balanzTrades = [{\n  operatoria: 'Venta',\n  especie: 'AL30',\n  fecha: '10/06/2026',\n  cantidad: '5.040,00',\n  montoTotal: '4.033.512,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Compra',\n  especie: 'AL30',\n  fecha: '19/05/2026',\n  cantidad: '26.220,00',\n  montoTotal: '6.362.020,80',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Venta',\n  especie: 'AL30',\n  fecha: '13/05/2026',\n  cantidad: '60.000,00',\n  montoTotal: '16.096,80',\n  moneda: 'USD'\n}, {\n  operatoria: 'Compra',\n  especie: 'AL30',\n  fecha: '16/03/2026',\n  cantidad: '5.670,00',\n  montoTotal: '3.848,23',\n  moneda: 'USD'\n}, {\n  operatoria: 'Compra',\n  especie: 'GD30',\n  fecha: '13/03/2026',\n  cantidad: '8.616,00',\n  montoTotal: '1.788,68',\n  moneda: 'USD'\n}, {\n  operatoria: 'Compra',\n  especie: 'B.BA',\n  fecha: '10/06/2026',\n  cantidad: '152,00',\n  montoTotal: '465.120,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Compra',\n  especie: 'NFLX.BA',\n  fecha: '10/06/2026',\n  cantidad: '155,00',\n  montoTotal: '823.980,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Compra',\n  especie: 'AAPL.BA',\n  fecha: '03/06/2026',\n  cantidad: '90,00',\n  montoTotal: '146.250,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Compra',\n  especie: 'PAMP.BA',\n  fecha: '15/04/2026',\n  cantidad: '2.450,00',\n  montoTotal: '114.415,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Compra',\n  especie: 'AAPL.BA',\n  fecha: '02/01/2026',\n  cantidad: '160,00',\n  montoTotal: '2.912,00',\n  moneda: 'USD'\n}, {\n  operatoria: 'Compra',\n  especie: 'KO.BA',\n  fecha: '13/11/2025',\n  cantidad: '60,00',\n  montoTotal: '3.757,19',\n  moneda: 'USD'\n}, {\n  operatoria: 'Venta',\n  especie: 'NVDA.BA',\n  fecha: '07/11/2025',\n  cantidad: '2.000,00',\n  montoTotal: '10.720.000,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Compra',\n  especie: 'NVDA.BA',\n  fecha: '06/11/2025',\n  cantidad: '1.500,00',\n  montoTotal: '7.965.000,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Venta',\n  especie: 'TSLA.BA',\n  fecha: '20/10/2025',\n  cantidad: '144,00',\n  montoTotal: '2.916.000,00',\n  moneda: 'ARS'\n}, {\n  operatoria: 'Compra',\n  especie: 'TSLA.BA',\n  fecha: '09/10/2025',\n  cantidad: '360,00',\n  montoTotal: '7.857.000,00',\n  moneda: 'ARS'\n}];\ncy.importOperations('Balanz (.xlsx)', 'Boletos-Balanz-Ejemplo.xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\ncy.validarTabsEncabezadosImportacion();\ncy.validarTablaEncabezadosImportacion();\n// --- VALIDACIÓN DE FILAS (PREVIEW) ---\n// Ahora es una sola línea súper limpia 👇\nbalanzTrades.forEach(trade => cy.importTalbeValidation(trade.especie, trade));\n// --- FLUJO DE IMPORTACIÓN ---\ncy.ejecutarFlujoImportacion('01/01/2024');\n// --- VALIDACIÓN DE FILAS IMPORTADAS (TRADING) ---\ncy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}/trading`);\ncy.filtrarFecha('01/01/2024');\nbalanzTrades.forEach(trade => cy.importTalbeValidation(trade.especie, trade));\n// --- NUEVA VALIDACIÓN DE POSICIÓN EN PORTFOLIO ---\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.validarPosicionesNetasPortfolio(balanzTrades);",
                   "err": {},
-                  "uuid": "bafb126d-0d0f-4f40-9195-42add23e3155",
+                  "uuid": "a7c7aa13-cf83-43e0-858d-1ff16783e909",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -279,7 +279,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "bafb126d-0d0f-4f40-9195-42add23e3155"
+                "a7c7aa13-cf83-43e0-858d-1ff16783e909"
               ],
               "duration": 0,
               "root": false,

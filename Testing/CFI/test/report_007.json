@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-06T14:27:57.337Z",
-    "end": "2026-07-06T14:27:57.437Z",
-    "duration": 100,
+    "start": "2026-07-06T14:54:23.950Z",
+    "end": "2026-07-06T14:54:24.030Z",
+    "duration": 80,
     "testsRegistered": 18,
     "passPercent": 5.555555555555555,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "92c159ce-f971-421e-81b2-9a10628876c8",
+      "uuid": "6005a25c-eb8c-4915-a43b-e47fa46b05d1",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/08_rendimiento.cy.js",
       "file": "build/testing/cfi/smoke/08_rendimiento.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6be0ef18-68ca-413c-ad03-d606fe0a2385",
+          "uuid": "c84fa09e-8f02-499e-aeb3-8cec0928e49f",
           "title": "Ingreso al menú Rendimiento | Portfolio Total | Portfolio Cypress",
           "fullFile": "",
           "file": "",
@@ -47,15 +47,15 @@
               "context": null,
               "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}/historical-performance`);\ncy.get('.alert').should('be.visible').and('contain.text', 'Seleccione un portfolio para ver su rendimiento');\ncy.get('div.card.composite-account-composition-details-card').should('be.visible');",
               "err": {},
-              "uuid": "aa4927b5-69e4-4b25-b52e-7798addf95d0",
-              "parentUUID": "6be0ef18-68ca-413c-ad03-d606fe0a2385",
+              "uuid": "00c4d278-4c98-47ee-ba30-cbc1812d0665",
+              "parentUUID": "c84fa09e-8f02-499e-aeb3-8cec0928e49f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "6932b777-582a-41df-8a12-b882b2726c3d",
+              "uuid": "00ffacd0-d855-49ba-ac60-a2a7c586e591",
               "title": "Operaciones en Portfolio Total",
               "fullFile": "",
               "file": "",
@@ -75,7 +75,7 @@
                   "context": null,
                   "code": "cy.contains('Total').should('be.visible').click({\n  force: true\n});\ncy.validarDashboardRendimiento(true);\ncy.get('div.card.composite-account-composition-details-card').should('be.visible');\ncy.get('h5.card-title').should('be.visible');",
                   "err": {},
-                  "uuid": "36e30d7d-fdc0-4ea3-a266-f486d674d96b",
+                  "uuid": "a1244009-a9ad-4f8b-845f-1b6b3616fcf6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -93,7 +93,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "caa286ce-edd4-4c6c-9c56-dee97493d28c",
+                  "uuid": "aec3ef27-662e-4309-8f53-dc1b22449b21",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -111,7 +111,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "e5d8d2ca-e21c-4519-a792-f8b9a2b1e880",
+                  "uuid": "8e16e9f1-8fbf-4dbc-a8e0-aca8434ec6f0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -129,7 +129,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "8b3273ce-ccc8-4929-8151-0be721498a5e",
+                  "uuid": "d830dbf5-b56c-4024-aa2d-cee2354d9ff6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -147,7 +147,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "c3db91a4-989a-46dc-bbad-018903faaa0d",
+                  "uuid": "6c3924bd-2a45-4569-a3c7-75f29580a2aa",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -165,7 +165,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "25ebd5fb-c09f-4e2b-9e38-d4a521842265",
+                  "uuid": "747015d1-84dc-437b-ad0a-c2d4f9eb2dc4",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -183,7 +183,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "b3be0ed4-5ebd-40d9-8f3d-d803a6ec1969",
+                  "uuid": "c6b802ea-ef2d-484d-93b8-fa33cc105f5b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -201,7 +201,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "aaa3f393-3242-472e-ad01-327e2dafbe97",
+                  "uuid": "c3b248bd-646d-450d-98af-cfcc39c85ac0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -212,14 +212,14 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "36e30d7d-fdc0-4ea3-a266-f486d674d96b",
-                "caa286ce-edd4-4c6c-9c56-dee97493d28c",
-                "e5d8d2ca-e21c-4519-a792-f8b9a2b1e880",
-                "8b3273ce-ccc8-4929-8151-0be721498a5e",
-                "c3db91a4-989a-46dc-bbad-018903faaa0d",
-                "25ebd5fb-c09f-4e2b-9e38-d4a521842265",
-                "b3be0ed4-5ebd-40d9-8f3d-d803a6ec1969",
-                "aaa3f393-3242-472e-ad01-327e2dafbe97"
+                "a1244009-a9ad-4f8b-845f-1b6b3616fcf6",
+                "aec3ef27-662e-4309-8f53-dc1b22449b21",
+                "8e16e9f1-8fbf-4dbc-a8e0-aca8434ec6f0",
+                "d830dbf5-b56c-4024-aa2d-cee2354d9ff6",
+                "6c3924bd-2a45-4569-a3c7-75f29580a2aa",
+                "747015d1-84dc-437b-ad0a-c2d4f9eb2dc4",
+                "c6b802ea-ef2d-484d-93b8-fa33cc105f5b",
+                "c3b248bd-646d-450d-98af-cfcc39c85ac0"
               ],
               "duration": 0,
               "root": false,
@@ -227,7 +227,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "54f3dda7-d8c5-41e6-aa9d-6bb4102f9940",
+              "uuid": "c8c8b93e-ab58-4f8d-8381-e75d057b974d",
               "title": "Operaciones en Portfolio CYPRESS",
               "fullFile": "",
               "file": "",
@@ -247,7 +247,7 @@
                   "context": null,
                   "code": "cy.contains('Portfolio CYPRESS').should('be.visible').click({\n  force: true\n});\ncy.validarDashboardRendimiento(true);\ncy.get('h5.card-title').should('be.visible');",
                   "err": {},
-                  "uuid": "f5501409-659d-495d-9124-1c7725ac2a4e",
+                  "uuid": "f7e372d6-7872-43ce-9555-30d1a0c7f54e",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -265,7 +265,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "234f62d4-a678-4bb8-9ba8-53867b4e2494",
+                  "uuid": "e1dc3c71-4192-4e05-b844-fe9f89fbf5be",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -283,7 +283,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "4927f449-93dc-4e6e-98e7-afaf9704b5ae",
+                  "uuid": "a6e4b8e0-0298-4c8e-ba60-3b1555396160",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -301,7 +301,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "791487fa-4f90-4a59-8905-b65fd7361313",
+                  "uuid": "dcfe9ba6-c333-49fc-90a1-b1dd6589cc3f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -319,7 +319,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "3bbf729a-1825-43b5-950e-93cc255f4a9d",
+                  "uuid": "9b901d9c-a86d-469b-b207-4d3aec694b6f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -337,7 +337,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "72204dda-58e8-4e7c-bbe2-3d88cf5be141",
+                  "uuid": "5cb21675-3765-41d0-8b54-a1fe85510996",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -355,7 +355,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "5757d4ac-48d7-45d8-ba5c-864467da72aa",
+                  "uuid": "fa7e19e9-250e-4a09-9866-9d7fd6e9ff2e",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -373,7 +373,7 @@
                   "context": null,
                   "code": "cy.get(`label[data-original-title=\"${periodo.nombre}\"]`).click({\n  force: true\n});\ncy.validarDashboardRendimiento(periodo.validaLinea);",
                   "err": {},
-                  "uuid": "c6dd11da-a589-4c9a-bd70-868c8b607f5d",
+                  "uuid": "9988fcc5-cb53-49c3-af51-efbbb174c622",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -391,7 +391,7 @@
                   "context": null,
                   "code": "cy.contains('label', 'Personalizado').click({\n  force: true\n});\nconst fechaInicio = '01/05/2026';\nconst fechaFin = '01/06/2026';\ncy.setPeriodoPersonalizado(fechaInicio, fechaFin);\ncy.validarDashboardRendimiento(true);",
                   "err": {},
-                  "uuid": "de7f069b-204a-4439-9e69-471a6046feae",
+                  "uuid": "2c0d400b-f794-46a6-b05d-de478238852a",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -402,15 +402,15 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "f5501409-659d-495d-9124-1c7725ac2a4e",
-                "234f62d4-a678-4bb8-9ba8-53867b4e2494",
-                "4927f449-93dc-4e6e-98e7-afaf9704b5ae",
-                "791487fa-4f90-4a59-8905-b65fd7361313",
-                "3bbf729a-1825-43b5-950e-93cc255f4a9d",
-                "72204dda-58e8-4e7c-bbe2-3d88cf5be141",
-                "5757d4ac-48d7-45d8-ba5c-864467da72aa",
-                "c6dd11da-a589-4c9a-bd70-868c8b607f5d",
-                "de7f069b-204a-4439-9e69-471a6046feae"
+                "f7e372d6-7872-43ce-9555-30d1a0c7f54e",
+                "e1dc3c71-4192-4e05-b844-fe9f89fbf5be",
+                "a6e4b8e0-0298-4c8e-ba60-3b1555396160",
+                "dcfe9ba6-c333-49fc-90a1-b1dd6589cc3f",
+                "9b901d9c-a86d-469b-b207-4d3aec694b6f",
+                "5cb21675-3765-41d0-8b54-a1fe85510996",
+                "fa7e19e9-250e-4a09-9866-9d7fd6e9ff2e",
+                "9988fcc5-cb53-49c3-af51-efbbb174c622",
+                "2c0d400b-f794-46a6-b05d-de478238852a"
               ],
               "duration": 0,
               "root": false,
@@ -419,7 +419,7 @@
             }
           ],
           "passes": [
-            "aa4927b5-69e4-4b25-b52e-7798addf95d0"
+            "00c4d278-4c98-47ee-ba30-cbc1812d0665"
           ],
           "failures": [],
           "pending": [],

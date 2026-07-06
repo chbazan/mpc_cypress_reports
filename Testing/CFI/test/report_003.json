@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-06T14:27:46.129Z",
-    "end": "2026-07-06T14:27:46.224Z",
-    "duration": 95,
+    "start": "2026-07-06T14:54:14.097Z",
+    "end": "2026-07-06T14:54:14.178Z",
+    "duration": 81,
     "testsRegistered": 12,
     "passPercent": 8.333333333333332,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b08738c3-78fc-49d9-8032-c48d4d0fd859",
+      "uuid": "6ed8638c-e75b-4164-b5e9-d56d635612a4",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/04_agenda.cy.js",
       "file": "build/testing/cfi/smoke/04_agenda.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "92c5c4b1-1f0e-4515-b60a-f8ad1910573b",
+          "uuid": "4dabcd48-62f6-45d2-b54d-af6d290f6f9f",
           "title": "Agenda",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "1c2171e5-c2ba-486d-8c17-e47ca19ff2b9",
+              "uuid": "8f4f4911-1792-4fc9-9079-1a986069923a",
               "title": "Corte de cupón",
               "fullFile": "",
               "file": "",
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.irAAgenda();\ncy.seleccionarTab('Bonos');\ncy.filtrarPendientesPorFecha('Pendiente', '08/01/2026', 'Fecha desde');\ncy.buscarDepositario('depositario CYPRESS');\ncy.cobrarInstrumento('AL30-10');\ncy.cobrarCupon();\ncy.validarInstrumentoCobrado('depositario CYPRESS', 'AL30-10', '08/01/2026');",
                   "err": {},
-                  "uuid": "6e78ce2f-fee4-40a7-ad99-b16b1aa51167",
-                  "parentUUID": "1c2171e5-c2ba-486d-8c17-e47ca19ff2b9",
+                  "uuid": "4b5fddeb-1317-4976-9874-b45c29e12125",
+                  "parentUUID": "8f4f4911-1792-4fc9-9079-1a986069923a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -74,20 +74,20 @@
                   "context": null,
                   "code": "cy.irAAgenda();\ncy.seleccionarTab('Bonos');\ncy.filtrarCobradosConceptoPorFecha('Pendiente', '08/01/2026');\ncy.buscarDepositario('depositario CYPRESS');\ncy.eliminarCobro('AL30-10');\n// Verificar que se muestre el cupón en pendiente.\ncy.seleccionarTab('Bonos');\ncy.filtrarPendientesPorFecha('Cobrado', '08/01/2026', 'Fecha desde');\ncy.buscarDepositario('depositario CYPRESS');\ncy.validarInstrumentoPendiente('AL30-10');",
                   "err": {},
-                  "uuid": "a821eaeb-f4bb-41c4-b4dc-9ea981a8acf2",
-                  "parentUUID": "1c2171e5-c2ba-486d-8c17-e47ca19ff2b9",
+                  "uuid": "55eab985-1c25-4eb4-811b-f957f874f2cc",
+                  "parentUUID": "8f4f4911-1792-4fc9-9079-1a986069923a",
                   "isHook": false,
                   "skipped": true
                 }
               ],
               "suites": [],
               "passes": [
-                "6e78ce2f-fee4-40a7-ad99-b16b1aa51167"
+                "4b5fddeb-1317-4976-9874-b45c29e12125"
               ],
               "failures": [],
               "pending": [],
               "skipped": [
-                "a821eaeb-f4bb-41c4-b4dc-9ea981a8acf2"
+                "55eab985-1c25-4eb4-811b-f957f874f2cc"
               ],
               "duration": 0,
               "root": false,
@@ -95,7 +95,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "95837196-84f2-4512-b576-0d4ecb38688f",
+              "uuid": "65ec26dd-809c-4e55-a0b8-c9309899b8e0",
               "title": "Operaciones a Plazo",
               "fullFile": "",
               "file": "",
@@ -115,7 +115,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a plazo');\ncy.filtrarPendientesPorFecha('Pendiente', '05/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.cobrarInstrumento('Plazo fijo - Plazo fijo aut N° 1');\ncy.cargarVencimiento('Plazo fijo - Plazo fijo aut N° 1', 'PF-C-0001');\ncy.validarInstrumentoCobrado('depositario CYPRESS', 'Plazo fijo - Plazo fijo aut N° 1', '05/03/2026', 'Vencimiento');",
                   "err": {},
-                  "uuid": "3fbd59c8-17ec-4531-b84e-b307ba930a69",
+                  "uuid": "d36ef371-835b-49e7-840c-1a87cdb5b7d5",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -133,7 +133,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a plazo');\ncy.filtrarCobradosConceptoPorFecha('Cobrado', '05/03/2026', 'Vencimiento');\ncy.buscarDepositario('depositario CYPRESS');\ncy.eliminarCobro('Plazo fijo - Plazo fijo aut N° 1');\n// Verificar que se muestre el Plazo fijo en pendiente.\ncy.seleccionarTab('Operaciones a plazo');\ncy.filtrarPendientesPorFecha('Cobrado', '05/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.validarInstrumentoPendiente('Plazo fijo - Plazo fijo aut N° 1');",
                   "err": {},
-                  "uuid": "2c44b51b-5110-4b56-ae0c-63aec595eb15",
+                  "uuid": "4122c430-9665-4084-98ca-bee316b900cc",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -151,7 +151,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a plazo');\ncy.filtrarPendientesPorFecha('Pendiente', '05/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.venderInstrumento('Plazo fijo - Plazo fijo aut N° 1', '05/03/2026');\ncy.validarInstrumentoCobrado('depositario CYPRESS', 'Plazo fijo - Plazo fijo aut N° 1', '05/03/2026', 'Venta');",
                   "err": {},
-                  "uuid": "a5fae36c-f356-4f68-98df-a444e1978283",
+                  "uuid": "b61437bc-2b85-42e0-a20e-df4e01ebce74",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -169,7 +169,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a plazo');\ncy.filtrarCobradosConceptoPorFecha('Cobrado', '05/03/2026', 'Venta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.eliminarCobro('Plazo fijo - Plazo fijo aut N° 1');\n// Verificar que se muestre el Plazo fijo en pendiente.\ncy.seleccionarTab('Operaciones a plazo');\ncy.filtrarPendientesPorFecha('Cobrado', '05/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.validarInstrumentoPendiente('Plazo fijo - Plazo fijo aut N° 1');",
                   "err": {},
-                  "uuid": "d853b2a5-ed8d-4675-97ca-215e60725c14",
+                  "uuid": "60233299-c716-451d-86e2-d64ef4d4ca2b",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -187,7 +187,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a plazo');\ncy.filtrarPendientesPorFecha('Pendiente', '05/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.precancelarInstrumento('Plazo fijo - Plazo fijo aut N° 1', '05/03/2026');\ncy.validarInstrumentoCobrado('depositario CYPRESS', 'Plazo fijo - Plazo fijo aut N° 1', '05/03/2026', 'Cancelación anticipada');",
                   "err": {},
-                  "uuid": "9a7dc33e-2294-4434-afa2-ce9c7c422612",
+                  "uuid": "83417e37-faad-4e73-a0bf-9be920a19e3c",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -205,7 +205,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a plazo');\ncy.filtrarCobradosConceptoPorFecha('Cobrado', '05/03/2026', 'Cancelación anticipada');\ncy.buscarDepositario('depositario CYPRESS');\ncy.eliminarCobro('Plazo fijo - Plazo fijo aut N° 1');\n// Verificar que se muestre el Plazo fijo en pendiente.\ncy.seleccionarTab('Operaciones a plazo');\ncy.filtrarPendientesPorFecha('Cobrado', '05/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.validarInstrumentoPendiente('Plazo fijo - Plazo fijo aut N° 1');",
                   "err": {},
-                  "uuid": "7e4f9e2b-e1af-42d9-9803-bd1ce76801d7",
+                  "uuid": "779d372b-54b3-40bf-8066-63bf79e47bd6",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -216,12 +216,12 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "3fbd59c8-17ec-4531-b84e-b307ba930a69",
-                "2c44b51b-5110-4b56-ae0c-63aec595eb15",
-                "a5fae36c-f356-4f68-98df-a444e1978283",
-                "d853b2a5-ed8d-4675-97ca-215e60725c14",
-                "9a7dc33e-2294-4434-afa2-ce9c7c422612",
-                "7e4f9e2b-e1af-42d9-9803-bd1ce76801d7"
+                "d36ef371-835b-49e7-840c-1a87cdb5b7d5",
+                "4122c430-9665-4084-98ca-bee316b900cc",
+                "b61437bc-2b85-42e0-a20e-df4e01ebce74",
+                "60233299-c716-451d-86e2-d64ef4d4ca2b",
+                "83417e37-faad-4e73-a0bf-9be920a19e3c",
+                "779d372b-54b3-40bf-8066-63bf79e47bd6"
               ],
               "duration": 0,
               "root": false,
@@ -229,7 +229,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "e47cb112-7fbf-4040-8036-72a99b6e2d8f",
+              "uuid": "d1b81465-0036-461c-8cbc-437efca88f0e",
               "title": "Operaciones a descuento",
               "fullFile": "",
               "file": "",
@@ -249,7 +249,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a descuento');\ncy.filtrarPendientesPorFecha('Pendiente', '09/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.cobrarInstrumento('Cheque - Cheque aut N° 1');\ncy.cargarVencimiento('Cheque - Cheque aut N° 1', 'PF-C-0001');\ncy.validarInstrumentoCobrado('depositario CYPRESS', 'Cheque - Cheque aut N° 1', '09/03/2026', 'Vencimiento');",
                   "err": {},
-                  "uuid": "d2b8d04e-b7e7-41c7-8a61-53d6da565d98",
+                  "uuid": "87a7859f-96b5-463e-9958-e2d41019d9ec",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -267,7 +267,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a descuento');\ncy.filtrarCobradosConceptoPorFecha('Cobrado', '09/03/2026', 'Vencimiento');\ncy.buscarDepositario('depositario CYPRESS');\ncy.eliminarCobro('Cheque - Cheque aut N° 1');\n// Verificar que se muestre el Cheque en pendiente.\ncy.seleccionarTab('Operaciones a descuento');\ncy.filtrarPendientesPorFecha('Cobrado', '09/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.validarInstrumentoPendiente('Cheque - Cheque aut N° 1');",
                   "err": {},
-                  "uuid": "9f72ce93-2ee6-42b7-b8f1-9940f3944668",
+                  "uuid": "badb9e44-27be-4371-9c1c-ff671faceb6d",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -285,7 +285,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a descuento');\ncy.filtrarPendientesPorFecha('Pendiente', '09/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.venderInstrumento('Cheque - Cheque aut N° 1', '06/03/2026');\ncy.validarInstrumentoCobrado('depositario CYPRESS', 'Cheque - Cheque aut N° 1', '06/03/2026', 'Venta');",
                   "err": {},
-                  "uuid": "f9a97d24-5217-4fd3-8f4d-d022adc853d6",
+                  "uuid": "1caf1135-8686-476c-8e6e-200cf1c1658f",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -303,7 +303,7 @@
                   "context": null,
                   "code": "cy.seleccionarTab('Operaciones a descuento');\ncy.filtrarCobradosConceptoPorFecha('Cobrado', '06/03/2026', 'Venta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.eliminarCobro('Cheque - Cheque aut N° 1');\n// Verificar que se muestre el Cheque en pendiente.\ncy.seleccionarTab('Operaciones a descuento');\ncy.filtrarPendientesPorFecha('Cobrado', '09/03/2026', 'Fecha hasta');\ncy.buscarDepositario('depositario CYPRESS');\ncy.validarInstrumentoPendiente('Cheque - Cheque aut N° 1');",
                   "err": {},
-                  "uuid": "7589658f-684f-43c3-9c5e-c30c81448022",
+                  "uuid": "a4a2e98a-b268-4767-bf85-f5c7db4d7303",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -314,10 +314,10 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "d2b8d04e-b7e7-41c7-8a61-53d6da565d98",
-                "9f72ce93-2ee6-42b7-b8f1-9940f3944668",
-                "f9a97d24-5217-4fd3-8f4d-d022adc853d6",
-                "7589658f-684f-43c3-9c5e-c30c81448022"
+                "87a7859f-96b5-463e-9958-e2d41019d9ec",
+                "badb9e44-27be-4371-9c1c-ff671faceb6d",
+                "1caf1135-8686-476c-8e6e-200cf1c1658f",
+                "a4a2e98a-b268-4767-bf85-f5c7db4d7303"
               ],
               "duration": 0,
               "root": false,

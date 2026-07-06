@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-03T20:58:56.073Z",
-    "end": "2026-07-03T20:58:56.151Z",
-    "duration": 78,
+    "start": "2026-07-06T13:34:09.219Z",
+    "end": "2026-07-06T13:34:09.293Z",
+    "duration": 74,
     "testsRegistered": 6,
     "passPercent": 16.666666666666664,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a43bbca5-62b1-4d1c-ab60-bc92c55f9f2a",
+      "uuid": "1282b3e1-437e-4636-9081-fe5fd29598f2",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/11_eliminar_operaciones.cy.js",
       "file": "build/testing/cfi/smoke/11_eliminar_operaciones.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7614e4b8-b672-4217-8857-5728ef9c399f",
+          "uuid": "a03ae359-c115-4a1a-a38a-f00b618cdeee",
           "title": "Eliminar operaciones",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "2144822b-3c72-469c-ba94-ce710be7d70a",
+              "uuid": "52a40bd6-4437-430c-ace4-5985ec7394c2",
               "title": "Bonos",
               "fullFile": "",
               "file": "",
@@ -56,15 +56,15 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"02/01/2026\");\ncy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO, 'Compra');\ncy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO, 'Venta');\ncy.validacionGrillaOperaciones();\n//validar que no existan las operaciones de bono en la grilla\ncy.contains(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO).should('not.exist');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.validarTablaPortfolios();\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"24/04/2026\");\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsBonos);",
                   "err": {},
-                  "uuid": "51256b85-a9ef-444b-a06a-4d07af39f634",
-                  "parentUUID": "2144822b-3c72-469c-ba94-ce710be7d70a",
+                  "uuid": "e8b0f34f-1422-4d3a-82fe-f9fc6cfd41d1",
+                  "parentUUID": "52a40bd6-4437-430c-ace4-5985ec7394c2",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "51256b85-a9ef-444b-a06a-4d07af39f634"
+                "e8b0f34f-1422-4d3a-82fe-f9fc6cfd41d1"
               ],
               "failures": [],
               "pending": [],
@@ -75,7 +75,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "c23724a0-411c-42a1-b1c2-6eafb0affa40",
+              "uuid": "814f8d62-7545-4dfc-b40d-9ac6f388b03b",
               "title": "Acciones",
               "fullFile": "",
               "file": "",
@@ -95,7 +95,7 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"01/02/2026\");\ncy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION, 'Compra');\ncy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION, 'Venta');\ncy.validacionGrillaOperaciones();\n//validar que no existan las operaciones de bono en la grilla\ncy.contains(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION).should('not.exist');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.validarTablaPortfolios();\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"24/04/2026\");\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsAcciones);",
                   "err": {},
-                  "uuid": "634da106-5cca-473d-87df-ce06950b888c",
+                  "uuid": "5488289c-3163-4cff-969d-c967014e0be0",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -106,7 +106,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "634da106-5cca-473d-87df-ce06950b888c"
+                "5488289c-3163-4cff-969d-c967014e0be0"
               ],
               "duration": 0,
               "root": false,
@@ -114,7 +114,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "abd4efec-ca68-4c0c-bc58-f5dd097b89e5",
+              "uuid": "183d33eb-df83-4ca7-b97b-79a51e261e91",
               "title": "Fondos",
               "fullFile": "",
               "file": "",
@@ -134,7 +134,7 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"01/02/2026\");\ncy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO, 'Suscripción');\ncy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO, 'Rescate');\ncy.validacionGrillaOperaciones();\n//validar que no existan las operaciones de bono en la grilla\ncy.contains(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO).should('not.exist');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.validarTablaPortfolios();\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"24/04/2026\");\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsFondos);",
                   "err": {},
-                  "uuid": "f8e05d00-aad2-4902-8330-4872b4898751",
+                  "uuid": "032611a4-3b21-4930-ac89-5a87e7ec9958",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -145,7 +145,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "f8e05d00-aad2-4902-8330-4872b4898751"
+                "032611a4-3b21-4930-ac89-5a87e7ec9958"
               ],
               "duration": 0,
               "root": false,
@@ -153,7 +153,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "6c2cc79c-bddd-45ae-85d7-69ec2f2c90ac",
+              "uuid": "3a89d416-4274-4c9a-84c1-5450d478fe12",
               "title": "Depósitos a plazo",
               "fullFile": "",
               "file": "",
@@ -173,7 +173,7 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"01/02/2026\");\ncy.borrarOperacion('Plazo fijo - Plazo fijo aut N° 1', 'Concertación');\ncy.borrarOperacion('Caución - Caución aut N° 1', 'Concertación');\ncy.validacionGrillaOperaciones();\n//validar que no existan las operaciones de bono en la grilla\ncy.contains('Plazo fijo - Plazo fijo aut N° 1').should('not.exist');\ncy.contains('Caución - Caución aut N° 1').should('not.exist');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.validarTablaPortfolios();\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"24/04/2026\");\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsPlazoFijo);",
                   "err": {},
-                  "uuid": "a4827d24-e581-4ec6-bf3c-2dbb95ef0e95",
+                  "uuid": "0e17b06c-f14f-4d1e-8a51-98f44f8a0849",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -184,7 +184,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "a4827d24-e581-4ec6-bf3c-2dbb95ef0e95"
+                "0e17b06c-f14f-4d1e-8a51-98f44f8a0849"
               ],
               "duration": 0,
               "root": false,
@@ -192,7 +192,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "82b57f5d-f2a6-4cd7-98e7-ae4452df4610",
+              "uuid": "f9b0ce46-6760-4fa2-bb28-443619d6732a",
               "title": "Operaciones a descuento",
               "fullFile": "",
               "file": "",
@@ -212,7 +212,7 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"06/02/2026\");\ncy.borrarOperacion('Cheque - Cheque aut N° 1', 'Compra');\ncy.validacionGrillaOperaciones();\n//validar que no existan las operaciones de bono en la grilla\ncy.contains('Cheque - Cheque aut N° 1').should('not.exist');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.validarTablaPortfolios();\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"24/04/2026\");\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsCheque);",
                   "err": {},
-                  "uuid": "1489fa32-1b15-41ac-ae8d-836ad8f67e0f",
+                  "uuid": "52f8a691-7799-4a73-b29f-33481898e402",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -223,7 +223,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "1489fa32-1b15-41ac-ae8d-836ad8f67e0f"
+                "52f8a691-7799-4a73-b29f-33481898e402"
               ],
               "duration": 0,
               "root": false,
@@ -231,7 +231,7 @@
               "_timeout": 2000
             },
             {
-              "uuid": "27723bef-1f45-43ef-b34b-5463ee155ce7",
+              "uuid": "bfa9f520-498c-4aa6-b88b-2464bd0091b2",
               "title": "Eliminar los depósitos Monetarios",
               "fullFile": "",
               "file": "",
@@ -251,7 +251,7 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"02/01/2026\");\ncy.borrarOperacion('ARS', '10.000.000,00');\ncy.borrarOperacion('USD', '1.000.000,00');\ncy.validacionGrillaOperaciones();\n//validar que no existan las operaciones de bono en la grilla\ncy.contains('No hay información para mostrar').should('be.visible');",
                   "err": {},
-                  "uuid": "87910a11-5203-49a9-bff7-0e187fc56948",
+                  "uuid": "bf8cbb49-2176-4016-8d40-132420620005",
                   "parentUUID": null,
                   "isHook": false,
                   "skipped": true
@@ -262,7 +262,7 @@
               "failures": [],
               "pending": [],
               "skipped": [
-                "87910a11-5203-49a9-bff7-0e187fc56948"
+                "bf8cbb49-2176-4016-8d40-132420620005"
               ],
               "duration": 0,
               "root": false,

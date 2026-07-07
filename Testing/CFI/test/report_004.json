@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-07T14:38:59.137Z",
-    "end": "2026-07-07T14:39:19.797Z",
-    "duration": 20660,
+    "start": "2026-07-07T15:11:30.487Z",
+    "end": "2026-07-07T15:11:30.541Z",
+    "duration": 54,
     "testsRegistered": 2,
-    "passPercent": 100,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "2da0a998-3e23-4758-8835-175b0fc69528",
+      "uuid": "c41189b4-605e-43f3-89e9-1f4cb9709b39",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/05_mis_depositarios.cy.js",
       "file": "build/testing/cfi/smoke/05_mis_depositarios.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "000c528f-68b3-43fc-8263-56dd4801f90d",
+          "uuid": "fc0c2f81-3d91-4065-8235-ea2f8521ef92",
           "title": "Mis Depositarios",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,17 @@
               "title": "Validación Depositario agrupamiento por cuenta consolidada",
               "fullTitle": "Mis Depositarios Validación Depositario agrupamiento por cuenta consolidada",
               "timedOut": null,
-              "duration": 17625,
+              "duration": 0,
               "state": "passed",
-              "speed": "slow",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.irAMisDepositarios();\ncy.validarAgrupamientoPorCuentaConsolidada();",
               "err": {},
-              "uuid": "221138ef-779c-4c19-968d-9ffd14ecac3f",
-              "parentUUID": "000c528f-68b3-43fc-8263-56dd4801f90d",
+              "uuid": "d72af65a-7351-49e6-beef-3d1dfde60e50",
+              "parentUUID": "fc0c2f81-3d91-4065-8235-ea2f8521ef92",
               "isHook": false,
               "skipped": false
             },
@@ -56,30 +56,31 @@
               "title": "Validación agrupamiento por especie",
               "fullTitle": "Mis Depositarios Validación agrupamiento por especie",
               "timedOut": null,
-              "duration": 745,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.validarAgrupamientoPorEspecie();",
               "err": {},
-              "uuid": "973f29af-4a12-4844-a16c-94b51a9f8f65",
-              "parentUUID": "000c528f-68b3-43fc-8263-56dd4801f90d",
+              "uuid": "c6bd8323-58cf-4f84-a220-2d21b2b2b138",
+              "parentUUID": "fc0c2f81-3d91-4065-8235-ea2f8521ef92",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "221138ef-779c-4c19-968d-9ffd14ecac3f",
-            "973f29af-4a12-4844-a16c-94b51a9f8f65"
+            "d72af65a-7351-49e6-beef-3d1dfde60e50"
           ],
           "failures": [],
           "pending": [],
-          "skipped": [],
-          "duration": 18370,
+          "skipped": [
+            "c6bd8323-58cf-4f84-a220-2d21b2b2b138"
+          ],
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

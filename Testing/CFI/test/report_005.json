@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
+    "tests": 1,
     "passes": 1,
-    "pending": 1,
-    "failures": 1,
-    "start": "2026-07-07T14:39:21.713Z",
-    "end": "2026-07-07T14:43:49.859Z",
-    "duration": 268146,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-07T15:11:32.998Z",
+    "end": "2026-07-07T15:11:33.051Z",
+    "duration": 53,
     "testsRegistered": 3,
-    "passPercent": 50,
-    "pendingPercent": 33.33333333333333,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 2,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "ce1258e0-0d54-4a5f-bc23-dffd5187c46e",
+      "uuid": "fbdb22cd-ab3b-4ecc-8f02-84def373654c",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/06_limites.cy.js",
       "file": "build/testing/cfi/smoke/06_limites.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "adbebda3-2eb4-4a66-9756-da9fb586791a",
+          "uuid": "26f8a393-c832-44c9-b3ba-fdbd286a5eab",
           "title": "Limites",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,17 @@
               "title": "Creación de nueva política de límites",
               "fullTitle": "Limites Creación de nueva política de límites",
               "timedOut": null,
-              "duration": 17192,
+              "duration": 0,
               "state": "passed",
-              "speed": "slow",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.irALimites();\ncy.validarPantallaLimites();\ncy.irAConfiguracionPoliticas();\ncy.clickNuevaPolitica();\ncy.ingresarNombrePolitica('1-VALIDO Politica CYPRESS');\ncy.agregarPortfolio('Portfolio CYPRESS');\ncy.seleccionarUnEsquema('MEP');\ncy.ingresarFechaDesdeLimite('02/01/2026');\ncy.irAReglas();\ncy.agregarReglaInstrumento({\n  nombre: 'Regla por Instrumento sobre Portfolio - AL30',\n  nivel1: 'Bono',\n  instrumento: 'AL30',\n  desde: 0.05,\n  hasta: 85.5\n});\ncy.guardarPolitica();\ncy.resolverAlertInstrumentoSiExiste('AL30');\ncy.get('.modal-content').should('not.exist');",
               "err": {},
-              "uuid": "7c8c8c07-b6e4-48e8-b0b8-d366fd34558d",
-              "parentUUID": "adbebda3-2eb4-4a66-9756-da9fb586791a",
+              "uuid": "b7833de0-4d56-40ed-830a-c36981afe2b0",
+              "parentUUID": "26f8a393-c832-44c9-b3ba-fdbd286a5eab",
               "isHook": false,
               "skipped": false
             },
@@ -56,55 +56,50 @@
               "title": "Validación de la política creada",
               "fullTitle": "Limites Validación de la política creada",
               "timedOut": null,
-              "duration": 248426,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.irALimites();\ncy.filtrarFechaLimites('10/02/2026');\ncy.filtrarPortfolioLimites('Portfolio CYPRESS');\ncy.abrirLimitePortfolio('Portfolio CYPRESS');\ncy.expandirTodasLasReglas();\nconst rules = [\n// 'Regla por Tipo de Instrumento sobre Portfolio - Plazo fijo',\n// 'Regla por Subtipo de Instrumento sobre Portfolio - Renta Fija',\n// 'Regla por Subtipo de Instrumento sobre Portfolio - Título Público',\n'Regla por Instrumento sobre Portfolio - AL30'];\nrules.forEach(rule => {\n  cy.validarReglaOK(rule);\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 240000ms: Expected to find element: `.svg-inline--fa.fa-circle-check.fa-lg.p-2.text-success`, but never found it. Queried from:\n\n              > cy.contains(Regla por Instrumento sobre Portfolio - AL30).closest(.text-center.d-flex.py-1.flex-row.pr-4.grid-row)",
-                "estack": "AssertionError: Timed out retrying after 240000ms: Expected to find element: `.svg-inline--fa.fa-circle-check.fa-lg.p-2.text-success`, but never found it. Queried from:\n\n              > cy.contains(Regla por Instrumento sobre Portfolio - AL30).closest(.text-center.d-flex.py-1.flex-row.pr-4.grid-row)\n    at Context.eval (webpack:///../../../cypress/support/commands/limites.commands.js:133:0)\n    at wrapped (https://mercap-staging-1.us.auth0.com/__cypress/runner/cypress_runner.js:146042:43)",
-                "diff": null
-              },
-              "uuid": "d771a354-23eb-4d99-a3d2-09736b4b042d",
-              "parentUUID": "adbebda3-2eb4-4a66-9756-da9fb586791a",
+              "err": {},
+              "uuid": "af98cd2a-9327-44c9-b116-6ca0bfd7e2c1",
+              "parentUUID": "26f8a393-c832-44c9-b3ba-fdbd286a5eab",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Eliminación de política de límites",
               "fullTitle": "Limites Eliminación de política de límites",
               "timedOut": null,
               "duration": 0,
-              "state": "pending",
+              "state": "skipped",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
               "code": "cy.irALimites();\ncy.validarPantallaLimites();\ncy.irAConfiguracionPoliticas();\ncy.elminarPolitica('1-VALIDO Politica CYPRESS');\ncy.validaEliminacionPolitica('1-VALIDO Politica CYPRESS');",
               "err": {},
-              "uuid": "84f0c6e9-3ce4-4ab5-84fe-350a7e105474",
-              "parentUUID": "adbebda3-2eb4-4a66-9756-da9fb586791a",
+              "uuid": "f6e8fe67-f135-43a6-ba0a-c1ff9602de24",
+              "parentUUID": "26f8a393-c832-44c9-b3ba-fdbd286a5eab",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "7c8c8c07-b6e4-48e8-b0b8-d366fd34558d"
+            "b7833de0-4d56-40ed-830a-c36981afe2b0"
           ],
-          "failures": [
-            "d771a354-23eb-4d99-a3d2-09736b4b042d"
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "af98cd2a-9327-44c9-b116-6ca0bfd7e2c1",
+            "f6e8fe67-f135-43a6-ba0a-c1ff9602de24"
           ],
-          "pending": [
-            "84f0c6e9-3ce4-4ab5-84fe-350a7e105474"
-          ],
-          "skipped": [],
-          "duration": 265618,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

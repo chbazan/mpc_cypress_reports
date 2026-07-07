@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-06T19:52:31.795Z",
-    "end": "2026-07-06T19:54:51.575Z",
-    "duration": 139780,
+    "start": "2026-07-07T14:34:35.326Z",
+    "end": "2026-07-07T14:36:52.816Z",
+    "duration": 137490,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "603ed2fb-8f5c-4402-a947-e0384b3c7f0a",
+      "uuid": "9870bcdc-3c62-48be-aac0-602fc8a71bfa",
       "title": "",
       "fullFile": "build/testing/cfi/smoke/03_modificar_operaciones.cy.js",
       "file": "build/testing/cfi/smoke/03_modificar_operaciones.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "201c1f17-1a8c-47d7-9eb5-d5191c398e92",
+          "uuid": "dad5c227-8c0e-4173-8d02-ad0d4b0d3a94",
           "title": "Modificar operaciones",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "ccb0c83b-8273-491d-966b-0aafba0ca514",
+              "uuid": "28066e7c-33f3-47b3-b6d2-f86f0f5c5b1b",
               "title": "Modificar Bonos",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Modificar Venta del bono AL30 y validación de impacto en Mis Portfolios",
                   "fullTitle": "Modificar operaciones Modificar Bonos Modificar Venta del bono AL30 y validación de impacto en Mis Portfolios",
                   "timedOut": null,
-                  "duration": 37879,
+                  "duration": 32830,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,26 +56,26 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"02/01/2026\");\ncy.clickearBotonEditar('Venta', 'Bono', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO);\ncy.modificarOperación('56000', 'ARS', '2000');\ncy.asignarPortfolio('500');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"13/03/2026\");\ncy.mostrarPPC();\ncy.validarTablaPortfolios();\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsBonos);\ncy.abrirYValidarInstrumento('Bonos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO, '500');",
                   "err": {},
-                  "uuid": "422cf31f-b510-4f92-bcdc-8df7c130cf95",
-                  "parentUUID": "ccb0c83b-8273-491d-966b-0aafba0ca514",
+                  "uuid": "b5de2d70-ade0-4ee6-987b-160a2be5d1a5",
+                  "parentUUID": "28066e7c-33f3-47b3-b6d2-f86f0f5c5b1b",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "422cf31f-b510-4f92-bcdc-8df7c130cf95"
+                "b5de2d70-ade0-4ee6-987b-160a2be5d1a5"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 37879,
+              "duration": 32830,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "b1ae1d88-99cc-4fd0-a567-f290268c5884",
+              "uuid": "66f405a9-d4ee-4019-9dce-8e46f045e2f7",
               "title": "Modificar Acciones",
               "fullFile": "",
               "file": "",
@@ -86,7 +86,7 @@
                   "title": "Modificar compra de la acción ALUA",
                   "fullTitle": "Modificar operaciones Modificar Acciones Modificar compra de la acción ALUA",
                   "timedOut": null,
-                  "duration": 23115,
+                  "duration": 26138,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -95,26 +95,26 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"03/02/2026\");\ncy.clickearBotonEditar('Compra', 'Acción', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION);\ncy.modificarOperación('400', 'ARS', '2000');\ncy.asignarPortfolio('1000');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"12/03/2026\");\ncy.mostrarPPC();\ncy.validarTablaPortfolios();\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsAcciones);\ncy.abrirYValidarInstrumento('Acciones', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION, '500');",
                   "err": {},
-                  "uuid": "ea016fe9-0e09-4e48-b37d-84afd2c858a5",
-                  "parentUUID": "b1ae1d88-99cc-4fd0-a567-f290268c5884",
+                  "uuid": "032eb744-6ac4-4496-8e45-e2ae8471561c",
+                  "parentUUID": "66f405a9-d4ee-4019-9dce-8e46f045e2f7",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "ea016fe9-0e09-4e48-b37d-84afd2c858a5"
+                "032eb744-6ac4-4496-8e45-e2ae8471561c"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 23115,
+              "duration": 26138,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "d9f3989c-ce70-4ecc-a112-a172e84386fd",
+              "uuid": "1eaaa5b6-efce-40e7-a2e9-e61ddc2f7a66",
               "title": "Modificar Fondos",
               "fullFile": "",
               "file": "",
@@ -125,7 +125,7 @@
                   "title": "Modificar fondo Argenfunds Renta Mixta - Clase B",
                   "fullTitle": "Modificar operaciones Modificar Fondos Modificar fondo Argenfunds Renta Mixta - Clase B",
                   "timedOut": null,
-                  "duration": 24841,
+                  "duration": 21986,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -134,26 +134,26 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"04/02/2026\");\ncy.clickearBotonEditar('Suscripción', 'Fondo', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO);\ncy.modificarOperación('2600', 'ARS', '2000');\ncy.asignarPortfolio('1000');\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada(\"13/03/2026\");\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsFondos);\ncy.abrirYValidarInstrumento('Fondos', _support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO, '500');",
                   "err": {},
-                  "uuid": "0a597b54-4e59-4643-a37c-eae1a7722c74",
-                  "parentUUID": "d9f3989c-ce70-4ecc-a112-a172e84386fd",
+                  "uuid": "50cf79ce-8ff4-4abc-bf73-31fa35f8a05d",
+                  "parentUUID": "1eaaa5b6-efce-40e7-a2e9-e61ddc2f7a66",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "0a597b54-4e59-4643-a37c-eae1a7722c74"
+                "50cf79ce-8ff4-4abc-bf73-31fa35f8a05d"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 24841,
+              "duration": 21986,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "690f6218-d110-4ce1-a9cf-59d03a733490",
+              "uuid": "191478ba-9167-4bbb-8ceb-0de878a97bbd",
               "title": "Modificar Depósitos a plazo",
               "fullFile": "",
               "file": "",
@@ -164,7 +164,7 @@
                   "title": "Modificar plazo fijo",
                   "fullTitle": "Modificar operaciones Modificar Depósitos a plazo Modificar plazo fijo",
                   "timedOut": null,
-                  "duration": 26343,
+                  "duration": 26080,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -173,26 +173,26 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"02/01/2026\");\ncy.clickearBotonEditar('Concertación', 'Plazo fijo', 'Plazo fijo - Plazo fijo aut N° 1', '50.000');\ncy.contains('.modal-title', 'Concertación') // Busca el modal que contenga ese texto\n.should('be.visible');\ncy.ingresarCapital('60000');\ncy.ingresarTNA('55');\ncy.aceptarOperacion();\ncy.irAMisOperaciones();\ncy.filtrarFecha(\"05/02/2026\");\ncy.validacionGrillaOperaciones();\ncy.validarFilaOperacion('Plazo fijo', 'Plazo fijo - Plazo fijo aut N° 1', '60000');\n//Validación de la operación Plazo fijo.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada('05/02/2026');\ncy.mostrarPPC();\ncy.validarTablaPortfolios();\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsPlazoFijo);\ncy.abrirYValidarInstrumento('Plazos fijos', 'Plazo fijo - Plazo fijo aut N° 1', '60.000');",
                   "err": {},
-                  "uuid": "8410f647-2644-4229-b589-e7464d86dca1",
-                  "parentUUID": "690f6218-d110-4ce1-a9cf-59d03a733490",
+                  "uuid": "88dcc608-02c5-4266-bedb-70b66ffdf97f",
+                  "parentUUID": "191478ba-9167-4bbb-8ceb-0de878a97bbd",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "8410f647-2644-4229-b589-e7464d86dca1"
+                "88dcc608-02c5-4266-bedb-70b66ffdf97f"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 26343,
+              "duration": 26080,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "cba1703f-fe17-4a40-9d56-ed7293ec3a49",
+              "uuid": "6cd2c5da-42bd-423d-af49-28a7f9ff6cd1",
               "title": "Modificar Operaciones a descuento",
               "fullFile": "",
               "file": "",
@@ -203,7 +203,7 @@
                   "title": "Modificar compra de cheque",
                   "fullTitle": "Modificar operaciones Modificar Operaciones a descuento Modificar compra de cheque",
                   "timedOut": null,
-                  "duration": 23839,
+                  "duration": 27020,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -212,20 +212,20 @@
                   "context": null,
                   "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"02/02/2026\");\ncy.clickearBotonEditar('Compra', 'Cheque', 'Cheque - Cheque aut N° 1', '52.000,00');\ncy.contains('.modal-title', 'Compra') // Busca el modal que contenga ese texto\n.should('be.visible');\ncy.ingresarCosto('80000');\ncy.ingresarMontoACobrar('85000');\ncy.aceptarOperacion();\ncy.irAMisOperaciones();\ncy.filtrarFecha(\"09/02/2026\");\ncy.validacionGrillaOperaciones();\ncy.validarFilaOperacion('Compra', 'Cheque - Cheque aut N° 1', '85000');\n//Validación de la operación CHeque.\ncy.irAMisPortfolios();\ncy.abrirPortfolio('Portfolio CYPRESS');\ncy.filtrarFechaPosicionValuada('09/02/2026');\ncy.mostrarPPC();\ncy.validarTablaPortfolios();\ncy.abrirMonedas();\ncy.validarSaldoMoneda('ARS', arsCheque); // 9.869.231\ncy.abrirYValidarInstrumento('Cheques', 'Cheque - Cheque aut N° 1', '80.000');",
                   "err": {},
-                  "uuid": "5a3153a8-f76b-4c6d-9d1d-1900e63ce0c7",
-                  "parentUUID": "cba1703f-fe17-4a40-9d56-ed7293ec3a49",
+                  "uuid": "4774330f-1cc0-4763-9606-9f8eda9ee79e",
+                  "parentUUID": "6cd2c5da-42bd-423d-af49-28a7f9ff6cd1",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "5a3153a8-f76b-4c6d-9d1d-1900e63ce0c7"
+                "4774330f-1cc0-4763-9606-9f8eda9ee79e"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 23839,
+              "duration": 27020,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

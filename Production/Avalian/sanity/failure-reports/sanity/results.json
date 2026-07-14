@@ -1,0 +1,71 @@
+{
+  "spec": "build/production/avalian/specs/sanity/sanity.cy.js",
+  "specName": "sanity",
+  "timestamp": "2026-07-14T14:39:15.758Z",
+  "environment": {
+    "TARGET_ENV": "production",
+    "TARGET_CLIENT": "avalian",
+    "browser": "chrome"
+  },
+  "stats": {
+    "duration": 11045,
+    "endedAt": "2026-07-14T14:39:15.732Z",
+    "failures": 2,
+    "passes": 0,
+    "pending": 0,
+    "skipped": 3,
+    "startedAt": "2026-07-14T14:39:04.687Z",
+    "suites": 3,
+    "tests": 5
+  },
+  "failedTests": [
+    {
+      "title": [
+        "Precondición Admin Login",
+        "Ingresar y hacer login en el admin de MPC"
+      ],
+      "fullTitle": "Precondición Admin Login > Ingresar y hacer login en el admin de MPC",
+      "state": "failed",
+      "duration": 7590,
+      "error": "CypressError: `cy.task('ctrLogMessages')` failed with the following error:\n\nThe task 'ctrLogMessages' was not handled in the setupNodeEvents method. The following tasks are registered: failFastResetSkip, failFastShouldSkip, failFastFailedTests, failFastResetFailedTests, failFastLog, saveHar, recordHar, disposeOfHar, writeHar, writeDomSnapshot\n\nFix this in your setupNodeEvents method here:\n/home/runner/work/portfolio-qa-tests/portfolio-qa-tests/cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:138426:72)\n    at tryCatcher (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2256:14)",
+      "attempts": [
+        {
+          "state": "failed",
+          "error": null
+        }
+      ]
+    },
+    {
+      "title": [
+        "Verificar la posición valuada de los portfolios",
+        "Ingresar a todos los portfolios disponibles y validar que carguen correctamente"
+      ],
+      "fullTitle": "Verificar la posición valuada de los portfolios > Ingresar a todos los portfolios disponibles y validar que carguen correctamente",
+      "state": "failed",
+      "duration": 0,
+      "error": "CypressError: `cy.task('ctrLogFiles')` failed with the following error:\n\nThe task 'ctrLogFiles' was not handled in the setupNodeEvents method. The following tasks are registered: failFastResetSkip, failFastShouldSkip, failFastFailedTests, failFastResetFailedTests, failFastLog, saveHar, recordHar, disposeOfHar, writeHar, writeDomSnapshot\n\nFix this in your setupNodeEvents method here:\n/home/runner/work/portfolio-qa-tests/portfolio-qa-tests/cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at <unknown> (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:138426:72)\n    at tryCatcher (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://mercap.auth0.com/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress/./node_modules/cypress-terminal-report/src/collector/LogCollectControlSimple.js:81:0)",
+      "attempts": [
+        {
+          "state": "failed",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "height": 633,
+      "name": null,
+      "path": "/home/runner/work/portfolio-qa-tests/portfolio-qa-tests/cypress/reports/screenshots/sanity.cy.js/Ingresar y hacer login en el admin de MPC -- after each hook (failed).png",
+      "takenAt": "2026-07-14T14:39:15.173Z",
+      "width": 1280
+    },
+    {
+      "height": 633,
+      "name": null,
+      "path": "/home/runner/work/portfolio-qa-tests/portfolio-qa-tests/cypress/reports/screenshots/sanity.cy.js/Ingresar a todos los portfolios disponibles y validar que carguen correctamente -- after all hook (failed).png",
+      "takenAt": "2026-07-14T14:39:15.552Z",
+      "width": 1280
+    }
+  ]
+}

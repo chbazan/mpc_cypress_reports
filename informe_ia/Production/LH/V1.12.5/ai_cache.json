@@ -1,0 +1,73 @@
+{
+  "hash": "6f754087caf8cdc7726cc94195e927530165d7ad2928ea8a0face5e010ae3906",
+  "ai_model": "gemini-2.5-flash",
+  "conclusions": {
+    "estado_general": "bueno",
+    "resumen_ejecutivo": "El sistema MPC en la versión V1.12.5 muestra un estado general bueno, con todas las secciones dentro de los umbrales de rendimiento agregados. Sin embargo, se identifican puntos críticos en la experiencia de usuario inicial, con acciones como 'Primer ingreso al menú Home' y 'Primer ingreso al menú Mi dinero' registrando P95 de 81.29s y 71.39s respectivamente, lo que requiere atención inmediata.",
+    "escalar": {
+      "titulo": "Acciones de primer ingreso en Home y Mi dinero superan 60s",
+      "detalle": "Las acciones 'Primer ingreso al menú Home' (81.29s) y 'Primer ingreso al menú Mi dinero' (71.39s) presentan tiempos de carga inaceptables para la experiencia inicial del usuario, requiriendo atención inmediata."
+    },
+    "investigar": {
+      "titulo": "Altos tiempos de carga en primeros ingresos a Home y Mi dinero",
+      "detalle": "Las acciones 'Primer ingreso al menú Home' (81.29s) y 'Primer ingreso al menú Mi dinero' (71.39s) muestran P95s muy elevados, sugiriendo problemas en la carga inicial de datos o componentes."
+    },
+    "optimizar": {
+      "titulo": "Mejorar la experiencia de primer ingreso en Home y Mi dinero",
+      "detalle": "La optimización de las acciones 'Primer ingreso al menú Home' (81.29s) y 'Primer ingreso al menú Mi dinero' (71.39s) representa la mayor oportunidad para reducir la latencia inicial del usuario."
+    },
+    "hallazgos": [
+      {
+        "tipo": "alerta",
+        "seccion": "Home",
+        "descripcion": "La acción 'Primer ingreso al menú Home' presenta un tiempo de carga muy elevado.",
+        "evidencia": "P95 actual de 81.29s."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Mi dinero",
+        "descripcion": "La acción 'Primer ingreso al menú Mi dinero' muestra un rendimiento deficiente.",
+        "evidencia": "P95 actual de 71.39s."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Mis operaciones",
+        "descripcion": "La acción 'Primer ingreso: Filtro de 3 meses de operaciones' es notablemente lenta.",
+        "evidencia": "P95 actual de 50.53s."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Agenda",
+        "descripcion": "Se observa una mejora significativa en el rendimiento de la Agenda al reingresar con filtros específicos.",
+        "evidencia": "La acción 'Primer ingreso: Tipo de instrumento Acciones, estado: Pendiente, fecha: 3 meses hacia atras' mejoró de 2.17s a 1.54s (+28.8%) en el segundo ingreso."
+      }
+    ],
+    "causa_raiz": [],
+    "recomendaciones": [
+      {
+        "prioridad": "P1",
+        "accion": "Analizar y refactorizar los procesos de carga de datos y renderizado para la acción 'Primer ingreso al menú Home', buscando reducir el P95 a menos de 10 segundos.",
+        "seccion": "Home",
+        "evidencia": "P95 de 81.29s para 'Primer ingreso al menú Home'."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Investigar las causas del alto P95 en la acción 'Primer ingreso al menú Mi dinero' y aplicar optimizaciones de backend/frontend para reducirlo drásticamente.",
+        "seccion": "Mi dinero",
+        "evidencia": "P95 de 71.39s para 'Primer ingreso al menú Mi dinero'."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Revisar la eficiencia de las consultas y la lógica de filtrado para las acciones de 'Filtro de 3 meses de operaciones', con el objetivo de mejorar la respuesta.",
+        "seccion": "Mis operaciones",
+        "evidencia": "P95 de 50.53s para 'Primer ingreso: Filtro de 3 meses de operaciones'."
+      },
+      {
+        "prioridad": "P3",
+        "accion": "Continuar monitoreando el impacto de caché en la sección Agenda y evaluar la aplicación de estrategias de caché similares en otras secciones.",
+        "seccion": "Agenda",
+        "evidencia": "Mejora del 28.8% en 'Primer ingreso: Tipo de instrumento Acciones, estado: Pendiente, fecha: 3 meses hacia atras' con caché."
+      }
+    ]
+  }
+}

@@ -1,72 +1,97 @@
 {
-  "hash": "6f754087caf8cdc7726cc94195e927530165d7ad2928ea8a0face5e010ae3906",
+  "hash": "26f89c21cb8b5d810ea578dd810de8780d357d44dde630ee5cbb4058d530bfbb",
   "ai_model": "gemini-2.5-flash",
   "conclusions": {
-    "estado_general": "bueno",
-    "resumen_ejecutivo": "El sistema MPC en la versión V1.12.5 muestra un estado general bueno, con todas las secciones dentro de los umbrales de rendimiento agregados. Sin embargo, se identifican puntos críticos en la experiencia de usuario inicial, con acciones como 'Primer ingreso al menú Home' y 'Primer ingreso al menú Mi dinero' registrando P95 de 81.29s y 71.39s respectivamente, lo que requiere atención inmediata.",
+    "estado_general": "atencion",
+    "resumen_ejecutivo": "La versión V1.12.5 de MPC muestra un rendimiento general estable, aunque sin datos históricos para evaluar mejoras o degradaciones relativas. Sin embargo, la sección \"Mi dinero\" presenta un P95 de 90.24s, superando el umbral de rendimiento y requiriendo atención urgente, con la acción \"Primer ingreso al menú Mi dinero\" alcanzando 95.06s.",
     "escalar": {
-      "titulo": "Acciones de primer ingreso en Home y Mi dinero superan 60s",
-      "detalle": "Las acciones 'Primer ingreso al menú Home' (81.29s) y 'Primer ingreso al menú Mi dinero' (71.39s) presentan tiempos de carga inaceptables para la experiencia inicial del usuario, requiriendo atención inmediata."
+      "titulo": "Mi dinero supera umbral de rendimiento con P95 de 90.24s",
+      "detalle": "La sección \"Mi dinero\" presenta un P95 de 90.24s, superando el umbral de rendimiento de 60s, con la acción \"Primer ingreso al menú Mi dinero\" alcanzando 95.06s."
     },
     "investigar": {
-      "titulo": "Altos tiempos de carga en primeros ingresos a Home y Mi dinero",
-      "detalle": "Las acciones 'Primer ingreso al menú Home' (81.29s) y 'Primer ingreso al menú Mi dinero' (71.39s) muestran P95s muy elevados, sugiriendo problemas en la carga inicial de datos o componentes."
+      "titulo": "Alto P95 en \"Mi dinero\" y \"Home\" para primeros ingresos",
+      "detalle": "Investigar por qué el \"Primer ingreso al menú Mi dinero\" toma 95.06s y el \"Primer ingreso al menú Home\" 86.45s, lo que sugiere problemas en la carga inicial de datos o componentes críticos."
     },
     "optimizar": {
-      "titulo": "Mejorar la experiencia de primer ingreso en Home y Mi dinero",
-      "detalle": "La optimización de las acciones 'Primer ingreso al menú Home' (81.29s) y 'Primer ingreso al menú Mi dinero' (71.39s) representa la mayor oportunidad para reducir la latencia inicial del usuario."
+      "titulo": "Mayor oportunidad de mejora: rendimiento de la sección \"Mi dinero\"",
+      "detalle": "La sección \"Mi dinero\" es la más lenta con un P95 de 90.24s, siendo la única que supera el umbral de rendimiento, lo que representa la mayor oportunidad para impactar positivamente la UX."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
-        "seccion": "Home",
-        "descripcion": "La acción 'Primer ingreso al menú Home' presenta un tiempo de carga muy elevado.",
-        "evidencia": "P95 actual de 81.29s."
+        "seccion": "Mi dinero",
+        "descripcion": "La sección \"Mi dinero\" excede el umbral de rendimiento, impactando la experiencia del usuario.",
+        "evidencia": "P95 actual de 90.24s."
       },
       {
         "tipo": "alerta",
         "seccion": "Mi dinero",
-        "descripcion": "La acción 'Primer ingreso al menú Mi dinero' muestra un rendimiento deficiente.",
-        "evidencia": "P95 actual de 71.39s."
+        "descripcion": "La acción más lenta de la plataforma es el primer ingreso al menú \"Mi dinero\".",
+        "evidencia": "P95 actual de 95.06s."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Home",
+        "descripcion": "El primer ingreso al menú \"Home\" presenta un tiempo de carga muy elevado.",
+        "evidencia": "P95 actual de 86.45s."
       },
       {
         "tipo": "alerta",
         "seccion": "Mis operaciones",
-        "descripcion": "La acción 'Primer ingreso: Filtro de 3 meses de operaciones' es notablemente lenta.",
-        "evidencia": "P95 actual de 50.53s."
-      },
-      {
-        "tipo": "mejora",
-        "seccion": "Agenda",
-        "descripcion": "Se observa una mejora significativa en el rendimiento de la Agenda al reingresar con filtros específicos.",
-        "evidencia": "La acción 'Primer ingreso: Tipo de instrumento Acciones, estado: Pendiente, fecha: 3 meses hacia atras' mejoró de 2.17s a 1.54s (+28.8%) en el segundo ingreso."
+        "descripcion": "La sección \"Mis operaciones\" muestra una alta variabilidad en los tiempos de respuesta.",
+        "evidencia": "Ratio P95/P50 de 7.91."
       }
     ],
-    "causa_raiz": [],
+    "causa_raiz": [
+      {
+        "seccion": "Mi dinero",
+        "hipotesis": [
+          "La carga inicial de datos de flujos de fondos o movimientos de efectivo es muy pesada o requiere múltiples llamadas a APIs.",
+          "Existe una consulta a base de datos ineficiente o sin índices optimizados para el volumen de transacciones del usuario.",
+          "Problemas de renderizado o procesamiento en el frontend para grandes volúmenes de datos financieros."
+        ]
+      },
+      {
+        "seccion": "Home",
+        "hipotesis": [
+          "La inicialización de componentes o la carga de portfolios destacados es ineficiente al primer acceso.",
+          "Dependencia de servicios externos o microservicios lentos que bloquean la carga inicial de la UI.",
+          "Falta de optimización en la precarga o cacheo de datos para usuarios recurrentes."
+        ]
+      },
+      {
+        "seccion": "Mis operaciones",
+        "hipotesis": [
+          "La aplicación de filtros (ej. 3 meses de operaciones) desencadena consultas muy costosas o no optimizadas.",
+          "El volumen de operaciones financieras a mostrar varía drásticamente entre usuarios, afectando el P95.",
+          "Inconsistencias en el rendimiento de la red o del backend para diferentes tipos de operaciones o rangos de fechas."
+        ]
+      }
+    ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Analizar y refactorizar los procesos de carga de datos y renderizado para la acción 'Primer ingreso al menú Home', buscando reducir el P95 a menos de 10 segundos.",
-        "seccion": "Home",
-        "evidencia": "P95 de 81.29s para 'Primer ingreso al menú Home'."
+        "accion": "Realizar un análisis profundo de la acción \"Primer ingreso al menú Mi dinero\" para identificar cuellos de botella en la carga de datos y renderizado.",
+        "seccion": "Mi dinero",
+        "evidencia": "P95 actual de 95.06s, contribuyendo al P95 de la sección de 90.24s (Sobre umbral)."
       },
       {
         "prioridad": "P1",
-        "accion": "Investigar las causas del alto P95 en la acción 'Primer ingreso al menú Mi dinero' y aplicar optimizaciones de backend/frontend para reducirlo drásticamente.",
-        "seccion": "Mi dinero",
-        "evidencia": "P95 de 71.39s para 'Primer ingreso al menú Mi dinero'."
+        "accion": "Optimizar la carga inicial de la sección \"Home\", priorizando la acción \"Primer ingreso al menú Home\".",
+        "seccion": "Home",
+        "evidencia": "P95 actual de 86.45s para la acción \"Primer ingreso al menú Home\"."
       },
       {
         "prioridad": "P2",
-        "accion": "Revisar la eficiencia de las consultas y la lógica de filtrado para las acciones de 'Filtro de 3 meses de operaciones', con el objetivo de mejorar la respuesta.",
+        "accion": "Investigar la variabilidad en el rendimiento de \"Mis operaciones\", especialmente en la aplicación de filtros, para reducir el P95.",
         "seccion": "Mis operaciones",
-        "evidencia": "P95 de 50.53s para 'Primer ingreso: Filtro de 3 meses de operaciones'."
+        "evidencia": "Ratio P95/P50 de 7.91, con acciones como \"Primer ingreso: Filtro de 3 meses de operaciones\" en 49.4s."
       },
       {
         "prioridad": "P3",
-        "accion": "Continuar monitoreando el impacto de caché en la sección Agenda y evaluar la aplicación de estrategias de caché similares en otras secciones.",
-        "seccion": "Agenda",
-        "evidencia": "Mejora del 28.8% en 'Primer ingreso: Tipo de instrumento Acciones, estado: Pendiente, fecha: 3 meses hacia atras' con caché."
+        "accion": "Analizar y mejorar la efectividad del cacheo en secciones con bajo impacto de caché, como \"Agenda\" donde algunas acciones muestran poca mejora.",
+        "seccion": "General",
+        "evidencia": "Algunas acciones en \"Agenda\" muestran mejoras de caché mínimas o negativas (ej. \"Primer ingreso: Tipo de instrumento Acciones, estado: Cobrado, fecha: 1 mes hacia atras\" con -1.1%)."
       }
     ]
   }

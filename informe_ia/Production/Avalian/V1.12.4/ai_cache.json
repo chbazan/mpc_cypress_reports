@@ -1,120 +1,107 @@
 {
-  "hash": "2a4aa150f8ab28b5304c736d9a9a1ec1aa8a3cdf00a47755ba23ed0137da3f28",
+  "hash": "30978b7c8d3c4d0b564bdc5beadeb2ce548e586786de9668b9f1bb752c9bbb08",
   "ai_model": "gemini-2.5-flash",
   "conclusions": {
     "estado_general": "critico",
-    "resumen_ejecutivo": "La versión V1.12.4 de MPC presenta un estado crítico de performance, principalmente debido a la sección Mi dinero, que está en SLA crítico con un P95 de 167.44s y una degradación del 22.3% vs histórico. Además, la sección Rendimiento degradó un 15.1%, aunque se observan mejoras significativas en Home (+49.0%), Mis operaciones (+24.6%) y Mis portfolios (+29.3%) respecto a la versión anterior.",
+    "resumen_ejecutivo": "La versión V1.12.4 de MPC presenta un estado crítico debido a degradaciones significativas en secciones clave. Mientras 5 secciones mostraron mejoras, 'Mi dinero' degradó un 22.3% (P95 actual 167.4s) y 'Rendimiento' un 15.2% (P95 actual 3.31s) respecto a su histórico, con 'Mi dinero' además en SLA crítico.",
     "escalar": {
-      "titulo": "Mi dinero: SLA crítico, degradación sostenida y acción persistentemente lenta",
-      "detalle": "La sección Mi dinero tiene un P95 de 167.44s, superando el SLA crítico, y la acción 'Primer ingreso al menú Mi dinero' es persistentemente lenta (239.16s, 4 de 4 versiones sobre umbral) y sufrió un salto abrupto de 90.7s a 229.33s (+152.8%) en V1.11.8."
+      "titulo": "Degradación crítica y persistente en Mi dinero",
+      "detalle": "La sección 'Mi dinero' presenta una degradación del 22.3% (P95 actual 167.4s) y está en SLA crítico. La acción 'Primer ingreso al menú Mi dinero' ha estado sobre el umbral en 4 de 4 versiones, con un P95 actual de 212.61s."
     },
     "investigar": {
-      "titulo": "Degradación sostenida y persistente lentitud en 'Mi dinero'",
-      "detalle": "La sección 'Mi dinero' ha mostrado una degradación sostenida en 3 versiones consecutivas, alcanzando un P95 de 167.33s, y la acción 'Primer ingreso al menú Mi dinero' es crónicamente lenta, requiriendo una investigación profunda."
+      "titulo": "Degradación sostenida y saltos en Mi dinero y Rendimiento",
+      "detalle": "La sección 'Mi dinero' ha degradado sostenidamente por 3 versiones (de 90.7s a 167.33s). Además, la acción 'Segundo ingreso al menú Mi dinero' degradó un 44.8% (de 101.07s a 146.34s) y varias acciones de 'Rendimiento' degradaron más del 50% en la versión actual."
     },
     "optimizar": {
-      "titulo": "Mejorar la sección 'Mi dinero' para salir del SLA crítico",
-      "detalle": "La sección 'Mi dinero' es la más lenta con un P95 de 167.44s y está en SLA crítico. Optimizarla tendría el mayor impacto en la experiencia de usuario."
+      "titulo": "Mejorar la performance de la sección Mi dinero",
+      "detalle": "La sección 'Mi dinero' es la más lenta con un P95 de 167.4s y está en SLA crítico. Optimizar esta sección ofrece el mayor impacto en la experiencia de usuario."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
-        "seccion": "Mi dinero",
-        "descripcion": "La sección Mi dinero está en SLA crítico y muestra una degradación sostenida, con la acción 'Primer ingreso al menú Mi dinero' persistentemente lenta y un salto abrupto reciente.",
-        "evidencia": "P95 actual 167.44s (-22.3% vs histórico), con 'Primer ingreso al menú Mi dinero' en 239.16s (4 de 4 versiones sobre umbral) y un salto de 90.7s a 229.33s (+152.8%) en V1.11.8."
-      },
-      {
-        "tipo": "alerta",
         "seccion": "Agenda",
-        "descripcion": "La mejora aparente en Agenda es sospechosa debido a la discontinuación de acciones lentas, incluyendo una acción crítica.",
-        "evidencia": "Se discontinuaron 12/14 acciones medidas en V1.11.8 (P95 máx removidas: 103.34s), y la acción 'Primer ingreso: Filtro de todos los estados y conceptos con fecha actual' fue removida con un P95 de 103.34s (+29.6%)."
+        "descripcion": "La mejora de 'Agenda' es aparente debido a la discontinuación de acciones lentas",
+        "evidencia": "Se removieron 12 de 14 acciones (85.7% dropout), incluyendo 'Primer ingreso: Filtro de todos los estados y conceptos con fecha actual' que tenía un P95 de 103.34s en V1.11.8."
       },
       {
         "tipo": "alerta",
-        "seccion": "Mis portfolios",
-        "descripcion": "A pesar de una mejora general, una acción clave en Mis portfolios experimentó un salto abrupto de rendimiento.",
-        "evidencia": "La acción 'Segundo ingreso al portfolio Hard Dollar desde Mis portfolios' saltó de 5.7s a 17.89s (+213.9%) en V1.11.8. La sección P95 mejoró de 13.62s a 9.63s (+29.3%) vs versión anterior."
-      },
-      {
-        "tipo": "degradacion",
-        "seccion": "Rendimiento",
-        "descripcion": "La sección Rendimiento ha degradado su performance general, con acciones específicas mostrando fuertes regresiones.",
-        "evidencia": "P95 actual 3.31s (-15.1% vs histórico), con 'Portfolio Hard Dollar: Primer ingreso a la carta de rendimiento Desde principio de año con método TWR' degradando 78.3% (0.92s a 1.64s)."
+        "seccion": "Mi dinero",
+        "descripcion": "La sección 'Mi dinero' sufre degradación sostenida y acciones persistentemente lentas",
+        "evidencia": "El P95 de la sección aumentó de 90.7s a 167.33s en 3 versiones. La acción 'Primer ingreso al menú Mi dinero' (P95 212.61s) ha estado sobre el umbral en 4 de 4 versiones, y 'Segundo ingreso al menú Mi dinero' degradó un 44.8% (101.07s a 146.34s) en V1.12.4."
       },
       {
         "tipo": "mejora",
         "seccion": "Home",
-        "descripcion": "La sección Home experimentó una mejora significativa en su rendimiento general y en múltiples acciones.",
-        "evidencia": "P95 mejoró de 27.41s a 13.98s (+49.0%) vs versión anterior, con 6 acciones mejoradas, destacando 'Primer ingreso al portfolio Estrategia desde el Home' (-61.26%)."
+        "descripcion": "La sección 'Home' mostró una mejora significativa en la versión actual",
+        "evidencia": "P95 mejoró de 27.41s a 13.93s (+49.2%). La acción 'Primer ingreso al portfolio Estrategia desde el Home' mejoró un 61.31%."
       },
       {
         "tipo": "mejora",
         "seccion": "Mis operaciones",
-        "descripcion": "La sección Mis operaciones muestra una mejora notable en su rendimiento general y en la mayoría de sus acciones.",
-        "evidencia": "P95 mejoró de 52.55s a 39.65s (+24.6%) vs versión anterior, con 9 acciones mejoradas, destacando 'Primer ingreso al depositario ARS' (-52.21%)."
+        "descripcion": "La sección 'Mis operaciones' mejoró su rendimiento en esta versión",
+        "evidencia": "P95 mejoró de 52.55s a 40.29s (+23.3%). La acción 'Primer ingreso al depositario ARS' mejoró un 52.23%."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Mis portfolios",
+        "descripcion": "La sección 'Mis portfolios' experimentó una mejora considerable",
+        "evidencia": "P95 mejoró de 13.62s a 9.61s (+29.5%). La acción 'Segundo ingreso al portfolio Cobertura desde Mis portfolios' mejoró un 63.75%."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Rendimiento",
+        "descripcion": "La sección 'Rendimiento' experimentó una degradación significativa",
+        "evidencia": "P95 degradó de 2.88s a 3.31s (-15.2%) vs histórico. La acción 'Portfolio Hard Dollar: Primer ingreso a la carta de rendimiento Desde principio de año con método TWR' degradó un 78.2% (0.92s a 1.63s) en V1.12.4."
       },
       {
         "tipo": "mejora",
         "seccion": "Resultado",
-        "descripcion": "La sección Resultado muestra mejoras significativas en acciones clave, aunque su P95 general mejoró moderadamente.",
-        "evidencia": "El P95 mejoró 12.6% vs histórico, con 7 acciones mejoradas, destacando 'Cambio de esquema de valuación del portfolio Hard Dollar a ARS-USD CCL' (-68.07%)."
+        "descripcion": "La sección 'Resultado' muestra una mejora general, destacando una acción clave",
+        "evidencia": "El P95 mejoró un 12.6% vs histórico. La acción 'Cambio de esquema de valuación del portfolio Hard Dollar a ARS-USD CCL' mejoró un 68.1% (25.55s a 8.15s)."
       }
     ],
     "causa_raiz": [
       {
         "seccion": "Mi dinero",
         "hipotesis": [
-          "Posible aumento en el volumen o complejidad de los datos de flujo de fondos y movimientos de efectivo, afectando la carga inicial.",
-          "Ineficiencias en las consultas a la base de datos o en la lógica de negocio para consolidar y presentar la información de 'Mi dinero'.",
-          "Dependencia de servicios externos lentos o con alta latencia para obtener datos financieros críticos."
+          "Podría deberse a un aumento en el volumen o complejidad de los datos financieros procesados para la sección 'Mi dinero', especialmente en el cálculo de flujos de fondos.",
+          "Revisar si hay consultas a la base de datos ineficientes o bloqueos en el backend que impacten el rendimiento de las operaciones de efectivo.",
+          "Posiblemente, la lógica de negocio para la carga de movimientos de efectivo se ha vuelto más pesada o se están realizando llamadas a servicios externos con alta latencia."
         ]
       },
       {
         "seccion": "Rendimiento",
         "hipotesis": [
-          "Incremento en la complejidad de los algoritmos de cálculo de rendimiento (TWR/MWR) para períodos largos (e.g., 'Desde principio de año').",
-          "Crecimiento del volumen de datos históricos necesarios para los cálculos de rendimiento, impactando el tiempo de procesamiento.",
-          "Problemas de optimización en la renderización de gráficos o en la carga de datos para las cartas de rendimiento."
-        ]
-      },
-      {
-        "seccion": "Mis portfolios",
-        "hipotesis": [
-          "Cambios en la forma en que se cargan los datos específicos de un portfolio al acceder por segunda vez, posiblemente invalidando cachés o forzando recargas completas.",
-          "Problemas de concurrencia o bloqueo de recursos al acceder a detalles de portfolios específicos."
+          "La degradación podría estar relacionada con la complejidad de los cálculos de retorno y performance histórica, especialmente para periodos largos como 'Desde principio de año'.",
+          "Revisar la eficiencia de las APIs que alimentan los gráficos de rendimiento, ya que varias acciones de carga de gráficos muestran degradaciones significativas.",
+          "Podría haber un problema con la indexación o el acceso a datos históricos que se utilizan para generar los reportes de rendimiento."
         ]
       }
     ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Priorizar la investigación y optimización de la acción 'Primer ingreso al menú Mi dinero' y la sección 'Mi dinero' en general.",
+        "accion": "Realizar un análisis de causa raíz exhaustivo para la sección 'Mi dinero', enfocándose en la acción 'Primer ingreso al menú Mi dinero' y 'Segundo ingreso al menú Mi dinero'.",
         "seccion": "Mi dinero",
-        "evidencia": "La acción tiene un P95 de 239.16s (4 de 4 versiones sobre umbral), y la sección está en SLA crítico (167.44s) con degradación sostenida."
+        "evidencia": "La sección está en SLA crítico (P95 167.4s), con una acción persistentemente lenta (P95 212.61s en 4/4 versiones) y otra con degradación del 44.8% en V1.12.4."
       },
       {
         "prioridad": "P1",
-        "accion": "Realizar un análisis de rendimiento detallado de las acciones de cálculo de rendimiento 'Desde principio de año' en la sección 'Rendimiento'.",
+        "accion": "Investigar la degradación en la sección 'Rendimiento', priorizando las acciones de carga de gráficos 'Desde principio de año'.",
         "seccion": "Rendimiento",
-        "evidencia": "La sección degradó 15.1% vs histórico, y la acción 'Portfolio Hard Dollar: Primer ingreso a la carta de rendimiento Desde principio de año con método TWR' degradó 78.3% (0.92s a 1.64s)."
+        "evidencia": "La sección degradó un 15.2% vs histórico, y acciones como 'Portfolio Hard Dollar: Primer ingreso a la carta de rendimiento Desde principio de año con método TWR' degradaron un 78.2%."
       },
       {
         "prioridad": "P2",
-        "accion": "Revisar la medición de la sección 'Agenda', reintroduciendo y monitoreando las acciones discontinuadas para validar la mejora reportada.",
+        "accion": "Revisar la cobertura de métricas en la sección 'Agenda' y reincorporar acciones clave discontinuadas para asegurar una medición precisa.",
         "seccion": "Agenda",
-        "evidencia": "Se discontinuaron 12 de 14 acciones medidas en V1.11.8, con un P95 máximo de 103.34s entre las removidas."
-      },
-      {
-        "prioridad": "P2",
-        "accion": "Investigar la causa raíz del salto abrupto en la acción 'Segundo ingreso al portfolio Hard Dollar desde Mis portfolios'.",
-        "seccion": "Mis portfolios",
-        "evidencia": "La acción saltó de 5.7s a 17.89s (+213.9%) en V1.11.8."
+        "evidencia": "Se discontinuaron 12 de 14 acciones, incluyendo una con P95 de 103.34s en V1.11.8, sesgando la mejora aparente."
       },
       {
         "prioridad": "P3",
-        "accion": "Documentar y aplicar las estrategias de optimización que llevaron a mejoras significativas en las secciones 'Home', 'Mis operaciones' y 'Resultado' a otras áreas de la plataforma.",
+        "accion": "Analizar las optimizaciones implementadas en 'Home', 'Mis operaciones' y 'Mis portfolios' para identificar patrones y aplicarlos a otras secciones.",
         "seccion": "General",
-        "evidencia": "Home mejoró 49.0%, Mis operaciones 24.6%, y Resultado tuvo acciones con mejoras de hasta 68.1%."
+        "evidencia": "Estas secciones mostraron mejoras significativas del 49.2%, 23.3% y 29.5% respectivamente en la versión actual."
       }
     ]
   }

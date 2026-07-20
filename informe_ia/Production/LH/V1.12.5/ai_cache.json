@@ -1,97 +1,102 @@
 {
-  "hash": "562b8a8af525aa4f8b032f7efb5db75fb841cad6794d482a7023d033e03ea214",
+  "hash": "875c22a8e4a9427a6f3111f346d8e2eac46c4b0389f4379c250902c7b1b10631",
   "ai_model": "gemini-2.5-flash",
   "conclusions": {
     "estado_general": "atencion",
-    "resumen_ejecutivo": "La versión V1.12.5 de MPC muestra un estado de atención debido a que la sección 'Mi dinero' supera el umbral de rendimiento con un P95 de 89.03s. Además, acciones críticas de primer ingreso en 'Mi dinero' (94.46s) y 'Home' (83.42s) presentan tiempos de carga excesivos, aunque no se detectan degradaciones contra el histórico ni saltos abruptos en esta versión.",
+    "resumen_ejecutivo": "La plataforma MPC se encuentra en estado de atención debido a que la sección 'Mi dinero' presenta un P95 de 87.83s, superando el umbral de rendimiento de 60s. Aunque el resto de las secciones están dentro de los SLA, la falta de datos históricos impide evaluar mejoras o degradaciones generales.",
     "escalar": {
-      "titulo": "Mi dinero supera umbral de rendimiento con 89.03s P95",
-      "detalle": "La sección 'Mi dinero' presenta un P95 de 89.03s, superando el umbral de rendimiento, siendo la acción 'Primer ingreso al menú Mi dinero' la más lenta con 94.46s."
+      "titulo": "Rendimiento crítico en 'Mi dinero' y acciones clave",
+      "detalle": "La sección 'Mi dinero' presenta un P95 de 87.83s, superando el umbral de rendimiento de 60s. La acción 'Primer ingreso al menú Mi dinero' es la más lenta con 93.86s, requiriendo atención inmediata."
     },
     "investigar": {
-      "titulo": "Alto P95 en acciones de primer ingreso a Mi dinero y Home",
-      "detalle": "Las acciones de 'Primer ingreso al menú Mi dinero' (94.46s) y 'Primer ingreso al menú Home' (83.42s) son las más lentas, sugiriendo problemas en la carga inicial de estas secciones."
+      "titulo": "Alta variabilidad en 'Mi dinero' y 'Mis operaciones'",
+      "detalle": "Investigar la alta dispersión de tiempos en 'Mi dinero' (ratio P95/P50 de 4.58) y 'Mis operaciones' (ratio P95/P50 de 7.84), lo que sugiere una experiencia inconsistente para los usuarios."
     },
     "optimizar": {
-      "titulo": "Optimizar la carga inicial de la sección Mi dinero",
-      "detalle": "La sección 'Mi dinero' tiene un P95 de 89.03s, siendo la acción 'Primer ingreso al menú Mi dinero' la más lenta con 94.46s, lo que representa la mayor oportunidad de mejora."
+      "titulo": "Mejorar el rendimiento de la sección 'Mi dinero'",
+      "detalle": "La sección 'Mi dinero' es la más lenta con un P95 de 87.83s. Optimizar la acción 'Primer ingreso al menú Mi dinero' (93.86s) representa la mayor oportunidad de mejora."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
         "seccion": "Mi dinero",
-        "descripcion": "La sección 'Mi dinero' supera el umbral de rendimiento, siendo la acción de primer ingreso la más lenta.",
-        "evidencia": "P95 de la sección es 89.03s, y 'Primer ingreso al menú Mi dinero' es 94.46s."
+        "descripcion": "La sección 'Mi dinero' excede el umbral de rendimiento, impactando la experiencia del usuario.",
+        "evidencia": "P95 actual de 87.83s (sobre umbral de 60s)"
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Mi dinero",
+        "descripcion": "La acción 'Primer ingreso al menú Mi dinero' es la más lenta de la plataforma.",
+        "evidencia": "P95 actual de 93.86s"
       },
       {
         "tipo": "alerta",
         "seccion": "Home",
-        "descripcion": "Una acción crítica en la sección Home presenta un tiempo de carga excesivo.",
-        "evidencia": "La acción 'Primer ingreso al menú Home' tiene un P95 de 83.42s."
+        "descripcion": "La acción 'Primer ingreso al menú Home' presenta un tiempo de carga excesivo.",
+        "evidencia": "P95 actual de 80.38s"
       },
       {
         "tipo": "alerta",
         "seccion": "Mis operaciones",
-        "descripcion": "Las acciones de filtrado en 'Mis operaciones' muestran tiempos de respuesta elevados.",
-        "evidencia": "'Primer ingreso: Filtro de 3 meses de operaciones' es 48.27s y 'Segundo ingreso: Filtro de 3 meses de operaciones' es 43.66s."
+        "descripcion": "Las acciones de filtrado en 'Mis operaciones' son significativamente lentas y la sección tiene alta variabilidad.",
+        "evidencia": "P95 de 47.14s para 'Primer ingreso: Filtro de 3 meses de operaciones' y ratio P95/P50 de 7.84"
       },
       {
         "tipo": "alerta",
         "seccion": "Agenda",
-        "descripcion": "Una acción específica de filtrado en 'Agenda' es significativamente más lenta que el P95 de la sección.",
-        "evidencia": "La acción 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente' es 27.93s, mientras el P95 de la sección es 8.03s."
+        "descripcion": "Una acción específica en 'Agenda' muestra un tiempo de carga elevado.",
+        "evidencia": "P95 de 27.05s para 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente'"
       }
     ],
     "causa_raiz": [
       {
         "seccion": "Mi dinero",
         "hipotesis": [
-          "Carga de grandes volúmenes de datos financieros o cálculos complejos al iniciar la sección.",
-          "Problemas de optimización en las consultas a la base de datos o APIs externas para obtener los movimientos de efectivo.",
-          "Renderizado de componentes complejos o gráficos interactivos que no están optimizados para la carga inicial."
+          "Carga de grandes volúmenes de datos o cálculos complejos al inicio de la sección.",
+          "Consultas ineficientes a la base de datos o APIs lentas para obtener la información de flujos de fondos.",
+          "Problemas de renderizado o procesamiento en el frontend para mostrar la información inicial."
         ]
       },
       {
         "seccion": "Home",
         "hipotesis": [
-          "Carga inicial de widgets o resúmenes de portfolios destacados que requieren múltiples llamadas a APIs.",
-          "Problemas de rendimiento en la inicialización de la sesión del usuario o la recuperación de preferencias.",
-          "Bloqueo del hilo principal por scripts pesados o procesamiento de datos en el cliente al cargar la vista."
+          "Carga de múltiples widgets o componentes con datos de portfolios destacados y accesos directos.",
+          "Dependencia de servicios externos o APIs lentas para obtener la información inicial de la vista principal."
         ]
       },
       {
         "seccion": "Mis operaciones",
         "hipotesis": [
-          "Filtrado y procesamiento de un historial extenso de operaciones financieras en el backend o frontend.",
-          "Consultas ineficientes a la base de datos para recuperar operaciones dentro de un rango de fechas.",
-          "Falta de indexación adecuada en la base de datos para los campos de fecha y tipo de instrumento."
+          "La aplicación de filtros requiere una nueva consulta a la base de datos o API no optimizada para grandes rangos de fechas.",
+          "El volumen de operaciones a filtrar es muy grande, afectando el rendimiento del backend o frontend.",
+          "La alta variabilidad podría indicar problemas de concurrencia o picos de carga en el servidor."
         ]
       }
     ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Realizar un análisis de rendimiento profundo en la sección 'Mi dinero', enfocándose en la optimización de la carga inicial de datos y el procesamiento de movimientos de efectivo.",
+        "accion": "Optimizar la carga inicial de datos y cálculos para la sección 'Mi dinero', enfocándose en la acción 'Primer ingreso al menú Mi dinero'.",
         "seccion": "Mi dinero",
-        "evidencia": "La sección tiene un P95 de 89.03s y la acción 'Primer ingreso al menú Mi dinero' es 94.46s."
+        "evidencia": "P95 de la sección 87.83s; P95 de la acción 93.86s"
       },
       {
         "prioridad": "P1",
-        "accion": "Investigar y optimizar la acción 'Primer ingreso al menú Home', identificando cuellos de botella en la carga de componentes o datos iniciales.",
+        "accion": "Revisar y optimizar la carga de componentes y llamadas a APIs para la acción 'Primer ingreso al menú Home'.",
         "seccion": "Home",
-        "evidencia": "La acción 'Primer ingreso al menú Home' tiene un P95 de 83.42s."
+        "evidencia": "P95 de la acción 80.38s"
       },
       {
         "prioridad": "P2",
-        "accion": "Revisar la eficiencia de las consultas y el procesamiento de datos para las acciones de filtrado en la sección 'Mis operaciones'.",
+        "accion": "Analizar y mejorar el rendimiento de las operaciones de filtrado en la sección 'Mis operaciones', especialmente para rangos de fechas amplios.",
         "seccion": "Mis operaciones",
-        "evidencia": "Las acciones de filtrado de 3 meses son 48.27s y 43.66s."
+        "evidencia": "P95 de 47.14s para filtros de 3 meses y ratio P95/P50 de 7.84"
       },
       {
         "prioridad": "P3",
-        "accion": "Analizar la acción 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente' en 'Agenda' para identificar la causa de su lentitud.",
+        "accion": "Investigar la causa del tiempo de carga elevado para la acción 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente'.",
         "seccion": "Agenda",
-        "evidencia": "La acción tiene un P95 de 27.93s."
+        "evidencia": "P95 de la acción 27.05s"
       }
     ]
   }

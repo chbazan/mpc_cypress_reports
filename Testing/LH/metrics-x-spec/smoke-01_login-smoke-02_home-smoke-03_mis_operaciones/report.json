@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-20T17:25:33.295Z",
+    "end": "2026-07-20T17:25:55.428Z",
+    "duration": 22133,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e2b40c6-016b-4448-a645-b0150f6ed391",
+      "title": "",
+      "fullFile": "build/testing/lh/specs/smoke/01_login.cy.js",
+      "file": "build/testing/lh/specs/smoke/01_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7319e1f9-e845-42aa-8e6b-a19269ff0b17",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ingreso al admin de MPC y setup de portfolios",
+              "fullTitle": "Login Ingreso al admin de MPC y setup de portfolios",
+              "timedOut": null,
+              "duration": 17553,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.adminLoginMPC();\n      cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ADMIN_LOCATION);\n      cy.guardarEsquemasValuacion();\n      cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${investmentAcccountsPath}`);\n      cy.guardarNombresPortfolios();\n      cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${depositaryPath}`);\n      cy.contains('Seleccioná una o varias cuentas para verificar la información consolidada.').\n      should('be.visible');\n      cy.guardarNombresDepositarios();\n      cy.guardarCuentasDepositarios();",
+              "err": {},
+              "uuid": "f0c43dcb-c688-4664-aafe-da91e8942fda",
+              "parentUUID": "7319e1f9-e845-42aa-8e6b-a19269ff0b17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f0c43dcb-c688-4664-aafe-da91e8942fda"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17553,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

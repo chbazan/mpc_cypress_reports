@@ -1,95 +1,116 @@
 {
-  "hash": "593c2d4a939606ec78d250750d14289ae70eaed7338a341c3fa073983d99527c",
+  "hash": "f2b9776677acf1ed856e9e8029e6a614907aa6df45b7bc813edc2db2788c65a8",
   "ai_model": "gemini-2.5-flash",
   "conclusions": {
     "estado_general": "atencion",
-    "resumen_ejecutivo": "La plataforma MPC en la versión V1.12.5 muestra un estado de atención debido a problemas de rendimiento. La sección 'Mi dinero' supera el umbral de rendimiento con un P95 de 79.31s, y la acción 'Primer ingreso al menú Home' es críticamente lenta con 127.56s.",
+    "resumen_ejecutivo": "La versión V1.12.5 de MPC muestra un rendimiento generalmente estable, pero la sección 'Mi dinero' excede el umbral de rendimiento con un P95 de 74.29s. La ausencia de datos históricos impide una evaluación completa de mejoras o degradaciones respecto a versiones anteriores.",
     "escalar": {
-      "titulo": "Acción crítica: Primer ingreso al Home excede 120s",
-      "detalle": "La acción 'Primer ingreso al menú Home' presenta un P95 de 127.56s, superando el umbral crítico de 120s y afectando la primera impresión del usuario."
+      "titulo": "Mi dinero supera umbral de rendimiento con 74.29s P95",
+      "detalle": "La sección 'Mi dinero' presenta un P95 de 74.29s, superando el umbral de rendimiento de 60s. Esto impacta directamente la experiencia de usuario en flujos de fondos."
     },
     "investigar": {
-      "titulo": "Anomalía en carga inicial de Home y Mi dinero",
-      "detalle": "Investigar la causa del P95 de 127.56s para 'Primer ingreso al menú Home' y el P95 de 92.65s para 'Primer ingreso al menú Mi dinero', que contribuyen a la lentitud de sus secciones."
+      "titulo": "Establecer línea base histórica y analizar acciones lentas",
+      "detalle": "La falta de datos históricos (P95 histórico = 0.0s) es una anomalía clave que impide el análisis de tendencias. Además, acciones como 'Primer ingreso al menú Home' (125.36s) y 'Primer ingreso al menú Mi dinero' (92.05s) requieren investigación urgente."
     },
     "optimizar": {
-      "titulo": "Mayor oportunidad: Mejorar rendimiento de la sección Mi dinero",
-      "detalle": "La sección 'Mi dinero' tiene un P95 de 79.31s, siendo la más lenta del sistema y superando el umbral de rendimiento. Reducir este tiempo mejoraría significativamente la UX."
+      "titulo": "Optimizar la sección Mi dinero para mejorar UX",
+      "detalle": "La sección 'Mi dinero' tiene un P95 de 74.29s, siendo la más lenta y la única sobre el umbral de rendimiento. Reducir este tiempo mejoraría significativamente la experiencia de usuario en flujos de fondos."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
         "seccion": "Mi dinero",
-        "descripcion": "La sección 'Mi dinero' supera el umbral de rendimiento.",
-        "evidencia": "P95 actual de 79.31s."
+        "descripcion": "La sección 'Mi dinero' supera el umbral de rendimiento y contiene una acción clave extremadamente lenta.",
+        "evidencia": "P95 de la sección 74.29s (sobre umbral de 60s) y la acción 'Primer ingreso al menú Mi dinero' en 92.05s."
       },
       {
         "tipo": "alerta",
         "seccion": "Home",
-        "descripcion": "La acción 'Primer ingreso al menú Home' es críticamente lenta.",
-        "evidencia": "P95 actual de 127.56s."
+        "descripcion": "Una acción crítica en 'Home' es extremadamente lenta, impactando la interacción inicial del usuario.",
+        "evidencia": "La acción 'Primer ingreso al menú Home' tiene un P95 de 125.36s."
       },
       {
         "tipo": "alerta",
         "seccion": "Agenda",
-        "descripcion": "La acción 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente' es muy lenta.",
-        "evidencia": "P95 actual de 68.12s."
+        "descripcion": "La sección 'Agenda' presenta una acción lenta y una degradación en el rendimiento con caché para otra acción.",
+        "evidencia": "La acción 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente' en 64.67s y una degradación del 15.5% en caché para 'Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado'."
       },
       {
         "tipo": "alerta",
         "seccion": "Mis operaciones",
-        "descripcion": "La sección 'Mis operaciones' presenta acciones lentas, como el filtro de 3 meses.",
-        "evidencia": "P95 de sección 30.85s, con 'Primer ingreso: Filtro de 3 meses de operaciones' en 44.88s."
+        "descripcion": "Las acciones de filtrado en 'Mis operaciones' muestran tiempos de carga elevados.",
+        "evidencia": "'Primer ingreso: Filtro de 3 meses de operaciones' en 43.75s y 'Segundo ingreso: Filtro de 3 meses de operaciones' en 40.05s."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "General",
+        "descripcion": "La ausencia de datos históricos impide un análisis comparativo completo del rendimiento de la versión actual.",
+        "evidencia": "P95 histórico es 0.0s para todas las secciones."
       }
     ],
     "causa_raiz": [
       {
         "seccion": "Mi dinero",
         "hipotesis": [
-          "Podría deberse a la carga de un gran volumen de datos históricos o transaccionales al inicializar la vista de flujos de fondos.",
-          "Revisar si hay consultas a la base de datos ineficientes o APIs lentas que alimentan los movimientos de efectivo.",
-          "Posiblemente, la renderización de componentes complejos o tablas con muchos registros esté impactando el tiempo de carga inicial."
+          "La carga inicial de datos para el flujo de fondos o movimientos de efectivo es muy pesada, posiblemente por consultas a bases de datos no optimizadas o gran volumen de transacciones.",
+          "Problemas de rendimiento en la API que provee los datos de movimientos, o en el procesamiento de estos datos en el frontend.",
+          "La complejidad de los cálculos o agregaciones para mostrar el estado de 'Mi dinero' está causando latencia."
         ]
       },
       {
         "seccion": "Home",
         "hipotesis": [
-          "La carga inicial del Home podría estar realizando múltiples peticiones en cascada o bloqueando el renderizado de la UI.",
-          "Revisar la optimización de los widgets de portfolios destacados y accesos directos, que podrían estar cargando datos pesados.",
-          "Considerar la precarga de datos o la implementación de esqueletos de carga para mejorar la percepción de velocidad."
+          "La carga inicial de portfolios destacados y accesos directos implica múltiples llamadas a servicios o la recuperación de grandes volúmenes de datos.",
+          "Un cuello de botella en la inicialización de componentes o la renderización de la interfaz de usuario al cargar la vista principal.",
+          "Posibles dependencias externas o scripts de terceros que bloquean la carga inicial de la página."
+        ]
+      },
+      {
+        "seccion": "Agenda",
+        "hipotesis": [
+          "La consulta y filtrado de operaciones programadas por tipo de instrumento y estado es ineficiente, especialmente para 'Bonos, estado: Pendiente'.",
+          "El procesamiento de datos para mostrar la agenda es lento, o hay un problema con la indexación de la información.",
+          "La degradación del caché para 'Bonos, estado: Cobrado' sugiere que la estrategia de caché no está funcionando correctamente o que los datos se invalidan prematuramente."
+        ]
+      },
+      {
+        "seccion": "Mis operaciones",
+        "hipotesis": [
+          "El filtrado de operaciones por rangos de tiempo (ej. 3 meses) no está optimizado, resultando en consultas lentas a la base de datos o APIs.",
+          "La cantidad de datos a procesar y mostrar para el historial de operaciones es muy grande, y la paginación o carga incremental no es eficiente."
         ]
       }
     ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Realizar un análisis profundo del rendimiento de la acción 'Primer ingreso al menú Home' para identificar cuellos de botella.",
-        "seccion": "Home",
-        "evidencia": "P95 de 127.56s para 'Primer ingreso al menú Home'."
+        "accion": "Investigar y optimizar las consultas de datos y la renderización de la sección 'Mi dinero', priorizando la acción 'Primer ingreso al menú Mi dinero'.",
+        "seccion": "Mi dinero",
+        "evidencia": "P95 de la sección 74.29s (sobre umbral) y acción 'Primer ingreso al menú Mi dinero' en 92.05s."
       },
       {
         "prioridad": "P1",
-        "accion": "Optimizar la carga de datos y renderizado de la sección 'Mi dinero' para reducir su P95.",
-        "seccion": "Mi dinero",
-        "evidencia": "P95 de la sección 'Mi dinero' es 79.31s, sobre el umbral."
+        "accion": "Analizar las dependencias y el proceso de inicialización de la vista principal para la acción 'Primer ingreso al menú Home'.",
+        "seccion": "Home",
+        "evidencia": "P95 de la acción 'Primer ingreso al menú Home' es 125.36s."
       },
       {
         "prioridad": "P2",
-        "accion": "Investigar la lentitud de acciones específicas en 'Agenda', como la carga de bonos pendientes.",
-        "seccion": "Agenda",
-        "evidencia": "P95 de 68.12s para 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente'."
-      },
-      {
-        "prioridad": "P2",
-        "accion": "Revisar la eficiencia de los filtros de operaciones en la sección 'Mis operaciones'.",
+        "accion": "Revisar la eficiencia de las consultas y el procesamiento de datos para los filtros de tiempo en 'Mis operaciones'.",
         "seccion": "Mis operaciones",
-        "evidencia": "Acción 'Primer ingreso: Filtro de 3 meses de operaciones' con P95 de 44.88s."
+        "evidencia": "Acciones de filtrado de 3 meses en 43.75s y 40.05s."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Investigar la estrategia de caché y la optimización de consultas para la sección 'Agenda', especialmente para la acción 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente'.",
+        "seccion": "Agenda",
+        "evidencia": "Acción 'Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente' en 64.67s y degradación del 15.5% en caché para otra acción de Bonos."
       },
       {
         "prioridad": "P3",
-        "accion": "Analizar el impacto de caché en acciones donde el segundo ingreso no muestra mejora significativa o incluso degrada.",
+        "accion": "Implementar la recolección y almacenamiento de datos históricos de P95 para todas las secciones y acciones para permitir análisis de tendencias futuras.",
         "seccion": "General",
-        "evidencia": "Ej: 'Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado' en Agenda degrada un 18.5% con caché."
+        "evidencia": "P95 histórico es 0.0s para todas las secciones, impidiendo análisis de tendencias."
       }
     ]
   }

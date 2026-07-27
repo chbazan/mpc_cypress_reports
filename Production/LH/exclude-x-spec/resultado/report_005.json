@@ -5,9 +5,9 @@
     "passes": 13,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-24T18:07:29.151Z",
-    "end": "2026-07-24T18:09:02.070Z",
-    "duration": 92919,
+    "start": "2026-07-27T18:07:18.646Z",
+    "end": "2026-07-27T18:08:37.194Z",
+    "duration": 78548,
     "testsRegistered": 13,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2cd6e988-a8f3-4426-8709-9c197a152fd1",
+      "uuid": "44e137eb-0a9c-4599-8d2e-9244ddbca00d",
       "title": "",
       "fullFile": "build/production/lh/specs/performance/mis_operaciones.cy.js",
       "file": "build/production/lh/specs/performance/mis_operaciones.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "83f929ea-a543-44d1-960e-e5a4d28134ed",
+          "uuid": "f4d7129f-f5e6-4ca7-977a-604f90e7d1db",
           "title": "Mis operaciones",
           "fullFile": "",
           "file": "",
@@ -38,24 +38,24 @@
               "title": "Ingreso a MPC",
               "fullTitle": "Mis operaciones Ingreso a MPC",
               "timedOut": null,
-              "duration": 4181,
+              "duration": 5340,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.adminLoginMPC();",
               "err": {},
-              "uuid": "c5008bd1-251f-468c-b4cd-29fff86dca60",
-              "parentUUID": "83f929ea-a543-44d1-960e-e5a4d28134ed",
+              "uuid": "eb32f570-71bf-46ee-84f2-7f5d4751bc6d",
+              "parentUUID": "f4d7129f-f5e6-4ca7-977a-604f90e7d1db",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [
             {
-              "uuid": "f8ecb82a-1394-4409-9944-a0c353ac9434",
+              "uuid": "5ce01826-9dc4-4fd4-a253-f1df38a0b5b1",
               "title": "Primer ingreso al menu Mis operaciones",
               "fullFile": "",
               "file": "",
@@ -66,7 +66,7 @@
                   "title": "Primer ingreso al menú Mis operaciones",
                   "fullTitle": "Mis operaciones Primer ingreso al menu Mis operaciones Primer ingreso al menú Mis operaciones",
                   "timedOut": null,
-                  "duration": 4736,
+                  "duration": 4408,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -75,26 +75,26 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${path}`);\ncy.validacionesMisOperaciones();",
                   "err": {},
-                  "uuid": "7e986968-2315-42ae-86fc-9eb6a07f4c1a",
-                  "parentUUID": "f8ecb82a-1394-4409-9944-a0c353ac9434",
+                  "uuid": "49cf4bae-7283-4ab3-bf96-a1bd65f7e9b8",
+                  "parentUUID": "5ce01826-9dc4-4fd4-a253-f1df38a0b5b1",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "7e986968-2315-42ae-86fc-9eb6a07f4c1a"
+                "49cf4bae-7283-4ab3-bf96-a1bd65f7e9b8"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 4736,
+              "duration": 4408,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "6adceff0-96c4-4c05-aaa0-bcb889ed1e92",
+              "uuid": "9e139f39-fd87-419e-bdf9-ec0b567cc8bc",
               "title": "Primer ingreso: Filtros de Mis operaciones",
               "fullFile": "",
               "file": "",
@@ -105,7 +105,7 @@
                   "title": "Primer ingreso: Filtro de 1 mes de operaciones",
                   "fullTitle": "Mis operaciones Primer ingreso: Filtros de Mis operaciones Primer ingreso: Filtro de 1 mes de operaciones",
                   "timedOut": null,
-                  "duration": 1865,
+                  "duration": 1449,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -114,8 +114,8 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(1);",
                   "err": {},
-                  "uuid": "1c9cfe4a-e9b4-416b-bdbe-e27d75788145",
-                  "parentUUID": "6adceff0-96c4-4c05-aaa0-bcb889ed1e92",
+                  "uuid": "99a4c9cb-806a-47cb-805c-bbd35d077086",
+                  "parentUUID": "9e139f39-fd87-419e-bdf9-ec0b567cc8bc",
                   "isHook": false,
                   "skipped": false
                 },
@@ -123,36 +123,36 @@
                   "title": "Primer ingreso: Filtro de 3 meses de operaciones",
                   "fullTitle": "Mis operaciones Primer ingreso: Filtros de Mis operaciones Primer ingreso: Filtro de 3 meses de operaciones",
                   "timedOut": null,
-                  "duration": 14915,
+                  "duration": 9790,
                   "state": "passed",
-                  "speed": "slow",
+                  "speed": "medium",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(3);",
                   "err": {},
-                  "uuid": "5977a515-66bd-40ef-b0d2-d47003791f63",
-                  "parentUUID": "6adceff0-96c4-4c05-aaa0-bcb889ed1e92",
+                  "uuid": "3ddf7478-00cf-4d37-a323-4d5606e5b880",
+                  "parentUUID": "9e139f39-fd87-419e-bdf9-ec0b567cc8bc",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "1c9cfe4a-e9b4-416b-bdbe-e27d75788145",
-                "5977a515-66bd-40ef-b0d2-d47003791f63"
+                "99a4c9cb-806a-47cb-805c-bbd35d077086",
+                "3ddf7478-00cf-4d37-a323-4d5606e5b880"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 16780,
+              "duration": 11239,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "61534b1d-bd7d-49b4-b21f-f97adfdde54b",
+              "uuid": "7f4ff338-7be1-4a12-b17a-27bae0e017cf",
               "title": "Segundo ingreso al menu Mis operaciones",
               "fullFile": "",
               "file": "",
@@ -163,7 +163,7 @@
                   "title": "Segundo ingreso al menú Mis operaciones",
                   "fullTitle": "Mis operaciones Segundo ingreso al menu Mis operaciones Segundo ingreso al menú Mis operaciones",
                   "timedOut": null,
-                  "duration": 4412,
+                  "duration": 4974,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -172,26 +172,26 @@
                   "context": null,
                   "code": "cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${path}`);\ncy.validacionesMisOperaciones();",
                   "err": {},
-                  "uuid": "5ad932c6-d327-4586-a392-6cbf7cc2d8cd",
-                  "parentUUID": "61534b1d-bd7d-49b4-b21f-f97adfdde54b",
+                  "uuid": "d8c05a10-93a6-456d-b635-722f68d2b5b4",
+                  "parentUUID": "7f4ff338-7be1-4a12-b17a-27bae0e017cf",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "5ad932c6-d327-4586-a392-6cbf7cc2d8cd"
+                "d8c05a10-93a6-456d-b635-722f68d2b5b4"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 4412,
+              "duration": 4974,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "988fe54d-72ad-4b0f-a078-ad18899c6223",
+              "uuid": "89d31d87-3c04-4480-b7ff-ec77db57ed8c",
               "title": "Segundo ingreso: Filtros de Mis operaciones",
               "fullFile": "",
               "file": "",
@@ -202,7 +202,7 @@
                   "title": "Segundo ingreso: Filtro de 1 mes de operaciones",
                   "fullTitle": "Mis operaciones Segundo ingreso: Filtros de Mis operaciones Segundo ingreso: Filtro de 1 mes de operaciones",
                   "timedOut": null,
-                  "duration": 1991,
+                  "duration": 1393,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -211,8 +211,8 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(1);",
                   "err": {},
-                  "uuid": "a0dc97f1-14e6-4754-b7db-8dca88600289",
-                  "parentUUID": "988fe54d-72ad-4b0f-a078-ad18899c6223",
+                  "uuid": "b11dcc40-34bf-4c63-8520-ac5ba7814221",
+                  "parentUUID": "89d31d87-3c04-4480-b7ff-ec77db57ed8c",
                   "isHook": false,
                   "skipped": false
                 },
@@ -220,7 +220,7 @@
                   "title": "Segundo ingreso: Filtro de 3 meses de operaciones",
                   "fullTitle": "Mis operaciones Segundo ingreso: Filtros de Mis operaciones Segundo ingreso: Filtro de 3 meses de operaciones",
                   "timedOut": null,
-                  "duration": 20990,
+                  "duration": 16718,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -229,27 +229,27 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(3);",
                   "err": {},
-                  "uuid": "8888ec76-c613-468a-9bfd-568f8bb4679a",
-                  "parentUUID": "988fe54d-72ad-4b0f-a078-ad18899c6223",
+                  "uuid": "f8120ee0-dc55-4fe2-9b47-31ccc35d4cfc",
+                  "parentUUID": "89d31d87-3c04-4480-b7ff-ec77db57ed8c",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "a0dc97f1-14e6-4754-b7db-8dca88600289",
-                "8888ec76-c613-468a-9bfd-568f8bb4679a"
+                "b11dcc40-34bf-4c63-8520-ac5ba7814221",
+                "f8120ee0-dc55-4fe2-9b47-31ccc35d4cfc"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 22981,
+              "duration": 18111,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "0a0625d8-28d2-4f19-bbfa-e08ca545d9bb",
+              "uuid": "13ab5d1c-c5c9-4b2a-bbc0-66f80210960b",
               "title": "Primer ingreso al depositario Premier LH",
               "fullFile": "",
               "file": "",
@@ -260,7 +260,7 @@
                   "title": "Primer ingreso al depositario Premier LH",
                   "fullTitle": "Mis operaciones Primer ingreso al depositario Premier LH Primer ingreso al depositario Premier LH",
                   "timedOut": null,
-                  "duration": 4077,
+                  "duration": 3224,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -269,26 +269,26 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorDepositario(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].SELECT_DEPOSITARIO);",
                   "err": {},
-                  "uuid": "52a8ece4-cb35-404a-87af-12c3c441a55c",
-                  "parentUUID": "0a0625d8-28d2-4f19-bbfa-e08ca545d9bb",
+                  "uuid": "dc82e6e9-33e1-412a-acdf-e9efc38e69c0",
+                  "parentUUID": "13ab5d1c-c5c9-4b2a-bbc0-66f80210960b",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "52a8ece4-cb35-404a-87af-12c3c441a55c"
+                "dc82e6e9-33e1-412a-acdf-e9efc38e69c0"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 4077,
+              "duration": 3224,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "7d7615a9-3cfa-40a1-aefc-f4a8e3314133",
+              "uuid": "2dc93217-84dc-4110-b418-bbc89240f355",
               "title": "Primer ingreso: Depositario Premier LH filtros de Mis operaciones",
               "fullFile": "",
               "file": "",
@@ -299,7 +299,7 @@
                   "title": "Primer ingreso: Depositario Premier LH filtro de 1 mes de operaciones",
                   "fullTitle": "Mis operaciones Primer ingreso: Depositario Premier LH filtros de Mis operaciones Primer ingreso: Depositario Premier LH filtro de 1 mes de operaciones",
                   "timedOut": null,
-                  "duration": 1201,
+                  "duration": 1107,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -308,8 +308,8 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(1);",
                   "err": {},
-                  "uuid": "a7b7c4a8-d222-4274-a152-02cf17533cc5",
-                  "parentUUID": "7d7615a9-3cfa-40a1-aefc-f4a8e3314133",
+                  "uuid": "46653dff-7d92-4d2c-8185-dd068b33c5e7",
+                  "parentUUID": "2dc93217-84dc-4110-b418-bbc89240f355",
                   "isHook": false,
                   "skipped": false
                 },
@@ -317,7 +317,7 @@
                   "title": "Primer ingreso: Depositario Premier LH filtro de 3 meses de operaciones",
                   "fullTitle": "Mis operaciones Primer ingreso: Depositario Premier LH filtros de Mis operaciones Primer ingreso: Depositario Premier LH filtro de 3 meses de operaciones",
                   "timedOut": null,
-                  "duration": 4057,
+                  "duration": 2531,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -326,27 +326,27 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(3);",
                   "err": {},
-                  "uuid": "4e7efaa8-567b-451d-80ba-186f543cc27c",
-                  "parentUUID": "7d7615a9-3cfa-40a1-aefc-f4a8e3314133",
+                  "uuid": "2921da5b-94d8-4a93-a6f3-c7e5e7e6dc36",
+                  "parentUUID": "2dc93217-84dc-4110-b418-bbc89240f355",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "a7b7c4a8-d222-4274-a152-02cf17533cc5",
-                "4e7efaa8-567b-451d-80ba-186f543cc27c"
+                "46653dff-7d92-4d2c-8185-dd068b33c5e7",
+                "2921da5b-94d8-4a93-a6f3-c7e5e7e6dc36"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 5258,
+              "duration": 3638,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "b415788b-971b-4fdf-a40e-85acd02b5a5f",
+              "uuid": "f1e58973-569e-41d8-9da3-6f1f3ce33fb5",
               "title": "Segundo ingreso al depositario Premier LH",
               "fullFile": "",
               "file": "",
@@ -357,7 +357,7 @@
                   "title": "Segundo ingreso al depositario Premier LH",
                   "fullTitle": "Mis operaciones Segundo ingreso al depositario Premier LH Segundo ingreso al depositario Premier LH",
                   "timedOut": null,
-                  "duration": 2875,
+                  "duration": 3472,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -366,26 +366,26 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorDepositario(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].SELECT_DEPOSITARIO);",
                   "err": {},
-                  "uuid": "975aa212-5798-4439-99e3-73134cd54c32",
-                  "parentUUID": "b415788b-971b-4fdf-a40e-85acd02b5a5f",
+                  "uuid": "d863259b-8b8f-4b65-a48b-6256bb81c31a",
+                  "parentUUID": "f1e58973-569e-41d8-9da3-6f1f3ce33fb5",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "975aa212-5798-4439-99e3-73134cd54c32"
+                "d863259b-8b8f-4b65-a48b-6256bb81c31a"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 2875,
+              "duration": 3472,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "23442f7a-03f5-4e14-bf4a-5561301c0d6f",
+              "uuid": "054b0409-fdf6-42e6-bc83-a6829283d387",
               "title": "Segundo ingreso: Depositario Premier LH filtros de Mis operaciones",
               "fullFile": "",
               "file": "",
@@ -396,7 +396,7 @@
                   "title": "Segundo ingreso: Depositario Premier LH filtro de 1 mes de operaciones",
                   "fullTitle": "Mis operaciones Segundo ingreso: Depositario Premier LH filtros de Mis operaciones Segundo ingreso: Depositario Premier LH filtro de 1 mes de operaciones",
                   "timedOut": null,
-                  "duration": 1276,
+                  "duration": 1027,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -405,8 +405,8 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(1);",
                   "err": {},
-                  "uuid": "3ad84818-20e8-457b-a0e2-059f25e243a7",
-                  "parentUUID": "23442f7a-03f5-4e14-bf4a-5561301c0d6f",
+                  "uuid": "143ff7ac-16df-4f0e-ab4c-ab14f820ffae",
+                  "parentUUID": "054b0409-fdf6-42e6-bc83-a6829283d387",
                   "isHook": false,
                   "skipped": false
                 },
@@ -414,7 +414,7 @@
                   "title": "Segundo ingreso: Depositario Premier LH filtro de 3 meses de operaciones",
                   "fullTitle": "Mis operaciones Segundo ingreso: Depositario Premier LH filtros de Mis operaciones Segundo ingreso: Depositario Premier LH filtro de 3 meses de operaciones",
                   "timedOut": null,
-                  "duration": 3146,
+                  "duration": 3455,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -423,33 +423,33 @@
                   "context": null,
                   "code": "cy.filtrarOperacionesPorMeses(3);",
                   "err": {},
-                  "uuid": "a0db82b6-e329-4b3f-9fb9-9cbba925801d",
-                  "parentUUID": "23442f7a-03f5-4e14-bf4a-5561301c0d6f",
+                  "uuid": "611963a1-51ea-40d6-aa40-51e649d35f6b",
+                  "parentUUID": "054b0409-fdf6-42e6-bc83-a6829283d387",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "3ad84818-20e8-457b-a0e2-059f25e243a7",
-                "a0db82b6-e329-4b3f-9fb9-9cbba925801d"
+                "143ff7ac-16df-4f0e-ab4c-ab14f820ffae",
+                "611963a1-51ea-40d6-aa40-51e649d35f6b"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 4422,
+              "duration": 4482,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             }
           ],
           "passes": [
-            "c5008bd1-251f-468c-b4cd-29fff86dca60"
+            "eb32f570-71bf-46ee-84f2-7f5d4751bc6d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4181,
+          "duration": 5340,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

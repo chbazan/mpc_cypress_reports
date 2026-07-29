@@ -1,0 +1,49 @@
+{
+  "spec": "build/production/avalian/specs/performance/01_login.cy.js",
+  "specName": "01_login",
+  "timestamp": "2026-07-29T15:38:36.469Z",
+  "environment": {
+    "TARGET_ENV": "production",
+    "TARGET_CLIENT": "avalian",
+    "browser": "chromium"
+  },
+  "version": "unknown",
+  "stats": {
+    "duration": 939,
+    "endedAt": "2026-07-29T15:38:36.446Z",
+    "failures": 1,
+    "passes": 0,
+    "pending": 0,
+    "skipped": 0,
+    "startedAt": "2026-07-29T15:38:35.507Z",
+    "suites": 1,
+    "tests": 1
+  },
+  "failedTests": [
+    {
+      "title": [
+        "Login",
+        "Ingreso al admin de MPC y setup de portfolios"
+      ],
+      "fullTitle": "Login > Ingreso al admin de MPC y setup de portfolios",
+      "state": "failed",
+      "duration": 910,
+      "error": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://avalian.mercapportfolio.com/mercap-portfolio-admin\n\nThe response we received from your web server was:\n\n  > 503: Service Unavailable\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:38369/__cypress/runner/cypress_runner.js:134864:76)\n    at visitFailedByErr (http://localhost:38369/__cypress/runner/cypress_runner.js:134454:12)\n    at <unknown> (http://localhost:38369/__cypress/runner/cypress_runner.js:134847:13)\n    at tryCatcher (http://localhost:38369/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:38369/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:38369/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:38369/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:38369/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:38369/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:38369/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:38369/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:38369/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress/./cypress/support/commands/shared.commands.js:54:0)\n    at wrapped (http://localhost:38369/__cypress/runner/cypress_runner.js:146042:43)",
+      "attempts": [
+        {
+          "state": "failed",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "height": 633,
+      "name": null,
+      "path": "/home/runner/work/portfolio-qa-tests/portfolio-qa-tests/cypress/reports/screenshots/01_login.cy.js/Login -- Ingreso al admin de MPC y setup de portfolios (failed).png",
+      "takenAt": "2026-07-29T15:38:36.167Z",
+      "width": 1280
+    }
+  ]
+}

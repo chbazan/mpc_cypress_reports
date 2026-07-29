@@ -1,0 +1,106 @@
+{
+  "hash": "9e9e3c17c127ac61190f426051b3d47363aeb78b8b819b8cf58751c5b72ae3ea",
+  "ai_model": "gemini-2.5-flash",
+  "conclusions": {
+    "estado_general": "atencion",
+    "resumen_ejecutivo": "La versión V1.13.4 de MPC presenta un estado de atención debido a una degradación crítica en la sección 'Mi dinero', cuyo P95 aumentó un 15.9% hasta 78.45s, superando el umbral de rendimiento. A pesar de esto, se observan mejoras significativas en otras áreas como 'Mis operaciones' (+57.1%) y 'Rendimiento' (+11.1%), con una notable recuperación en el 'Primer ingreso al menú Home' (+74.4%). Es crucial investigar la degradación en 'Mi dinero' y la posible mejora ilusoria en 'Mis operaciones' debido a acciones discontinuadas.",
+    "escalar": {
+      "titulo": "Degradación crítica en 'Mi dinero' y superación de umbral de rendimiento",
+      "detalle": "La sección 'Mi dinero' degradó un 15.9% (de 67.69s a 78.45s) y su P95 actual de 78.45s supera el umbral de rendimiento de 60s. Además, experimentó un salto abrupto del P95 del 86.5% (de 43.83s a 81.74s) en esta versión."
+    },
+    "investigar": {
+      "titulo": "Salto abrupto del P95 en la sección 'Mi dinero'",
+      "detalle": "La sección 'Mi dinero' mostró un salto abrupto del P95 del 86.5%, pasando de 43.83s en la versión anterior a 81.74s en la actual, lo que requiere una investigación inmediata para identificar la causa."
+    },
+    "optimizar": {
+      "titulo": "Mejorar el rendimiento de la sección 'Mi dinero'",
+      "detalle": "La sección 'Mi dinero' es la más lenta con un P95 de 78.45s y ha sufrido una degradación del 15.9%, representando la mayor oportunidad de mejora para la experiencia de usuario."
+    },
+    "hallazgos": [
+      {
+        "tipo": "alerta",
+        "seccion": "Mis operaciones",
+        "descripcion": "Mejora aparente — se discontinuaron 6/18 acciones medidas en V1.12.5 (P95 máx removidas: 6.24s).",
+        "evidencia": "Dropout rate: 33.3%"
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Mi dinero",
+        "descripcion": "La sección Mi dinero sufrió una degradación significativa y supera el umbral de rendimiento.",
+        "evidencia": "P95 degradó de 67.69s a 78.45s (-15.9%) y está sobre el umbral de 60s."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Home",
+        "descripcion": "El primer ingreso al menú Home mejoró drásticamente.",
+        "evidencia": "P95 mejoró de 120.95s a 30.99s (+74.4%)"
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Agenda",
+        "descripcion": "La sección Agenda muestra una mejora generalizada en sus acciones.",
+        "evidencia": "53.2% de las acciones mejoraron, con la mejor acción reduciendo su P95 en 51.08%."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Mis depositarios",
+        "descripcion": "La sección Mis depositarios presenta mejoras en más de la mitad de sus acciones.",
+        "evidencia": "72 acciones mejoraron, con la mejor reduciendo su P95 en 43.48%."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Rendimiento",
+        "descripcion": "La sección Rendimiento experimentó mejoras significativas en la mayoría de sus acciones.",
+        "evidencia": "193 acciones mejoraron, con la mejor reduciendo su P95 en 60.3%."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Mis portfolios",
+        "descripcion": "El primer ingreso al menú Mis portfolios experimentó una degradación notable.",
+        "evidencia": "P95 degradó de 10.36s a 13.2s (-27.5%)"
+      }
+    ],
+    "causa_raiz": [
+      {
+        "seccion": "Mi dinero",
+        "hipotesis": [
+          "Podría deberse a un aumento en el volumen o complejidad de los datos de flujo de fondos y movimientos de efectivo que se cargan al ingresar a la sección.",
+          "Revisar si hay consultas a la base de datos ineficientes o servicios externos lentos que impacten la carga inicial de 'Mi dinero'.",
+          "Considerar si cambios recientes en la lógica de negocio o la UI de 'Mi dinero' introdujeron cuellos de botella en el renderizado o procesamiento."
+        ]
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": "P1",
+        "accion": "Investigar la causa raíz de la degradación del 15.9% en 'Mi dinero' y el salto abrupto del P95 de 43.83s a 81.74s.",
+        "seccion": "Mi dinero",
+        "evidencia": "P95 actual de 78.45s (sobre umbral) y degradación del 15.9% vs histórico."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Revisar las acciones discontinuadas en 'Mis operaciones' para asegurar que no se ocultaron problemas de rendimiento.",
+        "seccion": "Mis operaciones",
+        "evidencia": "33.3% de las acciones medidas en V1.12.5 fueron discontinuadas en V1.13.4."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Analizar la degradación de la acción 'Primer ingreso al menú Mis portfolios' para identificar posibles regresiones.",
+        "seccion": "Mis portfolios",
+        "evidencia": "La acción 'Primer ingreso al menú Mis portfolios' degradó un 27.5% (de 10.36s a 13.2s)."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Investigar la degradación de la acción 'Deseleccionar todas las cuentas del depositario Bacs'.",
+        "seccion": "Mis depositarios",
+        "evidencia": "La acción 'Deseleccionar todas las cuentas del depositario Bacs' degradó un 31.8% (de 8.43s a 11.1s)."
+      },
+      {
+        "prioridad": "P3",
+        "accion": "Documentar y replicar las optimizaciones que llevaron a mejoras significativas en 'Mis operaciones' y 'Rendimiento'.",
+        "seccion": "General",
+        "evidencia": "Mis operaciones mejoró 57.1% y Rendimiento mejoró 11.1% con 79.8% de acciones mejoradas."
+      }
+    ]
+  }
+}

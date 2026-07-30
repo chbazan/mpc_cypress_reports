@@ -1,0 +1,130 @@
+{
+  "hash": "ca99c7f82afb39c61ccc616f9782beee1f6cdf5266050bb2e686b11a124b72ca",
+  "ai_model": "gemini-2.5-flash",
+  "conclusions": {
+    "estado_general": "critico",
+    "resumen_ejecutivo": "La versión V1.13.4 de MPC presenta un estado crítico, con tres secciones mostrando degradaciones significativas frente a su histórico. Agenda sufrió una degradación del 194.7% (P95 26.3s) y Rendimiento un 19.7% (P95 4.02s). Aunque Mi dinero mejoró un 36.9%, su P95 de 107.93s sigue siendo la más lenta y una acción clave es persistentemente lenta.",
+    "escalar": {
+      "titulo": "Degradaciones críticas y lentitud persistente en secciones clave",
+      "detalle": "La sección Agenda sufrió una degradación del 194.7% (P95 26.3s) y Rendimiento un 19.7% (P95 4.02s) vs. histórico. Además, 'Primer ingreso al menú Mi dinero' es persistentemente lento, superando el umbral en 5 de 5 versiones (P95 108.7s)."
+    },
+    "investigar": {
+      "titulo": "Salto abrupto en Agenda y tendencia de degradación en Rendimiento",
+      "detalle": "La sección Agenda experimentó un salto del 196.1% en P95 (de 8.92s a 26.41s) entre V1.12.4 y V1.13.4. Además, Rendimiento muestra una degradación sostenida en las últimas 3 versiones."
+    },
+    "optimizar": {
+      "titulo": "Optimizar la experiencia en Mi dinero y revertir degradación en Agenda",
+      "detalle": "La sección Mi dinero, con un P95 de 107.93s, es la más lenta y requiere optimización, a pesar de una mejora del 36.9%. La degradación del 194.7% en Agenda también es una prioridad."
+    },
+    "hallazgos": [
+      {
+        "tipo": "alerta",
+        "seccion": "Mi dinero",
+        "descripcion": "La acción 'Primer ingreso al menú Mi dinero' es persistentemente lenta.",
+        "evidencia": "5 de 5 versiones sobre el umbral, con P95 actual de 108.7s."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Agenda",
+        "descripcion": "La sección Agenda sufrió una degradación crítica en esta versión.",
+        "evidencia": "P95 degradó de 8.93s a 26.3s (-194.7%)."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Rendimiento",
+        "descripcion": "La sección Rendimiento muestra una degradación sostenida en las últimas 3 versiones.",
+        "evidencia": "P95 creció de 2.87s a 4.02s."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Mis portfolios",
+        "descripcion": "La sección Mis portfolios experimentó una degradación significativa.",
+        "evidencia": "P95 degradó de 9.61s a 11.08s (-15.3%)."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Mi dinero",
+        "descripcion": "La sección Mi dinero muestra una mejora significativa en esta versión.",
+        "evidencia": "P95 mejoró de 171.08s a 107.93s (+36.9%)."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Mis operaciones",
+        "descripcion": "La sección Mis operaciones muestra una mejora estructural en varias acciones.",
+        "evidencia": "5 acciones mejoraron, destacando 'Primer ingreso al menú Mis operaciones' de 7.88s a 4.39s (+44.3%)."
+      },
+      {
+        "tipo": "mejora",
+        "seccion": "Home",
+        "descripcion": "La acción 'Primer ingreso al menú Home' mejoró drásticamente.",
+        "evidencia": "P95 de 101.02s a 9.12s (+91.0%)."
+      }
+    ],
+    "causa_raiz": [
+      {
+        "seccion": "Agenda",
+        "hipotesis": [
+          "Aumento en el volumen o complejidad de datos de operaciones programadas/alertas.",
+          "Cambios recientes en las consultas a la base de datos o APIs que alimentan la sección.",
+          "Ineficiencias en el renderizado de la UI al cargar la lista de ítems en la agenda."
+        ]
+      },
+      {
+        "seccion": "Mis portfolios",
+        "hipotesis": [
+          "Incremento en la cantidad de portfolios por cliente o en la complejidad de sus datos.",
+          "Consultas ineficientes al cargar el listado o el detalle de los portfolios.",
+          "Problemas de concurrencia o bloqueo al acceder a los datos de los portfolios."
+        ]
+      },
+      {
+        "seccion": "Rendimiento",
+        "hipotesis": [
+          "Mayor complejidad en los cálculos de retorno y performance histórica.",
+          "Ineficiencias en la recuperación de datos históricos para los gráficos.",
+          "Degradación en el rendimiento de los servicios de cálculo de métricas financieras."
+        ]
+      },
+      {
+        "seccion": "Mi dinero",
+        "hipotesis": [
+          "Consultas a la base de datos o APIs que manejan flujos de fondos y movimientos de efectivo son inherentemente lentas o no están optimizadas.",
+          "Procesamiento pesado en el frontend para consolidar y mostrar grandes volúmenes de transacciones.",
+          "Falta de indexación adecuada o caché en los datos de movimientos de efectivo."
+        ]
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": "P1",
+        "accion": "Realizar un análisis de causa raíz profundo para la acción 'Primer ingreso al menú Mi dinero', enfocándose en la optimización de consultas y APIs.",
+        "seccion": "Mi dinero",
+        "evidencia": "P95 actual 108.7s, persistentemente lento en 5 de 5 versiones."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Investigar el salto abrupto de rendimiento en la sección Agenda, revisando cambios recientes en código, consultas de datos y volumen de información.",
+        "seccion": "Agenda",
+        "evidencia": "Degradación del 194.7% (P95 de 8.93s a 26.3s) entre V1.12.4 y V1.13.4."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Analizar la tendencia de degradación sostenida en la sección Rendimiento para identificar cuellos de botella en cálculos o recuperación de datos históricos.",
+        "seccion": "Rendimiento",
+        "evidencia": "P95 creció de 2.87s a 4.02s en las últimas 3 versiones."
+      },
+      {
+        "prioridad": "P2",
+        "accion": "Revisar la eficiencia de las consultas y el procesamiento de datos en la sección Mis portfolios para revertir la degradación.",
+        "seccion": "Mis portfolios",
+        "evidencia": "Degradación del 15.3% (P95 de 9.61s a 11.08s)."
+      },
+      {
+        "prioridad": "P3",
+        "accion": "Documentar y replicar las optimizaciones exitosas implementadas en las secciones Mis operaciones y Resultado para aplicarlas en otras áreas.",
+        "seccion": "General",
+        "evidencia": "Mis operaciones mejoró 41.7% y Resultado 21.1% en acciones clave."
+      }
+    ]
+  }
+}

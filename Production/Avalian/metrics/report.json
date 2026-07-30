@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2026-07-29T15:38:35.512Z",
-    "end": "2026-07-29T15:38:36.450Z",
-    "duration": 938,
+    "failures": 0,
+    "start": "2026-07-30T15:39:45.651Z",
+    "end": "2026-07-30T15:40:12.137Z",
+    "duration": 26486,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "018085ca-7b4c-450e-b5c0-9b874db4e538",
+      "uuid": "123db157-6ca0-468f-a354-1a2f893a2f14",
       "title": "",
       "fullFile": "build/production/avalian/specs/performance/01_login.cy.js",
       "file": "build/production/avalian/specs/performance/01_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "996306d1-38a0-4dab-b232-14c219994f2f",
+          "uuid": "f2d678bd-0d2e-4082-81ee-bf5aa75ab926",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Ingreso al admin de MPC y setup de portfolios",
               "fullTitle": "Login Ingreso al admin de MPC y setup de portfolios",
               "timedOut": null,
-              "duration": 744,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 20386,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.adminLoginMPC();\n      cy.visit(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ADMIN_LOCATION);\n      cy.guardarEsquemasValuacion();\n      cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${investmentAcccountsPath}`);\n      cy.guardarNombresPortfolios();\n      cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}${depositaryPath}`);\n      cy.contains('Seleccioná una o varias cuentas para verificar la información consolidada.').\n      should('be.visible');\n      cy.guardarNombresDepositarios();\n      cy.guardarCuentasDepositarios();",
-              "err": {
-                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://avalian.mercapportfolio.com/mercap-portfolio-admin\n\nThe response we received from your web server was:\n\n  > 503: Service Unavailable\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
-                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://avalian.mercapportfolio.com/mercap-portfolio-admin\n\nThe response we received from your web server was:\n\n  > 503: Service Unavailable\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:38369/__cypress/runner/cypress_runner.js:134864:76)\n    at visitFailedByErr (http://localhost:38369/__cypress/runner/cypress_runner.js:134454:12)\n    at <unknown> (http://localhost:38369/__cypress/runner/cypress_runner.js:134847:13)\n    at tryCatcher (http://localhost:38369/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:38369/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:38369/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:38369/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:38369/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:38369/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:38369/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:38369/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:38369/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress/./cypress/support/commands/shared.commands.js:54:0)\n    at wrapped (http://localhost:38369/__cypress/runner/cypress_runner.js:146042:43)",
-                "diff": null
-              },
-              "uuid": "e9ce4aab-f20a-4a8a-87eb-062d7658708d",
-              "parentUUID": "996306d1-38a0-4dab-b232-14c219994f2f",
+              "err": {},
+              "uuid": "1993bd4d-eed0-4fe2-a753-82a6b0a781e5",
+              "parentUUID": "f2d678bd-0d2e-4082-81ee-bf5aa75ab926",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "e9ce4aab-f20a-4a8a-87eb-062d7658708d"
+          "passes": [
+            "1993bd4d-eed0-4fe2-a753-82a6b0a781e5"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 744,
+          "duration": 20386,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

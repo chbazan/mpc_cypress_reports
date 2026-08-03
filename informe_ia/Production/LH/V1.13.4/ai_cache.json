@@ -1,99 +1,109 @@
 {
-  "hash": "0b88dd6d140723e36e93663b03a585a8b2f40d7acfb8da40ad13b2202f38f7a2",
+  "hash": "44eeca2ef5e6e7f217aa0cd17dedcdc98f11a851815eaa22a8ed7944f09ff451",
   "ai_model": "gemini-2.5-flash",
   "conclusions": {
     "estado_general": "atencion",
-    "resumen_ejecutivo": "La versión V1.13.4 de MPC muestra un rendimiento mixto. Aunque 5 de las 7 secciones mejoraron su P95, destacando \"Mis operaciones\" con una mejora del 45.6%, la sección \"Mi dinero\" presenta una degradación del 9.8% y su P95 actual de 74.33s la sitúa por encima del umbral de rendimiento, requiriendo atención.",
+    "resumen_ejecutivo": "La versión V1.13.4 de MPC requiere atención debido a que la sección 'Mi dinero' supera el umbral de rendimiento con un P95 de 69.39s y experimentó un salto abrupto del 86.5%. Aunque 'Mis operaciones' mejoró un 32.6% y 'Home' tuvo una mejora del 75.8% en una acción clave, la sección 'Mis portfolios' degradó un 13.6% y una acción en 'Rendimiento' sufrió una degradación del 112%.",
     "escalar": {
-      "titulo": "Degradación crítica y alto P95 en Mi dinero",
-      "detalle": "La sección 'Mi dinero' experimentó un salto abrupto del 86.5% en su P95 entre V1.12.5 y V1.13.4, alcanzando 74.33s, lo que la sitúa sobre el umbral de rendimiento y requiere investigación urgente."
+      "titulo": "Mi dinero sobre umbral y degradación crítica en acción de Rendimiento",
+      "detalle": "La sección 'Mi dinero' tiene un P95 de 69.39s, superando el umbral de 60s, y una acción en 'Rendimiento' ('Portfolio LH Liquidez: Primer ingreso a la carta de rendimiento Desde principio ') degradó un 112% (de 1.17s a 2.48s)."
     },
     "investigar": {
-      "titulo": "Salto abrupto de rendimiento en Mi dinero",
-      "detalle": "La sección 'Mi dinero' mostró un incremento del 86.5% en su P95 entre la versión anterior y la actual, pasando de 43.83s a 81.74s, lo que sugiere una regresión importante en su performance y requiere investigación."
+      "titulo": "Salto abrupto del 86.5% en la sección Mi dinero",
+      "detalle": "La sección 'Mi dinero' mostró un salto abrupto en su P95, pasando de 43.83s a 81.74s (+86.5%) en la transición a V1.13.4, lo que requiere una investigación profunda."
     },
     "optimizar": {
-      "titulo": "Optimizar la sección Mi dinero para mejorar UX",
-      "detalle": "La sección 'Mi dinero' es la más lenta con un P95 de 74.33s, superando el umbral de rendimiento. Su optimización tiene el mayor potencial para mejorar la experiencia de usuario."
+      "titulo": "Optimizar la sección Mi dinero para reducir su P95",
+      "detalle": "La sección 'Mi dinero' es la más lenta con un P95 de 69.39s, superando el umbral de rendimiento, lo que representa la mayor oportunidad de mejora para la UX."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
         "seccion": "Mis operaciones",
-        "descripcion": "Mejora aparente — se discontinuaron 6/18 acciones medidas en V1.12.5 (P95 máx removidas: 6.24s)",
-        "evidencia": "Dropout rate del 33.3% en V1.12.5"
+        "descripcion": "Mejora aparente — se discontinuaron 6/18 acciones medidas en V1.12.5 (P95 máx removidas: 6.24s).",
+        "evidencia": "Dropout rate: 33.3%"
       },
       {
-        "tipo": "mejora",
-        "seccion": "Mis operaciones",
-        "descripcion": "La sección 'Mis operaciones' mostró una mejora significativa en su rendimiento.",
-        "evidencia": "P95 mejoró de 29.96s a 16.31s (+45.6%), con la acción 'Primer ingreso: Filtro de 1 mes de operaciones' mejorando de 5.15s a 1.75s (+66.05%)."
-      },
-      {
-        "tipo": "mejora",
+        "tipo": "alerta",
         "seccion": "Rendimiento",
-        "descripcion": "La sección 'Rendimiento' muestra una mejora estructural en muchas de sus acciones.",
-        "evidencia": "55.8% (135 de 242) de sus acciones mejoraron, destacando 'Portfolio LH Inversiones: Primer ingreso a la carta de rendimiento Desde princip' con una mejora del 56.61% (2.7s a 1.17s)."
+        "descripcion": "La acción 'Portfolio LH Liquidez: Primer ingreso a la carta de rendimiento Desde principio ' sufrió una degradación abrupta.",
+        "evidencia": "P95 pasó de 1.17s a 2.48s (+112%) en V1.13.4"
       },
       {
-        "tipo": "degradacion",
+        "tipo": "alerta",
         "seccion": "Mi dinero",
-        "descripcion": "La sección 'Mi dinero' se degradó y supera el umbral de rendimiento, además de sufrir un salto abrupto.",
-        "evidencia": "P95 degradó de 67.69s a 74.33s (-9.8%) y está sobre el umbral de 60s. Sufrió un salto abrupto del 86.5% en su P95 entre V1.12.5 y V1.13.4."
+        "descripcion": "La sección Mi dinero se encuentra sobre el umbral de rendimiento y sufrió un salto abrupto.",
+        "evidencia": "P95 actual de 69.39s (sobre umbral de 60s) y un salto del 86.5% de 43.83s a 81.74s en V1.13.4"
       },
       {
         "tipo": "degradacion",
         "seccion": "Mis portfolios",
-        "descripcion": "La sección 'Mis portfolios' experimentó una degradación, impulsada por una acción clave.",
-        "evidencia": "P95 degradó de 12.35s a 13.24s (-7.2%), con la acción 'Primer ingreso al menú Mis portfolios' degradando de 10.36s a 13.93s (+34.52%)."
+        "descripcion": "La sección Mis portfolios experimentó una degradación en su rendimiento.",
+        "evidencia": "P95 degradó de 12.35s a 14.03s (-13.6%)"
       },
       {
         "tipo": "mejora",
-        "seccion": "Agenda",
-        "descripcion": "La sección 'Agenda' mostró una mejora significativa en su rendimiento.",
-        "evidencia": "P95 mejoró de 7.92s a 6.68s (+15.7%)."
+        "seccion": "Rendimiento",
+        "descripcion": "La sección Rendimiento muestra una mejora generalizada en muchas acciones.",
+        "evidencia": "128 acciones mejoraron, con 'Portfolio LH ART: Primer ingreso a la carta de rendimiento Últimos 3 meses con m' mejorando un 54.78% (1.6s a 0.72s)"
       },
       {
         "tipo": "mejora",
         "seccion": "Home",
-        "descripcion": "La sección 'Home' mejoró su rendimiento, con una acción clave destacada.",
-        "evidencia": "P95 mejoró de 17.3s a 16.24s (+6.1%), con la acción 'Primer ingreso al menú Home' mejorando de 120.95s a 30.13s (+75.1%)."
+        "descripcion": "La acción 'Primer ingreso al menú Home' mejoró significativamente.",
+        "evidencia": "P95 mejoró de 120.95s a 29.28s (+75.8%)"
       }
     ],
     "causa_raiz": [
       {
         "seccion": "Mi dinero",
         "hipotesis": [
-          "Podría deberse a un aumento en la complejidad o volumen de los datos financieros cargados para el flujo de fondos.",
-          "Revisar si existen ineficiencias en las consultas a la base de datos o en la lógica de agregación de movimientos de efectivo.",
-          "Considerar si el renderizado de componentes de UI con gran cantidad de transacciones está impactando el rendimiento."
+          "Podría deberse a un aumento en el volumen de datos procesados para los flujos de fondos o movimientos de efectivo.",
+          "Revisar si hay consultas a la base de datos ineficientes o bloqueos al agregar datos financieros.",
+          "Posibles latencias o fallos en la integración con APIs externas que proveen datos para esta sección."
+        ]
+      },
+      {
+        "seccion": "Mis portfolios",
+        "hipotesis": [
+          "La degradación podría estar relacionada con una mayor complejidad en los cálculos de los portfolios o la agregación de datos.",
+          "Revisar la eficiencia en la carga de los resúmenes de portfolios o la información asociada.",
+          "Posibles cambios en la estructura de datos subyacente o en los índices de la base de datos que afecten la consulta."
+        ]
+      },
+      {
+        "seccion": "Rendimiento",
+        "hipotesis": [
+          "La degradación en la acción específica podría indicar una ineficiencia en el cálculo del método TWR para periodos 'Desde principio de año'.",
+          "Revisar si el aumento de puntos de datos para gráficos de rendimiento a largo plazo está impactando el procesamiento.",
+          "Posibles regresiones en la librería de gráficos o en el procesamiento de datos para esta vista particular."
         ]
       }
     ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Realizar un análisis profundo de la sección 'Mi dinero' para identificar la causa raíz del salto abrupto y su alto P95.",
+        "accion": "Investigar la causa del salto abrupto y el alto P95 en la sección Mi dinero, priorizando la optimización de consultas de datos.",
         "seccion": "Mi dinero",
-        "evidencia": "P95 actual de 74.33s (sobre umbral) y un salto del 86.5% en P95 entre V1.12.5 y V1.13.4."
+        "evidencia": "P95 actual de 69.39s (sobre umbral) y salto del 86.5% en V1.13.4."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Analizar la degradación del 112% en la acción 'Portfolio LH Liquidez: Primer ingreso a la carta de rendimiento Desde principio '.",
+        "seccion": "Rendimiento",
+        "evidencia": "P95 pasó de 1.17s a 2.48s (+112%) en V1.13.4."
       },
       {
         "prioridad": "P2",
-        "accion": "Investigar la mejora en 'Mis operaciones' y validar que no se deba a la discontinuación de acciones lentas, sino a optimizaciones reales.",
-        "seccion": "Mis operaciones",
-        "evidencia": "La sección mejoró 45.6%, pero se discontinuaron 6 de 18 acciones (33.3% dropout rate) en V1.12.5."
-      },
-      {
-        "prioridad": "P2",
-        "accion": "Analizar la degradación en la sección 'Mis portfolios', enfocándose en la acción 'Primer ingreso al menú Mis portfolios' para entender la regresión.",
+        "accion": "Revisar el rendimiento de la sección Mis portfolios, especialmente el 'Primer ingreso al menú Mis portfolios'.",
         "seccion": "Mis portfolios",
-        "evidencia": "La sección degradó 7.2% y la acción 'Primer ingreso al menú Mis portfolios' degradó 34.52% (de 10.36s a 13.93s)."
+        "evidencia": "Sección degradó -13.6% (12.35s a 14.03s), con una acción degradando 40.68%."
       },
       {
         "prioridad": "P3",
-        "accion": "Monitorear de cerca las acciones con mayor degradación en la sección 'Rendimiento' para prevenir futuras regresiones.",
-        "seccion": "Rendimiento",
-        "evidencia": "La acción 'Portfolio RE Valor Tecnico: Primer ingreso a la carta de rendimiento Desde principio de año con método MWR' degradó 44.6% (de 1.34s a 1.93s)."
+        "accion": "Evaluar el impacto de las acciones discontinuadas en la sección Mis operaciones para confirmar mejoras.",
+        "seccion": "Mis operaciones",
+        "evidencia": "33.3% de acciones discontinuadas en V1.13.4, con P95 máx de 6.24s en las removidas."
       }
     ]
   }

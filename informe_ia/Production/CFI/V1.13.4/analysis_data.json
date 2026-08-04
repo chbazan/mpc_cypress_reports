@@ -5,28 +5,28 @@
       "cliente": "CFI",
       "version": "V1.13.4",
       "version_anterior": "V1.12.5",
-      "timestamp_informe": "2026-07-29T14:01:41-03:00",
-      "muestras": 1
+      "timestamp_informe": "2026-08-04T14:16:05-03:00",
+      "muestras": 2
     },
     "resumen": {
       "total_secciones": 6,
       "total_acciones": 313,
       "secciones_con_mejora": 0,
-      "secciones_con_degradacion": 4,
-      "secciones_con_alerta_15pct": 3,
-      "ux_health_score": 68,
+      "secciones_con_degradacion": 6,
+      "secciones_con_alerta_15pct": 5,
+      "ux_health_score": 42,
       "secciones_en_sla_critico": 0,
-      "secciones_sobre_umbral": 0
+      "secciones_sobre_umbral": 1
     },
     "secciones": [
       {
         "seccion": "Agenda",
-        "p95_actual_s": 29.9,
+        "p95_actual_s": 45.07,
         "p95_historico_s": 9.8,
-        "pct_mejora": -205.3,
+        "pct_mejora": -360.1,
         "estado": "degradacion",
         "p50_s": 1.05,
-        "ratio_p95_p50": 28.48,
+        "ratio_p95_p50": 42.92,
         "sla": {
           "color": "#27ae60",
           "bg": "#eafaf1",
@@ -36,12 +36,12 @@
       },
       {
         "seccion": "Home",
-        "p95_actual_s": 32.01,
+        "p95_actual_s": 27.75,
         "p95_historico_s": 20.32,
-        "pct_mejora": -57.5,
+        "pct_mejora": -36.5,
         "estado": "degradacion",
-        "p50_s": 18.43,
-        "ratio_p95_p50": 1.74,
+        "p50_s": 17.18,
+        "ratio_p95_p50": 1.62,
         "sla": {
           "color": "#27ae60",
           "bg": "#eafaf1",
@@ -51,12 +51,12 @@
       },
       {
         "seccion": "Mis depositarios",
-        "p95_actual_s": 2.62,
+        "p95_actual_s": 3.13,
         "p95_historico_s": 2.59,
-        "pct_mejora": -1.1,
-        "estado": "estable",
-        "p50_s": 1.44,
-        "ratio_p95_p50": 1.82,
+        "pct_mejora": -20.7,
+        "estado": "degradacion",
+        "p50_s": 1.7,
+        "ratio_p95_p50": 1.84,
         "sla": {
           "color": "#27ae60",
           "bg": "#eafaf1",
@@ -66,27 +66,27 @@
       },
       {
         "seccion": "Mis operaciones",
-        "p95_actual_s": 48.14,
+        "p95_actual_s": 114.65,
         "p95_historico_s": 44.37,
-        "pct_mejora": -8.5,
+        "pct_mejora": -158.4,
         "estado": "degradacion",
-        "p50_s": 6.19,
-        "ratio_p95_p50": 7.78,
+        "p50_s": 6.32,
+        "ratio_p95_p50": 18.14,
         "sla": {
-          "color": "#27ae60",
-          "bg": "#eafaf1",
-          "label": "Dentro de SLA",
-          "icon": "🟢"
+          "color": "#e67e22",
+          "bg": "#fef5e7",
+          "label": "Sobre umbral",
+          "icon": "🟡"
         }
       },
       {
         "seccion": "Mis portfolios",
-        "p95_actual_s": 28.43,
+        "p95_actual_s": 23.37,
         "p95_historico_s": 15.37,
-        "pct_mejora": -85.0,
+        "pct_mejora": -52.1,
         "estado": "degradacion",
-        "p50_s": 11.89,
-        "ratio_p95_p50": 2.39,
+        "p50_s": 11.63,
+        "ratio_p95_p50": 2.01,
         "sla": {
           "color": "#27ae60",
           "bg": "#eafaf1",
@@ -96,12 +96,12 @@
       },
       {
         "seccion": "Rendimiento",
-        "p95_actual_s": 5.03,
+        "p95_actual_s": 5.63,
         "p95_historico_s": 5.27,
-        "pct_mejora": 4.5,
-        "estado": "estable",
-        "p50_s": 0.9,
-        "ratio_p95_p50": 5.59,
+        "pct_mejora": -6.8,
+        "estado": "degradacion",
+        "p50_s": 0.96,
+        "ratio_p95_p50": 5.86,
         "sla": {
           "color": "#27ae60",
           "bg": "#eafaf1",
@@ -113,254 +113,264 @@
     "alertas": [
       {
         "seccion": "Agenda",
-        "pct_degradacion": -205.3,
-        "p95_actual_s": 29.9
+        "pct_degradacion": -360.1,
+        "p95_actual_s": 45.07
       },
       {
         "seccion": "Home",
-        "pct_degradacion": -57.5,
-        "p95_actual_s": 32.01
+        "pct_degradacion": -36.5,
+        "p95_actual_s": 27.75
+      },
+      {
+        "seccion": "Mis depositarios",
+        "pct_degradacion": -20.7,
+        "p95_actual_s": 3.13
+      },
+      {
+        "seccion": "Mis operaciones",
+        "pct_degradacion": -158.4,
+        "p95_actual_s": 114.65
       },
       {
         "seccion": "Mis portfolios",
-        "pct_degradacion": -85.0,
-        "p95_actual_s": 28.43
+        "pct_degradacion": -52.1,
+        "p95_actual_s": 23.37
       }
     ],
     "top_acciones_lentas": [
       {
-        "descripcion": "Primer ingreso: Filtro de 3 meses de operaciones",
-        "seccion": "Mis operaciones",
-        "p95_actual_s": 51.48,
-        "p95_historico_s": 76.53,
-        "pct_mejora": 32.7
-      },
-      {
-        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente",
-        "seccion": "Agenda",
-        "p95_actual_s": 46.48,
-        "p95_historico_s": 133.66,
-        "pct_mejora": 65.2
-      },
-      {
         "descripcion": "Segundo ingreso: Filtro de 3 meses de operaciones",
         "seccion": "Mis operaciones",
-        "p95_actual_s": 45.4,
+        "p95_actual_s": 123.82,
         "p95_historico_s": 78.17,
-        "pct_mejora": 41.9
+        "pct_mejora": -58.4
       },
       {
-        "descripcion": "Segundo ingreso al menú Agenda",
+        "descripcion": "Primer ingreso: Filtro de 3 meses de operaciones",
+        "seccion": "Mis operaciones",
+        "p95_actual_s": 122.08,
+        "p95_historico_s": 76.53,
+        "pct_mejora": -59.5
+      },
+      {
+        "descripcion": "Segundo ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 1 mes hacia atras",
         "seccion": "Agenda",
-        "p95_actual_s": 43.63,
-        "p95_historico_s": 4.32,
-        "pct_mejora": -909.5
+        "p95_actual_s": 72.75,
+        "p95_historico_s": 11.22,
+        "pct_mejora": -548.6
       },
       {
-        "descripcion": "Segundo ingreso al portfolio Consolidado CFI desde el Home",
-        "seccion": "Home",
-        "p95_actual_s": 35.73,
-        "p95_historico_s": 35.1,
-        "pct_mejora": -1.8
+        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 1 mes hacia atras",
+        "seccion": "Agenda",
+        "p95_actual_s": 69.46,
+        "p95_historico_s": 12.56,
+        "pct_mejora": -452.8
+      },
+      {
+        "descripcion": "Segundo ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 3 meses hacia atras",
+        "seccion": "Agenda",
+        "p95_actual_s": 60.65,
+        "p95_historico_s": 11.76,
+        "pct_mejora": -415.8
       }
     ],
     "top_acciones_rapidas": [
       {
-        "descripcion": "Portfolio FFI: Primer ingreso a la carta de rendimiento Última semana con método MWR",
+        "descripcion": "Portfolio CFI: Primer ingreso a la carta de rendimiento Desde principio de mes con método TWR",
         "seccion": "Rendimiento",
-        "p95_actual_s": 0.37,
-        "p95_historico_s": 0.53,
-        "pct_mejora": 29.7
+        "p95_actual_s": 0.47,
+        "p95_historico_s": 0.62,
+        "pct_mejora": 24.5
+      },
+      {
+        "descripcion": "Portfolio FFI: Primer ingreso a la carta de rendimiento Última semana con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.47,
+        "p95_historico_s": 0.57,
+        "pct_mejora": 16.5
+      },
+      {
+        "descripcion": "Portfolio FPC: Primer ingreso a la carta de rendimiento Desde principio de mes con método MWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.47,
+        "p95_historico_s": 0.63,
+        "pct_mejora": 25.5
+      },
+      {
+        "descripcion": "Portfolio FPC: Primer ingreso a la carta de rendimiento Desde principio de mes con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.47,
+        "p95_historico_s": 0.58,
+        "pct_mejora": 19.3
       },
       {
         "descripcion": "Portfolio FPC: Primer ingreso a la carta de rendimiento Última semana con método TWR",
         "seccion": "Rendimiento",
-        "p95_actual_s": 0.38,
+        "p95_actual_s": 0.47,
         "p95_historico_s": 0.55,
-        "pct_mejora": 29.6
-      },
-      {
-        "descripcion": "Portfolio CFI: Primer ingreso a la carta de rendimiento Última semana con método MWR",
-        "seccion": "Rendimiento",
-        "p95_actual_s": 0.39,
-        "p95_historico_s": 0.53,
-        "pct_mejora": 26.3
-      },
-      {
-        "descripcion": "Portfolio Fondo de Garantia CFI: Primer ingreso a la carta de rendimiento Última semana con método MWR",
-        "seccion": "Rendimiento",
-        "p95_actual_s": 0.39,
-        "p95_historico_s": 0.57,
-        "pct_mejora": 31.5
-      },
-      {
-        "descripcion": "Portfolio CFI: Primer ingreso a la carta de rendimiento Último mes con método TWR",
-        "seccion": "Rendimiento",
-        "p95_actual_s": 0.4,
-        "p95_historico_s": 0.69,
-        "pct_mejora": 41.8
+        "pct_mejora": 13.6
       }
     ],
     "top_acciones_mejoradas": [
       {
         "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente",
         "seccion": "Agenda",
-        "p95_actual_s": 46.48,
+        "p95_actual_s": 49.79,
         "p95_historico_s": 133.66,
-        "pct_mejora": 65.2
+        "pct_mejora": 62.8
       },
       {
         "descripcion": "Portfolio FFI: Primer ingreso a la carta de rendimiento Últimos 3 meses con método TWR",
         "seccion": "Rendimiento",
-        "p95_actual_s": 0.58,
+        "p95_actual_s": 0.88,
         "p95_historico_s": 1.6,
-        "pct_mejora": 63.5
-      },
-      {
-        "descripcion": "Portfolio CFI: Primer ingreso a la carta de rendimiento Último mes con método MWR",
-        "seccion": "Rendimiento",
-        "p95_actual_s": 0.42,
-        "p95_historico_s": 1.01,
-        "pct_mejora": 58.5
-      },
-      {
-        "descripcion": "Portfolio Fondo de Garantia CFI: Segundo ingreso a la carta de rendimiento Último mes con método TWR",
-        "seccion": "Rendimiento",
-        "p95_actual_s": 0.57,
-        "p95_historico_s": 1.2,
-        "pct_mejora": 52.3
+        "pct_mejora": 44.8
       },
       {
         "descripcion": "Portfolio Fondo de Garantia CFI: Segundo ingreso a la carta de rendimiento Último mes con método MWR",
         "seccion": "Rendimiento",
-        "p95_actual_s": 0.62,
+        "p95_actual_s": 0.73,
         "p95_historico_s": 1.29,
-        "pct_mejora": 51.7
+        "pct_mejora": 43.9
+      },
+      {
+        "descripcion": "Portfolio Fondo de Garantia CFI: Segundo ingreso a la carta de rendimiento Último mes con método TWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.75,
+        "p95_historico_s": 1.2,
+        "pct_mejora": 37.7
+      },
+      {
+        "descripcion": "Portfolio Total: Segundo ingreso a la carta de rendimiento Últimos 3 meses con método MWR",
+        "seccion": "Rendimiento",
+        "p95_actual_s": 0.96,
+        "p95_historico_s": 1.53,
+        "pct_mejora": 37.1
       }
     ],
     "top_acciones_degradadas": [
       {
         "descripcion": "Segundo ingreso al menú Agenda",
         "seccion": "Agenda",
-        "p95_actual_s": 43.63,
+        "p95_actual_s": 41.68,
         "p95_historico_s": 4.32,
-        "pct_mejora": -909.5
-      },
-      {
-        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 1 mes hacia atras",
-        "seccion": "Agenda",
-        "p95_actual_s": 30.86,
-        "p95_historico_s": 12.56,
-        "pct_mejora": -145.7
+        "pct_mejora": -864.3
       },
       {
         "descripcion": "Segundo ingreso: Tipo de instrumento Bonos, estado: pendiente",
         "seccion": "Agenda",
-        "p95_actual_s": 15.77,
+        "p95_actual_s": 43.85,
         "p95_historico_s": 6.46,
-        "pct_mejora": -143.9
+        "pct_mejora": -578.3
       },
       {
         "descripcion": "Segundo ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 1 mes hacia atras",
         "seccion": "Agenda",
-        "p95_actual_s": 26.45,
+        "p95_actual_s": 72.75,
         "p95_historico_s": 11.22,
-        "pct_mejora": -135.9
+        "pct_mejora": -548.6
+      },
+      {
+        "descripcion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 1 mes hacia atras",
+        "seccion": "Agenda",
+        "p95_actual_s": 69.46,
+        "p95_historico_s": 12.56,
+        "pct_mejora": -452.8
       },
       {
         "descripcion": "Segundo ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 3 meses hacia atras",
         "seccion": "Agenda",
-        "p95_actual_s": 26.37,
+        "p95_actual_s": 60.65,
         "p95_historico_s": 11.76,
-        "pct_mejora": -124.3
+        "pct_mejora": -415.8
       }
     ],
     "comparativa_version_anterior": [
       {
         "seccion": "Agenda",
-        "p95_actual_s": 29.9,
+        "p95_actual_s": 45.07,
         "p95_anterior_s": 9.54,
-        "pct_mejora": -213.6
+        "pct_mejora": -372.6
       },
       {
         "seccion": "Home",
-        "p95_actual_s": 32.01,
+        "p95_actual_s": 27.75,
         "p95_anterior_s": 21.77,
-        "pct_mejora": -47.0
+        "pct_mejora": -27.5
       },
       {
         "seccion": "Mis depositarios",
-        "p95_actual_s": 2.62,
+        "p95_actual_s": 3.13,
         "p95_anterior_s": 2.69,
-        "pct_mejora": 2.7
+        "pct_mejora": -16.2
       },
       {
         "seccion": "Mis operaciones",
-        "p95_actual_s": 48.14,
+        "p95_actual_s": 114.65,
         "p95_anterior_s": 61.92,
-        "pct_mejora": 22.3
+        "pct_mejora": -85.2
       },
       {
         "seccion": "Mis portfolios",
-        "p95_actual_s": 28.43,
+        "p95_actual_s": 23.37,
         "p95_anterior_s": 17.44,
-        "pct_mejora": -63.0
+        "pct_mejora": -34.0
       },
       {
         "seccion": "Rendimiento",
-        "p95_actual_s": 5.03,
+        "p95_actual_s": 5.63,
         "p95_anterior_s": 5.38,
-        "pct_mejora": 6.4
+        "pct_mejora": -4.7
       }
     ],
     "impacto_cache": [
       {
         "seccion": "Agenda",
         "descripcion_base": "Primer ingreso al menú Agenda",
-        "p95_base_s": 2.93,
+        "p95_base_s": 4.66,
         "descripcion_cache": "Segundo ingreso al menú Agenda",
-        "p95_cache_s": 43.63,
-        "pct_mejora": -1388.0
+        "p95_cache_s": 30.1,
+        "pct_mejora": -545.5
       },
       {
         "seccion": "Agenda",
         "descripcion_base": "Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado",
-        "p95_base_s": 1.29,
+        "p95_base_s": 1.6,
         "descripcion_cache": "Segundo ingreso: Tipo de instrumento Bonos, estado: Cobrado",
-        "p95_cache_s": 1.39,
-        "pct_mejora": -7.6
+        "p95_cache_s": 1.57,
+        "pct_mejora": 2.0
       },
       {
         "seccion": "Agenda",
         "descripcion_base": "Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado, fecha: 1 mes hacia atras",
-        "p95_base_s": 2.59,
+        "p95_base_s": 2.78,
         "descripcion_cache": "Segundo ingreso: Tipo de instrumento Bonos, estado: Cobrado, fecha: 1 mes hacia atras",
-        "p95_cache_s": 2.74,
-        "pct_mejora": -5.8
+        "p95_cache_s": 2.8,
+        "pct_mejora": -0.7
       },
       {
         "seccion": "Agenda",
         "descripcion_base": "Primer ingreso: Tipo de instrumento Bonos, estado: Cobrado, fecha: 3 meses hacia atras",
-        "p95_base_s": 3.41,
+        "p95_base_s": 3.18,
         "descripcion_cache": "Segundo ingreso: Tipo de instrumento Bonos, estado: Cobrado, fecha: 3 meses hacia atras",
-        "p95_cache_s": 2.77,
-        "pct_mejora": 18.7
+        "p95_cache_s": 2.96,
+        "pct_mejora": 7.0
       },
       {
         "seccion": "Agenda",
         "descripcion_base": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 1 mes hacia atras",
-        "p95_base_s": 30.86,
+        "p95_base_s": 60.64,
         "descripcion_cache": "Segundo ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 1 mes hacia atras",
-        "p95_cache_s": 26.45,
-        "pct_mejora": 14.3
+        "p95_cache_s": 64.0,
+        "pct_mejora": -5.5
       },
       {
         "seccion": "Agenda",
         "descripcion_base": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 3 meses hacia atras",
-        "p95_base_s": 30.09,
+        "p95_base_s": 51.5,
         "descripcion_cache": "Segundo ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 3 meses hacia atras",
-        "p95_cache_s": 26.37,
-        "pct_mejora": 12.3
+        "p95_cache_s": 52.75,
+        "pct_mejora": -2.4
       }
     ],
     "tendencia_versiones": [
@@ -390,60 +400,74 @@
       },
       {
         "version": "V1.13.4",
-        "p95_global_s": 18.52
+        "p95_global_s": 18.31
       }
     ],
     "nuevas_acciones": [],
     "impact_ranking": [
       {
         "seccion": "Agenda",
-        "p95_actual_s": 29.9,
+        "p95_actual_s": 45.07,
         "n_acciones": 62,
-        "impact_score": 1853.8,
+        "impact_score": 2794.3,
+        "estado": "degradacion"
+      },
+      {
+        "seccion": "Mis operaciones",
+        "p95_actual_s": 114.65,
+        "n_acciones": 12,
+        "impact_score": 1375.8,
         "estado": "degradacion"
       },
       {
         "seccion": "Rendimiento",
-        "p95_actual_s": 5.03,
+        "p95_actual_s": 5.63,
         "n_acciones": 182,
-        "impact_score": 915.5,
-        "estado": "estable"
-      },
-      {
-        "seccion": "Mis operaciones",
-        "p95_actual_s": 48.14,
-        "n_acciones": 12,
-        "impact_score": 577.7,
+        "impact_score": 1024.7,
         "estado": "degradacion"
       },
       {
         "seccion": "Home",
-        "p95_actual_s": 32.01,
+        "p95_actual_s": 27.75,
         "n_acciones": 15,
-        "impact_score": 480.1,
+        "impact_score": 416.2,
         "estado": "degradacion"
       },
       {
         "seccion": "Mis portfolios",
-        "p95_actual_s": 28.43,
+        "p95_actual_s": 23.37,
         "n_acciones": 14,
-        "impact_score": 398.0,
+        "impact_score": 327.2,
         "estado": "degradacion"
       },
       {
         "seccion": "Mis depositarios",
-        "p95_actual_s": 2.62,
+        "p95_actual_s": 3.13,
         "n_acciones": 28,
-        "impact_score": 73.4,
-        "estado": "estable"
+        "impact_score": 87.6,
+        "estado": "degradacion"
       }
     ],
     "tendencias_sostenidas": [
       {
+        "seccion": "Mis operaciones",
+        "n_versiones": 5,
+        "p95_inicio_s": 6.91,
+        "p95_actual_s": 125.8,
+        "version_inicio": "V1.11.8"
+      },
+      {
         "seccion": "Home",
         "n_versiones": 4,
         "p95_inicio_s": 12.4,
-        "p95_actual_s": 30.41,
+        "p95_actual_s": 24.5,
+        "version_inicio": "V1.12.3"
+      },
+      {
+        "seccion": "Mis depositarios",
+        "n_versiones": 4,
+        "p95_inicio_s": 1.83,
+        "p95_actual_s": 3.1,
         "version_inicio": "V1.12.3"
       },
       {
@@ -460,8 +484,8 @@
         "de_version": "V1.12.5",
         "a_version": "V1.13.4",
         "de_p95_s": 9.53,
-        "a_p95_s": 30.09,
-        "pct_salto": 215.7
+        "a_p95_s": 45.32,
+        "pct_salto": 375.6
       },
       {
         "seccion": "Home",
@@ -488,12 +512,12 @@
         "pct_salto": 111.3
       },
       {
-        "seccion": "Mis portfolios",
-        "de_version": "V1.12.4",
-        "a_version": "V1.12.5",
-        "de_p95_s": 8.56,
-        "a_p95_s": 17.43,
-        "pct_salto": 103.6
+        "seccion": "Mis operaciones",
+        "de_version": "V1.12.5",
+        "a_version": "V1.13.4",
+        "de_p95_s": 61.62,
+        "a_p95_s": 125.8,
+        "pct_salto": 104.2
       }
     ],
     "saltos_abruptos_acciones": [
@@ -552,40 +576,40 @@
         "pct_degraded": 0.0,
         "best_improvement": {
           "accion": "Primer ingreso al menú Home",
-          "pct": -17.43,
+          "pct": -17.19,
           "de_p95_s": 19.62,
-          "a_p95_s": 16.2,
+          "a_p95_s": 16.25,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         },
         "worst_degradation": {
           "accion": "Segundo ingreso al portfolio FFI desde el Home",
-          "pct": 11.0,
+          "pct": 10.57,
           "de_p95_s": 17.44,
-          "a_p95_s": 19.36,
+          "a_p95_s": 19.28,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         }
       },
       "Agenda": {
-        "n_improved": 9,
-        "n_degraded": 7,
+        "n_improved": 2,
+        "n_degraded": 11,
         "total_with_history": 62,
-        "pct_improved": 14.5,
-        "pct_degraded": 11.3,
+        "pct_improved": 3.2,
+        "pct_degraded": 17.7,
         "best_improvement": {
-          "accion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente, fecha: 3 meses hac",
-          "pct": -38.22,
-          "de_p95_s": 48.7,
-          "a_p95_s": 30.09,
+          "accion": "Primer ingreso: Tipo de instrumento Bonos, estado: Pendiente",
+          "pct": -24.1,
+          "de_p95_s": 65.6,
+          "a_p95_s": 49.79,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         },
         "worst_degradation": {
           "accion": "Segundo ingreso al menú Agenda",
-          "pct": 914.86,
+          "pct": 869.46,
           "de_p95_s": 4.3,
-          "a_p95_s": 43.63,
+          "a_p95_s": 41.68,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         }
@@ -607,20 +631,27 @@
         }
       },
       "Mis operaciones": {
-        "n_improved": 9,
-        "n_degraded": 0,
+        "n_improved": 0,
+        "n_degraded": 5,
         "total_with_history": 12,
-        "pct_improved": 75.0,
-        "pct_degraded": 0.0,
+        "pct_improved": 0.0,
+        "pct_degraded": 41.7,
         "best_improvement": {
-          "accion": "Segundo ingreso: Filtro de 3 meses de operaciones",
-          "pct": -44.23,
-          "de_p95_s": 81.4,
-          "a_p95_s": 45.4,
+          "accion": "Segundo ingreso: Depositario CFI filtro de 3 meses de operaciones",
+          "pct": -14.47,
+          "de_p95_s": 5.35,
+          "a_p95_s": 4.57,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         },
-        "worst_degradation": null
+        "worst_degradation": {
+          "accion": "Primer ingreso al depositario CFI",
+          "pct": 55.25,
+          "de_p95_s": 7.88,
+          "a_p95_s": 12.23,
+          "de_version": "V1.12.5",
+          "a_version": "V1.13.4"
+        }
       },
       "Mis portfolios": {
         "n_improved": 0,
@@ -629,64 +660,64 @@
         "pct_improved": 0.0,
         "pct_degraded": 0.0,
         "best_improvement": {
-          "accion": "Segundo ingreso al menú Mis portfolios",
-          "pct": -13.75,
-          "de_p95_s": 5.57,
-          "a_p95_s": 4.8,
+          "accion": "Primer ingreso al portfolio Fondo de Garantia CFI desde Mis portfolios",
+          "pct": -9.51,
+          "de_p95_s": 13.73,
+          "a_p95_s": 12.43,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         },
         "worst_degradation": {
-          "accion": "Primer ingreso al portfolio Consolidado CFI desde Mis portfolios",
-          "pct": 12.87,
-          "de_p95_s": 29.73,
-          "a_p95_s": 33.55,
+          "accion": "Segundo ingreso al portfolio FPC desde Mis portfolios",
+          "pct": 18.67,
+          "de_p95_s": 7.4,
+          "a_p95_s": 8.78,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         }
       },
       "Rendimiento": {
-        "n_improved": 115,
-        "n_degraded": 2,
+        "n_improved": 34,
+        "n_degraded": 10,
         "total_with_history": 182,
-        "pct_improved": 63.2,
-        "pct_degraded": 1.1,
+        "pct_improved": 18.7,
+        "pct_degraded": 5.5,
         "best_improvement": {
-          "accion": "Portfolio FFI: Primer ingreso a la carta de rendimiento Últimos 3 meses con méto",
-          "pct": -65.69,
-          "de_p95_s": 1.7,
-          "a_p95_s": 0.58,
+          "accion": "Portfolio Total: Primer ingreso a la carta de rendimiento Último mes con método ",
+          "pct": -50.71,
+          "de_p95_s": 1.6,
+          "a_p95_s": 0.79,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         },
         "worst_degradation": {
-          "accion": "Cambio de método de rentabilidad a TWR",
-          "pct": 39.2,
-          "de_p95_s": 12.3,
-          "a_p95_s": 17.12,
+          "accion": "Portfolio FPC: Segundo ingreso a la carta de rendimiento Último mes con método M",
+          "pct": 145.76,
+          "de_p95_s": 0.63,
+          "a_p95_s": 1.55,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         }
       },
       "Mis depositarios": {
-        "n_improved": 18,
-        "n_degraded": 1,
+        "n_improved": 6,
+        "n_degraded": 5,
         "total_with_history": 28,
-        "pct_improved": 64.3,
-        "pct_degraded": 3.6,
+        "pct_improved": 21.4,
+        "pct_degraded": 17.9,
         "best_improvement": {
-          "accion": "Deseleccionar la cuenta ICBC (ICBC - FONDO DE GARANTÍA)",
-          "pct": -53.98,
-          "de_p95_s": 1.73,
-          "a_p95_s": 0.8,
+          "accion": "Seleccionar todas las cuentas del depositario Banco Nación",
+          "pct": -34.92,
+          "de_p95_s": 1.85,
+          "a_p95_s": 1.21,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         },
         "worst_degradation": {
-          "accion": "Primer ingreso al menú Mis depositarios",
-          "pct": 25.28,
-          "de_p95_s": 3.88,
-          "a_p95_s": 4.87,
+          "accion": "Deseleccionar la cuenta Banco Nación (Banco Nación FPC)",
+          "pct": 70.4,
+          "de_p95_s": 1.48,
+          "a_p95_s": 2.52,
           "de_version": "V1.12.5",
           "a_version": "V1.13.4"
         }
@@ -708,127 +739,130 @@
   },
   "conclusions": {
     "estado_general": "critico",
-    "resumen_ejecutivo": "La versión V1.13.4 presenta un estado crítico de performance, con 3 de 6 secciones principales mostrando degradaciones significativas de más del 15% respecto a su histórico. Las secciones Agenda, Home y Mis portfolios han empeorado en P95 en -205.3%, -57.5% y -85.0% respectivamente, y el UX Health Score global es de 68. Además, la acción 'Primer ingreso al menú Mi dinero' es persistentemente lenta, superando el umbral en 3 de 3 versiones medidas con un P95 actual de 345.8s.",
+    "resumen_ejecutivo": "La versión V1.13.4 de MPC presenta un estado crítico de performance. Cinco de seis secciones principales muestran degradaciones significativas (>15%) respecto a su P95 histórico, con 'Mis operaciones' superando el umbral de rendimiento con 114.65s. La sección 'Agenda' sufrió un salto abrupto del 375.6% en su P95, y la acción 'Primer ingreso al menú Mi dinero' permanece persistentemente lenta en 345.8s.",
     "escalar": {
-      "titulo": "Degradación crítica en Agenda y lentitud crónica en Mi dinero",
-      "detalle": "La sección Agenda sufrió una degradación del P95 del 205.3% (de 9.8s a 29.9s) y la acción 'Segundo ingreso al menú Agenda' se disparó un 914.86% (de 4.3s a 43.63s). Adicionalmente, la acción 'Primer ingreso al menú Mi dinero' es persistentemente lenta con 345.8s en P95."
+      "titulo": "Degradación crítica en Mis operaciones y lentitud crónica en Mi dinero",
+      "detalle": "La sección 'Mis operaciones' alcanzó un P95 de 114.65s, un 158.4% más lento que el histórico, y la acción 'Primer ingreso al menú Mi dinero' persiste sobre el umbral con 345.8s en 3 de 3 versiones."
     },
     "investigar": {
-      "titulo": "Salto abrupto en 'Segundo ingreso al menú Agenda' y tendencias de Home/Mis portfolios",
-      "detalle": "La acción 'Segundo ingreso al menú Agenda' experimentó un salto del P95 del 914.86% (de 4.3s a 43.63s) en la versión V1.13.4. Las secciones Home y Mis portfolios muestran tendencias sostenidas de degradación en las últimas 4 versiones."
+      "titulo": "Salto abrupto del 375.6% en la sección Agenda",
+      "detalle": "La sección 'Agenda' experimentó un salto drástico en su P95, pasando de 9.53s a 45.32s entre V1.12.5 y V1.13.4, lo que requiere una investigación inmediata de la causa raíz."
     },
     "optimizar": {
-      "titulo": "Mejorar la experiencia en la sección Agenda y el ingreso a Mi dinero",
-      "detalle": "La sección Agenda es la más degradada (-205.3% vs histórico) y tiene el mayor impacto (impact_score 1853.8). La acción 'Primer ingreso al menú Mi dinero' es la más lenta con 345.8s, ofreciendo una gran oportunidad de mejora en la UX."
+      "titulo": "Optimizar la carga de datos en Mis operaciones y Agenda",
+      "detalle": "La sección 'Mis operaciones' es la más lenta (P95 114.65s) y 'Agenda' sufrió la mayor degradación porcentual (-360.1%), ofreciendo las mayores oportunidades de mejora de UX."
     },
     "hallazgos": [
       {
         "tipo": "alerta",
-        "seccion": "Agenda",
-        "descripcion": "La sección Agenda sufrió una degradación masiva y una acción clave se disparó en esta versión.",
-        "evidencia": "El P95 de la sección Agenda degradó de 9.8s a 29.9s (+205.3%). La acción 'Segundo ingreso al menú Agenda' pasó de 4.3s a 43.63s (+914.86%) en V1.13.4."
-      },
-      {
-        "tipo": "alerta",
         "seccion": "Mi dinero",
-        "descripcion": "La acción 'Primer ingreso al menú Mi dinero' es persistentemente lenta y supera el umbral de alerta.",
-        "evidencia": "La acción 'Primer ingreso al menú Mi dinero' ha estado sobre el umbral en 3 de 3 versiones medidas, con un P95 actual de 345.8s."
+        "descripcion": "La acción 'Primer ingreso al menú Mi dinero' ha estado sobre el umbral en 3 de 3 versiones medidas, con un P95 actual de 345.8s.",
+        "evidencia": "P95 actual: 345.8s (3 de 3 versiones sobre el umbral)"
       },
       {
         "tipo": "alerta",
-        "seccion": "Home",
-        "descripcion": "La sección Home muestra una tendencia sostenida de degradación en las últimas versiones.",
-        "evidencia": "El P95 de Home ha aumentado en 4 versiones consecutivas, pasando de 12.4s a 30.41s desde V1.12.3."
-      },
-      {
-        "tipo": "alerta",
-        "seccion": "Mis portfolios",
-        "descripcion": "La sección Mis portfolios presenta una tendencia sostenida de degradación en las últimas versiones.",
-        "evidencia": "El P95 de Mis portfolios ha aumentado en 4 versiones consecutivas, pasando de 7.75s a 25.67s desde V1.12.3."
-      },
-      {
-        "tipo": "mejora",
         "seccion": "Mis operaciones",
-        "descripcion": "La sección Mis operaciones mostró una recuperación significativa respecto a la versión anterior.",
-        "evidencia": "El P95 mejoró de 61.92s a 48.14s (+22.3%) entre V1.12.5 y V1.13.4. La acción 'Segundo ingreso: Filtro de 3 meses de operaciones' mejoró un 44.23%."
+        "descripcion": "La sección 'Mis operaciones' ha degradado su P95 en 5 versiones consecutivas, alcanzando 114.65s y superando el umbral de rendimiento. Además, la acción 'Segundo ingreso: Filtro de 3 meses de operaciones' sufrió un salto abrupto del 190.8% (de 27.99s a 81.4s) en la versión V1.12.5.",
+        "evidencia": "P95 actual: 114.65s (+158.4% vs histórico), tendencia sostenida en 5 versiones. Salto de acción: 27.99s a 81.4s (+190.8%) en V1.12.5."
+      },
+      {
+        "tipo": "alerta",
+        "seccion": "Agenda",
+        "descripcion": "La sección 'Agenda' sufrió un salto abrupto del 375.6% en su P95, pasando de 9.53s a 45.32s entre V1.12.5 y V1.13.4, y muestra una degradación del 360.1% vs histórico.",
+        "evidencia": "P95 actual: 45.07s (+360.1% vs histórico). Salto abrupto: 9.53s a 45.32s (+375.6%) entre V1.12.5 y V1.13.4."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Home",
+        "descripcion": "La sección 'Home' ha mostrado una degradación sostenida en 4 versiones consecutivas, con un P95 actual de 27.75s, un 36.5% más lento que el histórico.",
+        "evidencia": "P95 actual: 27.75s (+36.5% vs histórico), tendencia sostenida en 4 versiones."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Mis portfolios",
+        "descripcion": "La sección 'Mis portfolios' ha degradado su P95 en 4 versiones consecutivas, alcanzando 23.37s, un 52.1% más lento que el histórico.",
+        "evidencia": "P95 actual: 23.37s (+52.1% vs histórico), tendencia sostenida en 4 versiones."
+      },
+      {
+        "tipo": "degradacion",
+        "seccion": "Mis depositarios",
+        "descripcion": "La sección 'Mis depositarios' ha degradado su P95 en 4 versiones consecutivas, con un P95 actual de 3.13s, un 20.7% más lento que el histórico.",
+        "evidencia": "P95 actual: 3.13s (+20.7% vs histórico), tendencia sostenida en 4 versiones."
       },
       {
         "tipo": "mejora",
         "seccion": "Rendimiento",
-        "descripcion": "La sección Rendimiento muestra mejoras estructurales en múltiples acciones.",
-        "evidencia": "115 de 182 acciones mejoraron entre las últimas 2 versiones (+63.2%). La acción 'Portfolio FFI: Primer ingreso a la carta de rendimiento Últimos 3 meses con méto' mejoró un 65.69%."
-      },
-      {
-        "tipo": "mejora",
-        "seccion": "Mis depositarios",
-        "descripcion": "La sección Mis depositarios presenta mejoras en la mayoría de sus acciones.",
-        "evidencia": "18 de 28 acciones mejoraron entre las últimas 2 versiones (+64.3%). La acción 'Deseleccionar la cuenta ICBC (ICBC - FONDO DE GARANTÍA)' mejoró un 53.98%."
+        "descripcion": "La sección 'Rendimiento' muestra una mejora destacada en la acción 'Portfolio Total: Primer ingreso a la carta de rendimiento Último mes con método ', que mejoró un 50.71%.",
+        "evidencia": "P95 mejoró de 1.6s a 0.79s (+50.71%) para la acción destacada."
       }
     ],
     "causa_raiz": [
       {
+        "seccion": "Mis operaciones",
+        "hipotesis": [
+          "Podría deberse a la ineficiencia en las consultas o indexación de la base de datos al filtrar grandes volúmenes de operaciones históricas.",
+          "Revisar si hay cambios recientes en la lógica de negocio o APIs que afecten la carga de datos en esta sección."
+        ]
+      },
+      {
         "seccion": "Agenda",
         "hipotesis": [
-          "Podría deberse a cambios en la lógica de carga de operaciones programadas o alertas de vencimiento, especialmente en escenarios de segundo ingreso o filtros complejos.",
-          "Revisar si hay nuevas consultas a la base de datos o APIs externas que se ejecutan de forma ineficiente al recargar la vista o aplicar filtros.",
-          "Posible regresión en el manejo de caché o estado de la UI que impacta negativamente los re-ingresos a la sección."
-        ]
-      },
-      {
-        "seccion": "Home",
-        "hipotesis": [
-          "La carga de portfolios destacados o accesos directos podría estar realizando consultas más pesadas o en cascada.",
-          "Revisar la optimización de imágenes o componentes visuales que se cargan al inicio, especialmente si hay nuevos elementos o cambios en su renderizado.",
-          "Posible aumento en la cantidad de datos a procesar o renderizar en la vista principal, afectando la carga inicial."
-        ]
-      },
-      {
-        "seccion": "Mis portfolios",
-        "hipotesis": [
-          "La lógica de listado y detalle de portfolios podría estar realizando un procesamiento más intensivo de datos financieros.",
-          "Revisar la eficiencia de las llamadas a APIs para obtener información de los portfolios, o la agregación de datos en el backend.",
-          "Posible impacto de un mayor volumen de portfolios o complejidad de los mismos en la carga y visualización."
+          "El salto abrupto podría ser causado por una nueva funcionalidad o un cambio en la forma en que se procesan las operaciones programadas y alertas de vencimiento.",
+          "Investigar si hay un aumento en la complejidad de los datos o en las dependencias externas al cargar esta sección."
         ]
       },
       {
         "seccion": "Mi dinero",
         "hipotesis": [
-          "La acción 'Primer ingreso al menú Mi dinero' podría estar realizando una consulta o cálculo extremadamente costoso de flujos de fondos o movimientos de efectivo.",
-          "Revisar la indexación de la base de datos o la eficiencia de las queries relacionadas con el historial de transacciones de efectivo.",
-          "Posible problema de concurrencia o bloqueo en el backend al acceder a datos financieros sensibles y complejos."
+          "La lentitud crónica podría estar relacionada con la agregación de datos de múltiples fuentes o cálculos complejos en tiempo real para el flujo de fondos y movimientos de efectivo.",
+          "Revisar la eficiencia de las consultas iniciales y la infraestructura subyacente para esta sección."
+        ]
+      },
+      {
+        "seccion": "Home",
+        "hipotesis": [
+          "La degradación sostenida podría indicar un aumento en la complejidad de los portfolios destacados o los accesos directos, o una carga inicial más pesada de componentes en la página principal.",
+          "Analizar el impacto de nuevas funcionalidades o widgets agregados al Home en versiones recientes."
+        ]
+      },
+      {
+        "seccion": "Mis portfolios",
+        "hipotesis": [
+          "La carga del listado o detalle de portfolios podría haberse vuelto más lenta debido a un mayor volumen de datos por cliente o ineficiencias en la paginación/filtrado.",
+          "Evaluar la performance de las APIs que alimentan esta sección y la optimización de las consultas a la base de datos."
         ]
       }
     ],
     "recomendaciones": [
       {
         "prioridad": "P1",
-        "accion": "Investigar y resolver la degradación crítica de 'Segundo ingreso al menú Agenda' y el P95 general de la sección Agenda.",
-        "seccion": "Agenda",
-        "evidencia": "La acción 'Segundo ingreso al menú Agenda' degradó un 914.86% (de 4.3s a 43.63s) y la sección Agenda degradó un 205.3% vs histórico."
-      },
-      {
-        "prioridad": "P1",
-        "accion": "Priorizar la optimización de la acción 'Primer ingreso al menú Mi dinero' para reducir su tiempo de carga crónico.",
+        "accion": "Investigar y optimizar la acción 'Primer ingreso al menú Mi dinero' para reducir su P95 de 345.8s.",
         "seccion": "Mi dinero",
-        "evidencia": "La acción 'Primer ingreso al menú Mi dinero' tiene un P95 actual de 345.8s y ha estado sobre el umbral en 3 de 3 versiones."
+        "evidencia": "3 de 3 versiones sobre el umbral de alerta, P95 actual de 345.8s."
       },
       {
         "prioridad": "P1",
-        "accion": "Analizar y revertir la tendencia sostenida de degradación en las secciones Home y Mis portfolios.",
-        "seccion": "Home, Mis portfolios",
-        "evidencia": "Home y Mis portfolios han degradado en P95 en 4 versiones consecutivas, con degradaciones del 57.5% y 85.0% vs histórico respectivamente."
+        "accion": "Priorizar la optimización de la sección 'Mis operaciones', enfocándose en la carga y filtrado de datos históricos.",
+        "seccion": "Mis operaciones",
+        "evidencia": "P95 actual de 114.65s (sobre umbral), degradación del 158.4% vs histórico, y tendencia sostenida de 5 versiones."
+      },
+      {
+        "prioridad": "P1",
+        "accion": "Realizar un análisis de causa raíz para el salto abrupto y la degradación del 360.1% en la sección 'Agenda'.",
+        "seccion": "Agenda",
+        "evidencia": "P95 actual de 45.07s, con un salto del 375.6% entre V1.12.5 y V1.13.4."
       },
       {
         "prioridad": "P2",
-        "accion": "Mantener el monitoreo de la sección Mis operaciones para asegurar la sostenibilidad de las mejoras recientes.",
-        "seccion": "Mis operaciones",
-        "evidencia": "La sección Mis operaciones mejoró un 22.3% (de 61.92s a 48.14s) respecto a la versión anterior."
+        "accion": "Revisar las causas de la degradación sostenida en las secciones 'Home', 'Mis portfolios' y 'Mis depositarios'.",
+        "seccion": "General",
+        "evidencia": "'Home' (+36.5%), 'Mis portfolios' (+52.1%), 'Mis depositarios' (+20.7%) con tendencias de degradación en 4 versiones consecutivas."
       },
       {
         "prioridad": "P3",
-        "accion": "Continuar las optimizaciones en la sección Rendimiento, replicando las mejoras en otras acciones.",
+        "accion": "Documentar y replicar las optimizaciones que llevaron a mejoras significativas en acciones de la sección 'Rendimiento'.",
         "seccion": "Rendimiento",
-        "evidencia": "115 de 182 acciones de Rendimiento mejoraron entre las últimas 2 versiones, con la mejor acción mejorando un 65.69%."
+        "evidencia": "Acciones como 'Portfolio Total: Primer ingreso a la carta de rendimiento Último mes con método ' mejoraron un 50.71%."
       }
     ]
   },

@@ -1,0 +1,345 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 6,
+    "pending": 1,
+    "failures": 1,
+    "start": "2026-08-06T23:05:46.360Z",
+    "end": "2026-08-06T23:27:01.960Z",
+    "duration": 1275600,
+    "testsRegistered": 10,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 10,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "fa4bdff6-5a53-495b-ba74-0ccc598ec0f2",
+      "title": "",
+      "fullFile": "build/testing/cfi/specs/smoke/12_importacion_archivo.cy.js",
+      "file": "build/testing/cfi/specs/smoke/12_importacion_archivo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7df8173a-5599-4797-b2e1-819957df81f2",
+          "title": "Importación de archivo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+              "title": "Importación del template de Mercap",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Mercap template Importación de Movimientos Monetarios",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Movimientos Monetarios",
+                  "timedOut": null,
+                  "duration": 215265,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {},
+                  "uuid": "3a9d9a36-88a5-4e65-a30a-3d244697c691",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Mercap template Importación de Movimientos de Títulos",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Movimientos de Títulos",
+                  "timedOut": null,
+                  "duration": 177750,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {},
+                  "uuid": "75bd966b-bf3c-425c-9bbc-b42c05a4e500",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Mercap template Importación de Trades",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Trades",
+                  "timedOut": null,
+                  "duration": 191284,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {},
+                  "uuid": "bf39b920-413c-47a1-8dbc-5591dd0da2d6",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Mercap template Importación de Cobros de cupón",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Cobros de cupón",
+                  "timedOut": null,
+                  "duration": 76968,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {},
+                  "uuid": "7b6cf0d6-27a3-48ae-a1c2-0c831bb1fd89",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Mercap template Importación de Cobros de dividendos",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Cobros de dividendos",
+                  "timedOut": null,
+                  "duration": 130276,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {},
+                  "uuid": "7d4db3bb-509b-45f9-9e57-59d2a20ed2f3",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Mercap template Importación de Cheques",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Cheques",
+                  "timedOut": null,
+                  "duration": 143180,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {},
+                  "uuid": "eed6b14e-cd57-4796-8ec4-7c53ce8c89c3",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Mercap template Importación de Fondos",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Fondos",
+                  "timedOut": null,
+                  "duration": 327265,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 180000ms: Expected to find content: '3 Posición' within the element: <div.col-3.d-flex.align-items-center.step-header-primary> but never did.",
+                    "estack": "AssertionError: Timed out retrying after 180000ms: Expected to find content: '3 Posición' within the element: <div.col-3.d-flex.align-items-center.step-header-primary> but never did.\n    at Context.eval (webpack://cypress/./cypress/support/commands/importacion.archivos.commands.js:143:0)\n    at wrapped (https://mercap-staging-1.us.auth0.com/__cypress/runner/cypress_runner.js:146042:43)",
+                    "diff": null
+                  },
+                  "uuid": "4b1779a5-fcbc-477d-8747-cd54aeb1abee",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Mercap template Importación de Plazos Fijos",
+                  "fullTitle": "Importación de archivo Importación del template de Mercap Mercap template Importación de Plazos Fijos",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "pending",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": true,
+                  "context": null,
+                  "code": "cy.importOperations('Mercap (.xlsx)', testCase.fileName, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n          cy.validarTabsEncabezadosImportacion();\n          cy.validarTablaEncabezadosImportacion();\n          // Validación de operaciones en la tabla en flujo de Importación.\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Flujo de Importación.\n          cy.ejecutarFlujoImportacion('01/01/2024');\n          // Spec largo (~23 min): el import pesado puede consumir la vida del token/SSO de Auth0 y\n          // un cy.visit posterior rebotaría a la pantalla de login (/u/login) en vez de la app.\n          // cy.session().validate() solo corre al inicio del spec, no en cada navegación — así que\n          // antes de las validaciones (Mis Operaciones + Mis Portfolios) revalidamos la sesión con\n          // cy.LogIn(): es idempotente (revalida y solo re-loguea real si la sesión murió, no-op\n          // barato si sigue viva). Ver .claude/tasks/lessons.md.\n          cy.LogIn();\n          // Validación de operaciones importadas desde Mis Operaciones.\n          cy.irAMisOperaciones();\n          cy.filtrarFecha('01/01/2024');\n          testCase.data.forEach((item) => cy.importTalbeValidation(item.especie, item));\n          // Validación de la operación desde el portfolio.\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          // Este nuevo command sumará, restará, filtrará por la fecha máxima y validará\n          cy.validarPosicionesNetasPortfolio(testCase.data);\n          // cy.wait(30000) // se agrega espera para que no rompa la importación.",
+                  "err": {},
+                  "uuid": "c8d2484a-5cb6-4ccd-9234-c44e4bd22a24",
+                  "parentUUID": "96ef1d94-e537-430a-95cd-6b5590ceb99b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3a9d9a36-88a5-4e65-a30a-3d244697c691",
+                "75bd966b-bf3c-425c-9bbc-b42c05a4e500",
+                "bf39b920-413c-47a1-8dbc-5591dd0da2d6",
+                "7b6cf0d6-27a3-48ae-a1c2-0c831bb1fd89",
+                "7d4db3bb-509b-45f9-9e57-59d2a20ed2f3",
+                "eed6b14e-cd57-4796-8ec4-7c53ce8c89c3"
+              ],
+              "failures": [
+                "4b1779a5-fcbc-477d-8747-cd54aeb1abee"
+              ],
+              "pending": [
+                "c8d2484a-5cb6-4ccd-9234-c44e4bd22a24"
+              ],
+              "skipped": [],
+              "duration": 1261988,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "0bdc4ffd-6d8a-4144-b7d6-658f3e2cb904",
+              "title": "Importación del template de Fondos Pellegrini",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Pellegrini Template Importación y validación",
+                  "fullTitle": "Importación de archivo Importación del template de Fondos Pellegrini Pellegrini Template Importación y validación",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.importOperations('Pellegrini (.xls)', 'Pellegrini-Template-Multiples.xls', 'application/vnd.ms-excel');\n        cy.validarTabsEncabezadosImportacion();\n        cy.validarTablaEncabezadosImportacion();\n        // Validación de operaciones en la tabla en flujo de Importación.\n        fondosPellegrini.forEach((f) => cy.importTalbeValidation(f.especie, f));\n        // Flujo de Importación.\n        cy.ejecutarFlujoImportacion('01/01/2024');\n        // Revalida la sesión antes de las validaciones (spec largo, ver comentario en el bloque\n        // Mercap): cy.LogIn() re-loguea real solo si el token Auth0 venció a mitad del spec.\n        cy.LogIn();\n        // Validación de operaciones importadas desde Mis Operaciones.\n        cy.irAMisOperaciones();\n        cy.filtrarFecha('01/01/2024');\n        fondosPellegrini.forEach((f) => cy.importTalbeValidation(f.especie, f));\n        // Validación de la operación desde el portfolio.\n        cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        // Calcula las tenencias finales de los fondos tras suscripciones/rescates y las valida\n        cy.validarPosicionesNetasPortfolio(fondosPellegrini);",
+                  "err": {},
+                  "uuid": "9ee625f9-8558-4132-9594-a281b2df0424",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [
+                "9ee625f9-8558-4132-9594-a281b2df0424"
+              ],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3391dab9-dfdc-4249-805a-46a0bcb7c02c",
+              "title": "Importación del template balanz",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Balanz template Importación y validación",
+                  "fullTitle": "Importación de archivo Importación del template balanz Balanz template Importación y validación",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const balanzTrades = [\n        { operatoria: 'Venta', especie: 'AL30', fecha: '10/06/2026', cantidad: '5.040,00', montoTotal: '4.033.512,00', moneda: 'ARS' },\n        { operatoria: 'Compra', especie: 'AL30', fecha: '19/05/2026', cantidad: '26.220,00', montoTotal: '6.362.020,80', moneda: 'ARS' },\n        { operatoria: 'Venta', especie: 'AL30', fecha: '13/05/2026', cantidad: '60.000,00', montoTotal: '16.096,80', moneda: 'USD' },\n        { operatoria: 'Compra', especie: 'AL30', fecha: '16/03/2026', cantidad: '5.670,00', montoTotal: '3.848,23', moneda: 'USD' },\n        { operatoria: 'Compra', especie: 'GD30', fecha: '13/03/2026', cantidad: '8.616,00', montoTotal: '1.788,68', moneda: 'USD' },\n        { operatoria: 'Compra', especie: 'B.BA', fecha: '11/06/2026', cantidad: '152,00', montoTotal: '465.120,00', moneda: 'ARS' },\n        { operatoria: 'Compra', especie: 'NFLX.BA', fecha: '10/06/2026', cantidad: '155,00', montoTotal: '823.980,00', moneda: 'ARS' },\n        { operatoria: 'Compra', especie: 'AAPL.BA', fecha: '03/06/2026', cantidad: '90,00', montoTotal: '146.250,00', moneda: 'ARS' },\n        { operatoria: 'Compra', especie: 'PAMP.BA', fecha: '15/04/2026', cantidad: '2.450,00', montoTotal: '114.415,00', moneda: 'ARS' },\n        { operatoria: 'Compra', especie: 'AAPL.BA', fecha: '02/01/2026', cantidad: '160,00', montoTotal: '2.912,00', moneda: 'USD' },\n        { operatoria: 'Compra', especie: 'KO.BA', fecha: '13/11/2025', cantidad: '60,00', montoTotal: '3.757,19', moneda: 'USD' },\n        { operatoria: 'Venta', especie: 'NVDA.BA', fecha: '07/11/2025', cantidad: '2.000,00', montoTotal: '10.720.000,00', moneda: 'ARS' },\n        { operatoria: 'Compra', especie: 'NVDA.BA', fecha: '06/11/2025', cantidad: '1.500,00', montoTotal: '7.965.000,00', moneda: 'ARS' },\n        { operatoria: 'Venta', especie: 'TSLA.BA', fecha: '20/10/2025', cantidad: '144,00', montoTotal: '2.916.000,00', moneda: 'ARS' },\n        { operatoria: 'Compra', especie: 'TSLA.BA', fecha: '09/10/2025', cantidad: '360,00', montoTotal: '7.857.000,00', moneda: 'ARS' }];\n        // Posición neta PREVIA por especie (agnóstico al ambiente): el import Balanz SUMA sus\n        // trades a lo que ya haya en el portfolio, así que después validamos \"previa + neto\".\n        cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        cy.capturarPosicionesPortfolio(balanzTrades).as('posicionAntes');\n        cy.importOperations('Balanz (.xlsx)', 'Boletos-Balanz-Ejemplo.xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n        cy.validarTabsEncabezadosImportacion();\n        cy.validarTablaEncabezadosImportacion();\n        // --- VALIDACIÓN DE FILAS (PREVIEW) ---\n        // Ahora es una sola línea súper limpia 👇\n        balanzTrades.forEach((trade) => cy.importTalbeValidation(trade.especie, trade));\n        // --- FLUJO DE IMPORTACIÓN ---\n        cy.ejecutarFlujoImportacion('01/01/2024');\n        // Revalida la sesión antes de las validaciones (spec largo, ver comentario en el bloque\n        // Mercap): cy.LogIn() re-loguea real solo si el token Auth0 venció a mitad del spec.\n        cy.LogIn();\n        // --- VALIDACIÓN DE FILAS IMPORTADAS (TRADING) ---\n        cy.visit(`${_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].MPC_LOCATION}/trading`);\n        cy.filtrarFecha('01/01/2024');\n        balanzTrades.forEach((trade) => cy.importTalbeValidation(trade.especie, trade));\n        // --- NUEVA VALIDACIÓN DE POSICIÓN EN PORTFOLIO ---\n        cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        cy.get('@posicionAntes').then((posicionAntes) =>\n        cy.validarPosicionesNetasPortfolio(balanzTrades, posicionAntes)\n        );",
+                  "err": {},
+                  "uuid": "d2d99f75-82cd-48ee-ba49-53baa8641558",
+                  "parentUUID": null,
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [
+                "d2d99f75-82cd-48ee-ba49-53baa8641558"
+              ],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

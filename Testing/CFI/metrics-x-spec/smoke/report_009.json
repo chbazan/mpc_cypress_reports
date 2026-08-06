@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-08-06T23:01:10.882Z",
+    "end": "2026-08-06T23:01:50.616Z",
+    "duration": 39734,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9f5cefec-3f72-4a31-b17f-ad1a56fe0619",
+      "title": "",
+      "fullFile": "build/testing/cfi/specs/smoke/09_proyeccion.cy.js",
+      "file": "build/testing/cfi/specs/smoke/09_proyeccion.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a48ce184-dec8-4f8b-b30a-30ef45a3d442",
+          "title": "Proyección",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validación tabla de proyección",
+              "fullTitle": "Proyección Validación tabla de proyección",
+              "timedOut": null,
+              "duration": 36139,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ingresarProyeccionPortfolio('Portfolio CYPRESS');\n      // Validar operaciones existentes - ARS\n      // cy.expandirMonedaProyeccion('ARS');\n      // cy.expandirTipoInstrumentoProyeccion('ARS', 'Plazo fijo');\n      // cy.expandirTipoInstrumentoProyeccion('ARS', 'Caución');\n      // Validar operaciones existentes - USD\n      cy.expandirMonedaProyeccion('USD');\n      cy.expandirTipoInstrumentoProyeccion('USD', 'Título Público');\n      cy.validarColumnasMesesActivos();\n      // Parámetros: Monto en la tabla, Fecha, Instrumento, Monto Modal, Moneda\n      cy.validarModalDetalleProyeccion('40,00', /* '09/01/2026', */'AL30', '40,00', 'USD');",
+              "err": {},
+              "uuid": "32a3ebf6-4632-47f1-89ff-ae5abf4de52f",
+              "parentUUID": "a48ce184-dec8-4f8b-b30a-30ef45a3d442",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32a3ebf6-4632-47f1-89ff-ae5abf4de52f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36139,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

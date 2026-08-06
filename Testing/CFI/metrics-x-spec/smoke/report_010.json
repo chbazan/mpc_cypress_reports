@@ -1,0 +1,323 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-08-06T23:01:52.766Z",
+    "end": "2026-08-06T23:05:44.318Z",
+    "duration": 231552,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb18656a-673b-4690-aebc-945ac6cb7f95",
+      "title": "",
+      "fullFile": "build/testing/cfi/specs/smoke/11_eliminar_operaciones.cy.js",
+      "file": "build/testing/cfi/specs/smoke/11_eliminar_operaciones.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5520076b-89b5-4feb-bb8b-fe37a71531b6",
+          "title": "Eliminar operaciones",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "eb8c96ba-bb46-498f-bfb9-1698ce10130a",
+              "title": "Bonos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Elimina compra y venta bono AL30 con Id externo",
+                  "fullTitle": "Eliminar operaciones Bonos Elimina compra y venta bono AL30 con Id externo",
+                  "timedOut": null,
+                  "duration": 70034,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n        cy.abrirMonedas();\n        cy.obtenerSaldoMoneda('ARS').then((saldoAntes) => {\n          cy.irAMisOperaciones();\n          cy.filtrarFecha(\"02/01/2026\");\n          cy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO, 'Compra');\n          cy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO, 'Venta');\n          cy.validacionGrillaOperaciones();\n          //validar que no existan las operaciones de bono en la grilla\n          cy.contains(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].BONO).should('not.exist');\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.validarTablaPortfolios();\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n          cy.abrirMonedas();\n          cy.validarImpactoSaldoMoneda('ARS', saldoAntes, 'cambio');\n        });",
+                  "err": {},
+                  "uuid": "f0888eeb-81ab-42c9-8bb5-9f3b0b4ca7da",
+                  "parentUUID": "eb8c96ba-bb46-498f-bfb9-1698ce10130a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f0888eeb-81ab-42c9-8bb5-9f3b0b4ca7da"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 70034,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e5489ff5-f479-423b-914d-c47550bb7aae",
+              "title": "Acciones",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Eliminar compra y venta de ALUA, con Id externo",
+                  "fullTitle": "Eliminar operaciones Acciones Eliminar compra y venta de ALUA, con Id externo",
+                  "timedOut": null,
+                  "duration": 38318,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n        cy.abrirMonedas();\n        cy.obtenerSaldoMoneda('ARS').then((saldoAntes) => {\n          cy.irAMisOperaciones();\n          cy.filtrarFecha(\"01/02/2026\");\n          cy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION, 'Compra');\n          cy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION, 'Venta');\n          cy.validacionGrillaOperaciones();\n          //validar que no existan las operaciones de bono en la grilla\n          cy.contains(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ACCION).should('not.exist');\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.validarTablaPortfolios();\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n          cy.abrirMonedas();\n          cy.validarImpactoSaldoMoneda('ARS', saldoAntes, 'cambio');\n        });",
+                  "err": {},
+                  "uuid": "6ac91890-3e4d-4b05-80d5-8c9cf8f492f3",
+                  "parentUUID": "e5489ff5-f479-423b-914d-c47550bb7aae",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6ac91890-3e4d-4b05-80d5-8c9cf8f492f3"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 38318,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "8501027e-a2c2-4578-9d9b-6acb448d6fbd",
+              "title": "Fondos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Eliminar fondo Argenfunds Renta Mixta - Clase B, con Id externo",
+                  "fullTitle": "Eliminar operaciones Fondos Eliminar fondo Argenfunds Renta Mixta - Clase B, con Id externo",
+                  "timedOut": null,
+                  "duration": 39448,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n        cy.abrirMonedas();\n        cy.obtenerSaldoMoneda('ARS').then((saldoAntes) => {\n          cy.irAMisOperaciones();\n          cy.filtrarFecha(\"01/02/2026\");\n          cy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO, 'Suscripción');\n          cy.borrarOperacion(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO, 'Rescate');\n          cy.validacionGrillaOperaciones();\n          //validar que no existan las operaciones de bono en la grilla\n          cy.contains(_support_constants__WEBPACK_IMPORTED_MODULE_0__[\"default\"].FONDO).should('not.exist');\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.validarTablaPortfolios();\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n          cy.abrirMonedas();\n          cy.validarImpactoSaldoMoneda('ARS', saldoAntes, 'cambio');\n        });",
+                  "err": {},
+                  "uuid": "5568ac3a-1aae-4b3d-8d97-e57406c60bf0",
+                  "parentUUID": "8501027e-a2c2-4578-9d9b-6acb448d6fbd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5568ac3a-1aae-4b3d-8d97-e57406c60bf0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 39448,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "540b53fe-c391-4c59-89d9-20e9d9cf74ea",
+              "title": "Depósitos a plazo",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Eliminar plazo fijo y caución",
+                  "fullTitle": "Eliminar operaciones Depósitos a plazo Eliminar plazo fijo y caución",
+                  "timedOut": null,
+                  "duration": 33028,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n        cy.abrirMonedas();\n        cy.obtenerSaldoMoneda('ARS').then((saldoAntes) => {\n          cy.irAMisOperaciones();\n          cy.filtrarFecha(\"01/02/2026\");\n          cy.borrarOperacion('Plazo fijo - Plazo fijo aut N° 1', 'Concertación');\n          cy.borrarOperacion('Caución - Caución aut N° 1', 'Concertación');\n          cy.validacionGrillaOperaciones();\n          //validar que no existan las operaciones de bono en la grilla\n          cy.contains('Plazo fijo - Plazo fijo aut N° 1').should('not.exist');\n          cy.contains('Caución - Caución aut N° 1').should('not.exist');\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.validarTablaPortfolios();\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n          cy.abrirMonedas();\n          // Se libera el capital inmovilizado de plazo fijo Y caución (dos operaciones que\n          // restan saldo al crearse) -- el saldo disponible aumenta.\n          cy.validarImpactoSaldoMoneda('ARS', saldoAntes, 'aumento');\n        });",
+                  "err": {},
+                  "uuid": "25b780c1-21f9-4231-befe-16c17c0bfaa8",
+                  "parentUUID": "540b53fe-c391-4c59-89d9-20e9d9cf74ea",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "25b780c1-21f9-4231-befe-16c17c0bfaa8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 33028,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3a279f75-813e-40e0-8c95-df74c44af7ef",
+              "title": "Operaciones a descuento",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Eliminar cheque",
+                  "fullTitle": "Eliminar operaciones Operaciones a descuento Eliminar cheque",
+                  "timedOut": null,
+                  "duration": 32928,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.irAMisPortfolios();\n        cy.abrirPortfolio('Portfolio CYPRESS');\n        cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n        cy.abrirMonedas();\n        cy.obtenerSaldoMoneda('ARS').then((saldoAntes) => {\n          cy.irAMisOperaciones();\n          cy.filtrarFecha(\"06/02/2026\");\n          cy.borrarOperacion('Cheque - Cheque aut N° 1', 'Compra');\n          cy.validacionGrillaOperaciones();\n          //validar que no existan las operaciones de bono en la grilla\n          cy.contains('Cheque - Cheque aut N° 1').should('not.exist');\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.validarTablaPortfolios();\n          cy.irAMisPortfolios();\n          cy.abrirPortfolio('Portfolio CYPRESS');\n          cy.filtrarFechaPosicionValuada(\"24/04/2026\");\n          cy.abrirMonedas();\n          // Se revierte el costo del cheque (una compra que resta saldo al crearse) -- el saldo\n          // disponible aumenta.\n          cy.validarImpactoSaldoMoneda('ARS', saldoAntes, 'aumento');\n        });",
+                  "err": {},
+                  "uuid": "2fd763c0-638b-44b0-8df4-f5eca273445d",
+                  "parentUUID": "3a279f75-813e-40e0-8c95-df74c44af7ef",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2fd763c0-638b-44b0-8df4-f5eca273445d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 32928,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "098d5109-fdd1-4e0d-87fa-e9f67df245df",
+              "title": "Eliminar los depósitos Monetarios",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Eliminar los depósitos Monetarios ARS y USD con Id externo",
+                  "fullTitle": "Eliminar operaciones Eliminar los depósitos Monetarios Eliminar los depósitos Monetarios ARS y USD con Id externo",
+                  "timedOut": null,
+                  "duration": 6222,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.irAMisOperaciones();\ncy.filtrarFecha(\"02/01/2026\");\ncy.borrarOperacion('ARS', '10.000.000,00');\ncy.borrarOperacion('USD', '1.000.000,00');\ncy.validacionGrillaOperaciones();\n//validar que no existan las operaciones de bono en la grilla\ncy.contains('No hay información para mostrar').should('be.visible');",
+                  "err": {},
+                  "uuid": "b0b246a8-91a9-43f5-b704-237eb96f4084",
+                  "parentUUID": "098d5109-fdd1-4e0d-87fa-e9f67df245df",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b0b246a8-91a9-43f5-b704-237eb96f4084"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6222,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

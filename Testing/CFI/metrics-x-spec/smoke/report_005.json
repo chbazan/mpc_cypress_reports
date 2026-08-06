@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-08-06T22:57:17.386Z",
+    "end": "2026-08-06T22:58:02.293Z",
+    "duration": 44907,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9e29e707-feb8-47ea-b8b2-bdc704bff696",
+      "title": "",
+      "fullFile": "build/testing/cfi/specs/smoke/05_mis_depositarios.cy.js",
+      "file": "build/testing/cfi/specs/smoke/05_mis_depositarios.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "93941526-f841-4198-8390-955502ec97ff",
+          "title": "Mis Depositarios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validación Depositario agrupamiento por cuenta consolidada",
+              "fullTitle": "Mis Depositarios Validación Depositario agrupamiento por cuenta consolidada",
+              "timedOut": null,
+              "duration": 39931,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.irAMisDepositarios();\n      cy.validarAgrupamientoPorCuentaConsolidada();",
+              "err": {},
+              "uuid": "00775bb0-107b-4bf4-a6c2-46f541795e27",
+              "parentUUID": "93941526-f841-4198-8390-955502ec97ff",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validación agrupamiento por especie",
+              "fullTitle": "Mis Depositarios Validación agrupamiento por especie",
+              "timedOut": null,
+              "duration": 734,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.validarAgrupamientoPorEspecie();",
+              "err": {},
+              "uuid": "89c88e75-4396-40ca-b380-a3a27434018b",
+              "parentUUID": "93941526-f841-4198-8390-955502ec97ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "00775bb0-107b-4bf4-a6c2-46f541795e27",
+            "89c88e75-4396-40ca-b380-a3a27434018b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40665,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

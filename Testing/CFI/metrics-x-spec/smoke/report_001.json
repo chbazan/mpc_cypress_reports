@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-08-06T22:41:47.402Z",
+    "end": "2026-08-06T22:42:38.906Z",
+    "duration": 51504,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "db9e13e9-73be-42dc-ae39-c2b38d05ef80",
+      "title": "",
+      "fullFile": "build/testing/cfi/specs/smoke/01_home.cy.js",
+      "file": "build/testing/cfi/specs/smoke/01_home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e3ac3291-6e0c-410f-962a-1e338d3378c5",
+          "title": "Precondición tener un Portfolio y Depositario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validación del menú Home",
+              "fullTitle": "Precondición tener un Portfolio y Depositario Validación del menú Home",
+              "timedOut": null,
+              "duration": 25282,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.irAlHome();\ncy.validacionHome();\ncy.validarContenidoHomeSiExistePortfolio();",
+              "err": {},
+              "uuid": "c11770dd-2684-48fd-a1ad-6505f8358abf",
+              "parentUUID": "e3ac3291-6e0c-410f-962a-1e338d3378c5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Creación de Depositario si NO existe",
+              "fullTitle": "Precondición tener un Portfolio y Depositario Creación de Depositario si NO existe",
+              "timedOut": null,
+              "duration": 7413,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.irAMisDepositarios();\ncy.validarIngresoMisDepositarios();\ncy.crearDepositarioSiNoExiste();",
+              "err": {},
+              "uuid": "3b33dbea-67db-4cf3-91c1-1c1e9a6ebc72",
+              "parentUUID": "e3ac3291-6e0c-410f-962a-1e338d3378c5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Creación de Portfolio si NO existe",
+              "fullTitle": "Precondición tener un Portfolio y Depositario Creación de Portfolio si NO existe",
+              "timedOut": null,
+              "duration": 9994,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.irAMisPortfolios();\ncy.validarIngresoMisPortfolios();\ncy.crearPortfolioSiNoExiste();\ncy.validarCards('Portfolio CYPRESS');\ncy.ValidarCorrectaCreacionPorfolio();",
+              "err": {},
+              "uuid": "995c8cf6-6c31-4a6b-b012-bb45902bd8b2",
+              "parentUUID": "e3ac3291-6e0c-410f-962a-1e338d3378c5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c11770dd-2684-48fd-a1ad-6505f8358abf",
+            "3b33dbea-67db-4cf3-91c1-1c1e9a6ebc72",
+            "995c8cf6-6c31-4a6b-b012-bb45902bd8b2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42689,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "cleanReporterJson": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
